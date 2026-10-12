@@ -1,0 +1,40 @@
+{
+  "kind": "phase0_document_consistency",
+  "time": "2026-10-13T07:07:13.997512+08:00",
+  "requirements": 33,
+  "acceptance_conditions": 33,
+  "tasks": 42,
+  "completed_tasks": 3,
+  "planned_verification_protocols": 42,
+  "game_tests_executed": 0,
+  "source_sensitive_field_scanned": true,
+  "reference_media_excluded": true,
+  "errors": [
+    "Broken local link in tasks.md: evidence/2026-10-13/validation-result.json",
+    "Broken local link in tasks.md: evidence/2026-10-13/validation-result.json",
+    "Broken local link in tasks.md: evidence/2026-10-13/validation-result.json",
+    "Broken local link in tasks.md: evidence/2026-10-13/delivery.md"
+  ],
+  "passed": false,
+  "fingerprints_sha256": {
+    ".specify/memory/constitution.md": "2504e95f2c2a6deb622590da7b732b6dc2ec79b67bac344591c9c03cf190deed",
+    "specs/001-project-foundation/analysis.md": "5dc870ca78001cd9ac5c81b81dd1667eb2b506b3dc3410014a55dde20acecf24",
+    "specs/001-project-foundation/checklists/requirements.md": "873d4abb452bd6260bb87dfde9a3c3a04be59f6eb12b578b0e44b0f297abfde4",
+    "specs/001-project-foundation/contracts/gameplay.md": "13cb9793db1304f012833b4cd6df80a0b49e51b7d6c3f58fb50a2c7d6cbc6b67",
+    "specs/001-project-foundation/data-model.md": "02710d0083d1c315608ffe39666b6a53c74217ca9cc83f7711c955fd4eb70b33",
+    "specs/001-project-foundation/decisions.md": "61ce702dfb297dd50ef33178dba385b85d86efe49b30a498a95963f6b77ae417",
+    "specs/001-project-foundation/evidence/2026-10-13/speckit-audit.md": "871b32395f74d1a4d047517e7d4186cec16ad72b79843cdebdf044b26a4d02ef",
+    "specs/001-project-foundation/evidence/2026-10-13/tool-audit.md": "5ed88c50277e9a781a70ad63a073a66c14312c91ef6ee84b3590db207766ed00",
+    "specs/001-project-foundation/plan.md": "68cc4e72ea857e5e6c20d5ed2678702ee7570bb0cc9f7beab1377181495a26e8",
+    "specs/001-project-foundation/progress.md": "c8cef2b2b3b2ab92c714783dc2c11037c058054d0a417f12571dd2fdcad10502",
+    "specs/001-project-foundation/quickstart.md": "c4be16fd84bce2ffcdf3000a665ae02e663647833c543d39ab5238a84bec908c",
+    "specs/001-project-foundation/research-design.md": "dc1a354da2457e137823dad5d6a6609e5a29da387f163e8565deef83e580a23c",
+    "specs/001-project-foundation/research.md": "5a60506cc93506628e7c0ba3f1d279a4c73d4c2f5050e46fb0ea6d6aaff7e352",
+    "specs/001-project-foundation/spec.md": "731fc756ee7b2654e83415a50139752072ac033b916d4efaa38451f61c94c62c",
+    "specs/001-project-foundation/task-records.json": "147a0490957a0d7889d8bf64951c59ec5ea2de6d078a38ff84f507713e9b1e98",
+    "specs/001-project-foundation/tasks.md": "aa2bd6d18c963b6b063df2a3f671c6493249b2a005a957d5f462a19ee5932bf0",
+    "specs/001-project-foundation/validation.md": "e81592c79c49c5be7625aa275c69506243bcac9c60e6410290bf2054cee2b829",
+    "tools/verify_spec.py": "9862ddd6cb1d094b8ee0bb4236ebc7c779b16b9414c2a98e3569dc22a2306f7d"
+  },
+  "limitations": "Structural/reference/state checks only; not semantic, gameplay, device, visual, or human acceptance."
+}

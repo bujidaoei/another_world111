@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "TASK-001",
+    "phase": "阶段0",
+    "description": "核查工程、设备与工具",
+    "path": "research.md",
+    "requirements": [
+      "REQ-001"
+    ],
+    "acceptance": [
+      "AC-001"
+    ],
+    "dependencies": [],
+    "test": "TEST-001",
+    "criterion": "命令/MCP真实返回含失败和限制",
+    "evidence": [
+      "evidence/2026-10-13/tool-audit.md"
+    ],
+    "done": true,
+    "status": "已验收（核查任务）"
+  },
+  {
+    "id": "TASK-002",
+    "phase": "阶段0",
+    "description": "正式初始化Spec Kit并写宪章",
+    "path": "../../.specify/memory/constitution.md",
+    "requirements": [
+      "REQ-002"
+    ],
+    "acceptance": [
+      "AC-002"
+    ],
+    "dependencies": [
+      "TASK-001"
+    ],
+    "test": "TEST-002",
+    "criterion": "CLI初始化exit0、skills/脚本/模板真实存在",
+    "evidence": [
+      "evidence/2026-10-13/speckit-audit.md"
+    ],
+    "done": true,
+    "status": "已验收（初始化任务）"
+  },
+  {
+    "id": "TASK-003",
+    "phase": "阶段0",
+    "description": "访问参考视频与官方资料，分析图像、输入和原创方向",
+    "path": "research-design.md",
+    "requirements": [
+      "REQ-001",
+      "REQ-003",
+      "REQ-026",
+      "REQ-027"
+    ],
+    "acceptance": [
+      "AC-001",
+      "AC-003"
+    ],
+    "dependencies": [
+      "TASK-001"
+    ],
+    "test": "TEST-003",
+    "criterion": "指定BV实际解码帧，事实/推断/限制分离",
+    "evidence": [
+      "research-design.md"
+    ],
+    "done": true,
+    "status": "已验收（研究任务）"
+  },
+  {
+    "id": "TASK-004",
+    "phase": "阶段0",
+    "description": "编写规格、澄清、ADR、规则模型与契约",
+    "path": "spec.md",
+    "requirements": [
+      "REQ-002",
+      "REQ-003",
+      "NFR-004"
+    ],
+    "acceptance": [
+      "AC-002",
+      "AC-003",
+      "AC-031"
+    ],
+    "dependencies": [
+      "TASK-002",
+      "TASK-003"
+    ],
+    "test": "TEST-004",
+    "criterion": "全部原文规则保留，已确认与建议不同，凭据不入库",
+    "evidence": [
+      "evidence/2026-10-13/validation-result.json"
+    ],
+    "done": true,
+    "status": "已验收（阶段0工件与真实检查）"
+  },
+  {
+    "id": "TASK-005",
+    "phase": "阶段0",
+    "description": "建立阶段计划、任务、测试和需求质量检查",
+    "path": "plan.md",
+    "requirements": [
+      "REQ-002",
+      "REQ-003",
+      "NFR-003"
+    ],
+    "acceptance": [
+      "AC-002",
+      "AC-003",
+      "AC-030"
+    ],
+    "dependencies": [
+      "TASK-004"
+    ],
+    "test": "TEST-005",
+    "criterion": "每项路径/依赖/验证/AC/状态/证据可查",
+    "evidence": [
+      "evidence/2026-10-13/validation-result.json"
+    ],
+    "done": true,
+    "status": "已验收（阶段0工件与真实检查）"
+  },
+  {
+    "id": "TASK-006",
+    "phase": "阶段0",
+    "description": "实现关联验证并执行独立分析和收敛核对",
+    "path": "../../tools/verify_spec.py",
+    "requirements": [
+      "REQ-002",
+      "NFR-004"
+    ],
+    "acceptance": [
+      "AC-002",
+      "AC-031"
+    ],
+    "dependencies": [
+      "TASK-005"
+    ],
+    "test": "TEST-006",
+    "criterion": "关联非零错误拒绝，独立语义审查无未修高风险冲突",
+    "evidence": [
+      "evidence/2026-10-13/validation-result.json"
+    ],
+    "done": true,
+    "status": "已验收（阶段0工件与真实检查）"
+  },
+  {
+    "id": "TASK-007",
+    "phase": "阶段0",
+    "description": "敏感/许可扫描、提交推送并核对远端SHA",
+    "path": "evidence/2026-10-13/delivery.md",
+    "requirements": [
+      "REQ-003",
+      "NFR-004"
+    ],
+    "acceptance": [
+      "AC-003",
+      "AC-031"
+    ],
+    "dependencies": [
+      "TASK-006"
+    ],
+    "test": "TEST-007",
+    "criterion": "不含参考截图/凭据，安全Git推送成功且远端SHA一致",
+    "evidence": [
+      "evidence/2026-10-13/delivery.md"
+    ],
+    "done": false,
+    "status": "待验证"
+  },
+  {
+    "id": "TASK-008",
+    "phase": "阶段0门槛",
+    "description": "审阅并冻结下一阶段内容、失败规则、点数解释、数值和资源门槛",
+    "path": "decisions.md",
+    "requirements": [
+      "REQ-003",
+      "REQ-008",
+      "REQ-010",
+      "REQ-015",
+      "REQ-023"
+    ],
+    "acceptance": [
+      "AC-003",
+      "AC-008",
+      "AC-010",
+      "AC-015",
+      "AC-023"
+    ],
+    "dependencies": [
+      "TASK-005"
+    ],
+    "test": "TEST-008",
+    "criterion": "D-002至006有可执行决定，预算/日期不虚构，Android仍独立门槛",
+    "evidence": [],
+    "done": false,
+    "status": "待决策；阶段0技术资料可交付"
+  },
+  {
+    "id": "TASK-009",
+    "phase": "基础",
+    "description": "连接工具并执行引擎/渲染/GLB兼容探针",
+    "path": "../../game/project.godot",
+    "requirements": [
+      "REQ-001",
+      "NFR-001"
+    ],
+    "acceptance": [
+      "AC-001",
+      "AC-028"
+    ],
+    "dependencies": [
+      "TASK-008"
+    ],
+    "test": "TEST-009",
+    "criterion": "正确工程会话、导入/运行、GLB变形/材质和Mobile对照证据",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-010",
+    "phase": "基础",
+    "description": "配置Android路径、SDK版本、debug签名并实测导出",
+    "path": "../../game/export_presets.cfg",
+    "requirements": [
+      "NFR-005"
+    ],
+    "acceptance": [
+      "AC-032"
+    ],
+    "dependencies": [
+      "TASK-009"
+    ],
+    "test": "TEST-010",
+    "criterion": "依所选APK/Gradle路径验证依赖，导出真实成功，签名不入仓库",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-011",
+    "phase": "基础",
+    "description": "固定并集成GdUnit4，验证4.7.2兼容性与非零发现",
+    "path": "../../game/tests/test_toolchain.gd",
+    "requirements": [
+      "NFR-003",
+      "NFR-005"
+    ],
+    "acceptance": [
+      "AC-030",
+      "AC-032"
+    ],
+    "dependencies": [
+      "TASK-009"
+    ],
+    "test": "TEST-011",
+    "criterion": "固定SHA，实际pass/fail/zero-discovery退出码符合，非零真实测试",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-012",
+    "phase": "基础",
+    "description": "冻结并校验规则/输入/渲染/音频与存档配置",
+    "path": "../../game/config/",
+    "requirements": [
+      "REQ-005",
+      "REQ-008",
+      "REQ-010",
+      "REQ-012",
+      "REQ-023",
+      "NFR-001"
+    ],
+    "acceptance": [
+      "AC-005",
+      "AC-008",
+      "AC-010",
+      "AC-012",
+      "AC-023",
+      "AC-028"
+    ],
+    "dependencies": [
+      "TASK-008",
+      "TASK-011"
+    ],
+    "test": "TEST-012",
+    "criterion": "逐阶预算、概率、经验/成本、动作时序、输入参数、保存损失及错误行为具体化",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-013",
+    "phase": "US1",
+    "description": "编写远征、奖励、营地和升级门槛真实边界测试",
+    "path": "../../game/tests/test_expedition.gd",
+    "requirements": [
+      "REQ-004",
+      "REQ-005",
+      "REQ-028"
+    ],
+    "acceptance": [
+      "AC-004",
+      "AC-005",
+      "AC-033"
+    ],
+    "dependencies": [
+      "TASK-012"
+    ],
+    "test": "TEST-013",
+    "criterion": "测试含至少一个真实目标任务/击杀经验资源、重复领奖拒绝、状态/门槛；先失败后实现通过，不测试假业务",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-014",
+    "phase": "US1",
+    "description": "实现远征/遭遇/结算/撤离/失败核心状态",
+    "path": "../../game/features/expedition/",
+    "requirements": [
+      "REQ-004",
+      "NFR-001"
+    ],
+    "acceptance": [
+      "AC-004",
+      "AC-028"
+    ],
+    "dependencies": [
+      "TASK-013"
+    ],
+    "test": "TEST-014",
+    "criterion": "一次结算与目标任务奖励幂等、真实资源、短脱战仍active、重置后结束，TEST-013/014通过",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-015",
+    "phase": "US1",
+    "description": "实现三输入意图、镜头、UI消费和基本菜单",
+    "path": "../../game/platform/",
+    "requirements": [
+      "REQ-022",
+      "REQ-023",
+      "REQ-024"
+    ],
+    "acceptance": [
+      "AC-022",
+      "AC-023",
+      "AC-024"
+    ],
+    "dependencies": [
+      "TASK-012"
+    ],
+    "test": "TEST-015",
+    "criterion": "移动/瞄准/技能/防御/闪避/取消/固定镜头无漏入，设备未测单独开放",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-016",
+    "phase": "US1",
+    "description": "实现战斗时序、两敌人职责及一阶闪电三目标连锁",
+    "path": "../../game/features/combat/",
+    "requirements": [
+      "REQ-004",
+      "REQ-012"
+    ],
+    "acceptance": [
+      "AC-004",
+      "AC-012"
+    ],
+    "dependencies": [
+      "TASK-014",
+      "TASK-015"
+    ],
+    "test": "TEST-016",
+    "criterion": "真实命中、范围/资格/冷却、预备命中恢复；无障碍穿透假判定",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-017",
+    "phase": "US1",
+    "description": "实现采集、制作、补给和有功能营地设施",
+    "path": "../../game/features/expedition/crafting/",
+    "requirements": [
+      "REQ-004",
+      "REQ-028"
+    ],
+    "acceptance": [
+      "AC-004",
+      "AC-033"
+    ],
+    "dependencies": [
+      "TASK-014"
+    ],
+    "test": "TEST-017",
+    "criterion": "成本守恒、选择影响准备，设施真实作用且存档持久",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-018",
+    "phase": "US1",
+    "description": "实现世界升级、个人挑战、二阶锚点与区域回访",
+    "path": "../../game/features/progression/",
+    "requirements": [
+      "REQ-005",
+      "REQ-006",
+      "REQ-012",
+      "REQ-014"
+    ],
+    "acceptance": [
+      "AC-005",
+      "AC-006",
+      "AC-012",
+      "AC-014"
+    ],
+    "dependencies": [
+      "TASK-016",
+      "TASK-017",
+      "TASK-023"
+    ],
+    "test": "TEST-018",
+    "criterion": "真实任务/击杀升级到30、失败/重试/胜利、经验储备、同一电枪合法进阶、二阶新区域/旧区用途/锚点实操",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-019",
+    "phase": "US1",
+    "description": "实现双有效槽存档、迁移、设置、错误/后台恢复",
+    "path": "../../game/persistence/",
+    "requirements": [
+      "REQ-024",
+      "REQ-025",
+      "NFR-001"
+    ],
+    "acceptance": [
+      "AC-024",
+      "AC-025",
+      "AC-028"
+    ],
+    "dependencies": [
+      "TASK-014",
+      "TASK-012"
+    ],
+    "test": "TEST-019",
+    "criterion": "完整存档故障矩阵通过、失败保留有效槽，设置和游戏时钟一致",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-020",
+    "phase": "US1",
+    "description": "PC完整流程实测及首个原型交付",
+    "path": "evidence/pc-prototype/",
+    "requirements": [
+      "REQ-004",
+      "REQ-005",
+      "REQ-006",
+      "REQ-012",
+      "REQ-022",
+      "REQ-024",
+      "REQ-025",
+      "REQ-028",
+      "NFR-003"
+    ],
+    "acceptance": [
+      "AC-004",
+      "AC-005",
+      "AC-006",
+      "AC-012",
+      "AC-022",
+      "AC-024",
+      "AC-025",
+      "AC-030",
+      "AC-033"
+    ],
+    "dependencies": [
+      "TASK-018",
+      "TASK-019"
+    ],
+    "test": "TEST-020",
+    "criterion": "首次启动→出营→真实任务/击杀奖励→成败→暂停→晋阶与电枪进阶→保存退出→恢复；融合/扩槽UI另在TASK-024，不以夹具代替",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-021",
+    "phase": "US1",
+    "description": "目标玩家原型观察、问题修订与对比验证",
+    "path": "evidence/human-prototype/",
+    "requirements": [
+      "NFR-003"
+    ],
+    "acceptance": [
+      "AC-030"
+    ],
+    "dependencies": [
+      "TASK-020"
+    ],
+    "test": "TEST-021",
+    "criterion": "真实匹配参与者/观察/原话/构建/情境，关键假设有证据；无人不通过",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-022",
+    "phase": "US2",
+    "description": "编写装备预算、融合、扩槽、进阶事务边界测试",
+    "path": "../../game/tests/test_equipment.gd",
+    "requirements": [
+      "REQ-007",
+      "REQ-008",
+      "REQ-009",
+      "REQ-010",
+      "REQ-011",
+      "REQ-014"
+    ],
+    "acceptance": [
+      "AC-007",
+      "AC-008",
+      "AC-009",
+      "AC-010",
+      "AC-011",
+      "AC-014"
+    ],
+    "dependencies": [
+      "TASK-012"
+    ],
+    "test": "TEST-022",
+    "criterion": "枚举预算/互斥/锁定/候选不足/重复确认/身份经历/资格，真实实现验",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-023",
+    "phase": "US2",
+    "description": "实现装备生成与营地融合/扩槽/进阶",
+    "path": "../../game/features/equipment/",
+    "requirements": [
+      "REQ-007",
+      "REQ-008",
+      "REQ-009",
+      "REQ-010",
+      "REQ-011",
+      "REQ-014"
+    ],
+    "acceptance": [
+      "AC-007",
+      "AC-008",
+      "AC-009",
+      "AC-010",
+      "AC-011",
+      "AC-014"
+    ],
+    "dependencies": [
+      "TASK-022"
+    ],
+    "test": "TEST-023",
+    "criterion": "所有普通词条合法、固定金币、完整原子事务、历史来自实际事件",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-024",
+    "phase": "US2",
+    "description": "实现装备预览、概率/成本说明和完整培养流程UI",
+    "path": "../../game/presentation/equipment/",
+    "requirements": [
+      "REQ-009",
+      "REQ-010",
+      "REQ-011"
+    ],
+    "acceptance": [
+      "AC-009",
+      "AC-010",
+      "AC-011"
+    ],
+    "dependencies": [
+      "TASK-023",
+      "TASK-020"
+    ],
+    "test": "TEST-024",
+    "criterion": "真实获得资源装备后完成熔炉/扩槽/进阶/保存，取消无消费",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-025",
+    "phase": "US3",
+    "description": "编写角色、点数、配置、恢复冷却与预设边界测试",
+    "path": "../../game/tests/test_characters.gd",
+    "requirements": [
+      "REQ-015",
+      "REQ-017",
+      "REQ-018"
+    ],
+    "acceptance": [
+      "AC-015",
+      "AC-017",
+      "AC-018"
+    ],
+    "dependencies": [
+      "TASK-012"
+    ],
+    "test": "TEST-025",
+    "criterion": "D-005冻结后验证共享总点/角色独立配置解释、3套、生命比例资源冷却、治疗轮换拒绝",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-026",
+    "phase": "US3",
+    "description": "实现角色专属与公共解锁、天赋、技能和三预设",
+    "path": "../../game/features/characters/",
+    "requirements": [
+      "REQ-015",
+      "REQ-017",
+      "REQ-018"
+    ],
+    "acceptance": [
+      "AC-015",
+      "AC-017",
+      "AC-018"
+    ],
+    "dependencies": [
+      "TASK-025",
+      "TASK-018"
+    ],
+    "test": "TEST-026",
+    "criterion": "D-005冻结后两角色样本真实解锁、通用内容资格、专属不转移；独立配置与共享总量按确认解释执行，状态保持",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-027",
+    "phase": "US3",
+    "description": "实现营地应用/切换UI并验证构筑成长完整流程",
+    "path": "../../game/presentation/builds/",
+    "requirements": [
+      "REQ-006",
+      "REQ-012",
+      "REQ-015",
+      "REQ-017",
+      "REQ-018"
+    ],
+    "acceptance": [
+      "AC-006",
+      "AC-012",
+      "AC-015",
+      "AC-017",
+      "AC-018"
+    ],
+    "dependencies": [
+      "TASK-026",
+      "TASK-024"
+    ],
+    "test": "TEST-027",
+    "criterion": "编辑与生效分离、遭遇结束检查、三目标→锚点打法对比、实际角色切换",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-028",
+    "phase": "US4",
+    "description": "Blender原创代表模型/骨骼/动作/场景样本与风格批准",
+    "path": "../../source-assets/",
+    "requirements": [
+      "REQ-026"
+    ],
+    "acceptance": [
+      "AC-026"
+    ],
+    "dependencies": [
+      "TASK-009",
+      "TASK-021"
+    ],
+    "test": "TEST-028",
+    "criterion": "实际源工程/GLB/LOD/UV/材质/骨骼/接触时序及游戏内检查",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-029",
+    "phase": "US4",
+    "description": "验证Comfy本地工作流、模型/节点许可并制作采用图像样本",
+    "path": "../../source-assets/workflows/",
+    "requirements": [
+      "REQ-026",
+      "NFR-004"
+    ],
+    "acceptance": [
+      "AC-026",
+      "AC-031"
+    ],
+    "dependencies": [
+      "TASK-008",
+      "TASK-028"
+    ],
+    "test": "TEST-029",
+    "criterion": "服务运行、许可/哈希/版本/种子/产物、纹理和UI真实采用；不调用未授权收费节点",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-030",
+    "phase": "US4",
+    "description": "集成原创地编/雨水/电弧/音频/UI，修订视听样本",
+    "path": "../../game/assets/",
+    "requirements": [
+      "REQ-024",
+      "REQ-026",
+      "REQ-028"
+    ],
+    "acceptance": [
+      "AC-024",
+      "AC-026",
+      "AC-033"
+    ],
+    "dependencies": [
+      "TASK-028",
+      "TASK-029",
+      "TASK-027"
+    ],
+    "test": "TEST-030",
+    "criterion": "实际可玩尺度、碰撞/遮挡、视听同步、总线/削波/循环、资源清单对应",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-031",
+    "phase": "US4",
+    "description": "参考对照视觉评审与动态实机证据",
+    "path": "evidence/visual-comparison/",
+    "requirements": [
+      "REQ-027"
+    ],
+    "acceptance": [
+      "AC-027"
+    ],
+    "dependencies": [
+      "TASK-030",
+      "TASK-032"
+    ],
+    "test": "TEST-031",
+    "criterion": "相近构图/分辨率、无剪辑动作雨水镜头、非制作方逐项原因；未胜出不通过",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-032",
+    "phase": "US4",
+    "description": "PC分位帧时间、内存/加载和渲染档位测量优化",
+    "path": "evidence/pc-performance/",
+    "requirements": [
+      "NFR-002"
+    ],
+    "acceptance": [
+      "AC-029"
+    ],
+    "dependencies": [
+      "TASK-030"
+    ],
+    "test": "TEST-032",
+    "criterion": "同场景保存全部样本、P50/95/99与长帧、CPU/GPU/峰值内存和画质可读",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-033",
+    "phase": "US4",
+    "description": "Android真实设备接入、导出安装与存档升级流程",
+    "path": "evidence/android-install/",
+    "requirements": [
+      "REQ-023",
+      "REQ-025",
+      "NFR-005"
+    ],
+    "acceptance": [
+      "AC-023",
+      "AC-025",
+      "AC-032"
+    ],
+    "dependencies": [
+      "TASK-010",
+      "TASK-030"
+    ],
+    "test": "TEST-033",
+    "criterion": "记录真实型号/系统、签名产物哈希、安装/首次/升级/重载；缺设备开放",
+    "evidence": [],
+    "done": false,
+    "status": "等待后续手机"
+  },
+  {
+    "id": "TASK-034",
+    "phase": "US4",
+    "description": "Android多指/安全区/后台/声音与30分钟热性能验收",
+    "path": "evidence/android-device/",
+    "requirements": [
+      "REQ-022",
+      "REQ-023",
+      "REQ-024",
+      "REQ-026",
+      "NFR-002"
+    ],
+    "acceptance": [
+      "AC-022",
+      "AC-023",
+      "AC-024",
+      "AC-026",
+      "AC-029"
+    ],
+    "dependencies": [
+      "TASK-033"
+    ],
+    "test": "TEST-034",
+    "criterion": "真实完整流程、误触/遮挡/生命周期、P95/99/温升电量与扬声器；仿真不代替",
+    "evidence": [],
+    "done": false,
+    "status": "等待后续手机"
+  },
+  {
+    "id": "TASK-035",
+    "phase": "US4",
+    "description": "实际手柄与PC DPI/窗口/重映射/焦点验收",
+    "path": "evidence/input-devices/",
+    "requirements": [
+      "REQ-022",
+      "REQ-023",
+      "REQ-024"
+    ],
+    "acceptance": [
+      "AC-022",
+      "AC-023",
+      "AC-024"
+    ],
+    "dependencies": [
+      "TASK-015",
+      "TASK-030"
+    ],
+    "test": "TEST-035",
+    "criterion": "具名手柄、设备切换、失焦/返回、重映射和不同帧率，实测证据",
+    "evidence": [],
+    "done": false,
+    "status": "设备待核查"
+  },
+  {
+    "id": "TASK-036",
+    "phase": "US4",
+    "description": "双端真人切片试玩与循环/品质修订验收",
+    "path": "evidence/human-slice/",
+    "requirements": [
+      "REQ-004",
+      "REQ-026",
+      "REQ-027",
+      "NFR-003"
+    ],
+    "acceptance": [
+      "AC-004",
+      "AC-026",
+      "AC-027",
+      "AC-030"
+    ],
+    "dependencies": [
+      "TASK-031",
+      "TASK-034",
+      "TASK-035"
+    ],
+    "test": "TEST-036",
+    "criterion": "两设备匹配玩家真实观察；技术/体验/生产门槛分别达成",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-037",
+    "phase": "US5评估",
+    "description": "合作价值/网络权威/跨境界适配与首发去留评估",
+    "path": "decisions.md",
+    "requirements": [
+      "REQ-020",
+      "REQ-021"
+    ],
+    "acceptance": [
+      "AC-020",
+      "AC-021"
+    ],
+    "dependencies": [
+      "TASK-021"
+    ],
+    "test": "TEST-037",
+    "criterion": "规则/成本/风险实验后用户决定；评估不代表合作实现，另建规格与真实客户端任务",
+    "evidence": [],
+    "done": false,
+    "status": "单人验证后评估"
+  },
+  {
+    "id": "TASK-038",
+    "phase": "后续规则",
+    "description": "冻结三阶分支、共鸣、珠宝/外观单人路径并拆独立实施验收任务",
+    "path": "spec.md",
+    "requirements": [
+      "REQ-013",
+      "REQ-016",
+      "REQ-019"
+    ],
+    "acceptance": [
+      "AC-013",
+      "AC-016",
+      "AC-019"
+    ],
+    "dependencies": [
+      "TASK-036"
+    ],
+    "test": "TEST-038",
+    "criterion": "完整专属不能叠加、高阶资格/真伤/阈值/皮肤判定数值与真实测试范围冻结",
+    "evidence": [],
+    "done": false,
+    "status": "后续，非首原型"
+  },
+  {
+    "id": "TASK-039",
+    "phase": "正式内容",
+    "description": "按通过切片产能冻结首发体量与正式内容规格、拆任务",
+    "path": "plan.md",
+    "requirements": [
+      "REQ-006",
+      "REQ-013",
+      "REQ-016",
+      "REQ-019",
+      "REQ-020",
+      "REQ-021"
+    ],
+    "acceptance": [
+      "AC-006",
+      "AC-013",
+      "AC-016",
+      "AC-019",
+      "AC-020",
+      "AC-021"
+    ],
+    "dependencies": [
+      "TASK-036",
+      "TASK-037",
+      "TASK-038"
+    ],
+    "test": "TEST-039",
+    "criterion": "预算人力/生产吞吐支持数量与工期；每批规则/原创建模/单人途径/真实验收独立",
+    "evidence": [],
+    "done": false,
+    "status": "后续，未承诺"
+  },
+  {
+    "id": "TASK-040",
+    "phase": "发行基础",
+    "description": "固定CI/依赖/Actions并执行干净检出测试和两平台构建",
+    "path": "../../.github/workflows/",
+    "requirements": [
+      "NFR-003",
+      "NFR-004",
+      "NFR-005"
+    ],
+    "acceptance": [
+      "AC-030",
+      "AC-031",
+      "AC-032"
+    ],
+    "dependencies": [
+      "TASK-011",
+      "TASK-033",
+      "TASK-039"
+    ],
+    "test": "TEST-040",
+    "criterion": "非零测试、资源许可/静态引用、最小权限、失败阻断与归档、独立检出",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-041",
+    "phase": "稳定性",
+    "description": "2小时连续游玩/反复切区存档、严重缺陷回归",
+    "path": "evidence/stability/",
+    "requirements": [
+      "REQ-025",
+      "NFR-002",
+      "NFR-003"
+    ],
+    "acceptance": [
+      "AC-025",
+      "AC-029",
+      "AC-030"
+    ],
+    "dependencies": [
+      "TASK-036"
+    ],
+    "test": "TEST-041",
+    "criterion": "暴露量和故障真实记录，无崩溃/卡死/存档损坏阻断缺陷，修复有回归",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  },
+  {
+    "id": "TASK-042",
+    "phase": "发行验收",
+    "description": "源资产许可/秘密/产物/安装升级/远端SHA及交接验收",
+    "path": "evidence/release/",
+    "requirements": [
+      "REQ-003",
+      "NFR-004",
+      "NFR-005"
+    ],
+    "acceptance": [
+      "AC-003",
+      "AC-031",
+      "AC-032"
+    ],
+    "dependencies": [
+      "TASK-040",
+      "TASK-041"
+    ],
+    "test": "TEST-042",
+    "criterion": "所有规定平台/真人/内容子任务通过后交付构建、源项目、许可与完整证据",
+    "evidence": [],
+    "done": false,
+    "status": "未开始"
+  }
+]

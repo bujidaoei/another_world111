@@ -1,0 +1,28 @@
+# Local tools, caches, credentials, and builds
+.godot/
+.specify/feature.json
+.specify/extensions/*/local-config.yml
+.codex/
+.agents/**/auth*
+.agents/**/cache/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.keystore
+*.jks
+builds/
+artifacts/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.idea/
+# Reference media has no project redistribution license.
+specs/**/evidence/**/reference-*.png
+specs/**/evidence/**/reference-*.jpg
