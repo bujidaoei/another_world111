@@ -165,8 +165,8 @@
     "evidence": [
       "evidence/2026-10-13/delivery.md"
     ],
-    "done": false,
-    "status": "待验证"
+    "done": true,
+    "status": "已验收（安全推送/远端SHA/干净检出）"
   },
   {
     "id": "TASK-008",

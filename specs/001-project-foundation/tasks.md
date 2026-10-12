@@ -17,7 +17,7 @@
 - [x] TASK-004 编写规格、澄清、ADR、规则模型与契约，交付/实现位置 `spec.md`。
 - [x] TASK-005 建立阶段计划、任务、测试和需求质量检查，交付/实现位置 `plan.md`。
 - [x] TASK-006 实现关联验证并执行独立分析和收敛核对，交付/实现位置 `../../tools/verify_spec.py`。
-- [ ] TASK-007 敏感/许可扫描、提交推送并核对远端SHA，交付/实现位置 `evidence/2026-10-13/delivery.md`。
+- [x] TASK-007 敏感/许可扫描、提交推送并核对远端SHA，交付/实现位置 `evidence/2026-10-13/delivery.md`。
 ## 阶段0门槛
 
 - [ ] TASK-008 审阅并冻结下一阶段内容、失败规则、点数解释、数值和资源门槛，交付/实现位置 `decisions.md`。
@@ -88,7 +88,7 @@
 | TASK-004 | REQ-002, REQ-003, NFR-004 | AC-002, AC-003, AC-031 | TASK-002, TASK-003 | TEST-004：全部原文规则保留，已确认与建议不同，凭据不入库 | 已验收（阶段0工件与真实检查） | [记录](evidence/2026-10-13/validation-result.json) |
 | TASK-005 | REQ-002, REQ-003, NFR-003 | AC-002, AC-003, AC-030 | TASK-004 | TEST-005：每项路径/依赖/验证/AC/状态/证据可查 | 已验收（阶段0工件与真实检查） | [记录](evidence/2026-10-13/validation-result.json) |
 | TASK-006 | REQ-002, NFR-004 | AC-002, AC-031 | TASK-005 | TEST-006：关联非零错误拒绝，独立语义审查无未修高风险冲突 | 已验收（阶段0工件与真实检查） | [记录](evidence/2026-10-13/validation-result.json) |
-| TASK-007 | REQ-003, NFR-004 | AC-003, AC-031 | TASK-006 | TEST-007：不含参考截图/凭据，安全Git推送成功且远端SHA一致 | 待验证 | [记录](evidence/2026-10-13/delivery.md) |
+| TASK-007 | REQ-003, NFR-004 | AC-003, AC-031 | TASK-006 | TEST-007：不含参考截图/凭据，安全Git推送成功且远端SHA一致 | 已验收（安全推送/远端SHA/干净检出） | [记录](evidence/2026-10-13/delivery.md) |
 | TASK-008 | REQ-003, REQ-008, REQ-010, REQ-015, REQ-023 | AC-003, AC-008, AC-010, AC-015, AC-023 | TASK-005 | TEST-008：D-002至006有可执行决定，预算/日期不虚构，Android仍独立门槛 | 待决策；阶段0技术资料可交付 | 尚无 |
 | TASK-009 | REQ-001, NFR-001 | AC-001, AC-028 | TASK-008 | TEST-009：正确工程会话、导入/运行、GLB变形/材质和Mobile对照证据 | 未开始 | 尚无 |
 | TASK-010 | NFR-005 | AC-032 | TASK-009 | TEST-010：依所选APK/Gradle路径验证依赖，导出真实成功，签名不入仓库 | 未开始 | 尚无 |
