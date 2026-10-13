@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-13",
+  "engine": "Godot 4.7.2",
+  "dcc": "Blender 5.2.2 LTS",
+  "camera": "3D isometric, native desktop + Android later",
+  "units": "metres; glTF Y-up, forward -Z",
+  "visual_direction": "rain-soaked repair district, warm ochre housings, graphite structure, cyan functional light; enemy amber optics and oxide-red armor",
+  "source_code": "source-assets/scripts/build_asset_family.py",
+  "pbr_palette": {
+    "original": true,
+    "cell_size": 16,
+    "atlas_size": [
+      48,
+      48
+    ],
+    "roles": [
+      "graphite",
+      "steel",
+      "orange",
+      "ivory",
+      "cyan",
+      "amber",
+      "danger",
+      "moss",
+      "concrete"
+    ],
+    "maps": [
+      "basecolor(sRGB)",
+      "metal/rough(non-color)",
+      "emission(sRGB)"
+    ],
+    "static_primitives_per_mesh": 1,
+    "source_uv_preserved": true
+  },
+  "approval": "source geometry validated; in-engine visual/performance/Android acceptance pending",
+  "assets": [
+    {
+      "id": "survivor_robot",
+      "role": "player",
+      "collision": "capsule",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 2424,
+        "vertices": 1302,
+        "meshes": 6,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.5850000381469727,
+            -0.4975000023841858,
+            0.009999984875321388
+          ],
+          "max": [
+            0.5850000381469727,
+            0.35499998927116394,
+            2.3600001335144043
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -0.5850000381469727,
+            0.009999984875321388,
+            -0.35499998927116394
+          ],
+          "max": [
+            0.5850000381469727,
+            2.3600001335144043,
+            0.4975000023841858
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/survivor_robot.glb",
+      "sha256": "7d8835209772e52d2ec008611b0fb17c4bb12b3ea3a27ace3080062c79d11af7",
+      "bytes": 181124,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": [
+        "Idle",
+        "Walk"
+      ]
+    },
+    {
+      "id": "scavenger",
+      "role": "melee_enemy",
+      "collision": "capsule",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 2600,
+        "vertices": 1398,
+        "meshes": 6,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.5850000381469727,
+            -0.4975000023841858,
+            0.009999984875321388
+          ],
+          "max": [
+            0.5850000381469727,
+            0.40474873781204224,
+            2.3600001335144043
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -0.5850000381469727,
+            0.009999984875321388,
+            -0.40474873781204224
+          ],
+          "max": [
+            0.5850000381469727,
+            2.3600001335144043,
+            0.4975000023841858
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/scavenger.glb",
+      "sha256": "a7a63ed298409564393f3a2792b8bd1c1dca6beb3148e572342be5285234a91d",
+      "bytes": 190844,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": [
+        "Idle",
+        "Walk"
+      ]
+    },
+    {
+      "id": "guardian",
+      "role": "melee_enemy",
+      "collision": "capsule",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 3172,
+        "vertices": 1710,
+        "meshes": 6,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -1.0253068208694458,
+            -0.8099998235702515,
+            0.013499966822564602
+          ],
+          "max": [
+            1.0253068208694458,
+            0.5464107394218445,
+            3.5768065452575684
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -1.0253068208694458,
+            0.013499966822564602,
+            -0.5464107394218445
+          ],
+          "max": [
+            1.0253068208694458,
+            3.5768065452575684,
+            0.8099998235702515
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/guardian.glb",
+      "sha256": "564a7c51713a39634c13a3b249233bcf64fc710a521a88e760878964b0c3d011",
+      "bytes": 225048,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": [
+        "Idle",
+        "Walk"
+      ]
+    },
+    {
+      "id": "spitter",
+      "role": "ranged_enemy",
+      "collision": "sphere",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 904,
+        "vertices": 478,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.6100000143051147,
+            -0.4300000071525574,
+            0.05499998852610588
+          ],
+          "max": [
+            0.6100001335144043,
+            0.7124999761581421,
+            1.25
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -0.6100000143051147,
+            0.05499998852610588,
+            -0.7124999761581421
+          ],
+          "max": [
+            0.6100001335144043,
+            1.25,
+            0.4300000071525574
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/spitter.glb",
+      "sha256": "2e3630cc78ff8be4ded3571cc36ce9f4ee54f97384fdd1c4b0defa60cc5ecb96",
+      "bytes": 65532,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": []
+    },
+    {
+      "id": "lightning_rifle_t1",
+      "role": "weapon_t1",
+      "collision": "none",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 812,
+        "vertices": 432,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.16249990463256836,
+            -0.6399999260902405,
+            -0.20348495244979858
+          ],
+          "max": [
+            0.16249990463256836,
+            0.8200000524520874,
+            0.5200000405311584
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -0.16249990463256836,
+            -0.20348495244979858,
+            -0.8200000524520874
+          ],
+          "max": [
+            0.16249990463256836,
+            0.5200000405311584,
+            0.6399999260902405
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/lightning_rifle_t1.glb",
+      "sha256": "1569ffb15b3399900f4653f3b43f4086c0fd16e817769c1c1cbb15cdabf19aaf",
+      "bytes": 59956,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": []
+    },
+    {
+      "id": "lightning_rifle_t2",
+      "role": "weapon_t2",
+      "collision": "none",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 1084,
+        "vertices": 576,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.26999998092651367,
+            -0.64000004529953,
+            -0.20348498225212097
+          ],
+          "max": [
+            0.26999998092651367,
+            0.8199999928474426,
+            0.5199999809265137
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -0.26999998092651367,
+            -0.20348498225212097,
+            -0.8199999928474426
+          ],
+          "max": [
+            0.26999998092651367,
+            0.5199999809265137,
+            0.64000004529953
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/lightning_rifle_t2.glb",
+      "sha256": "5a74c300c757bca36db4b0f050e8532d901190f1e134b2f7c23129a3e889317e",
+      "bytes": 76988,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": []
+    },
+    {
+      "id": "conductive_anchor",
+      "role": "conductive_gameplay_anchor",
+      "collision": "cylinder",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 784,
+        "vertices": 414,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.41611766815185547,
+            -0.4760511815547943,
+            -0.01596791297197342
+          ],
+          "max": [
+            0.5450000762939453,
+            0.4760511815547943,
+            1.0499999523162842
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -0.41611766815185547,
+            -0.01596791297197342,
+            -0.4760511815547943
+          ],
+          "max": [
+            0.5450000762939453,
+            1.0499999523162842,
+            0.4760511815547943
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/conductive_anchor.glb",
+      "sha256": "7d0e235ed5befa7054c04839399351136934ba077a5e1e2bdfd30d74aba5e3e4",
+      "bytes": 56848,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": []
+    },
+    {
+      "id": "cargo_crate",
+      "role": "resource_container",
+      "collision": "box",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 408,
+        "vertices": 224,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.6400001049041748,
+            -0.4500000476837158,
+            0.0
+          ],
+          "max": [
+            0.6399998664855957,
+            0.5174999237060547,
+            1.0199999809265137
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -0.6400001049041748,
+            0.0,
+            -0.5174999237060547
+          ],
+          "max": [
+            0.6399998664855957,
+            1.0199999809265137,
+            0.4500000476837158
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/cargo_crate.glb",
+      "sha256": "17c5bbcbe57a8f0ad6ed8eb02ae413c7c16383557ab678578a1671b4aec5f05b",
+      "bytes": 34344,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": []
+    },
+    {
+      "id": "barricade",
+      "role": "cover_boundary",
+      "collision": "box",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 280,
+        "vertices": 160,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -1.274999976158142,
+            -0.34999990463256836,
+            0.0
+          ],
+          "max": [
+            1.274999976158142,
+            0.34999990463256836,
+            1.3599998950958252
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -1.274999976158142,
+            0.0,
+            -0.34999990463256836
+          ],
+          "max": [
+            1.274999976158142,
+            1.3599998950958252,
+            0.34999990463256836
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/barricade.glb",
+      "sha256": "a9211ad597bc31ff878b478fc1a2886a5a78f0d7319aaad91cec052a4c9e1fb1",
+      "bytes": 24328,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": []
+    },
+    {
+      "id": "pump_station",
+      "role": "camp_pump_workshop",
+      "collision": "box_combination",
+      "status": "authored_prototype",
+      "geometry": {
+        "triangles": 2288,
+        "vertices": 1262,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -3.6300010681152344,
+            -2.40000057220459,
+            -7.434491635649465e-07
+          ],
+          "max": [
+            3.630000114440918,
+            2.619999885559082,
+            5.159999370574951
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0,
+        "bounds_godot_m": {
+          "min": [
+            -3.6300010681152344,
+            -7.434491635649465e-07,
+            -2.619999885559082
+          ],
+          "max": [
+            3.630000114440918,
+            5.159999370574951,
+            2.40000057220459
+          ]
+        },
+        "bounds_method": "actual transformed mesh vertices, root translation removed, imported root scale retained; frame 1"
+      },
+      "runtime_file": "game/assets/models/pump_station.glb",
+      "sha256": "48b97292e3b4a2418cfa4c5683765d6646afffba3445b36206b83e62f3680987",
+      "bytes": 161232,
+      "source": "source-assets/blender/asset_family.blend",
+      "license": "original project-authored geometry and materials; no third-party source assets",
+      "clips_expected": [],
+      "walkable_intent": "closed workshop exterior, no traversable interior or open door; existing visual door closed",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            7.25,
+            3.6,
+            4.8
+          ],
+          "local_offset": [
+            0,
+            1.8,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

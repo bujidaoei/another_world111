@@ -1,0 +1,19 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Another World Development
+Signer #1 certificate SHA-256 digest: 4229fd56cc3269262d8b50583492e54865d19e6269556ad2e5dcc0b3f777209a
+Signer #1 certificate SHA-1 digest: c33629fda514016260639c3e667df0c38bf586d3
+Signer #1 certificate MD5 digest: 1243248e97b201bba04464980d07f1de
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 95bebfd369e508ce457fe35473cb217ef57263e7f3e82f5bac791dd652997eb7
+Signer #1 public key SHA-1 digest: be48ede239d2c9235a69f5b2dfb62b3d9c8b7f19
+Signer #1 public key MD5 digest: b22e491184b1769102ebdc0c9be6e929
+
+

@@ -1,0 +1,18 @@
+{
+  "1": {"class_type": "CheckpointLoaderSimple", "inputs": {"ckpt_name": "aw_sd_v1_4.ckpt"}},
+  "2": {"class_type": "CLIPTextEncode", "inputs": {"clip": ["1", 1], "text": "top down flat photographic material texture of dark weathered concrete industrial courtyard paving, damp charcoal gray fine rough grain, very subtle olive staining, small rust specks, evenly lit diffuse overcast light, uniform scale, flat surface fills entire image, no objects, no perspective, no shadows, no text"}},
+  "3": {"class_type": "CLIPTextEncode", "inputs": {"clip": ["1", 1], "text": "objects, letters, logo, watermark, figures, character, buildings, perspective, strong lighting, highlight, reflections, border, crack canyon, stones, cobblestones"}},
+  "4": {"class_type": "EmptyLatentImage", "inputs": {"width": 512, "height": 512, "batch_size": 1}},
+  "5": {"class_type": "KSampler", "inputs": {"model": ["1", 0], "positive": ["2", 0], "negative": ["3", 0], "latent_image": ["4", 0], "seed": 10132026, "steps": 24, "cfg": 6.0, "sampler_name": "euler", "scheduler": "normal", "denoise": 1.0}},
+  "6": {"class_type": "VAEDecode", "inputs": {"samples": ["5", 0], "vae": ["1", 2]}},
+  "7": {"class_type": "SaveImage", "inputs": {"images": ["6", 0], "filename_prefix": "another_world/wet_concrete_study"}},
+  "8": {"class_type": "ImageFlip", "inputs": {"image": ["6", 0], "flip_method": "y-axis: horizontally"}},
+  "9": {"class_type": "ImageBlend", "inputs": {"image1": ["6", 0], "image2": ["8", 0], "blend_factor": 0.5, "blend_mode": "normal"}},
+  "10": {"class_type": "ImageFlip", "inputs": {"image": ["9", 0], "flip_method": "x-axis: vertically"}},
+  "11": {"class_type": "ImageBlend", "inputs": {"image1": ["9", 0], "image2": ["10", 0], "blend_factor": 0.5, "blend_mode": "normal"}},
+  "12": {"class_type": "SaveImage", "inputs": {"images": ["11", 0], "filename_prefix": "another_world/wet_concrete_tile"}},
+  "13": {"class_type": "ImageToMask", "inputs": {"image": ["11", 0], "channel": "green"}},
+  "14": {"class_type": "MaskToImage", "inputs": {"mask": ["13", 0]}},
+  "15": {"class_type": "AdjustBrightness", "inputs": {"images": ["14", 0], "factor": 0.78}},
+  "16": {"class_type": "SaveImage", "inputs": {"images": ["15", 0], "filename_prefix": "another_world/wet_concrete_albedo"}}
+}

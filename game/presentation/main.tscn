@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://buso6ys37pt70"]
+
+[ext_resource type="Script" uid="uid://balatop832lx8" path="res://presentation/game_session.gd" id="1_session"]
+[ext_resource type="Script" uid="uid://boac11s8834il" path="res://presentation/weather_emitter.gd" id="2_y6j56"]
+[ext_resource type="Material" uid="uid://hdnkr2wmk1xj" path="res://presentation/rain_streak.tres" id="3_dp4la"]
+
+[node name="AnotherWorld" type="Node3D" unique_id=1176445585]
+script = ExtResource("1_session")
+
+[node name="Rain" type="MultiMeshInstance3D" parent="." unique_id=2057636954]
+process_mode = 1
+script = ExtResource("2_y6j56")
+rain_material = ExtResource("3_dp4la")

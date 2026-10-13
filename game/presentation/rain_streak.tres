@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://hdnkr2wmk1xj"]
+
+[ext_resource type="Shader" uid="uid://de4g1mo6fxvqx" path="res://presentation/rain_streak.gdshader" id="1_l82v3"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_l82v3")
+shader_parameter/weather_time = 0.0
+shader_parameter/flight_height = 9.0
+shader_parameter/minimum_speed = 14.0
+shader_parameter/maximum_speed = 18.0
+shader_parameter/wind = Vector2(0.4, 0.15)
+shader_parameter/rain_color = Color(0.45, 0.6, 0.64, 0.3)

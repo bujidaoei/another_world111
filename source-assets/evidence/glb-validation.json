@@ -1,0 +1,434 @@
+{
+  "schema": 1,
+  "date": "2026-10-13",
+  "assets": [
+    {
+      "id": "survivor_robot",
+      "container": "glTF 2.0 GLB",
+      "sha256": "7d8835209772e52d2ec008611b0fb17c4bb12b3ea3a27ace3080062c79d11af7",
+      "bytes": 181124,
+      "nodes": 13,
+      "meshes": 6,
+      "primitives": 6,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "animation_channels": {
+        "Idle": 2,
+        "Walk": 4
+      },
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 2424,
+        "vertices": 1302,
+        "meshes": 6,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.5850000381469727,
+            -0.4975000023841858,
+            0.009999983012676239
+          ],
+          "max": [
+            0.5850000381469727,
+            0.5151335000991821,
+            2.4564218521118164
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "scavenger",
+      "container": "glTF 2.0 GLB",
+      "sha256": "a7a63ed298409564393f3a2792b8bd1c1dca6beb3148e572342be5285234a91d",
+      "bytes": 190844,
+      "nodes": 13,
+      "meshes": 6,
+      "primitives": 6,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "animation_channels": {
+        "Idle": 2,
+        "Walk": 4
+      },
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 2600,
+        "vertices": 1398,
+        "meshes": 6,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.5850000381469727,
+            -0.4975000023841858,
+            0.009999983012676239
+          ],
+          "max": [
+            0.5850000977516174,
+            0.6897999048233032,
+            2.4564218521118164
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "guardian",
+      "container": "glTF 2.0 GLB",
+      "sha256": "564a7c51713a39634c13a3b249233bcf64fc710a521a88e760878964b0c3d011",
+      "bytes": 225048,
+      "nodes": 13,
+      "meshes": 6,
+      "primitives": 6,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "animation_channels": {
+        "Idle": 2,
+        "Walk": 4
+      },
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 3172,
+        "vertices": 1710,
+        "meshes": 6,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -1.0253068208694458,
+            -0.809999942779541,
+            0.013499965891242027
+          ],
+          "max": [
+            1.0253068208694458,
+            0.9312298893928528,
+            3.5768070220947266
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "spitter",
+      "container": "glTF 2.0 GLB",
+      "sha256": "2e3630cc78ff8be4ded3571cc36ce9f4ee54f97384fdd1c4b0defa60cc5ecb96",
+      "bytes": 65532,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 904,
+        "vertices": 478,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.6100000143051147,
+            -0.43000003695487976,
+            0.05499996617436409
+          ],
+          "max": [
+            0.6100000143051147,
+            0.7125000357627869,
+            1.25
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "lightning_rifle_t1",
+      "container": "glTF 2.0 GLB",
+      "sha256": "1569ffb15b3399900f4653f3b43f4086c0fd16e817769c1c1cbb15cdabf19aaf",
+      "bytes": 59956,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 812,
+        "vertices": 432,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.16249999403953552,
+            -0.6399999260902405,
+            -0.20348498225212097
+          ],
+          "max": [
+            0.16249999403953552,
+            0.8200000524520874,
+            0.5200000405311584
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "lightning_rifle_t2",
+      "container": "glTF 2.0 GLB",
+      "sha256": "5a74c300c757bca36db4b0f050e8532d901190f1e134b2f7c23129a3e889317e",
+      "bytes": 76988,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 1084,
+        "vertices": 576,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.2700001001358032,
+            -0.64000004529953,
+            -0.20348510146141052
+          ],
+          "max": [
+            0.27000004053115845,
+            0.8200000524520874,
+            0.5200001001358032
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "conductive_anchor",
+      "container": "glTF 2.0 GLB",
+      "sha256": "7d0e235ed5befa7054c04839399351136934ba077a5e1e2bdfd30d74aba5e3e4",
+      "bytes": 56848,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 784,
+        "vertices": 414,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.41611769795417786,
+            -0.4760511815547943,
+            -0.01596791297197342
+          ],
+          "max": [
+            0.5450000166893005,
+            0.4760511815547943,
+            1.0499999523162842
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "cargo_crate",
+      "container": "glTF 2.0 GLB",
+      "sha256": "17c5bbcbe57a8f0ad6ed8eb02ae413c7c16383557ab678578a1671b4aec5f05b",
+      "bytes": 34344,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 408,
+        "vertices": 224,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -0.6399999856948853,
+            -0.44999998807907104,
+            0.0
+          ],
+          "max": [
+            0.6399999260902405,
+            0.5175000429153442,
+            1.0199999809265137
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "barricade",
+      "container": "glTF 2.0 GLB",
+      "sha256": "a9211ad597bc31ff878b478fc1a2886a5a78f0d7319aaad91cec052a4c9e1fb1",
+      "bytes": 24328,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 280,
+        "vertices": 160,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -1.274999976158142,
+            -0.3499999940395355,
+            0.0
+          ],
+          "max": [
+            1.274999976158142,
+            0.3499999940395355,
+            1.3599998950958252
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "pump_station",
+      "container": "glTF 2.0 GLB",
+      "sha256": "48b97292e3b4a2418cfa4c5683765d6646afffba3445b36206b83e62f3680987",
+      "bytes": 161232,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 2288,
+        "vertices": 1262,
+        "meshes": 1,
+        "materials": [
+          "AW_PalettePBR"
+        ],
+        "bounds_blender_m": {
+          "min": [
+            -4.361395359039307,
+            -2.400001287460327,
+            -1.5304573774337769
+          ],
+          "max": [
+            4.390709400177002,
+            2.6200010776519775,
+            5.504704475402832
+          ]
+        },
+        "nonfinite_vertices": 0,
+        "degenerate_triangles": 0
+      },
+      "in_engine_acceptance": "pending"
+    }
+  ]
+}

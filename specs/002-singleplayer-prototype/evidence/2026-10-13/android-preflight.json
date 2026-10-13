@@ -1,0 +1,56 @@
+{
+  "preflight_commands_ok": true,
+  "captured_utc": "2026-10-13T00:32:19.0757409Z",
+  "sdk_directory": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk",
+  "jdk_directory": "D:\\bugu_software\\ai-game-toolchain\\java\\jdk-17.0.20.1+1",
+  "godot_template_version": "4.7.2.stable",
+  "template_files": [
+    {
+      "name": "android_debug.apk",
+      "bytes": 127260725,
+      "sha256": "59E0073F0FA59F552684A861D8F4266B0B34B488A140D6657EAC7DD70D1A0A0D"
+    },
+    {
+      "name": "android_release.apk",
+      "bytes": 104803333,
+      "sha256": "6D1BB2CFA126A1B1C87E064A35B3CBD181BEF0EC784DEC1EFD1D64DFFA8BE6CB"
+    },
+    {
+      "name": "android_source.zip",
+      "bytes": 214418211,
+      "sha256": "A15416B528EFB0A19A7D187E4D9F4E5336D0689144B111329FB4BD12C4447AD3"
+    }
+  ],
+  "build_tools": [
+    "35.0.0",
+    "36.1.0"
+  ],
+  "platforms": [
+    "android-33",
+    "android-35",
+    "android-36",
+    "android-36.1"
+  ],
+  "ndk": [
+    "28.2.13676358"
+  ],
+  "cmake": [
+    "3.22.1"
+  ],
+  "command_line_tools": [
+    "latest"
+  ],
+  "recommended_components_missing": [
+    "build-tools/35.0.1",
+    "cmake/3.10.2.4988404",
+    "ndk/28.1.13356709"
+  ],
+  "authorized_devices": 0,
+  "physical_authorized_devices": 0,
+  "apk_build_attempted": false,
+  "device_acceptance_performed": false,
+  "touch_and_device_performance_verified": false,
+  "next_build_policy": "Isolated editor settings and staging; debug signed development APK only. No storefront publishing or real-device acceptance without actual evidence.",
+  "version_gap_note": "Recommended exact versions differ from installed alternatives; this preflight does not claim built-in APK export fails or succeeds. Verify with a real isolated export.",
+  "documentation": "https://docs.godotengine.org/en/4.7/tutorials/export/exporting_for_android.html"
+}

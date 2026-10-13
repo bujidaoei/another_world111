@@ -1,0 +1,11 @@
+{
+	"audio_driver": "Dummy (technical mixer probe)",
+	"captured_frames": 81920,
+	"display_server": "headless",
+	"failed": 0,
+	"issues": [],
+	"mixed_peak": 0.592208802700043,
+	"mixed_rms": 0.17118312252853,
+	"passed": 54,
+	"subjective_listening": "not performed"
+}

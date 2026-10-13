@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "apk_sha256": "299d59b948428f462b3903d3ea7fa548e0698e89251e5c2e4b0156a25bd05a0f",
+  "apk_bytes": 30439166,
+  "zip_files": 368,
+  "godot_asset_files": 270,
+  "all_zip_crc_valid": true,
+  "native_libraries": [
+    "lib/arm64-v8a/libc++_shared.so",
+    "lib/arm64-v8a/libgodot_android.so"
+  ],
+  "debug_helper_test_content": [],
+  "signing_keys_packed": false
+}

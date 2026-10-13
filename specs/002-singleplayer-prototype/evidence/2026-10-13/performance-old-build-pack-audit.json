@@ -1,0 +1,1599 @@
+{
+  "ok": true,
+  "production_pck_sha256": "d397cfbb434bbc4a6c5da6fc270142a836b12c128d5553c87c8cf1967e8b3694",
+  "qa_pck_sha256": "f100bd0cd992a6c41a9a6bb99006e13da12c7dde3f9ce9d019e10abb8f510d32",
+  "production_resource_count": 265,
+  "unchanged_resource_count": 263,
+  "modified_paths": [
+    ".godot/global_script_class_cache.cfg",
+    "project.binary"
+  ],
+  "modified_settings": [
+    "application/run/main_loop_type",
+    "application/run/main_scene"
+  ],
+  "gameplay_resources_byte_identical": true,
+  "debug_test_paths": [],
+  "measurement_scripts_packed": false,
+  "external_startup_scene": "D:/bugu_projects/another_world/artifacts/performance/7194fe1c0fca423e85f991211802675b/external/qa-main.tscn",
+  "unchanged_resources": [
+    {
+      "path": ".godot/exported/133200997/export-1c7ced1d733f75dbde915a77f14685d1-main.scn",
+      "bytes": 5275,
+      "md5": "cad75cd0004fe10dfd8ac22998ec5202",
+      "sha256": "a3bd1d0a3a7879c045c59f1c45335aa2454314aa46bcc59524cd0462ac2a6470"
+    },
+    {
+      "path": ".godot/exported/133200997/export-4ee30a63b0fab74ecb49fee148d31bb6-wet_surface.res",
+      "bytes": 464,
+      "md5": "2edbd6568207e8734276fded3166057c",
+      "sha256": "e0e4a1d0e131fa44780cba41c86f3950d80f802781e5ceae542db4b6c58fa91f"
+    },
+    {
+      "path": ".godot/exported/133200997/export-da33f86b25c174a235f0969a13373ff0-courtyard_floor.res",
+      "bytes": 3038,
+      "md5": "11de0a5b3c3fe5b0c4d73f9d5bfae649",
+      "sha256": "2e970035b1f4eecd961a727b6557414923e7c88cf0bad78e9368810460e9a431"
+    },
+    {
+      "path": ".godot/imported/anchor.wav-b2a1079e490442b1cec5b8530069eff6.sample",
+      "bytes": 11107,
+      "md5": "7f477f28bbb7ec6998f8f320c61e8e54",
+      "sha256": "36252ed23cf7ea23716a8ffdd28e4cb4364925f6cfdb0989b94b7f4a6950f11d"
+    },
+    {
+      "path": ".godot/imported/barricade.glb-e7bdccc3a57a0b09122dd725c249994b.scn",
+      "bytes": 7660,
+      "md5": "309ae081e65a837e33d7cd17a619bb82",
+      "sha256": "7adaf8d6679965aac355598f05a5097b09d1c61bcb0a7ee62a0beb6a3bdbb6dc"
+    },
+    {
+      "path": ".godot/imported/barricade_palette_basecolor.png-fb6c713a1a5c90b98715c9c0082b6b18.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/barricade_palette_emission.png-4b192933bed09e9d41adbe735b83c86c.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/barricade_palette_metal_rough.png-696840003368dd50c6f19a16981d0690.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/cargo_crate.glb-a069a8bf93d1b98e26ff4196b9630444.scn",
+      "bytes": 11105,
+      "md5": "ec009fd70dd7769d319b965e6c088905",
+      "sha256": "aa1d09741a0d93b8aa774d1360dbc4b710d7b892d21f76c196f0d9649447cd15"
+    },
+    {
+      "path": ".godot/imported/cargo_crate_palette_basecolor.png-9ee8bb6356ca5a207ed471b9496fb814.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/cargo_crate_palette_emission.png-f4ca179210aa5fd0cddec0a36d079556.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/cargo_crate_palette_metal_rough.png-9790d7f03f720198549c7b720157cf77.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/collect.wav-70a75dd3409197e137d506421ae3ad3b.sample",
+      "bytes": 10203,
+      "md5": "d2345337975291a04413bb90d2f728b1",
+      "sha256": "6dbb4ed0befd4f7b91d72feafb3f51f62550561bc47476fc7a007c3292fd6a2c"
+    },
+    {
+      "path": ".godot/imported/conductive_anchor.glb-5f51e6654b11d28f90454a23ddfc7cad.scn",
+      "bytes": 20129,
+      "md5": "2dc98cebfa0556a57140a2bf01adfe62",
+      "sha256": "a4de68ef7b566a9bd3458fc3a0a6bb87ef0a1b50029c148a99dc589a240a0b96"
+    },
+    {
+      "path": ".godot/imported/conductive_anchor_palette_basecolor.png-9f9c8b44afe043696a9b3d43e5da5608.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/conductive_anchor_palette_emission.png-3c19b039a118d003402635d4f34f884d.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/conductive_anchor_palette_metal_rough.png-05cc828f5aeb3dc6f960810690168b14.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/conduit_gateway.glb-768010508faf06607b5a69316d6ed10e.scn",
+      "bytes": 41106,
+      "md5": "6a7c05729cf949c3721022e5e5e381a3",
+      "sha256": "7f20fff11670182368e7373b1c87fafb8666f342849d79a59f44e18be9df3c97"
+    },
+    {
+      "path": ".godot/imported/conduit_gateway_palette_basecolor.png-309f1883c228013a2dc2f5a71df213cb.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/conduit_gateway_palette_emission.png-ff11d2b8bf456228d4726981b2c5384f.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/conduit_gateway_palette_metal_rough.png-12f9afe0b4cfcbad27c4ea32ac2c92eb.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/confirm.wav-f384b89b03be0f4c54dea669aece985b.sample",
+      "bytes": 3251,
+      "md5": "14b605acb68be4c422f8e40f874ee1f9",
+      "sha256": "d3536c48892c4a475acc12fbc373b5d0026ac5b840b5111567b699087a0edc93"
+    },
+    {
+      "path": ".godot/imported/district_facade.glb-ca18d517efb624eb111dbb777dc5d205.scn",
+      "bytes": 41990,
+      "md5": "763e45be95883f85a35200d7f0c02f3e",
+      "sha256": "c38afe10631c03cea2ceddb2394a8abcceb74dc766925367254c35cbb4c69d96"
+    },
+    {
+      "path": ".godot/imported/district_facade_palette_basecolor.png-f420e2f1433d99de8e740c04c431a481.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/district_facade_palette_emission.png-b42dc97c8a8b2b438bc87e2354123b4d.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/district_facade_palette_metal_rough.png-93bb6a867bcf62d7b52aa0fd1d2b0482.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/dodge.wav-9186ee525247cf03bb2e8ec8df89e2e2.sample",
+      "bytes": 5747,
+      "md5": "f6bebce1b00ebaaccd40738191e8143e",
+      "sha256": "f562f41ef755a8a939e41c60a16c7f8cb6d8a5b36db54b5a472657e214713b2c"
+    },
+    {
+      "path": ".godot/imported/drain_grate.glb-bba5eceeeb5df954ad1b7d18b6845af5.scn",
+      "bytes": 17027,
+      "md5": "6f0e596d0d894cd17ba2d729f67be4fd",
+      "sha256": "ff2a58414f5908c96d692b0c5f24691b79d29a08f9a207e183bb43c7a2c342db"
+    },
+    {
+      "path": ".godot/imported/drain_grate_palette_basecolor.png-adcff8fd42cfad8004d292eefa97c69a.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/drain_grate_palette_emission.png-1cced3651d7efe5ecf7feb46d9af764f.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/drain_grate_palette_metal_rough.png-92b81342a1555a3d845ed613125e788e.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/electric_1.wav-9523c3cfe9c9d7c7b92c0f2f21cbeb95.sample",
+      "bytes": 6099,
+      "md5": "19b8366888445dd93a25e6ce1c2bf68d",
+      "sha256": "d209253e4ecc7800819b0d07514d33511c20992fee8ab30951913b79e7a93614"
+    },
+    {
+      "path": ".godot/imported/electric_2.wav-5ce9c4147c8c045a9d584f969f2ee508.sample",
+      "bytes": 6099,
+      "md5": "fc59051c7b9d1a9eeeb21ed2f0f28f2d",
+      "sha256": "5e27d5c9dc93339130e7e05b0860267057163342b6ba6000f60ca0253e28b3fc"
+    },
+    {
+      "path": ".godot/imported/failure.wav-2ed9219c0985d3bf32d69b009e716b99.sample",
+      "bytes": 32515,
+      "md5": "6ba643016a83fae6e0e5fb863d0aa9fa",
+      "sha256": "3bb2b194da55853ee6eebca8442e1c5bb592bfaf73ada9f444f75d2ad0de1223"
+    },
+    {
+      "path": ".godot/imported/guardian.glb-8e0281d95e975b783d034b5055c57bf0.scn",
+      "bytes": 86768,
+      "md5": "990c97956fbb8bb962a767f127955174",
+      "sha256": "11b63d4203feee6d7a8c6a5a7b8aa5ef37aac3ddc1edbe7a8963d630dbacc0b3"
+    },
+    {
+      "path": ".godot/imported/guardian_palette_basecolor.png-6fa57b60317886fa3cf55a202796cbe5.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/guardian_palette_emission.png-9b96c9c24727c0d917ec31028fc92640.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/guardian_palette_metal_rough.png-512b48ab951fb214e35364c9c13282c2.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/hurt.wav-e638edfaf88190ba3ffee0adc26b7375.sample",
+      "bytes": 7531,
+      "md5": "4e6dea5509501f8452b666c4f8f38fc4",
+      "sha256": "cd7a33940c428176e7f151c0551bd97b7c5c86f83a7e0fdab867648f5be47bb5"
+    },
+    {
+      "path": ".godot/imported/impact_1.wav-335389e3062064da61e1764338bb5318.sample",
+      "bytes": 4315,
+      "md5": "f0ec127d1cede14be6511adc29459fbe",
+      "sha256": "c28e7f39bac743fe5c5fe33c5b1e21665cc38b4dae9f2419cf882a08aa084de0"
+    },
+    {
+      "path": ".godot/imported/impact_2.wav-2cfe89bcbd136db8e97e2ed13640d620.sample",
+      "bytes": 4315,
+      "md5": "5554820231ae468ad1a87979d607c91d",
+      "sha256": "7133859a78545ecae847477716c74d21b57cdcc2ab623e05626c0c56c8c8cad3"
+    },
+    {
+      "path": ".godot/imported/industrial_lamp.glb-5b0131471fde62833bee1f99053ee432.scn",
+      "bytes": 12726,
+      "md5": "3fdb83d9b6287df075c5c10c7b0097b3",
+      "sha256": "edd57aa8a0f074622ea687ea4091f4ce55956a6adb42a5404c26b50ece892780"
+    },
+    {
+      "path": ".godot/imported/industrial_lamp_palette_basecolor.png-a937662b3e9893d4f652be1187957825.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/industrial_lamp_palette_emission.png-1a7f68d9735b7a9cc24cba9fe53a9f26.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/industrial_lamp_palette_metal_rough.png-90322d6447eeaeec1c7351edefe8dfc8.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/lightning_rifle_t1.glb-c3c8412d2f22779e1dd313970209f5c6.scn",
+      "bytes": 20324,
+      "md5": "5f7087857c06a75fbefc7aac35488975",
+      "sha256": "b017fa9d91874d40c80bf237dae8004c08ca0843a7c35084d606dc23364363c7"
+    },
+    {
+      "path": ".godot/imported/lightning_rifle_t1_palette_basecolor.png-0361a7466786be4d7b7b2f35776fdc30.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/lightning_rifle_t1_palette_emission.png-403fb2fd87e0c5710587100f468aee20.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/lightning_rifle_t1_palette_metal_rough.png-278e74b28ee65906d6f8e0a265f2e6d6.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/lightning_rifle_t2.glb-f10d2580e9ea11dee6611a06f29fc7d6.scn",
+      "bytes": 28813,
+      "md5": "877fb4becb3a29d8b5b0059787f03861",
+      "sha256": "0b5d1bebf2a7c856d0ff5f2b547c0d459764ec1294c2859324791124f572b0ed"
+    },
+    {
+      "path": ".godot/imported/lightning_rifle_t2_palette_basecolor.png-2575daa804a661e9d0c434aa0b367c75.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/lightning_rifle_t2_palette_emission.png-cbc1f9867a6d9a681276668b271714b4.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/lightning_rifle_t2_palette_metal_rough.png-04f9137e03c6fe146cd240143ed9b426.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/maintenance_shelter.glb-ecf5b2e7151814ecc6074807f51557ec.scn",
+      "bytes": 29668,
+      "md5": "f82a16075ccf772dbaf5f103a2310fb6",
+      "sha256": "cc0d8698dd1b88e27dbae204d48206c2977f6aea8ff86863bf158e5139bbcf1d"
+    },
+    {
+      "path": ".godot/imported/maintenance_shelter_palette_basecolor.png-392130879de19af31ce92458ff7aceb7.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/maintenance_shelter_palette_emission.png-3a8e6ea9b4dc0c33a0c833fdbf322d4a.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/maintenance_shelter_palette_metal_rough.png-3405eb38f7f2d188270621c39b1bfd4c.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/music_base.wav-b320edb5f05fc8d6d6b00800c9054e37.sample",
+      "bytes": 428707,
+      "md5": "29abf75f399c1cf12c50604d31225b36",
+      "sha256": "c6ff8883ff5525ade32e49dcf7970bb99aa10bac75831e20bdb979e2bbf5afa2"
+    },
+    {
+      "path": ".godot/imported/music_combat.wav-92c6e6eed47e69d31b01b7fdc4ee0a7e.sample",
+      "bytes": 428707,
+      "md5": "c916a52d05d789116daed02de08dcb98",
+      "sha256": "c73abb280006c750d51655a368db6d7219dd8921097735cf37f53a27da50c9be"
+    },
+    {
+      "path": ".godot/imported/paving_tiles.glb-c4ffa677c047583c0c123e911b69b345.scn",
+      "bytes": 7062,
+      "md5": "d453d68c6655b464041435f5937147ea",
+      "sha256": "8bf14f1d3ae3f634d09e3738dfc54113bbff8f4af14ef427345541841e48692a"
+    },
+    {
+      "path": ".godot/imported/paving_tiles_palette_basecolor.png-4bcfea99b6522c67a35fd3f4c102b954.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/paving_tiles_palette_emission.png-4c5cc6d7011baf66801f18a316d35bdc.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/paving_tiles_palette_metal_rough.png-ab45cd70b795accf6dbaceeb8eff2f1a.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/pipe_run.glb-2357867f3b4011b0ef9ba3137862b8c5.scn",
+      "bytes": 48826,
+      "md5": "87790049eb1e338ce2f17122768cf29e",
+      "sha256": "21c64f03c4931778c868b23a194b21e0bb1a412f21e559b6169ae87a8b589d85"
+    },
+    {
+      "path": ".godot/imported/pipe_run_palette_basecolor.png-04e2492ce1351b0e2c7a6419c7911683.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/pipe_run_palette_emission.png-58f61fc275bb2f4ee848db88736a5eb8.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/pipe_run_palette_metal_rough.png-8b074744467ae35236b0b1b5bce64701.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/planter_overgrowth.glb-c6ee1a79ce6d69651eaae4a4f8807f8f.scn",
+      "bytes": 25796,
+      "md5": "20e599dbcc00ede830ffd2c7d2f43aab",
+      "sha256": "e21e356e862cc7bc2f35f5dd586d7ef14bba3ea07344581d10e076611a062ed4"
+    },
+    {
+      "path": ".godot/imported/planter_overgrowth_palette_basecolor.png-d731c157f1af969dab3d5cd52ba73e1b.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/planter_overgrowth_palette_emission.png-70fa7e7a565d81f682323da18d4f44bb.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/planter_overgrowth_palette_metal_rough.png-d72638ae01084f6ae6139adfd174c1fd.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/pulse.wav-2767f1702d87630aca6f39d522402577.sample",
+      "bytes": 13779,
+      "md5": "f60d133107477934cb0dedd7cb6a7b74",
+      "sha256": "fb33c321177b70ea929f456c2ca8cce9a26151a9444c510f918f74313079b14b"
+    },
+    {
+      "path": ".godot/imported/pump_station.glb-902815651c40fc500106d2a4057a8eaf.scn",
+      "bytes": 68994,
+      "md5": "f5b2eef57b5ca2fa82a2628ffece0a78",
+      "sha256": "b824472d0557186d148f3c0a4822238395029bc5f3d10ae0a9abfa45cc9b25d7"
+    },
+    {
+      "path": ".godot/imported/pump_station_palette_basecolor.png-b488d86fcaa6a744cf55a6aa2a22741b.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/pump_station_palette_emission.png-c97d815298dbcaa1691690ec9c955395.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/pump_station_palette_metal_rough.png-6be4b3ee9f755d8486c93bcb7ad91c0a.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/rain_loop.wav-b0cbc8f6cc9d99c5ae1558c1078daad6.sample",
+      "bytes": 214555,
+      "md5": "c4d884318e6f95353490affdb690dc13",
+      "sha256": "b54216997fb8179f5319147448bcf51b03ef518641b2067c71c87535850ba828"
+    },
+    {
+      "path": ".godot/imported/reservoir_tank.glb-783d69ef35bad9787c76b13ccd68509d.scn",
+      "bytes": 55108,
+      "md5": "b3144431020bab6bc377488a1076e638",
+      "sha256": "a6fc943af411f395334f6b9408e000729b19a7a4551d528e47b756ec181f8e7c"
+    },
+    {
+      "path": ".godot/imported/reservoir_tank_palette_basecolor.png-e5f51483e7abedf4a28090321597069d.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/reservoir_tank_palette_emission.png-c3ca67781792d8187690c3b3a24f38da.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/reservoir_tank_palette_metal_rough.png-ff227ed279eabe8cd121818f04b0ffae.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/ruin_wall_broken.glb-817eb1a6ee1e2bc924461b3a13b01491.scn",
+      "bytes": 37086,
+      "md5": "95d12cf7fa639e45c835335d89e8714e",
+      "sha256": "b66bc00744d6e69c9a08be9e9e5782c988b432cc8c3e6ed80b95dc9cc423229b"
+    },
+    {
+      "path": ".godot/imported/ruin_wall_broken_palette_basecolor.png-5998740237a4df078330f84ed3c0551f.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/ruin_wall_broken_palette_emission.png-54169112d8cabdc09fde7498c6108d3f.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/ruin_wall_broken_palette_metal_rough.png-326079d85eaefbed2d5652a8d7882a2c.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/ruin_wall_full.glb-334ff3bf93ea5da41edf02b852fc06a6.scn",
+      "bytes": 36974,
+      "md5": "9c92b494d2e02671722f2dadb8055d88",
+      "sha256": "a1d3de0d1caa8ea81d97f2b5801cd146467cf72233b7d80a1a81a4a7cb9e8a30"
+    },
+    {
+      "path": ".godot/imported/ruin_wall_full_palette_basecolor.png-e0d95d88018d6a426e77ad2fd54bd1b2.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/ruin_wall_full_palette_emission.png-65b2a9e18780a1e8cdfae19137ce72f2.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/ruin_wall_full_palette_metal_rough.png-f62aec789639818cf8919e52d65e54d6.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/scattered_debris.glb-fd165d04fa55346540f720c0e2e39243.scn",
+      "bytes": 14674,
+      "md5": "7464a941a5b85b5ada068089004b56c0",
+      "sha256": "7b399726508c7d009fc65c13a7f7ca3eb402f7317ce3d3ecf372aeabbe872e7a"
+    },
+    {
+      "path": ".godot/imported/scattered_debris_palette_basecolor.png-dbaaa270c2cded08687cc04818354b5a.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/scattered_debris_palette_emission.png-b04ff77f1101ce8f8fc4687d0a1b0066.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/scattered_debris_palette_metal_rough.png-1928177918a496980a43346fe72f37eb.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/scavenger.glb-248af4843dd92007edf57dc36538a303.scn",
+      "bytes": 65949,
+      "md5": "fb3e1fb3fd46ca50a6ed99e50d119365",
+      "sha256": "555d917ffbe1cdefd336340b78abbcd9ac3c6e81a66b09e1441c53cffaff1c3c"
+    },
+    {
+      "path": ".godot/imported/scavenger_palette_basecolor.png-d06e9f7dc3561761b168dd49424b76c6.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/scavenger_palette_emission.png-abe50f851d51749d4c93c1909c9368b4.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/scavenger_palette_metal_rough.png-a64cc45b5abd90df5a756a7405e3926b.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/spitter.glb-e8c5be863a472dd1b056f9079fe88fdc.scn",
+      "bytes": 25128,
+      "md5": "c2e4f4fce2cd7cdbe169692def2a8dbf",
+      "sha256": "fc8e645c1e06a4b1c3f6051151f9bf49cd533875df1119d516b6cdf626eabc2e"
+    },
+    {
+      "path": ".godot/imported/spitter_palette_basecolor.png-b8b687a9024ca730ee91c10cdc454714.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/spitter_palette_emission.png-91ad7ad59c788434a584026185244f1d.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/spitter_palette_metal_rough.png-5975dc9dc3f9e0d21f27f674b65cf0fb.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/survivor_robot.glb-bae6c2859d45feca0bc3cabbbe703c6e.scn",
+      "bytes": 59541,
+      "md5": "757c213d31d3fb4ea622434c9a0fff1b",
+      "sha256": "c944196d17b6aaa02f5898866981c8f84754c9316cf8bd15215f5acc0c000132"
+    },
+    {
+      "path": ".godot/imported/survivor_robot_palette_basecolor.png-6cbbc4a44d1e116073499c7f3410da20.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "994286ef8e41c8cb6e914216baf1ba9e",
+      "sha256": "32a75b05775a46426614fe8284694cac3a690ee5c4faec9bcc76ed643d8f6b18"
+    },
+    {
+      "path": ".godot/imported/survivor_robot_palette_emission.png-762dc84412a4da75478dad2a81939429.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "14d059096140a36aa7c52392f3131f72",
+      "sha256": "e1d25d6b1f8ae45eb799dec65228521e4f1ecdc00dc8f4c89db6bdddb6021d21"
+    },
+    {
+      "path": ".godot/imported/survivor_robot_palette_metal_rough.png-436188251e0efdfdb9e787bf7f6e9017.s3tc.ctex",
+      "bytes": 1612,
+      "md5": "8298dfbdd046eafe205a9bc50370a683",
+      "sha256": "f56e2786174e8fcc7a32b3ca6b2c79a437276d98f96d2bc6543db80b2fd4ec5c"
+    },
+    {
+      "path": ".godot/imported/ventilation_unit.glb-e05f877c902de1b0d0935cae98d302a5.scn",
+      "bytes": 9389,
+      "md5": "87695afe100eefdc83fe5dbb119822c3",
+      "sha256": "e30f63cb90b5861800075ca0dea8c61cf99bca58c507dc1a92982546b8ea7bf7"
+    },
+    {
+      "path": ".godot/imported/ventilation_unit_palette_basecolor.png-2ed26f6fe9f79023b9657defe01058cf.ctex",
+      "bytes": 700,
+      "md5": "0a72b66803f051ab555cdf2eda55fe4b",
+      "sha256": "99295dae38b5426544fd74cd3053adc03c3742f8d85b21b559ddd68cf0133962"
+    },
+    {
+      "path": ".godot/imported/ventilation_unit_palette_emission.png-ee3af7578d8fa4982acb659bf07bf2f9.ctex",
+      "bytes": 440,
+      "md5": "40c4d3d479293cbbfe7285705b7235fb",
+      "sha256": "1936cb5bee47eee9d4ae87090b26111ef00e28296a50f08b04899634467c2658"
+    },
+    {
+      "path": ".godot/imported/ventilation_unit_palette_metal_rough.png-f3b98e6234540ebcda4d4a418c52fd22.ctex",
+      "bytes": 594,
+      "md5": "e15aea53a7f09010961104d66067c441",
+      "sha256": "fec760da1694faea847ee34a4cc970c876422f904868417dd5de7d0b78dc93c6"
+    },
+    {
+      "path": ".godot/imported/victory.wav-d893d32ad919f27e15cf04d35e288b78.sample",
+      "bytes": 32515,
+      "md5": "aaee1a1d8867f1616a0bad78d6ec0d9f",
+      "sha256": "7c7c4c675e0c772db17fa7f70cd476324f06af84847fe89e2fa1f8ef6410e7d0"
+    },
+    {
+      "path": ".godot/imported/wet_concrete_albedo.png-60a873761313fd98d6cdbd936bcd446a.ctex",
+      "bytes": 139006,
+      "md5": "91c6630f016d47a1b2b22d015ce14ec7",
+      "sha256": "edcb652e098859fd8d61e0f58b5b352617dbcd3a0ec981658f7e6740e45d8a94"
+    },
+    {
+      "path": ".godot/uid_cache.bin",
+      "bytes": 7587,
+      "md5": "a19e99721d3bc2cfcc6e6820789a2bb5",
+      "sha256": "28302e5419050917c3af70d2cdccbc0e3dc5ad7333cbc3231e268d73f84ef6cf"
+    },
+    {
+      "path": "assets/audio/anchor.wav.import",
+      "bytes": 153,
+      "md5": "bbd1e2bcef1250a8dd5ce99cf53b5337",
+      "sha256": "dde50fb5ba5586c11e456b6306b976a3ce6e839e51449c11f3bc63391bf3b24d"
+    },
+    {
+      "path": "assets/audio/collect.wav.import",
+      "bytes": 154,
+      "md5": "5a3305cc72ce5162748b3b265c0fc300",
+      "sha256": "689320b4108d50dd150df03693cdfacbe9f7ae97123c20717e1f7b40847d2717"
+    },
+    {
+      "path": "assets/audio/confirm.wav.import",
+      "bytes": 154,
+      "md5": "d77de4b9bdd056a391449336d09701fb",
+      "sha256": "9e9e7aab5141da55c523c10caa113bd748c6d61f09ffb16e65662bb6ce523d0f"
+    },
+    {
+      "path": "assets/audio/dodge.wav.import",
+      "bytes": 152,
+      "md5": "1976e19061336e35578231764a724f37",
+      "sha256": "f57bbecaf64a099af90c32366aab7c1d532320ab03420cc0370bae5662e91aa6"
+    },
+    {
+      "path": "assets/audio/electric_1.wav.import",
+      "bytes": 156,
+      "md5": "8fdade172c3fd6b0cb61575617a5abba",
+      "sha256": "578b6ccf33f77c79ddb90c244418488c2cd326be1c93ba166beb0ba35dee36ef"
+    },
+    {
+      "path": "assets/audio/electric_2.wav.import",
+      "bytes": 157,
+      "md5": "73ca0010c738a50f380ae3da80c80c85",
+      "sha256": "1fe7fd8ad704e852ba892736cdf96c5f69c79594133ae21dbc63caabafec74b1"
+    },
+    {
+      "path": "assets/audio/failure.wav.import",
+      "bytes": 154,
+      "md5": "81cdfb2c71d52ac68f82be841d4d9942",
+      "sha256": "846f88eb7e2af0e934c5f76e773b63192934f8ff6f03565fecbe1227e73e0ff7"
+    },
+    {
+      "path": "assets/audio/hurt.wav.import",
+      "bytes": 151,
+      "md5": "f4bf5946cb2ea6130169d6a103753f77",
+      "sha256": "2b442c0d1da1295b5e916c03362e0f78addbe1688152c25a7b96e60eaaa380cc"
+    },
+    {
+      "path": "assets/audio/impact_1.wav.import",
+      "bytes": 155,
+      "md5": "21d258e386690820a8453daab2d83a38",
+      "sha256": "3062259cfbf32aabe7f9206c983bb7204b839372b976aeb3864f2cc151bf9507"
+    },
+    {
+      "path": "assets/audio/impact_2.wav.import",
+      "bytes": 155,
+      "md5": "d67cd9ab5c6fc0d9b531a1c4c28b842c",
+      "sha256": "243431f353a949c2f70cc06b69e0728c294beb3f3ff4e7ad5f0805e987a5f62d"
+    },
+    {
+      "path": "assets/audio/music_base.wav.import",
+      "bytes": 157,
+      "md5": "d6599d7ca78024b0a73010cf8bd208b6",
+      "sha256": "852f0e7c7492d8db509388ba19baf6f585c95ba28ece7d4ae76805d4f16cbf54"
+    },
+    {
+      "path": "assets/audio/music_combat.wav.import",
+      "bytes": 159,
+      "md5": "e09e314e3f38468a15514134e9674388",
+      "sha256": "07a49a8b79631ea9139fa8146d3d0fb95b0b17cad73a984b96d79bf6f4acfdf0"
+    },
+    {
+      "path": "assets/audio/pulse.wav.import",
+      "bytes": 151,
+      "md5": "a6b9150ef1bc0ac622813bb21600fefc",
+      "sha256": "444aa2cb809c2fc5ea481827f5de6e6397caa5beda4239726009018ced2a93a9"
+    },
+    {
+      "path": "assets/audio/rain_loop.wav.import",
+      "bytes": 156,
+      "md5": "2e391c13664f6b34d87b9447f01e1ba8",
+      "sha256": "a831fbb150cc78ae098a4173571b4885dbdeaa065483d6f565ad8e187fffe5b4"
+    },
+    {
+      "path": "assets/audio/victory.wav.import",
+      "bytes": 154,
+      "md5": "db55c6a814492a83f0b9ab811f47ed11",
+      "sha256": "4f2f8fbe7ae77955ec17c273d14179b7d8faf903f089e600cdbacbceca857be9"
+    },
+    {
+      "path": "assets/models/barricade.glb.import",
+      "bytes": 171,
+      "md5": "d249779be96f1cece0b8b2f4626e5dd7",
+      "sha256": "f72c8e5960f126236890a1d16a2fd9a746f0695385647aeac7ab2a2aa1428d1e"
+    },
+    {
+      "path": "assets/models/barricade_palette_basecolor.png.import",
+      "bytes": 327,
+      "md5": "d1139c500633fa3c52082d36773b9143",
+      "sha256": "710951d4bf5a9aa793c8928693639829084e2d5798cdbd7e6d9e635ac7ddd382"
+    },
+    {
+      "path": "assets/models/barricade_palette_emission.png.import",
+      "bytes": 326,
+      "md5": "312479f4af3a79afa6ddfae2a9637b8f",
+      "sha256": "0a8972b039915b7cd05ed3890ebf794f176ac40c2988ddbf45a013031a3cd835"
+    },
+    {
+      "path": "assets/models/barricade_palette_metal_rough.png.import",
+      "bytes": 328,
+      "md5": "2282fe8096ef05c3885ca9f8df015b7f",
+      "sha256": "5f36682a3e4370c92df7a24830e563a6ccbaff7ac3f210faf8a23574a8aa3195"
+    },
+    {
+      "path": "assets/models/cargo_crate.glb.import",
+      "bytes": 172,
+      "md5": "c0cc044937fcf2790d089b7bcd3fcfbb",
+      "sha256": "ee1a8c834248f7c7dc3cb48022d4cdf822e152c7f7a041f3a6455386c695f3bd"
+    },
+    {
+      "path": "assets/models/cargo_crate_palette_basecolor.png.import",
+      "bytes": 329,
+      "md5": "5333d7ff7c55b80949c439027fc07e84",
+      "sha256": "3b0f898751ca092380f28a7424494195c66fb71ebec85304bc4be161ad7f95c0"
+    },
+    {
+      "path": "assets/models/cargo_crate_palette_emission.png.import",
+      "bytes": 327,
+      "md5": "6c89ffc9f0da24822c66b0bce5ed5c7f",
+      "sha256": "ce4eeeb9f185d2f271a1fe3e378dcf98d7d282b6be111aef29e5e60a052ea66a"
+    },
+    {
+      "path": "assets/models/cargo_crate_palette_metal_rough.png.import",
+      "bytes": 330,
+      "md5": "d95304a96186a160ace731e36a324726",
+      "sha256": "52f8b07dfed087046bd64f90cbe2bdbd6fe2c78e2f6e58808ed122961cd949ff"
+    },
+    {
+      "path": "assets/models/conductive_anchor.glb.import",
+      "bytes": 179,
+      "md5": "ae666b0bd48eba7f8dfc0d8bcd5b8453",
+      "sha256": "c7f611b65607c39147fe2ff34a97fc5295536ea60977105bd7473fb4c9f5673a"
+    },
+    {
+      "path": "assets/models/conductive_anchor_palette_basecolor.png.import",
+      "bytes": 335,
+      "md5": "325e955edf657d4d24a465fdee526551",
+      "sha256": "d47337b8dc549aaf06b97458663f0048d8cb02476ad5342d21fe6dbda303375d"
+    },
+    {
+      "path": "assets/models/conductive_anchor_palette_emission.png.import",
+      "bytes": 334,
+      "md5": "9c0ca1abd934436f89e40cce81f07eca",
+      "sha256": "1813a7fe3a2f6e965adc1d6a063d8432808be382c938be6e3c42cc96e66cb938"
+    },
+    {
+      "path": "assets/models/conductive_anchor_palette_metal_rough.png.import",
+      "bytes": 336,
+      "md5": "1603a3b579548e8b3905469511fe3ba9",
+      "sha256": "b299569630087d68a4a647f76a93b5e804723bb46c0b714114f9d84ee91ecf6d"
+    },
+    {
+      "path": "assets/models/conduit_gateway.glb.import",
+      "bytes": 177,
+      "md5": "50be9d34e9c73221ac7188a5b64d84ba",
+      "sha256": "78523b19c5f626a6d7cc15fc9d3b752033383776cc7a1dcec19caab4707c8ee1"
+    },
+    {
+      "path": "assets/models/conduit_gateway_palette_basecolor.png.import",
+      "bytes": 333,
+      "md5": "0eea56b716374a32084020ac445216c9",
+      "sha256": "54f2d793370c55dd5b1fb56747581723e65e6936362b66e24bc470d8f514aec7"
+    },
+    {
+      "path": "assets/models/conduit_gateway_palette_emission.png.import",
+      "bytes": 331,
+      "md5": "c0a21ec9b23add7be5586ade55e50a39",
+      "sha256": "d2438f499693357e0901a6f88629f2763bd74ee683c27e257b8074d67f5983db"
+    },
+    {
+      "path": "assets/models/conduit_gateway_palette_metal_rough.png.import",
+      "bytes": 334,
+      "md5": "329b175bf4be1d66b4febbcf0e264b6b",
+      "sha256": "7f67f1bfca79397d9556b3c429aea5fa0b4f0044db79ab71e4a7e09d2ee4ad23"
+    },
+    {
+      "path": "assets/models/district_facade.glb.import",
+      "bytes": 177,
+      "md5": "3988d72b2f17f67f9fbbecc8d562695f",
+      "sha256": "2f220a9425c0f0327040bf317dc2915728cc986dfe4abfe2a035491d369ff941"
+    },
+    {
+      "path": "assets/models/district_facade_palette_basecolor.png.import",
+      "bytes": 288,
+      "md5": "bf75516a3d1a935613de0ecfe0b99042",
+      "sha256": "b381013136eb7566d698b806dd341d633b794ac1528ba40ea039dd564bd1673e"
+    },
+    {
+      "path": "assets/models/district_facade_palette_emission.png.import",
+      "bytes": 288,
+      "md5": "9c5b3cc88cef8c4d3d0806a7a69bbd53",
+      "sha256": "f4105de49fa6d2fa29d24815de64c272b5b52130dda3bd47a0c72000ce66a943"
+    },
+    {
+      "path": "assets/models/district_facade_palette_metal_rough.png.import",
+      "bytes": 291,
+      "md5": "5eef819a28fb79e6b2b6f4171d4804ec",
+      "sha256": "0a990d3605cacd49a20de604abe71d71719e6cda25844b879f4bc24bf8c56792"
+    },
+    {
+      "path": "assets/models/drain_grate.glb.import",
+      "bytes": 173,
+      "md5": "39eb3d71ad09ffd5f013ff44d0a9d706",
+      "sha256": "2b87717427f100153eb668802caf1b5b29bffafce4247f1a1c20def05fb9d3c6"
+    },
+    {
+      "path": "assets/models/drain_grate_palette_basecolor.png.import",
+      "bytes": 285,
+      "md5": "41799de77cb9013a31d972239c5d78ce",
+      "sha256": "31154a6e1c3d91c3e944b32adde1d434def95dff193576ecad630cf7d068de92"
+    },
+    {
+      "path": "assets/models/drain_grate_palette_emission.png.import",
+      "bytes": 283,
+      "md5": "673fa709b4cb7037d1bb04bb04336a2b",
+      "sha256": "240121b65afe88ec6eaadbb47662ff74dce4789d74c3c8b2482e1ab474c9ea7e"
+    },
+    {
+      "path": "assets/models/drain_grate_palette_metal_rough.png.import",
+      "bytes": 286,
+      "md5": "0d575a7534d5157097405ee7c1a4c23b",
+      "sha256": "23d15ca30801b66f6c18af3ceea8b47847c5ea4ed4131c83457a525d400de732"
+    },
+    {
+      "path": "assets/models/guardian.glb.import",
+      "bytes": 170,
+      "md5": "fc7c65f901a4189ca507260c07a2257f",
+      "sha256": "adb743215b3721d9d14139270f815d3383dc897554174ac2a097885f6377690a"
+    },
+    {
+      "path": "assets/models/guardian_palette_basecolor.png.import",
+      "bytes": 326,
+      "md5": "c5815eb4385355157d4991bb1faaf6b9",
+      "sha256": "0b875d7fb36fc2fad9b85fcd3a7a0edb6e983258d1db78dd0c4be47a108ab91b"
+    },
+    {
+      "path": "assets/models/guardian_palette_emission.png.import",
+      "bytes": 325,
+      "md5": "dd3c3772f0be9889dd465381b68af622",
+      "sha256": "2b8c91740cbe0f8bc4d36fc9fb077e41380de93aab7c05208ee2b7552c09f5ca"
+    },
+    {
+      "path": "assets/models/guardian_palette_metal_rough.png.import",
+      "bytes": 328,
+      "md5": "396c5350bb8679e73da6697c21ce047c",
+      "sha256": "a68af7b47143528794d729cf7ecca2217e439e6e1f866cdd53acea6eadb41471"
+    },
+    {
+      "path": "assets/models/industrial_lamp.glb.import",
+      "bytes": 177,
+      "md5": "d90de47c254bd3c9349100b91c1ff911",
+      "sha256": "68244aac0bc80b72ff9d245852d8b950361029e2d5259454c41065aa57851b7b"
+    },
+    {
+      "path": "assets/models/industrial_lamp_palette_basecolor.png.import",
+      "bytes": 289,
+      "md5": "6c8fb2bb7e196dfb19b60841ce9743da",
+      "sha256": "de24445eb0a17987c54ff290faa7a690b95dd6f4d5a9407ed5552cc5fedaa13a"
+    },
+    {
+      "path": "assets/models/industrial_lamp_palette_emission.png.import",
+      "bytes": 288,
+      "md5": "718c1d42098e9825acb8c4ae12d674c9",
+      "sha256": "c4abec4b211c439ec94262329c6eb197e3019bf694682ff7c5404ce65fb20218"
+    },
+    {
+      "path": "assets/models/industrial_lamp_palette_metal_rough.png.import",
+      "bytes": 290,
+      "md5": "03140f139e045941daf1977a9ad05818",
+      "sha256": "2042910d11b959e057dabb9a3690cf7fd07ddf1cb8912f569858fc2b4bcebd56"
+    },
+    {
+      "path": "assets/models/lightning_rifle_t1.glb.import",
+      "bytes": 180,
+      "md5": "823ce79cbe27f77c4f483b3768849690",
+      "sha256": "6a549d39e58e06693cb8fdbccd40067149d94c3e2ceb1ab128be2c8b390e84b5"
+    },
+    {
+      "path": "assets/models/lightning_rifle_t1_palette_basecolor.png.import",
+      "bytes": 336,
+      "md5": "5efe06e8374dba31b977d122b9e2154e",
+      "sha256": "5b9b658f21e5ba5839c12cd8fc75134a5b072d447637bf9e506db8bc951232f4"
+    },
+    {
+      "path": "assets/models/lightning_rifle_t1_palette_emission.png.import",
+      "bytes": 335,
+      "md5": "45e7bd4d2182cff8f3c23019e98fdc41",
+      "sha256": "af35d8db6ce8c24bad7c89161831202818e1e62ca4f6ddfd969c7ab1b1ee7f17"
+    },
+    {
+      "path": "assets/models/lightning_rifle_t1_palette_metal_rough.png.import",
+      "bytes": 338,
+      "md5": "f8cb8d306c08b49632836d9a61671331",
+      "sha256": "12d1d4072def5bc89d1803b78bd36a913ad0273122728d396449cee61f9bae4d"
+    },
+    {
+      "path": "assets/models/lightning_rifle_t2.glb.import",
+      "bytes": 180,
+      "md5": "551c6e006b7a622c7800c47bca273b7a",
+      "sha256": "a8aa9da55fb7275bb82a5d32b7473e2b28b9b45c241b9d302b987c912a8c17bb"
+    },
+    {
+      "path": "assets/models/lightning_rifle_t2_palette_basecolor.png.import",
+      "bytes": 335,
+      "md5": "4bfbdcc58a3cedcd88c26d3340afb4a1",
+      "sha256": "b284ed4fb446f2ae2c41015ef7d048050138b31c1b0b2f23aec7b18880ec8405"
+    },
+    {
+      "path": "assets/models/lightning_rifle_t2_palette_emission.png.import",
+      "bytes": 335,
+      "md5": "011b0b3588f97c5542e53bb982789993",
+      "sha256": "ef9eedf4e182947608f43da9f530bca98b37850f67e0275a24aae53fd72ceffd"
+    },
+    {
+      "path": "assets/models/lightning_rifle_t2_palette_metal_rough.png.import",
+      "bytes": 338,
+      "md5": "ab68915fbfe0bc8265f623efbeaf60d2",
+      "sha256": "e5de810562e99347ec8f674a2f35f510392a61ea2c430630917780a9bd433eda"
+    },
+    {
+      "path": "assets/models/maintenance_shelter.glb.import",
+      "bytes": 180,
+      "md5": "7da530f76e6781288ac804e06a7b5813",
+      "sha256": "1b4c3c936e26a0f59cd18fd98d6d2cb4b897047617f0bdd454633ca87fa0c10c"
+    },
+    {
+      "path": "assets/models/maintenance_shelter_palette_basecolor.png.import",
+      "bytes": 293,
+      "md5": "f7d131c117ae7b949e8a55fc4268c861",
+      "sha256": "aaac41dbe9f7c89b2e0723ad4c45f7b429618d5b27bbe05e54020e6d48fcdfed"
+    },
+    {
+      "path": "assets/models/maintenance_shelter_palette_emission.png.import",
+      "bytes": 292,
+      "md5": "070798ed27b919f23ace52a4958a9867",
+      "sha256": "6375a600f35c9aff3f9e556668be8f8e62d7c0e66f195cc51d789b02ad70f297"
+    },
+    {
+      "path": "assets/models/maintenance_shelter_palette_metal_rough.png.import",
+      "bytes": 294,
+      "md5": "49ab8a68672bda7af89b98ba5c7ddf7d",
+      "sha256": "152fcf4456124c4e04f48b1e20101c6bcf18067fa1163bffdfc34edcf78f30ce"
+    },
+    {
+      "path": "assets/models/paving_tiles.glb.import",
+      "bytes": 174,
+      "md5": "a38124ddf858e37dc058815c49fe5a94",
+      "sha256": "707d154925040c60e3849857ffdd9682880beead14e8806d5190babbc8b94c20"
+    },
+    {
+      "path": "assets/models/paving_tiles_palette_basecolor.png.import",
+      "bytes": 286,
+      "md5": "55ac6f1f1d7be5fdf1a9199276f18b97",
+      "sha256": "7033a6d0a89af680dc94905f9b03c47c7fd6e0cf61eeff9af14d1a83d5e788f4"
+    },
+    {
+      "path": "assets/models/paving_tiles_palette_emission.png.import",
+      "bytes": 284,
+      "md5": "f7eb2276e0f3dc0cc9771a7b81a0c2ab",
+      "sha256": "84f18a09a0a6dd18d79efdc36b187a8783695b5d089e216a4d11784da9bda2a6"
+    },
+    {
+      "path": "assets/models/paving_tiles_palette_metal_rough.png.import",
+      "bytes": 288,
+      "md5": "26d75171716b1a44d9c70368d28c9006",
+      "sha256": "cfac12c36c846e47bde287c52bb9d66134e7d9bfdd8e84b05dbccec2f6c51c8f"
+    },
+    {
+      "path": "assets/models/pipe_run.glb.import",
+      "bytes": 169,
+      "md5": "0f15547036cf84e8f7d4a0a1a51921d1",
+      "sha256": "b05b138af763a1d292592c9d4bd73e72eb749b1be44f17735c7c14a65ce06075"
+    },
+    {
+      "path": "assets/models/pipe_run_palette_basecolor.png.import",
+      "bytes": 282,
+      "md5": "0c732e4126c41e13329e6559148662e9",
+      "sha256": "2aae789a6e7d653373f13065f34047fa169fe244a6ee79fc8baf544b2e4aede5"
+    },
+    {
+      "path": "assets/models/pipe_run_palette_emission.png.import",
+      "bytes": 281,
+      "md5": "0bdd30e27687f457de92768d3b332812",
+      "sha256": "0d2171b0eff3b15afe510855a81ebf6d6d61e2f4a10ca32c09d6e611bc6bbb40"
+    },
+    {
+      "path": "assets/models/pipe_run_palette_metal_rough.png.import",
+      "bytes": 284,
+      "md5": "8fc5a3e8c1b9f4c1423053cd63ed6157",
+      "sha256": "b81060d6b6a424a9a41ddab80b93615e7b6ca5d114a14bddb0844f33c74aa84c"
+    },
+    {
+      "path": "assets/models/planter_overgrowth.glb.import",
+      "bytes": 180,
+      "md5": "b3e7aa005749355775605ea551211223",
+      "sha256": "bdd992f3c84e9d36ed2cd9182aba1a500be6e955c867a959f19e83b85092ab73"
+    },
+    {
+      "path": "assets/models/planter_overgrowth_palette_basecolor.png.import",
+      "bytes": 292,
+      "md5": "e32da2cffaff45e85d1641750930cde5",
+      "sha256": "c1d5cf3bf89cbe5f56c72abd8c34d045d09fc2e23a7b0abfa3c69592ca53e3f1"
+    },
+    {
+      "path": "assets/models/planter_overgrowth_palette_emission.png.import",
+      "bytes": 290,
+      "md5": "2e5742c78eeb87a064837e9bf4a5642e",
+      "sha256": "00eca6741a18127c2195b9f62ede9713fdc11d762fb4f7d0ac3aef8ecabd128e"
+    },
+    {
+      "path": "assets/models/planter_overgrowth_palette_metal_rough.png.import",
+      "bytes": 294,
+      "md5": "db8aa9d742d4d1058becb920a4d2ec23",
+      "sha256": "6139a7ae0a2418504b9ba02e0c104536f3f9d1b7c9ef83dd4f9295de8d4530b2"
+    },
+    {
+      "path": "assets/models/pump_station.glb.import",
+      "bytes": 173,
+      "md5": "bbcab13a33cd059a007a6961034ea343",
+      "sha256": "4c96ba27db68d119a29a7277155e0236a76c4ed203ed5e9c697759efd8173ca3"
+    },
+    {
+      "path": "assets/models/pump_station_palette_basecolor.png.import",
+      "bytes": 330,
+      "md5": "32cca5388e5cb79e057ab46f7d199abd",
+      "sha256": "8a78df6e75e13fe6c27ee5a1cb375a96f6edad3ef5b76bccb26105032462df7d"
+    },
+    {
+      "path": "assets/models/pump_station_palette_emission.png.import",
+      "bytes": 329,
+      "md5": "136c69f09e7e6df8861a52570a95b6be",
+      "sha256": "bfe0a466b97c0c87bcae30ed9ff9a7f888fb201e3fbe2fbcb0cd96c405d17ba9"
+    },
+    {
+      "path": "assets/models/pump_station_palette_metal_rough.png.import",
+      "bytes": 332,
+      "md5": "b6332fabff12c5804acbc21861cdb32f",
+      "sha256": "f330c701e0d1c50ec71c9ada62cbb7063ef1cb8a121403792d82acd75dc9f93f"
+    },
+    {
+      "path": "assets/models/reservoir_tank.glb.import",
+      "bytes": 175,
+      "md5": "a86f51a348eeeda1c4d81a398e47c748",
+      "sha256": "b80d2a6971f3215e45edfbae20a863c6908192dceed4fb685ce5ed33517fd2d9"
+    },
+    {
+      "path": "assets/models/reservoir_tank_palette_basecolor.png.import",
+      "bytes": 288,
+      "md5": "0ba9c73a9230e6dccbbaa6910f71bf08",
+      "sha256": "b139aa763b5875a5c9e67c264906721943b59c0ac44deb78aad3b7b267b9a329"
+    },
+    {
+      "path": "assets/models/reservoir_tank_palette_emission.png.import",
+      "bytes": 287,
+      "md5": "cfd8056625290d7ca8b6144091eb0a1a",
+      "sha256": "49ce4ab41a40ab825900e1ba9e7a86706a595e34c7fc34c82023d0552bb2a364"
+    },
+    {
+      "path": "assets/models/reservoir_tank_palette_metal_rough.png.import",
+      "bytes": 289,
+      "md5": "9a9b4c8e5e6a67e77cd1a5b7a6cdd3e8",
+      "sha256": "40ed47dab1f9ca842dc61d65d6a2c215435a7bdca051299e49764629aefd5f35"
+    },
+    {
+      "path": "assets/models/ruin_wall_broken.glb.import",
+      "bytes": 178,
+      "md5": "915928dbd6d20d09fc550264071c61f0",
+      "sha256": "a2a47e7cf92094971b9331825b4bf6d3e266e0458c78840450b69272ccba5a6d"
+    },
+    {
+      "path": "assets/models/ruin_wall_broken_palette_basecolor.png.import",
+      "bytes": 290,
+      "md5": "3b1ace22e2d9f91891882f55812c5374",
+      "sha256": "2ee2ead09ae963b8e8b685f5509dc9b9937dbef5a038c20d3eeac467e11dc9e3"
+    },
+    {
+      "path": "assets/models/ruin_wall_broken_palette_emission.png.import",
+      "bytes": 289,
+      "md5": "23cd6a4680c5b205d4e692cdb31ec4a4",
+      "sha256": "e6a0b72aa6c9131a865cede171d02eeaf49c582737e2706e7e002366257e8f96"
+    },
+    {
+      "path": "assets/models/ruin_wall_broken_palette_metal_rough.png.import",
+      "bytes": 292,
+      "md5": "a892759e0ca2d413b6a7a7a90d935818",
+      "sha256": "5137188651e9de7e04f32c87b336ec68ca7fe93ec540f0e7234555209c6c8f90"
+    },
+    {
+      "path": "assets/models/ruin_wall_full.glb.import",
+      "bytes": 175,
+      "md5": "1fd8e6fa2269aadb1ff660675b188209",
+      "sha256": "d109b8acf95f2dbbb667427f2a0b3e92b1454ff1a9d8c3191da439a496489ccd"
+    },
+    {
+      "path": "assets/models/ruin_wall_full_palette_basecolor.png.import",
+      "bytes": 331,
+      "md5": "ad3e5ec41e9c7f51a70aaaefc673ca6a",
+      "sha256": "516668ecedc371ff66680837bc15bbaf45e7abe29e7f9059c123773ff8949365"
+    },
+    {
+      "path": "assets/models/ruin_wall_full_palette_emission.png.import",
+      "bytes": 330,
+      "md5": "29e66544b06024224ce1419976dd5e9f",
+      "sha256": "788bd61389e14e93d80780840cb511155d3c2b9e0e50769c20c87cfb58231d11"
+    },
+    {
+      "path": "assets/models/ruin_wall_full_palette_metal_rough.png.import",
+      "bytes": 334,
+      "md5": "c9d4a8c98f680c39280849af0fcf84b3",
+      "sha256": "9422cb7a80b9506af58d0228f8153590d8976fa4ffdb3fec5066f1911985e423"
+    },
+    {
+      "path": "assets/models/scattered_debris.glb.import",
+      "bytes": 178,
+      "md5": "f6c85bb98198ccca8a93b256e643bb1a",
+      "sha256": "734aeb98d57322105c18c18a226485bbd8a1b2b568004b341b4b888793b200a6"
+    },
+    {
+      "path": "assets/models/scattered_debris_palette_basecolor.png.import",
+      "bytes": 290,
+      "md5": "d767242ef7d20fa5017a94f95a0f7b6c",
+      "sha256": "b9d85e3e7153d9aef2b35215ea3918954f1d178a46f267822423100eb094553c"
+    },
+    {
+      "path": "assets/models/scattered_debris_palette_emission.png.import",
+      "bytes": 289,
+      "md5": "f6c2139c63eafeae5975336fb235ac03",
+      "sha256": "ea7f1f5db438654519ace06c97c3cea6aa3325ebd784837ad45848710bbd80fa"
+    },
+    {
+      "path": "assets/models/scattered_debris_palette_metal_rough.png.import",
+      "bytes": 291,
+      "md5": "0cda0701e15df77f697bcfd899812b50",
+      "sha256": "594d6356cfb2d06f88ee5042c47bf58d107109dfe4fa244874b9a5acbc92f9dd"
+    },
+    {
+      "path": "assets/models/scavenger.glb.import",
+      "bytes": 171,
+      "md5": "039c64ac99e8ed7d7dc33ee2a3929f78",
+      "sha256": "b50990d101b1bbe64ce5904eedbcb59af798d6adccca8c7e067bd92ecb07168f"
+    },
+    {
+      "path": "assets/models/scavenger_palette_basecolor.png.import",
+      "bytes": 327,
+      "md5": "12c1d39a4e2f3885daee476345b97389",
+      "sha256": "d8fdf33ccc563baf2f2a4b4dec1c56c03297d7031afa8ead37d62097ce50797f"
+    },
+    {
+      "path": "assets/models/scavenger_palette_emission.png.import",
+      "bytes": 325,
+      "md5": "fbd7f8342d2943e2186b6b1664975436",
+      "sha256": "616580627192461b8aff141b2f856229cd3421082b140db8a8db9b127acdff8c"
+    },
+    {
+      "path": "assets/models/scavenger_palette_metal_rough.png.import",
+      "bytes": 329,
+      "md5": "bab87cabdf6fcc7b25e7407eda8fae90",
+      "sha256": "dc3471c8c0b160f0c5c5b500e8c74ad3e79778e1886403e1eae0b2f7b54e9fc4"
+    },
+    {
+      "path": "assets/models/spitter.glb.import",
+      "bytes": 169,
+      "md5": "9c0a00a89a0d53b213db3b0a0f5780ce",
+      "sha256": "ffe54d7d920fc537003613324e5aca13a0ac87754a676592b6dcfff0070e4a1a"
+    },
+    {
+      "path": "assets/models/spitter_palette_basecolor.png.import",
+      "bytes": 325,
+      "md5": "c44ddcb05856647e6db7b46661829def",
+      "sha256": "82371628cb24baf8b2f3d7f9abfdf0b41be09e150822e21c126549b1e2c3eca9"
+    },
+    {
+      "path": "assets/models/spitter_palette_emission.png.import",
+      "bytes": 324,
+      "md5": "1df0a32a3ca49a93bc347971e9789a56",
+      "sha256": "d6aec27043596c4987d305126afc235109a702734a04f0fed52634cad78a56fc"
+    },
+    {
+      "path": "assets/models/spitter_palette_metal_rough.png.import",
+      "bytes": 326,
+      "md5": "459444a60b40e0c0097b567b5f1b98c5",
+      "sha256": "ad0808b4cf653a6e3dd44de2bbd55fe8056434dccbd8eede29d4902e4d033cf3"
+    },
+    {
+      "path": "assets/models/survivor_robot.glb.import",
+      "bytes": 175,
+      "md5": "386012a65f273073b6093d78d445599b",
+      "sha256": "08b844bd0471d76137f11911057609229f2331587744fff2613c52b0cdd835de"
+    },
+    {
+      "path": "assets/models/survivor_robot_palette_basecolor.png.import",
+      "bytes": 331,
+      "md5": "121b5f8a14a246a1cc6274efe0255ada",
+      "sha256": "8d26afe0001d457c2a3ca43042d686cfbc7ca42e2cf7f499d26127c4461ac2e7"
+    },
+    {
+      "path": "assets/models/survivor_robot_palette_emission.png.import",
+      "bytes": 331,
+      "md5": "35e730f7a157b29c5461a137cfba1bcc",
+      "sha256": "d4be06c7f8a0c7c3bc9dab8ebd9e9738db1f9220e7994bfa0b078aeb9a5c8991"
+    },
+    {
+      "path": "assets/models/survivor_robot_palette_metal_rough.png.import",
+      "bytes": 334,
+      "md5": "82432c5e20f06510a2e1bedaccf6bd45",
+      "sha256": "a31a5ef3889abdcab3ad572208067d312d395d4413da2c123c5f9a70d4e75846"
+    },
+    {
+      "path": "assets/models/ventilation_unit.glb.import",
+      "bytes": 178,
+      "md5": "d59882c536d86802a57a2bb83e0ec248",
+      "sha256": "222e9aaf375b81f7c2cd6a2dee8f9f8347af93dc7085e27104d2aa081f42be5c"
+    },
+    {
+      "path": "assets/models/ventilation_unit_palette_basecolor.png.import",
+      "bytes": 289,
+      "md5": "ee1c9506bd356444f62b28e95e09823d",
+      "sha256": "92fcdecefb2c64b002d0c0b4666224a971c4b5e176d033b04dcaf43b15f98c04"
+    },
+    {
+      "path": "assets/models/ventilation_unit_palette_emission.png.import",
+      "bytes": 289,
+      "md5": "2a2913fdccc00cd531cfefdf2d753d5b",
+      "sha256": "6199184cd929f77d20ca524af6d58d94121f609a6bbe074ba5f8732d8b956577"
+    },
+    {
+      "path": "assets/models/ventilation_unit_palette_metal_rough.png.import",
+      "bytes": 291,
+      "md5": "51993fbd2035a3b2d8d89b424150aaef",
+      "sha256": "794bc2bd0df86e259fb2ab47ed2b3d8f1c0461beef6bd8afc2f7bb984873adbc"
+    },
+    {
+      "path": "assets/textures/wet_concrete_albedo.png.import",
+      "bytes": 207,
+      "md5": "a561a95fcb98a0a529361708962fccb1",
+      "sha256": "3a0f7b7a77703d7bccf18fd561d46a6f19bd4c967bdfe05335f61270e60ee964"
+    },
+    {
+      "path": "config/input_bindings.json",
+      "bytes": 678,
+      "md5": "1ff5849a562ad19e55643f6618e47125",
+      "sha256": "f4ef819b9865d7a5f4a96a997afc034ab627298b671194034fa7c5a6d29a5902"
+    },
+    {
+      "path": "config/presentation.json",
+      "bytes": 1227,
+      "md5": "58b9d4560c16ba20373d87040c330d0b",
+      "sha256": "b0dcac073fb3d88e5635822efbc6e418483df424482bde3e4de094972742278f"
+    },
+    {
+      "path": "config/rule_result.gd.remap",
+      "bytes": 45,
+      "md5": "af4bfbe7a6ffb830435088de7e78b083",
+      "sha256": "6cd1f89db95ec648de0d81509ccf3ac37913e02d72bea9e56915dbbc8e1f9156"
+    },
+    {
+      "path": "config/rule_result.gdc",
+      "bytes": 380,
+      "md5": "bbfb4a795937197692540fc8aa3faae9",
+      "sha256": "52cfbbf7cc58afece61dab8c881606f9d3c7ff9b9dde5a53e5c748232e5bff6f"
+    },
+    {
+      "path": "config/rules.json",
+      "bytes": 3365,
+      "md5": "1539193a67724acae251e8f2dd13f5d6",
+      "sha256": "6b819dffeb62b827e9100fcba878c6039a4632383fa6eab8bf1adb3903273565"
+    },
+    {
+      "path": "config/rules_config.gd.remap",
+      "bytes": 46,
+      "md5": "9711b69ab2d2e07718b811e191d9adc0",
+      "sha256": "0f58757bbbfa7e92417e0e5146630b947986c9d6a0d4fca102fb742ab4e4e80d"
+    },
+    {
+      "path": "config/rules_config.gdc",
+      "bytes": 7413,
+      "md5": "399ac3b4f9bcf07cb49a92b6a95a3823",
+      "sha256": "18e2411c3338fe12a07b6fe6636bdf614ce17940409022ae5c1a2201287056ab"
+    },
+    {
+      "path": "features/equipment/equipment_instance.gd.remap",
+      "bytes": 64,
+      "md5": "bb6a3e8f368c7f4b0329d1349829ed29",
+      "sha256": "25a297c23243ec1d45b97dcc828cf04bd9f6eab89d728a727248714caa54ce46"
+    },
+    {
+      "path": "features/equipment/equipment_instance.gdc",
+      "bytes": 2704,
+      "md5": "2517f60c0bffb9e22a3c7fda8092bc16",
+      "sha256": "9cf12c29b54a9581c1eb1ff1b4d5a048ff8aad9c21279da1ab9e60d5a817ef83"
+    },
+    {
+      "path": "features/equipment/equipment_service.gd.remap",
+      "bytes": 63,
+      "md5": "d723ededbbf780fcf4138590aa6468e6",
+      "sha256": "5161b46cc241b5913fc14d4925d2b8de5c561b9785881113b9aa2dac405ae160"
+    },
+    {
+      "path": "features/equipment/equipment_service.gdc",
+      "bytes": 10180,
+      "md5": "d579319a68031ffea17145186aa0b09e",
+      "sha256": "53ba6bdf0d95e9cbd5e92f3b47a740dace9481251c4688ebc000658f7f5452fe"
+    },
+    {
+      "path": "features/expedition/expedition_state.gd.remap",
+      "bytes": 63,
+      "md5": "a990edcbbf5fcbea8200a733e7dca660",
+      "sha256": "5e856296f8ea8c8e2bfe6754cfe72c88a13960a119481cde800f4c5a80729340"
+    },
+    {
+      "path": "features/expedition/expedition_state.gdc",
+      "bytes": 8793,
+      "md5": "cb47a360e6a8f5a33b459daa1327c767",
+      "sha256": "0e1bccb458addf835326b39c8e8fff3ef29ea1573cab2720ed4efa88ae27095d"
+    },
+    {
+      "path": "features/expedition/inventory_ledger.gd.remap",
+      "bytes": 63,
+      "md5": "ff5b66551d6a37554784ac33f8231347",
+      "sha256": "e0715af8e75be3ab48d585157543172ec38403297ffc01549341266858b5a79d"
+    },
+    {
+      "path": "features/expedition/inventory_ledger.gdc",
+      "bytes": 3795,
+      "md5": "fdf5c1bbe065b69eb6e99ac7da892c39",
+      "sha256": "8b67a7192811201dcb7bfc50a666f7affc4d8cc4d883260de4355ffd0f3ee7dd"
+    },
+    {
+      "path": "features/progression/world_progress.gd.remap",
+      "bytes": 62,
+      "md5": "3dcd89bdcc149cfde0f3a5f7a8d88e50",
+      "sha256": "ab14bb3389ffed445f9e11bcd11fb45e3eec5bb6cddfe855d1c53008a4e54e06"
+    },
+    {
+      "path": "features/progression/world_progress.gdc",
+      "bytes": 3972,
+      "md5": "361339f3caaef31dc1de5ec6248586b5",
+      "sha256": "262b3490c1d530cebd4eaf3dacf2e2c49e3c5ef474bfd5b50c4b2e0c48e2ecc9"
+    },
+    {
+      "path": "persistence/game_settings.gd.remap",
+      "bytes": 52,
+      "md5": "502693662d4f1a8ea380daef6390c0c1",
+      "sha256": "dd5c75c93401f73f037735cf5ad16076876d2d3202a3cd52d53c9d139fa9e2a2"
+    },
+    {
+      "path": "persistence/game_settings.gdc",
+      "bytes": 2032,
+      "md5": "d70f85d180967d040b57912b48a423e7",
+      "sha256": "2af92fc3a61013f32a31f40ed0b724cb347665aa32a760dee04beed02fcc08b3"
+    },
+    {
+      "path": "persistence/save_repository.gd.remap",
+      "bytes": 54,
+      "md5": "0ad87093e19992550c008ae0f304f867",
+      "sha256": "ed0c64861948ae35a8f4bb05bf3b3082287fd528075d56f235bd0de0dcb8a845"
+    },
+    {
+      "path": "persistence/save_repository.gdc",
+      "bytes": 8507,
+      "md5": "44722b2aa399ca89cc46668e5cf32afe",
+      "sha256": "b408fe53b0c1c1d06798d8819f85d4cc69e1505d98db856f302f802705252fa4"
+    },
+    {
+      "path": "platform/input_adapter.gd.remap",
+      "bytes": 49,
+      "md5": "be4fa4b0d600ecc77e4a50c0186afef6",
+      "sha256": "ffab3c7247a1cbc880bf1d901d11e0937ebf860d552fa9e05c15a6f141f9bc93"
+    },
+    {
+      "path": "platform/input_adapter.gdc",
+      "bytes": 3482,
+      "md5": "5541c90cd4839451ae68570645c2903c",
+      "sha256": "2ce95ab5eaf707cdd899654631f09671e790b8e05fdd601b32a2cac61beb6932"
+    },
+    {
+      "path": "presentation/camera_rig.gd.remap",
+      "bytes": 50,
+      "md5": "fd2b8e9b3febab3210ec06639a482b60",
+      "sha256": "4f9cbdc882bcb479e76563b2b98a7b219d74c8877388bd0a45a9f52ac81f4754"
+    },
+    {
+      "path": "presentation/camera_rig.gdc",
+      "bytes": 2156,
+      "md5": "f7413beaca69355941f708ff43315147",
+      "sha256": "c75bda289fc09b9bf40eea8e041ec8fff4c6176b2c9ec2200c2e3bc399eefb24"
+    },
+    {
+      "path": "presentation/courtyard_floor.tres.remap",
+      "bytes": 108,
+      "md5": "216d1cb219bebbf15cf487114c49bde8",
+      "sha256": "eeac37daaa19407e476396e0c4c1dff4b1d2ebdd7b9aeed30a0d8dec58ee4169"
+    },
+    {
+      "path": "presentation/enemy_controller.gd.remap",
+      "bytes": 56,
+      "md5": "4b8c2b8ea4ca72a140ba36aa802e1971",
+      "sha256": "00e3785714fd9d729920fd21cd68c8148bb6dc3107e625285572d3dec18e26eb"
+    },
+    {
+      "path": "presentation/enemy_controller.gdc",
+      "bytes": 4716,
+      "md5": "cc5d4312277030fda2a34cc6f8c431ca",
+      "sha256": "8006c34fecb7454cb17e8aa188d5149675eb2f97e3bec8aa7aae1b0b814537f3"
+    },
+    {
+      "path": "presentation/game_audio.gd.remap",
+      "bytes": 50,
+      "md5": "553c0f39f9e8daa545755ed201deb570",
+      "sha256": "8c2dad00177ec92ae3d4560a0db31e9cab2d88a328a3741db2bbb2953862c297"
+    },
+    {
+      "path": "presentation/game_audio.gdc",
+      "bytes": 6858,
+      "md5": "174cd333806d6d0b29c3e1277ab004df",
+      "sha256": "a6a68d1cfd0ff9c98ad8935a7e0fec178a060e44650142a06ff270163c66da86"
+    },
+    {
+      "path": "presentation/game_hud.gd.remap",
+      "bytes": 48,
+      "md5": "ba3f128ac4ceb142066bd4ca9a9be72a",
+      "sha256": "9cfb8aecaffa03949f4be9a8fd5d50d5b9f5e69f89e1592b33fb08859a69dd5a"
+    },
+    {
+      "path": "presentation/game_hud.gdc",
+      "bytes": 10658,
+      "md5": "70a725ac035c066fd9f80e5947e160e1",
+      "sha256": "c83201506835295e9511704cb0e81f663cccf078f57db5ba9a88a6afc040a20e"
+    },
+    {
+      "path": "presentation/game_session.gd.remap",
+      "bytes": 52,
+      "md5": "4f3d609ddff39f3006d7e73b605a4df3",
+      "sha256": "b990004963825af547799c4005c2fa5e2c7d6894d9abdb22b181ad1ae84453e0"
+    },
+    {
+      "path": "presentation/game_session.gdc",
+      "bytes": 32137,
+      "md5": "ed29d557203bfb8018d2d916b847e0b7",
+      "sha256": "9cd8ab55c3bf7a0940099a33d315da50669310af20535dcee4a28d093ca58f34"
+    },
+    {
+      "path": "presentation/main.tscn.remap",
+      "bytes": 97,
+      "md5": "0b23ff6c6da9c7e8a5191ca8d6941b08",
+      "sha256": "6de73e65b25905cb80ce9ef201e31a842a286c36e93fc0c48a6868102890e049"
+    },
+    {
+      "path": "presentation/player_controller.gd.remap",
+      "bytes": 57,
+      "md5": "f52534dc91d4d15374b20cf9ce46097c",
+      "sha256": "02a69d8abdb507997a0171d32ab9cb209347deb1c8a18d10a3f1b75d0bd424b1"
+    },
+    {
+      "path": "presentation/player_controller.gdc",
+      "bytes": 5642,
+      "md5": "4b55a8de3acffad591440403cd9d6ad2",
+      "sha256": "16278d59fed14a930b7e5a2987118de00a47e41f4f54ed337c2189d060450778"
+    },
+    {
+      "path": "presentation/virtual_stick.gd.remap",
+      "bytes": 53,
+      "md5": "e801f310358dbe2fc4fc8fad4c05f68e",
+      "sha256": "603cea4b976eee05ebc7941d109919357a2e65527d9b1e01da3971edc529deab"
+    },
+    {
+      "path": "presentation/virtual_stick.gdc",
+      "bytes": 1982,
+      "md5": "48d68b890116302f3f174f983ddcf4f3",
+      "sha256": "fc6984834cae4106fad198d841db1b79f6fc42fc0a02e49dd5f79fc27d00c25b"
+    },
+    {
+      "path": "presentation/wet_surface.gdshader",
+      "bytes": 451,
+      "md5": "fc6ef0f53ab0e378addef1aba9147d7b",
+      "sha256": "f716a0757ac04ad4d7d030fc5b1556a0144272d0a1f917e8ac856b924a6c5c2e"
+    },
+    {
+      "path": "presentation/wet_surface.tres.remap",
+      "bytes": 104,
+      "md5": "d37d27c34f107c26b714cbffd399caf7",
+      "sha256": "6753e86aa45f4d07d6d1cb3c209564bec4da87aef50f4c5d77d5309bda9d0c03"
+    },
+    {
+      "path": "presentation/world_builder.gd.remap",
+      "bytes": 53,
+      "md5": "ae79df2010794c8cca96576f180f04e2",
+      "sha256": "77f957c71d172c9adf5cd14ba16e6e56bcc634fcb26c1a17052c39a0339db80c"
+    },
+    {
+      "path": "presentation/world_builder.gdc",
+      "bytes": 7646,
+      "md5": "10f4039f5d8f29890a3e3b8c04f5052a",
+      "sha256": "d908e7e12f3df12dbd435801c260b154f465c8d5c2ced1b59f93b223ed7ac202"
+    }
+  ]
+}

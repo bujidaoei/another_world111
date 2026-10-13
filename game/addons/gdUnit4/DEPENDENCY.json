@@ -1,0 +1,9 @@
+{
+  "name": "gdUnit4",
+  "version": "6.2.2",
+  "source": "https://github.com/godot-gdunit-labs/gdUnit4",
+  "commit": "0127a55f4543dfc24746f6e5c7ba6f94105d51f2",
+  "license": "MIT",
+  "distribution": "development dependency, exclude addon from release exports",
+  "adoption": "Original addons/gdUnit4 directory copied without source changes; this metadata file is project-authored."
+}

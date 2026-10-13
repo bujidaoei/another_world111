@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="9" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_presentation" package="tests" timestamp="2026-10-12T23:46:26" hostname="localhost" tests="9" failures="0" errors="0" skipped="0" flaky="0" time="2.248">
+		<testcase name="test_real_main_scene_initializes_title_and_original_assets_without_save_mutation" classname="test_presentation" time="0.067">
+		</testcase>
+		<testcase name="test_south_boundary_prevents_falling_outside_the_playable_floor" classname="test_presentation" time="1.643">
+		</testcase>
+		<testcase name="test_touch_reset_releases_both_sticks_and_accepts_a_new_finger" classname="test_presentation" time="0.051">
+		</testcase>
+		<testcase name="test_touch_visibility_and_focus_loss_clear_hold_state_and_pause_game" classname="test_presentation" time="0.044">
+		</testcase>
+		<testcase name="test_enemy_prepared_attack_expires_after_player_leaves_aggro_range" classname="test_presentation" time="0.038">
+		</testcase>
+		<testcase name="test_pause_stops_ai_windup_and_combat_cooldowns_until_resume" classname="test_presentation" time="0.196">
+		</testcase>
+		<testcase name="test_viewport_ui_dispatch_consumes_mouse_attack_before_world_adapter" classname="test_presentation" time="0.044">
+		</testcase>
+		<testcase name="test_save_and_fresh_scene_restore_exact_health_stamina_and_camp_checkpoint" classname="test_presentation" time="0.057">
+		</testcase>
+		<testcase name="test_rejected_domain_restore_does_not_partially_change_active_progress" classname="test_presentation" time="0.045">
+		</testcase>
+	</testsuite>
+</testsuites>

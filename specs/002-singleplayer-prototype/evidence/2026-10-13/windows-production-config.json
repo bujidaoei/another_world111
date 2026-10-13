@@ -1,0 +1,9 @@
+{
+	"editor_plugins_removed": true,
+	"godot_version": "4.7.2-stable (official)",
+	"ok": true,
+	"production_main_scene": "res://presentation/main.tscn",
+	"removed_debug_autoloads": [
+		"_mcp_game_helper"
+	]
+}

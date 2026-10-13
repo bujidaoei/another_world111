@@ -1,0 +1,8 @@
+# 模型
+继承产品基线不变量；AWGameRules加载验证集中JSON。WorldProgress持level/realm/xp/banked/talent/ascension/operationIDs；
+InventoryLedger持非负resource及装备map/id；EquipmentService在库存原子提交替换/删除/扣费；
+ExpeditionState持区域真实enemy/nodeIDs、击杀/采集、pending资源与状态、真实objective/settlementIDs。
+Session保存version/rulesVersion/world/inventory/equipmentId/playerVitals/settings/campFacilities/runCounter；
+在活动远征保存只允许checkpoint语义，load回camp、丢pending，保留XP与已入库装备；错误提示不可静默清档。
+SaveEnvelopev2：schema_version/sequence/payload_json/checksum，SHA256覆盖头与payload文本，双槽/回读校验。
+v1是明确回归协议而非宣称已有老玩家；升级添加设置默认，未来版本阻写，任意JSON安全data上限1MiB。

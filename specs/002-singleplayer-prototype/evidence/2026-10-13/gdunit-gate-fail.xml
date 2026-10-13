@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="1" failures="1" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_fail" package="tests/fail" timestamp="2026-10-12T23:29:50" hostname="localhost" tests="1" failures="1" errors="0" skipped="0" flaky="0" time="0.009">
+		<testcase name="test_deliberate_failure_must_block_the_gate" classname="test_fail" time="0.003">
+			<failure message="FAILED: res://tests/fail/test_fail.gd:3" type="FAILURE">
+<![CDATA[
+Expecting: 'true' but is 'false'
+	at 'test_deliberate_failure_must_block_the_gate' in res://tests/fail/test_fail.gd:3
+]]>
+			</failure>
+		</testcase>
+	</testsuite>
+</testsuites>

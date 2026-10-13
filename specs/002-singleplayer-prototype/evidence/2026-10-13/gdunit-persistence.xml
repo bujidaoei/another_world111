@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="22" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_save_repository" package="tests" timestamp="2026-10-12T23:28:41" hostname="localhost" tests="17" failures="0" errors="0" skipped="0" flaky="0" time="0.159">
+		<testcase name="test_new_directory_reports_missing_without_creating_a_save" classname="test_save_repository" time="0.004">
+		</testcase>
+		<testcase name="test_json_payload_roundtrip_and_detached_data" classname="test_save_repository" time="0.006">
+		</testcase>
+		<testcase name="test_repeated_saves_rotate_and_keep_two_valid_generations" classname="test_save_repository" time="0.012">
+		</testcase>
+		<testcase name="test_corrupt_latest_slot_recovers_previous_valid_generation" classname="test_save_repository" time="0.008">
+		</testcase>
+		<testcase name="test_checksum_and_sequence_tampering_are_rejected" classname="test_save_repository" time="0.007">
+		</testcase>
+		<testcase name="test_both_corrupt_slots_do_not_silently_reset_or_overwrite" classname="test_save_repository" time="0.005">
+		</testcase>
+		<testcase name="test_future_schema_blocks_load_and_any_overwrite" classname="test_save_repository" time="0.008">
+		</testcase>
+		<testcase name="test_v1_migration_is_pure_and_preserves_original_until_new_save" classname="test_save_repository" time="0.006">
+		</testcase>
+		<testcase name="test_interrupted_temp_write_is_ignored_and_replaced_on_next_save" classname="test_save_repository" time="0.008">
+		</testcase>
+		<testcase name="test_write_failure_preserves_last_effective_slot" classname="test_save_repository" time="0.007">
+		</testcase>
+		<testcase name="test_commit_rename_failure_preserves_last_effective_slot" classname="test_save_repository" time="0.007">
+		</testcase>
+		<testcase name="test_oversized_and_engine_object_payloads_never_replace_valid_save" classname="test_save_repository" time="0.011">
+		</testcase>
+		<testcase name="test_readonly_resource_path_is_rejected_at_configuration" classname="test_save_repository" time="0.004">
+		</testcase>
+		<testcase name="test_oversized_corrupt_file_recovers_valid_slot" classname="test_save_repository" time="0.007">
+		</testcase>
+		<testcase name="test_migration_failure_cannot_overwrite_only_old_slot" classname="test_save_repository" time="0.005">
+		</testcase>
+		<testcase name="test_two_repository_instances_share_generation_order_in_one_process" classname="test_save_repository" time="0.008">
+		</testcase>
+		<testcase name="test_diagnostic_event_contains_metadata_without_payload_or_path" classname="test_save_repository" time="0.006">
+		</testcase>
+	</testsuite>
+	<testsuite id="1" name="test_game_settings" package="tests" timestamp="2026-10-12T23:28:41" hostname="localhost" tests="5" failures="0" errors="0" skipped="0" flaky="0" time="0.029">
+		<testcase name="test_defaults_are_valid_and_detached" classname="test_game_settings" time="0.003">
+		</testcase>
+		<testcase name="test_normalize_preserves_present_values_and_fills_missing_settings" classname="test_game_settings" time="0.003">
+		</testcase>
+		<testcase name="test_numeric_boundaries_and_types_are_validated" classname="test_game_settings" time="0.003">
+		</testcase>
+		<testcase name="test_unknown_incomplete_or_invalid_switch_settings_are_rejected" classname="test_game_settings" time="0.003">
+		</testcase>
+		<testcase name="test_settings_survive_real_repository_roundtrip" classname="test_game_settings" time="0.006">
+		</testcase>
+	</testsuite>
+</testsuites>

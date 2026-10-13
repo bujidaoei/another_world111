@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-13",
+  "scope": "two repeated final source rebuilds in same Blender 5.2.2 session",
+  "source_uv_policy": "Editable original UV retained in blend; derived runtime copies contain palette UV only",
+  "assets": {
+    "barricade.glb": {
+      "before_sha256": "a9211ad597bc31ff878b478fc1a2886a5a78f0d7319aaad91cec052a4c9e1fb1",
+      "after_sha256": "a9211ad597bc31ff878b478fc1a2886a5a78f0d7319aaad91cec052a4c9e1fb1",
+      "byte_identical": true
+    },
+    "cargo_crate.glb": {
+      "before_sha256": "17c5bbcbe57a8f0ad6ed8eb02ae413c7c16383557ab678578a1671b4aec5f05b",
+      "after_sha256": "17c5bbcbe57a8f0ad6ed8eb02ae413c7c16383557ab678578a1671b4aec5f05b",
+      "byte_identical": true
+    },
+    "conductive_anchor.glb": {
+      "before_sha256": "757ede0daeb527ee1b43ef533706c47cc25f942b6fdcc06c47ec903a4fad1ee3",
+      "after_sha256": "7d0e235ed5befa7054c04839399351136934ba077a5e1e2bdfd30d74aba5e3e4",
+      "byte_identical": false
+    },
+    "guardian.glb": {
+      "before_sha256": "608df6ab3cdcd0d8e58c418d42b2edfd17fd66adec40b9bba5feb35ca8098dae",
+      "after_sha256": "564a7c51713a39634c13a3b249233bcf64fc710a521a88e760878964b0c3d011",
+      "byte_identical": false
+    },
+    "lightning_rifle_t1.glb": {
+      "before_sha256": "1569ffb15b3399900f4653f3b43f4086c0fd16e817769c1c1cbb15cdabf19aaf",
+      "after_sha256": "1569ffb15b3399900f4653f3b43f4086c0fd16e817769c1c1cbb15cdabf19aaf",
+      "byte_identical": true
+    },
+    "lightning_rifle_t2.glb": {
+      "before_sha256": "5a74c300c757bca36db4b0f050e8532d901190f1e134b2f7c23129a3e889317e",
+      "after_sha256": "5a74c300c757bca36db4b0f050e8532d901190f1e134b2f7c23129a3e889317e",
+      "byte_identical": true
+    },
+    "pump_station.glb": {
+      "before_sha256": "5f3ba3a2c8760de9530b0bb22ef1147c0029839f5fba0643fc1ed36579392f49",
+      "after_sha256": "48b97292e3b4a2418cfa4c5683765d6646afffba3445b36206b83e62f3680987",
+      "byte_identical": false
+    },
+    "scavenger.glb": {
+      "before_sha256": "4e99c2397c50cb283bd4136311b8c3dd52faa2916bcf1226d12471e9119398e4",
+      "after_sha256": "a7a63ed298409564393f3a2792b8bd1c1dca6beb3148e572342be5285234a91d",
+      "byte_identical": false
+    },
+    "spitter.glb": {
+      "before_sha256": "3051e3949b9ea4f6b11335409399b6c13071fc04ddead101f87460b0697bd501",
+      "after_sha256": "2e3630cc78ff8be4ded3571cc36ce9f4ee54f97384fdd1c4b0defa60cc5ecb96",
+      "byte_identical": false
+    },
+    "survivor_robot.glb": {
+      "before_sha256": "b77a5933673da4a106915be2e55124dc9526cdb307ec7db57e6023db9f7edcc2",
+      "after_sha256": "7d8835209772e52d2ec008611b0fb17c4bb12b3ea3a27ace3080062c79d11af7",
+      "byte_identical": false
+    }
+  }
+}

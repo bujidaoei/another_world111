@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="101" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_equipment" package="tests" timestamp="2026-10-13T00:21:42" hostname="localhost" tests="10" failures="0" errors="0" skipped="0" flaky="0" time="0.189">
+		<testcase name="test_fusion_preserves_identity_history_locks_and_cost_exactly_once" classname="test_equipment" time="0.006">
+		</testcase>
+		<testcase name="test_fusion_invalid_context_locks_and_identity_do_not_consume" classname="test_equipment" time="0.004">
+		</testcase>
+		<testcase name="test_expansion_preserves_every_old_affix_and_natural_five_slot_limits" classname="test_equipment" time="0.004">
+		</testcase>
+		<testcase name="test_ascension_requires_personal_realm_and_preserves_history_and_slots" classname="test_equipment" time="0.004">
+		</testcase>
+		<testcase name="test_seeded_generation_and_fusion_outcomes_always_respect_budget_and_exclusions" classname="test_equipment" time="0.076">
+		</testcase>
+		<testcase name="test_inventory_copy_isolation_and_equipped_material_rejection" classname="test_equipment" time="0.003">
+		</testcase>
+		<testcase name="test_previews_reject_insufficient_resources_without_mutation" classname="test_equipment" time="0.005">
+		</testcase>
+		<testcase name="test_all_legal_four_slot_type_sets_expand_at_single_affix_limit" classname="test_equipment" time="0.027">
+		</testcase>
+		<testcase name="test_all_tiers_qualities_slots_and_locks_use_identical_currency_cost" classname="test_equipment" time="0.027">
+		</testcase>
+		<testcase name="test_invalid_budget_or_special_ability_restore_never_replaces_valid_inventory" classname="test_equipment" time="0.005">
+		</testcase>
+	</testsuite>
+	<testsuite id="1" name="test_expedition" package="tests" timestamp="2026-10-13T00:21:42" hostname="localhost" tests="8" failures="0" errors="0" skipped="0" flaky="0" time="0.046">
+		<testcase name="test_real_objective_and_evacuation_commit_once" classname="test_expedition" time="0.004">
+		</testcase>
+		<testcase name="test_failure_discards_loot_and_retains_real_experience" classname="test_expedition" time="0.003">
+		</testcase>
+		<testcase name="test_short_disengagement_does_not_end_encounter_or_enable_camp" classname="test_expedition" time="0.003">
+		</testcase>
+		<testcase name="test_unknown_or_duplicate_kills_and_nodes_cannot_invent_rewards" classname="test_expedition" time="0.003">
+		</testcase>
+		<testcase name="test_challenge_requires_gate_and_actual_guardian_defeat" classname="test_expedition" time="0.003">
+		</testcase>
+		<testcase name="test_inventory_atomic_cost_deduplication_and_restore" classname="test_expedition" time="0.004">
+		</testcase>
+		<testcase name="test_reused_run_id_is_rejected_after_settlement" classname="test_expedition" time="0.003">
+		</testcase>
+		<testcase name="test_restore_rejects_terminal_state_without_outcome_or_real_victory" classname="test_expedition" time="0.003">
+		</testcase>
+	</testsuite>
+	<testsuite id="2" name="test_game_settings" package="tests" timestamp="2026-10-13T00:21:42" hostname="localhost" tests="5" failures="0" errors="0" skipped="0" flaky="0" time="0.040">
+		<testcase name="test_defaults_are_valid_and_detached" classname="test_game_settings" time="0.003">
+		</testcase>
+		<testcase name="test_normalize_preserves_present_values_and_fills_missing_settings" classname="test_game_settings" time="0.002">
+		</testcase>
+		<testcase name="test_numeric_boundaries_and_types_are_validated" classname="test_game_settings" time="0.004">
+		</testcase>
+		<testcase name="test_unknown_incomplete_or_invalid_switch_settings_are_rejected" classname="test_game_settings" time="0.003">
+		</testcase>
+		<testcase name="test_settings_survive_real_repository_roundtrip" classname="test_game_settings" time="0.015">
+		</testcase>
+	</testsuite>
+	<testsuite id="3" name="test_input_bindings" package="tests" timestamp="2026-10-13T00:21:42" hostname="localhost" tests="10" failures="0" errors="0" skipped="0" flaky="0" time="0.067">
+		<testcase name="test_default_file_and_remap_replace_real_keyboard_events" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_conflicts_invalid_keys_navigation_and_required_unbinds_are_rejected" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_atomic_full_restore_accepts_swaps_and_rejects_late_invalid_fields" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_snapshot_schema_rejects_unknown_fields_versions_and_missing_actions_atomically" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_remap_preserves_gamepad_mouse_events_and_unrelated_ui_actions" classname="test_input_bindings" time="0.007">
+		</testcase>
+		<testcase name="test_snapshot_is_detached_and_reset_defaults_applies_to_input_map" classname="test_input_bindings" time="0.005">
+		</testcase>
+		<testcase name="test_radial_deadzone_is_scaled_and_rotation_symmetric" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_focus_release_does_not_resume_movement_from_global_input_poll_or_echo" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_unhandled_keyboard_movement_release_and_mouse_hold_share_ui_safe_adapter" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_configure_is_atomic_and_remapping_releases_old_held_state" classname="test_input_bindings" time="0.004">
+		</testcase>
+	</testsuite>
+	<testsuite id="4" name="test_presentation" package="tests" timestamp="2026-10-13T00:21:42" hostname="localhost" tests="17" failures="0" errors="0" skipped="0" flaky="0" time="4.144">
+		<testcase name="test_real_main_scene_initializes_title_and_original_assets_without_save_mutation" classname="test_presentation" time="0.097">
+		</testcase>
+		<testcase name="test_south_boundary_prevents_falling_outside_the_playable_floor" classname="test_presentation" time="1.663">
+		</testcase>
+		<testcase name="test_touch_reset_releases_both_sticks_and_accepts_a_new_finger" classname="test_presentation" time="0.076">
+		</testcase>
+		<testcase name="test_touch_visibility_and_focus_loss_clear_hold_state_and_pause_game" classname="test_presentation" time="0.083">
+		</testcase>
+		<testcase name="test_enemy_prepared_attack_expires_after_player_leaves_aggro_range" classname="test_presentation" time="0.083">
+		</testcase>
+		<testcase name="test_pause_stops_ai_windup_and_combat_cooldowns_until_resume" classname="test_presentation" time="0.226">
+		</testcase>
+		<testcase name="test_viewport_ui_dispatch_consumes_mouse_attack_before_world_adapter" classname="test_presentation" time="0.080">
+		</testcase>
+		<testcase name="test_save_and_fresh_scene_restore_exact_health_stamina_and_camp_checkpoint" classname="test_presentation" time="0.104">
+		</testcase>
+		<testcase name="test_rejected_domain_restore_does_not_partially_change_active_progress" classname="test_presentation" time="0.078">
+		</testcase>
+		<testcase name="test_wrong_settings_types_are_rejected_without_partial_restore_or_script_errors" classname="test_presentation" time="0.084">
+		</testcase>
+		<testcase name="test_modal_bounds_fit_both_supported_logical_viewports" classname="test_presentation" time="0.277">
+		</testcase>
+		<testcase name="test_long_fusion_menu_scrolls_with_real_wheel_events_and_last_button_is_clickable" classname="test_presentation" time="0.730">
+		</testcase>
+		<testcase name="test_anchor_timeout_after_expedition_cleanup_does_not_capture_freed_nodes" classname="test_presentation" time="0.162">
+		</testcase>
+		<testcase name="test_camp_command_guards_reject_active_encounter_without_resource_or_health_changes" classname="test_presentation" time="0.090">
+		</testcase>
+		<testcase name="test_workbench_mutations_require_a_built_facility" classname="test_presentation" time="0.079">
+		</testcase>
+		<testcase name="test_binding_payload_roundtrip_and_failed_map_restore_are_atomic_with_world" classname="test_presentation" time="0.106">
+		</testcase>
+		<testcase name="test_restore_validates_nonactive_equipment_and_rejects_active_over_realm_item" classname="test_presentation" time="0.076">
+		</testcase>
+	</testsuite>
+	<testsuite id="5" name="test_presentation_config" package="tests" timestamp="2026-10-13T00:21:46" hostname="localhost" tests="8" failures="0" errors="0" skipped="0" flaky="0" time="0.048">
+		<testcase name="test_real_configuration_loads_and_does_not_expose_mutable_input_reference" classname="test_presentation_config" time="0.004">
+		</testcase>
+		<testcase name="test_zero_combat_cooldown_is_rejected_before_scene_creation" classname="test_presentation_config" time="0.003">
+		</testcase>
+		<testcase name="test_nonfinite_and_wrong_type_numeric_fields_are_rejected" classname="test_presentation_config" time="0.005">
+		</testcase>
+		<testcase name="test_world_seed_requires_finite_nonnegative_integer" classname="test_presentation_config" time="0.004">
+		</testcase>
+		<testcase name="test_unknown_or_missing_sections_and_fields_are_rejected" classname="test_presentation_config" time="0.005">
+		</testcase>
+		<testcase name="test_camera_distance_must_be_within_ordered_zoom_bounds" classname="test_presentation_config" time="0.004">
+		</testcase>
+		<testcase name="test_tier_damage_multipliers_require_exact_supported_tiers_and_finite_values" classname="test_presentation_config" time="0.004">
+		</testcase>
+		<testcase name="test_initial_stamina_must_cover_each_required_action" classname="test_presentation_config" time="0.004">
+		</testcase>
+	</testsuite>
+	<testsuite id="6" name="test_progression" package="tests" timestamp="2026-10-13T00:21:46" hostname="localhost" tests="8" failures="0" errors="0" skipped="0" flaky="0" time="0.049">
+		<testcase name="test_level_gate_banks_experience_without_extra_points" classname="test_progression" time="0.004">
+		</testcase>
+		<testcase name="test_ascension_requires_victory_then_releases_bank_once" classname="test_progression" time="0.005">
+		</testcase>
+		<testcase name="test_duplicate_negative_and_invalid_restore_leave_progress_unchanged" classname="test_progression" time="0.003">
+		</testcase>
+		<testcase name="test_restore_preserves_banked_xp_and_operation_deduplication" classname="test_progression" time="0.004">
+		</testcase>
+		<testcase name="test_configuration_rejects_bad_budget_and_unknown_resource" classname="test_progression" time="0.004">
+		</testcase>
+		<testcase name="test_restore_rejects_fabricated_or_inconsistent_ascension_records" classname="test_progression" time="0.003">
+		</testcase>
+		<testcase name="test_second_realm_restore_requires_level30_and_preserves_zero_bank_boundary" classname="test_progression" time="0.004">
+		</testcase>
+		<testcase name="test_configuration_requires_expandable_pools_and_complete_platform_values" classname="test_progression" time="0.004">
+		</testcase>
+	</testsuite>
+	<testsuite id="7" name="test_save_repository" package="tests" timestamp="2026-10-13T00:21:46" hostname="localhost" tests="17" failures="0" errors="0" skipped="0" flaky="0" time="0.390">
+		<testcase name="test_new_directory_reports_missing_without_creating_a_save" classname="test_save_repository" time="0.007">
+		</testcase>
+		<testcase name="test_json_payload_roundtrip_and_detached_data" classname="test_save_repository" time="0.013">
+		</testcase>
+		<testcase name="test_repeated_saves_rotate_and_keep_two_valid_generations" classname="test_save_repository" time="0.049">
+		</testcase>
+		<testcase name="test_corrupt_latest_slot_recovers_previous_valid_generation" classname="test_save_repository" time="0.028">
+		</testcase>
+		<testcase name="test_checksum_and_sequence_tampering_are_rejected" classname="test_save_repository" time="0.027">
+		</testcase>
+		<testcase name="test_both_corrupt_slots_do_not_silently_reset_or_overwrite" classname="test_save_repository" time="0.015">
+		</testcase>
+		<testcase name="test_future_schema_blocks_load_and_any_overwrite" classname="test_save_repository" time="0.020">
+		</testcase>
+		<testcase name="test_v1_migration_is_pure_and_preserves_original_until_new_save" classname="test_save_repository" time="0.020">
+		</testcase>
+		<testcase name="test_interrupted_temp_write_is_ignored_and_replaced_on_next_save" classname="test_save_repository" time="0.022">
+		</testcase>
+		<testcase name="test_write_failure_preserves_last_effective_slot" classname="test_save_repository" time="0.019">
+		</testcase>
+		<testcase name="test_commit_rename_failure_preserves_last_effective_slot" classname="test_save_repository" time="0.024">
+		</testcase>
+		<testcase name="test_oversized_and_engine_object_payloads_never_replace_valid_save" classname="test_save_repository" time="0.019">
+		</testcase>
+		<testcase name="test_readonly_resource_path_is_rejected_at_configuration" classname="test_save_repository" time="0.014">
+		</testcase>
+		<testcase name="test_oversized_corrupt_file_recovers_valid_slot" classname="test_save_repository" time="0.020">
+		</testcase>
+		<testcase name="test_migration_failure_cannot_overwrite_only_old_slot" classname="test_save_repository" time="0.012">
+		</testcase>
+		<testcase name="test_two_repository_instances_share_generation_order_in_one_process" classname="test_save_repository" time="0.021">
+		</testcase>
+		<testcase name="test_diagnostic_event_contains_metadata_without_payload_or_path" classname="test_save_repository" time="0.016">
+		</testcase>
+	</testsuite>
+	<testsuite id="8" name="test_user_preferences" package="tests" timestamp="2026-10-13T00:21:47" hostname="localhost" tests="13" failures="0" errors="0" skipped="0" flaky="0" time="0.315">
+		<testcase name="test_first_load_does_not_create_preferences_or_game_progress" classname="test_user_preferences" time="0.011">
+		</testcase>
+		<testcase name="test_title_settings_persist_without_game_progress_and_do_not_apply_inputmap" classname="test_user_preferences" time="0.021">
+		</testcase>
+		<testcase name="test_key_conflict_rejects_save_without_mutating_valid_slot_or_inputmap" classname="test_user_preferences" time="0.019">
+		</testcase>
+		<testcase name="test_invalid_or_oversized_settings_and_unknown_binding_fields_preserve_preferences" classname="test_user_preferences" time="0.021">
+		</testcase>
+		<testcase name="test_future_container_blocks_load_and_save_without_overwrite" classname="test_user_preferences" time="0.023">
+		</testcase>
+		<testcase name="test_future_binding_schema_blocks_save_of_old_defaults" classname="test_user_preferences" time="0.020">
+		</testcase>
+		<testcase name="test_corrupt_latest_preferences_recovers_previous_valid_generation" classname="test_user_preferences" time="0.026">
+		</testcase>
+		<testcase name="test_all_corrupt_preferences_are_diagnosed_and_not_cleared" classname="test_user_preferences" time="0.020">
+		</testcase>
+		<testcase name="test_valid_checksum_with_invalid_domain_data_is_rejected_without_overwrite" classname="test_user_preferences" time="0.020">
+		</testcase>
+		<testcase name="test_preferences_and_progress_use_distinct_slots" classname="test_user_preferences" time="0.026">
+		</testcase>
+		<testcase name="test_configure_failure_keeps_previous_preferences_repository" classname="test_user_preferences" time="0.028">
+		</testcase>
+		<testcase name="test_real_temporary_write_failure_keeps_previous_valid_preferences" classname="test_user_preferences" time="0.026">
+		</testcase>
+		<testcase name="test_unconfigured_service_and_loaded_candidate_mutation_are_safe" classname="test_user_preferences" time="0.021">
+		</testcase>
+	</testsuite>
+	<testsuite id="9" name="test_world_builder" package="tests" timestamp="2026-10-13T00:21:47" hostname="localhost" tests="5" failures="0" errors="0" skipped="0" flaky="0" time="0.177">
+		<testcase name="test_runtime_configuration_rejects_unbounded_counts_invalid_types_and_duplicate_instances" classname="test_world_builder" time="0.009">
+		</testcase>
+		<testcase name="test_region_identity_uses_different_layout_lighting_and_real_resource_types" classname="test_world_builder" time="0.044">
+		</testcase>
+		<testcase name="test_imported_paving_surface_and_continuous_physical_ground_share_zero_height" classname="test_world_builder" time="0.036">
+		</testcase>
+		<testcase name="test_prop_collision_tracks_visuals_without_blocking_resources_or_core_anchors" classname="test_world_builder" time="0.035">
+		</testcase>
+		<testcase name="test_closed_gate_and_low_south_boundary_have_real_blocking_shapes" classname="test_world_builder" time="0.035">
+		</testcase>
+	</testsuite>
+</testsuites>

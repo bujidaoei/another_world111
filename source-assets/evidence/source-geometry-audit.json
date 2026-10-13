@@ -1,0 +1,266 @@
+{
+  "date": "2026-10-13",
+  "source": "source-assets/blender/asset_family.blend",
+  "assets": [
+    {
+      "id": "survivor_robot",
+      "surface_checks": [
+        {
+          "mesh": "survivor_robot_Body_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "survivor_robot_Head_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "survivor_robot_LeftHip_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "survivor_robot_LeftShoulder_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "survivor_robot_RightHip_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "survivor_robot_RightShoulder_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    },
+    {
+      "id": "scavenger",
+      "surface_checks": [
+        {
+          "mesh": "scavenger_Body_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "scavenger_Head_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "scavenger_LeftHip_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "scavenger_LeftShoulder_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "scavenger_RightHip_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "scavenger_RightShoulder_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    },
+    {
+      "id": "guardian",
+      "surface_checks": [
+        {
+          "mesh": "guardian_Body_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "guardian_Head_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "guardian_LeftHip_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "guardian_LeftShoulder_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "guardian_RightHip_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        },
+        {
+          "mesh": "guardian_RightShoulder_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    },
+    {
+      "id": "spitter",
+      "surface_checks": [
+        {
+          "mesh": "spitter_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    },
+    {
+      "id": "lightning_rifle_t1",
+      "surface_checks": [
+        {
+          "mesh": "lightning_rifle_t1_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    },
+    {
+      "id": "lightning_rifle_t2",
+      "surface_checks": [
+        {
+          "mesh": "lightning_rifle_t2_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    },
+    {
+      "id": "conductive_anchor",
+      "surface_checks": [
+        {
+          "mesh": "conductive_anchor_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    },
+    {
+      "id": "cargo_crate",
+      "surface_checks": [
+        {
+          "mesh": "cargo_crate_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    },
+    {
+      "id": "barricade",
+      "surface_checks": [
+        {
+          "mesh": "barricade_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    },
+    {
+      "id": "pump_station",
+      "surface_checks": [
+        {
+          "mesh": "pump_station_Surface",
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "uv_layers": 2,
+          "negative_scale": false,
+          "remaining_modifiers": 0
+        }
+      ],
+      "composite_note": "Closed intersecting hard-surface components are intentionally separate topology islands; visual mesh is not collision geometry."
+    }
+  ]
+}

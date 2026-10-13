@@ -1,0 +1,443 @@
+[
+  {
+    "id": "TASK-101",
+    "phase": "Setup",
+    "description": "自主冻结规格与更新宪章/变更记录",
+    "path": "../../specs/002-singleplayer-prototype/decisions.md",
+    "requirements": [
+      "REQ-101",
+      "REQ-104",
+      "REQ-105",
+      "REQ-106",
+      "NFR-101"
+    ],
+    "acceptance": [
+      "AC-101",
+      "AC-104",
+      "AC-105",
+      "AC-106",
+      "AC-109"
+    ],
+    "dependencies": [],
+    "test": "TEST-101",
+    "criterion": "文档一致、规则数字、接口及禁止假验收有完整记录",
+    "evidence": [
+      "evidence/2026-10-13/setup-and-core.md"
+    ],
+    "done": true,
+    "status": "已验收（明确局部门槛）"
+  },
+  {
+    "id": "TASK-102",
+    "phase": "Setup",
+    "description": "安装验证官方GodotAI release并接通正确工程",
+    "path": "../../game/addons/godot_ai/",
+    "requirements": [
+      "REQ-108",
+      "NFR-101"
+    ],
+    "acceptance": [
+      "AC-108",
+      "AC-109"
+    ],
+    "dependencies": [
+      "TASK-101"
+    ],
+    "test": "TEST-102",
+    "criterion": "签名/hash/tree验证与MCP正确session",
+    "evidence": [
+      "evidence/2026-10-13/setup-and-core.md"
+    ],
+    "done": true,
+    "status": "已验收（明确局部门槛）"
+  },
+  {
+    "id": "TASK-103",
+    "phase": "Setup",
+    "description": "固定GdUnit4并验证非零/失败/空发现阻断wrapper",
+    "path": "../../tools/run_gdunit.ps1",
+    "requirements": [
+      "NFR-102"
+    ],
+    "acceptance": [
+      "AC-110"
+    ],
+    "dependencies": [
+      "TASK-101"
+    ],
+    "test": "TEST-103",
+    "criterion": "真实JUnit发现>0，预期失败/空发现退出非零",
+    "evidence": [
+      "evidence/2026-10-13/setup-and-core.md",
+      "evidence/2026-10-13/persistence-and-gdunit.md"
+    ],
+    "done": true,
+    "status": "已验收（明确局部门槛）"
+  },
+  {
+    "id": "TASK-104",
+    "phase": "US1",
+    "description": "规则测试与实现：XP/任务/遭遇/库存/负载/制作",
+    "path": "../../game/features/expedition/",
+    "requirements": [
+      "REQ-104",
+      "REQ-105",
+      "NFR-101"
+    ],
+    "acceptance": [
+      "AC-104",
+      "AC-105",
+      "AC-109"
+    ],
+    "dependencies": [
+      "TASK-101",
+      "TASK-103"
+    ],
+    "test": "TEST-104",
+    "criterion": "真实规则边界、奖励/事务幂等、合法还原非零GdUnit",
+    "evidence": [
+      "evidence/2026-10-13/setup-and-core.md",
+      "evidence/2026-10-13/gdunit-core-rules.xml"
+    ],
+    "done": true,
+    "status": "已验收（明确局部门槛）"
+  },
+  {
+    "id": "TASK-105",
+    "phase": "US2",
+    "description": "装备预算/融合/扩槽/进阶实现与真实测试",
+    "path": "../../game/features/equipment/",
+    "requirements": [
+      "REQ-106",
+      "NFR-101"
+    ],
+    "acceptance": [
+      "AC-106",
+      "AC-109"
+    ],
+    "dependencies": [
+      "TASK-101",
+      "TASK-103"
+    ],
+    "test": "TEST-105",
+    "criterion": "预算/身份/特效/候选/槽/阶级/成本/重复事务通过",
+    "evidence": [
+      "evidence/2026-10-13/setup-and-core.md",
+      "evidence/2026-10-13/gdunit-core-rules.xml"
+    ],
+    "done": true,
+    "status": "已验收（明确局部门槛）"
+  },
+  {
+    "id": "TASK-106",
+    "phase": "US3",
+    "description": "双槽存档/设置实现与风险测试",
+    "path": "../../game/persistence/",
+    "requirements": [
+      "REQ-107",
+      "NFR-101"
+    ],
+    "acceptance": [
+      "AC-107",
+      "AC-109"
+    ],
+    "dependencies": [
+      "TASK-101",
+      "TASK-103"
+    ],
+    "test": "TEST-106",
+    "criterion": "回读/损坏恢复/未来拒写/1MiB/连续与迁移真实测试，未能安全注入错误单列",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  },
+  {
+    "id": "TASK-107",
+    "phase": "US1",
+    "description": "输入、玩家/敌人、镜头和UI/菜单实装",
+    "path": "../../game/presentation/",
+    "requirements": [
+      "REQ-101",
+      "REQ-102",
+      "REQ-103",
+      "NFR-101"
+    ],
+    "acceptance": [
+      "AC-101",
+      "AC-102",
+      "AC-103",
+      "AC-109"
+    ],
+    "dependencies": [
+      "TASK-104"
+    ],
+    "test": "TEST-107",
+    "criterion": "实际3D行走/命中/危险预备/操作/UI消费及菜单恢复",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  },
+  {
+    "id": "TASK-108",
+    "phase": "US1",
+    "description": "集成真实远征/目标/采集/补给/营地设施/结算",
+    "path": "../../game/presentation/game_session.gd",
+    "requirements": [
+      "REQ-101",
+      "REQ-104",
+      "REQ-105"
+    ],
+    "acceptance": [
+      "AC-101",
+      "AC-104",
+      "AC-105"
+    ],
+    "dependencies": [
+      "TASK-104",
+      "TASK-106",
+      "TASK-107"
+    ],
+    "test": "TEST-108",
+    "criterion": "新档合法流程与失败/重试/保存恢复证据",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  },
+  {
+    "id": "TASK-109",
+    "phase": "US2",
+    "description": "集成30级个人挑战、二阶区域/锚点/电枪进阶与培养UI",
+    "path": "../../game/presentation/game_session.gd",
+    "requirements": [
+      "REQ-103",
+      "REQ-104",
+      "REQ-106"
+    ],
+    "acceptance": [
+      "AC-103",
+      "AC-104",
+      "AC-106"
+    ],
+    "dependencies": [
+      "TASK-105",
+      "TASK-108"
+    ],
+    "test": "TEST-109",
+    "criterion": "真实奖励升30并挑战，三目标→锚点，融合预览成本/概率/锁定真实交互",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  },
+  {
+    "id": "TASK-110",
+    "phase": "US3",
+    "description": "BlenderMCP制作原创代表资产与GLB导入审查",
+    "path": "../../source-assets/blender/",
+    "requirements": [
+      "REQ-108"
+    ],
+    "acceptance": [
+      "AC-108"
+    ],
+    "dependencies": [
+      "TASK-101"
+    ],
+    "test": "TEST-110",
+    "criterion": "源blend/script/GLB/mesh指标/原型审查，最终商业品质仍独立门槛",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  },
+  {
+    "id": "TASK-111",
+    "phase": "US3",
+    "description": "ComfyMCP本地合法图像生产/规范化与许可",
+    "path": "../../source-assets/workflows/",
+    "requirements": [
+      "REQ-108"
+    ],
+    "acceptance": [
+      "AC-108"
+    ],
+    "dependencies": [
+      "TASK-101"
+    ],
+    "test": "TEST-111",
+    "criterion": "真实工作流/节点/来源/hash/输出和实际采用，不用未知授权资产发布",
+    "evidence": [
+      "evidence/2026-10-13/setup-and-core.md"
+    ],
+    "done": true,
+    "status": "已验收（明确局部门槛）"
+  },
+  {
+    "id": "TASK-112",
+    "phase": "US3",
+    "description": "GodotMCP制作/修订材质、环境、粒子特效",
+    "path": "../../game/presentation/main.tscn",
+    "requirements": [
+      "REQ-103",
+      "REQ-108"
+    ],
+    "acceptance": [
+      "AC-103",
+      "AC-108"
+    ],
+    "dependencies": [
+      "TASK-102",
+      "TASK-107",
+      "TASK-110"
+    ],
+    "test": "TEST-112",
+    "criterion": "真实MCP场景/光/材质/雨粒子/命中效果及运行截图",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  },
+  {
+    "id": "TASK-113",
+    "phase": "US3",
+    "description": "原创音效、音乐/氛围与真实总线/设置集成",
+    "path": "../../game/assets/audio/",
+    "requirements": [
+      "REQ-101",
+      "REQ-108"
+    ],
+    "acceptance": [
+      "AC-101",
+      "AC-108"
+    ],
+    "dependencies": [
+      "TASK-107"
+    ],
+    "test": "TEST-113",
+    "criterion": "合成源/文件、总线独立音量/并发/循环/削波/事件时序，实际播放",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  },
+  {
+    "id": "TASK-114",
+    "phase": "QA",
+    "description": "真实PC完整输入/成败/培养/晋阶/保存端到端验收",
+    "path": "../../specs/002-singleplayer-prototype/evidence/",
+    "requirements": [
+      "REQ-101",
+      "REQ-102",
+      "REQ-103",
+      "REQ-104",
+      "REQ-105",
+      "REQ-106",
+      "REQ-107"
+    ],
+    "acceptance": [
+      "AC-101",
+      "AC-102",
+      "AC-103",
+      "AC-104",
+      "AC-105",
+      "AC-106",
+      "AC-107"
+    ],
+    "dependencies": [
+      "TASK-109",
+      "TASK-112",
+      "TASK-113"
+    ],
+    "test": "TEST-114",
+    "criterion": "合法新档真实完成，不用eval发经验/杀怪绕过流程；夹具局部对照分列",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  },
+  {
+    "id": "TASK-115",
+    "phase": "QA",
+    "description": "PC导出构建、分位性能、静态资源与干净检出",
+    "path": "../../game/export_presets.cfg",
+    "requirements": [
+      "NFR-101",
+      "NFR-102"
+    ],
+    "acceptance": [
+      "AC-109",
+      "AC-110"
+    ],
+    "dependencies": [
+      "TASK-114"
+    ],
+    "test": "TEST-115",
+    "criterion": "运行构建/资源合法、测试非零、FPS分位/加载/内存与对应设备",
+    "evidence": ["evidence/2026-10-13/performance-tooling.md", "evidence/2026-10-13/android-development-build.md"],
+    "done": false,
+    "status": "进行中/未验收（renderer门禁开放）"
+  },
+  {
+    "id": "TASK-116",
+    "phase": "QA",
+    "description": "独立审查、缺陷修复回归与Spec Kit状态/Git交付",
+    "path": "../../specs/002-singleplayer-prototype/analysis.md",
+    "requirements": [
+      "NFR-101",
+      "NFR-102"
+    ],
+    "acceptance": [
+      "AC-109",
+      "AC-110"
+    ],
+    "dependencies": [
+      "TASK-115"
+    ],
+    "test": "TEST-116",
+    "criterion": "严重问题关闭、实际证据匹配、远端SHA一致",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  },
+  {
+    "id": "TASK-117",
+    "phase": "外部验收",
+    "description": "Android/手柄真实设备及真人原型体验",
+    "path": "../../specs/002-singleplayer-prototype/evidence/",
+    "requirements": [
+      "REQ-102",
+      "NFR-102"
+    ],
+    "acceptance": [
+      "AC-102",
+      "AC-110"
+    ],
+    "dependencies": [
+      "TASK-114"
+    ],
+    "test": "TEST-117",
+    "criterion": "实际设备/参与者才验收；缺证据不暂停可独立完整制作",
+    "evidence": ["evidence/2026-10-13/android-development-build.md", "evidence/2026-10-13/android-build-verification.json"],
+    "done": false,
+    "status": "进行中/未验收（无手机运行证据）"
+  },
+  {
+    "id": "TASK-118",
+    "phase": "后续",
+    "description": "进入完整切片角色/天赋预设/三阶分支/共鸣/内容及合作评估",
+    "path": "../../specs/001-project-foundation/tasks.md",
+    "requirements": [
+      "REQ-104",
+      "REQ-106",
+      "NFR-102"
+    ],
+    "acceptance": [
+      "AC-104",
+      "AC-106",
+      "AC-110"
+    ],
+    "dependencies": [
+      "TASK-116"
+    ],
+    "test": "TEST-118",
+    "criterion": "另立完整产品功能规格，实际实现/验证，不以当前原型结束完整目标",
+    "evidence": [],
+    "done": false,
+    "status": "进行中/未验收"
+  }
+]

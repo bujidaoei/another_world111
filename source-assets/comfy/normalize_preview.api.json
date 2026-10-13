@@ -1,0 +1,5 @@
+{
+  "1": {"class_type": "LoadImage", "inputs": {"image": "survivor_robot.png"}},
+  "2": {"class_type": "ImageScale", "inputs": {"image": ["1", 0], "upscale_method": "lanczos", "width": 512, "height": 512, "crop": "disabled"}},
+  "3": {"class_type": "SaveImage", "inputs": {"images": ["2", 0], "filename_prefix": "another_world/survivor_robot_preview"}}
+}

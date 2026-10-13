@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="13" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_user_preferences" package="tests" timestamp="2026-10-13T00:05:10" hostname="localhost" tests="13" failures="0" errors="0" skipped="0" flaky="0" time="0.317">
+		<testcase name="test_first_load_does_not_create_preferences_or_game_progress" classname="test_user_preferences" time="0.012">
+		</testcase>
+		<testcase name="test_title_settings_persist_without_game_progress_and_do_not_apply_inputmap" classname="test_user_preferences" time="0.021">
+		</testcase>
+		<testcase name="test_key_conflict_rejects_save_without_mutating_valid_slot_or_inputmap" classname="test_user_preferences" time="0.018">
+		</testcase>
+		<testcase name="test_invalid_or_oversized_settings_and_unknown_binding_fields_preserve_preferences" classname="test_user_preferences" time="0.022">
+		</testcase>
+		<testcase name="test_future_container_blocks_load_and_save_without_overwrite" classname="test_user_preferences" time="0.021">
+		</testcase>
+		<testcase name="test_future_binding_schema_blocks_save_of_old_defaults" classname="test_user_preferences" time="0.020">
+		</testcase>
+		<testcase name="test_corrupt_latest_preferences_recovers_previous_valid_generation" classname="test_user_preferences" time="0.027">
+		</testcase>
+		<testcase name="test_all_corrupt_preferences_are_diagnosed_and_not_cleared" classname="test_user_preferences" time="0.017">
+		</testcase>
+		<testcase name="test_valid_checksum_with_invalid_domain_data_is_rejected_without_overwrite" classname="test_user_preferences" time="0.019">
+		</testcase>
+		<testcase name="test_preferences_and_progress_use_distinct_slots" classname="test_user_preferences" time="0.026">
+		</testcase>
+		<testcase name="test_configure_failure_keeps_previous_preferences_repository" classname="test_user_preferences" time="0.026">
+		</testcase>
+		<testcase name="test_real_temporary_write_failure_keeps_previous_valid_preferences" classname="test_user_preferences" time="0.033">
+		</testcase>
+		<testcase name="test_unconfigured_service_and_loaded_candidate_mutation_are_safe" classname="test_user_preferences" time="0.018">
+		</testcase>
+	</testsuite>
+</testsuites>

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-13",
+  "file": "source-assets/previews/comfy/20adb553_002.png",
+  "bytes": 219444,
+  "sha256": "55248ef8750451abe62a3488004904f25dbd7347735c40b74a026dceb8745dae",
+  "size": [
+    512,
+    512
+  ],
+  "mode": "RGB",
+  "edge_difference_8bit": {
+    "left_right_max": 0,
+    "left_right_mean": 0,
+    "top_bottom_max": 0,
+    "top_bottom_mean": 0
+  },
+  "max_rgb_channel_difference": 0,
+  "intensity": {
+    "min": 78,
+    "max": 119,
+    "mean": 94.33956909179688,
+    "stddev": 4.504912732821108
+  },
+  "seam_method": "ComfyUI core ImageFlip and ImageBlend averages, horizontal then vertical; mirror symmetry is intentional",
+  "acceptance": "technical sample only; Godot material and Android quality/performance pending"
+}

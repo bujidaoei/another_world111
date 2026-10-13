@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "assets": [
+    {
+      "path": "source-assets/previews/comfy/c273e74a_000.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 512,
+      "height": 512,
+      "bytes": 216440,
+      "color_count": 7566,
+      "has_alpha": false,
+      "alpha_min": 255,
+      "alpha_max": 255,
+      "transparent_pixels": 0,
+      "content_bounds": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "problems": []
+    }
+  ]
+}

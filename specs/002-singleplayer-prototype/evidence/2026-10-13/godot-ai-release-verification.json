@@ -1,0 +1,14 @@
+{
+  "repository": "hi-godot/godot-ai",
+  "channel": "stable",
+  "tag": "v4.3.0",
+  "version": "4.3.0",
+  "source_commit": "b82b5c519b1b17228f70d8effce1626f391bd1dd",
+  "asset": {
+    "name": "godot-ai-v4-plugin.zip",
+    "sha256": "dbc3d16e1aa7a5f3ae8038a150bf4191162112f4329c79611aa6f656e3ca4e58",
+    "size": 2296226
+  },
+  "inventory_count": 313,
+  "signature_and_archive_inventory_verified": true
+}

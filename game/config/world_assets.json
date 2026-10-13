@@ -1,0 +1,2482 @@
+{
+  "schema_version": 1,
+  "units": "metres; Y-up / model forward -Z",
+  "model_definitions": {
+    "survivor_robot": {
+      "path": "res://assets/models/survivor_robot.glb",
+      "bounds_m": {
+        "min": [
+          -0.5850000381469727,
+          0.009999984875321388,
+          -0.35499998927116394
+        ],
+        "max": [
+          0.5850000381469727,
+          2.3600001335144043,
+          0.4975000023841858
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "external visual; collision supplied by owning gameplay entity"
+    },
+    "scavenger": {
+      "path": "res://assets/models/scavenger.glb",
+      "bounds_m": {
+        "min": [
+          -0.5850000381469727,
+          0.009999984875321388,
+          -0.40474873781204224
+        ],
+        "max": [
+          0.5850000381469727,
+          2.3600001335144043,
+          0.4975000023841858
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "external visual; collision supplied by owning gameplay entity"
+    },
+    "guardian": {
+      "path": "res://assets/models/guardian.glb",
+      "bounds_m": {
+        "min": [
+          -1.0253068208694458,
+          0.013499966822564602,
+          -0.5464107394218445
+        ],
+        "max": [
+          1.0253068208694458,
+          3.5768065452575684,
+          0.8099998235702515
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "external visual; collision supplied by owning gameplay entity"
+    },
+    "spitter": {
+      "path": "res://assets/models/spitter.glb",
+      "bounds_m": {
+        "min": [
+          -0.6100000143051147,
+          0.05499998852610588,
+          -0.7124999761581421
+        ],
+        "max": [
+          0.6100001335144043,
+          1.25,
+          0.4300000071525574
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "external visual; collision supplied by owning gameplay entity"
+    },
+    "lightning_rifle_t1": {
+      "path": "res://assets/models/lightning_rifle_t1.glb",
+      "bounds_m": {
+        "min": [
+          -0.16249990463256836,
+          -0.20348495244979858,
+          -0.8200000524520874
+        ],
+        "max": [
+          0.16249990463256836,
+          0.5200000405311584,
+          0.6399999260902405
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "external visual; collision supplied by owning gameplay entity"
+    },
+    "lightning_rifle_t2": {
+      "path": "res://assets/models/lightning_rifle_t2.glb",
+      "bounds_m": {
+        "min": [
+          -0.26999998092651367,
+          -0.20348498225212097,
+          -0.8199999928474426
+        ],
+        "max": [
+          0.26999998092651367,
+          0.5199999809265137,
+          0.64000004529953
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "external visual; collision supplied by owning gameplay entity"
+    },
+    "conductive_anchor": {
+      "path": "res://assets/models/conductive_anchor.glb",
+      "bounds_m": {
+        "min": [
+          -0.41611766815185547,
+          -0.01596791297197342,
+          -0.4760511815547943
+        ],
+        "max": [
+          0.5450000762939453,
+          1.0499999523162842,
+          0.4760511815547943
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "external visual; collision supplied by owning gameplay entity"
+    },
+    "cargo_crate": {
+      "path": "res://assets/models/cargo_crate.glb",
+      "bounds_m": {
+        "min": [
+          -0.6400001049041748,
+          0.0,
+          -0.5174999237060547
+        ],
+        "max": [
+          0.6399998664855957,
+          1.0199999809265137,
+          0.4500000476837158
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            1.28,
+            1.02,
+            0.98
+          ],
+          "local_offset": [
+            0,
+            0.51,
+            -0.034
+          ]
+        }
+      ],
+      "camera_occluder": false,
+      "walkable_intent": "external visual; collision supplied by owning gameplay entity"
+    },
+    "barricade": {
+      "path": "res://assets/models/barricade.glb",
+      "bounds_m": {
+        "min": [
+          -1.274999976158142,
+          0.0,
+          -0.34999990463256836
+        ],
+        "max": [
+          1.274999976158142,
+          1.3599998950958252,
+          0.34999990463256836
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            2.55,
+            1.36,
+            0.7
+          ],
+          "local_offset": [
+            0,
+            0.68,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": false,
+      "walkable_intent": "external visual; collision supplied by owning gameplay entity"
+    },
+    "pump_station": {
+      "path": "res://assets/models/pump_station.glb",
+      "bounds_m": {
+        "min": [
+          -3.6300010681152344,
+          -7.434491635649465e-07,
+          -2.619999885559082
+        ],
+        "max": [
+          3.630000114440918,
+          5.159999370574951,
+          2.40000057220459
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            7.26,
+            3.6,
+            4.8
+          ],
+          "local_offset": [
+            0,
+            1.8,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": true,
+      "walkable_intent": "closed workshop exterior, no traversable interior or open door; existing visual door closed"
+    },
+    "ruin_wall_full": {
+      "path": "res://assets/models/ruin_wall_full.glb",
+      "bounds_m": {
+        "min": [
+          -2.1500000953674316,
+          0.0,
+          -0.6449999809265137
+        ],
+        "max": [
+          2.1500000953674316,
+          4.47851037979126,
+          0.5250000357627869
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            4.0,
+            4.45,
+            0.7
+          ],
+          "local_offset": [
+            0,
+            2.225,
+            0
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            4.3,
+            0.4,
+            1.05
+          ],
+          "local_offset": [
+            0,
+            0.2,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": true,
+      "walkable_intent": "closed wall, no traversal; decorate inside a real boundary"
+    },
+    "ruin_wall_broken": {
+      "path": "res://assets/models/ruin_wall_broken.glb",
+      "bounds_m": {
+        "min": [
+          -2.0999999046325684,
+          -0.030957207083702087,
+          -0.8624417781829834
+        ],
+        "max": [
+          2.1000003814697266,
+          3.808356285095215,
+          0.5
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            4.0,
+            3.3,
+            0.65
+          ],
+          "local_offset": [
+            0,
+            1.65,
+            0
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            4.2,
+            0.3,
+            1.0
+          ],
+          "local_offset": [
+            0,
+            0.15,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": true,
+      "walkable_intent": "closed damaged wall; top damage is not a ground-level doorway; collision may remain a continuous level boundary"
+    },
+    "conduit_gateway": {
+      "path": "res://assets/models/conduit_gateway.glb",
+      "bounds_m": {
+        "min": [
+          -3.325000762939453,
+          0.0,
+          -0.9375000596046448
+        ],
+        "max": [
+          3.325000762939453,
+          5.20584774017334,
+          0.9662065505981445
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            6.6,
+            5.25,
+            1.2
+          ],
+          "local_offset": [
+            0,
+            2.625,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": true,
+      "walkable_intent": "closed grille door; signal interaction only, no ground traversal opening at this region boundary"
+    },
+    "paving_tiles": {
+      "path": "res://assets/models/paving_tiles.glb",
+      "bounds_m": {
+        "min": [
+          -1.0,
+          0.0,
+          -1.0
+        ],
+        "max": [
+          1.0,
+          0.1340000033378601,
+          1.0
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "walkable surface decoration; main flat ground supplies continuous collision"
+    },
+    "district_facade": {
+      "path": "res://assets/models/district_facade.glb",
+      "bounds_m": {
+        "min": [
+          -4.110000133514404,
+          -0.005000114440917969,
+          -2.3625001907348633
+        ],
+        "max": [
+          4.110000133514404,
+          6.934999942779541,
+          1.9200000762939453
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            8.0,
+            6.3,
+            3.6
+          ],
+          "local_offset": [
+            0,
+            3.15,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": true,
+      "walkable_intent": "closed background building; place beyond playable boundary; no fake traversable doors"
+    },
+    "maintenance_shelter": {
+      "path": "res://assets/models/maintenance_shelter.glb",
+      "bounds_m": {
+        "min": [
+          -3.1800003051757812,
+          -0.004999995231628418,
+          -1.5064725875854492
+        ],
+        "max": [
+          3.1800003051757812,
+          2.9695162773132324,
+          1.506472110748291
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            6.0,
+            2.65,
+            0.42
+          ],
+          "local_offset": [
+            0,
+            1.325,
+            1.14
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.22,
+            2.55,
+            0.22
+          ],
+          "local_offset": [
+            -2.72,
+            1.275,
+            -1.13
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.22,
+            2.55,
+            0.22
+          ],
+          "local_offset": [
+            -2.72,
+            1.275,
+            1.13
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.22,
+            2.55,
+            0.22
+          ],
+          "local_offset": [
+            2.72,
+            1.275,
+            -1.13
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.22,
+            2.55,
+            0.22
+          ],
+          "local_offset": [
+            2.72,
+            1.275,
+            1.13
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            1.55,
+            1.1,
+            0.62
+          ],
+          "local_offset": [
+            -1.8,
+            0.55,
+            0.72
+          ]
+        }
+      ],
+      "camera_occluder": true,
+      "walkable_intent": "walkable beneath front canopy; collide only four columns, rear wall and work cabinet; do not use one full footprint box"
+    },
+    "pipe_run": {
+      "path": "res://assets/models/pipe_run.glb",
+      "bounds_m": {
+        "min": [
+          -2.0,
+          0.004999969620257616,
+          -0.5225000381469727
+        ],
+        "max": [
+          2.0,
+          0.9199999570846558,
+          0.34999942779541016
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            4.25,
+            0.65,
+            0.74
+          ],
+          "local_offset": [
+            0,
+            0.56,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": false,
+      "walkable_intent": "solid utility pipe; put next to wall outside combat movement corridors"
+    },
+    "industrial_lamp": {
+      "path": "res://assets/models/industrial_lamp.glb",
+      "bounds_m": {
+        "min": [
+          -0.3250007629394531,
+          0.0,
+          -0.8999996185302734
+        ],
+        "max": [
+          0.3250007629394531,
+          3.631786346435547,
+          0.3000001907348633
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            0.5,
+            3.7,
+            0.5
+          ],
+          "local_offset": [
+            0,
+            1.85,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": false,
+      "walkable_intent": "solid narrow post; emitting mesh does not create a runtime light; use sparse separately budgeted lights"
+    },
+    "planter_overgrowth": {
+      "path": "res://assets/models/planter_overgrowth.glb",
+      "bounds_m": {
+        "min": [
+          -0.657214879989624,
+          0.0,
+          -0.4850006103515625
+        ],
+        "max": [
+          0.7147210836410522,
+          1.129489541053772,
+          0.4940776824951172
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            1.22,
+            0.57,
+            0.91
+          ],
+          "local_offset": [
+            0,
+            0.285,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": false,
+      "walkable_intent": "solid planter at wall; upper foliage decorative, no transparent leaf cards or contact-damage implication"
+    },
+    "drain_grate": {
+      "path": "res://assets/models/drain_grate.glb",
+      "bounds_m": {
+        "min": [
+          -0.2700004577636719,
+          0.0,
+          -1.7999992370605469
+        ],
+        "max": [
+          0.2700004577636719,
+          0.10500000417232513,
+          1.8000011444091797
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "walkable flush grate; continuous ground collision supplies support"
+    },
+    "ventilation_unit": {
+      "path": "res://assets/models/ventilation_unit.glb",
+      "bounds_m": {
+        "min": [
+          -0.7399997711181641,
+          1.4901161193847656e-08,
+          -0.592498779296875
+        ],
+        "max": [
+          0.7399997711181641,
+          1.5299999713897705,
+          0.5500011444091797
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            1.36,
+            1.47,
+            1.08
+          ],
+          "local_offset": [
+            0,
+            0.735,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": false,
+      "walkable_intent": "solid machinery; avoid routes and use on roofs/edge service pads"
+    },
+    "reservoir_tank": {
+      "path": "res://assets/models/reservoir_tank.glb",
+      "bounds_m": {
+        "min": [
+          -1.1399993896484375,
+          0.0,
+          -0.7318744659423828
+        ],
+        "max": [
+          0.6900005340576172,
+          2.669999837875366,
+          0.6900005340576172
+        ]
+      },
+      "collision_shapes": [
+        {
+          "type": "box",
+          "size": [
+            1.48,
+            2.7,
+            1.48
+          ],
+          "local_offset": [
+            0,
+            1.35,
+            0
+          ]
+        }
+      ],
+      "camera_occluder": true,
+      "walkable_intent": "solid tank placed by walls; no walkable hollow interior"
+    },
+    "scattered_debris": {
+      "path": "res://assets/models/scattered_debris.glb",
+      "bounds_m": {
+        "min": [
+          -0.8072507381439209,
+          -0.019388476386666298,
+          -0.5651130676269531
+        ],
+        "max": [
+          0.6868448853492737,
+          0.149143785238266,
+          0.6252059936523438
+        ]
+      },
+      "collision_shapes": [],
+      "camera_occluder": false,
+      "walkable_intent": "decorative debris under .2m tall; no solid obstruction or loot affordance"
+    }
+  },
+  "anchors": {
+    "camp": [
+      0,
+      0,
+      12
+    ],
+    "bench": [
+      -3,
+      0,
+      12
+    ],
+    "exit": [
+      0,
+      0,
+      9
+    ],
+    "gate": [
+      0,
+      0,
+      -13
+    ]
+  },
+  "floor": {
+    "surface_y": 0.0,
+    "extent": 34.0,
+    "physics_thickness": 0.4,
+    "foundation_clearance": 0.002,
+    "boundary_half_extent": 16.1,
+    "boundary_thickness": 0.3,
+    "side_wall_height": 4.2,
+    "south_wall_height": 1.1,
+    "tile_asset": "paving_tiles",
+    "tile_spacing": 2.0,
+    "tile_count_axis": 16,
+    "tile_origin_y": -0.1340000033378601,
+    "seed": 78431,
+    "floor_material": "res://presentation/courtyard_floor.tres",
+    "wet_material": "res://presentation/wet_surface.tres"
+  },
+  "resource_locations": [
+    {
+      "type": "metal",
+      "number": "01",
+      "position": [
+        -11,
+        0,
+        -1
+      ]
+    },
+    {
+      "type": "metal",
+      "number": "02",
+      "position": [
+        11,
+        0,
+        -6
+      ]
+    },
+    {
+      "type": "metal",
+      "number": "03",
+      "position": [
+        -8,
+        0,
+        -10
+      ]
+    },
+    {
+      "type": "crystal",
+      "number": "01",
+      "position": [
+        2,
+        0,
+        -12
+      ]
+    }
+  ],
+  "common_placements": [
+    {
+      "id": "RealmGate",
+      "asset": "conduit_gateway",
+      "position": [
+        0,
+        0,
+        -16
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "WestPump",
+      "asset": "pump_station",
+      "position": [
+        -10,
+        0,
+        -14
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "EastPump",
+      "asset": "pump_station",
+      "position": [
+        11,
+        0,
+        -14
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "CampShelter",
+      "asset": "maintenance_shelter",
+      "position": [
+        -8,
+        0,
+        12
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "MaintenanceBench",
+      "asset": "cargo_crate",
+      "position": [
+        -3,
+        0,
+        12
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "CenterCoverWest",
+      "asset": "barricade",
+      "position": [
+        -2,
+        0,
+        -5
+      ],
+      "yaw": 0.1,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "CenterCoverEast",
+      "asset": "barricade",
+      "position": [
+        5,
+        0,
+        1
+      ],
+      "yaw": -0.5,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "RealmAnchor",
+      "asset": "conductive_anchor",
+      "position": [
+        0,
+        0.03,
+        -13
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "SideWall_-1_0",
+      "asset": "ruin_wall_full",
+      "position": [
+        -16,
+        0,
+        -14
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_-1_1",
+      "asset": "ruin_wall_broken",
+      "position": [
+        -16,
+        0,
+        -10
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_-1_2",
+      "asset": "ruin_wall_full",
+      "position": [
+        -16,
+        0,
+        -6
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_-1_3",
+      "asset": "ruin_wall_full",
+      "position": [
+        -16,
+        0,
+        -2
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_-1_4",
+      "asset": "ruin_wall_full",
+      "position": [
+        -16,
+        0,
+        2
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_-1_5",
+      "asset": "ruin_wall_broken",
+      "position": [
+        -16,
+        0,
+        6
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_-1_6",
+      "asset": "ruin_wall_full",
+      "position": [
+        -16,
+        0,
+        10
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_-1_7",
+      "asset": "ruin_wall_full",
+      "position": [
+        -16,
+        0,
+        14
+      ],
+      "yaw": -1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "Drain_-1_0",
+      "asset": "drain_grate",
+      "position": [
+        -13.75,
+        -0.10400000417232513,
+        -12
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_-1_1",
+      "asset": "drain_grate",
+      "position": [
+        -13.75,
+        -0.10400000417232513,
+        -8
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_-1_2",
+      "asset": "drain_grate",
+      "position": [
+        -13.75,
+        -0.10400000417232513,
+        -4
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_-1_3",
+      "asset": "drain_grate",
+      "position": [
+        -13.75,
+        -0.10400000417232513,
+        0
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_-1_4",
+      "asset": "drain_grate",
+      "position": [
+        -13.75,
+        -0.10400000417232513,
+        4
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_-1_5",
+      "asset": "drain_grate",
+      "position": [
+        -13.75,
+        -0.10400000417232513,
+        8
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_-1_6",
+      "asset": "drain_grate",
+      "position": [
+        -13.75,
+        -0.10400000417232513,
+        12
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "SideWall_1_0",
+      "asset": "ruin_wall_full",
+      "position": [
+        16,
+        0,
+        -14
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_1_1",
+      "asset": "ruin_wall_broken",
+      "position": [
+        16,
+        0,
+        -10
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_1_2",
+      "asset": "ruin_wall_full",
+      "position": [
+        16,
+        0,
+        -6
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_1_3",
+      "asset": "ruin_wall_full",
+      "position": [
+        16,
+        0,
+        -2
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_1_4",
+      "asset": "ruin_wall_full",
+      "position": [
+        16,
+        0,
+        2
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_1_5",
+      "asset": "ruin_wall_broken",
+      "position": [
+        16,
+        0,
+        6
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_1_6",
+      "asset": "ruin_wall_full",
+      "position": [
+        16,
+        0,
+        10
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SideWall_1_7",
+      "asset": "ruin_wall_full",
+      "position": [
+        16,
+        0,
+        14
+      ],
+      "yaw": 1.5707963267948966,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "Drain_1_0",
+      "asset": "drain_grate",
+      "position": [
+        13.75,
+        -0.10400000417232513,
+        -12
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_1_1",
+      "asset": "drain_grate",
+      "position": [
+        13.75,
+        -0.10400000417232513,
+        -8
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_1_2",
+      "asset": "drain_grate",
+      "position": [
+        13.75,
+        -0.10400000417232513,
+        -4
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_1_3",
+      "asset": "drain_grate",
+      "position": [
+        13.75,
+        -0.10400000417232513,
+        0
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_1_4",
+      "asset": "drain_grate",
+      "position": [
+        13.75,
+        -0.10400000417232513,
+        4
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_1_5",
+      "asset": "drain_grate",
+      "position": [
+        13.75,
+        -0.10400000417232513,
+        8
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Drain_1_6",
+      "asset": "drain_grate",
+      "position": [
+        13.75,
+        -0.10400000417232513,
+        12
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "RearWall_0",
+      "asset": "ruin_wall_full",
+      "position": [
+        -14,
+        0,
+        -16
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "RearWall_1",
+      "asset": "ruin_wall_full",
+      "position": [
+        -10,
+        0,
+        -16
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "RearWall_2",
+      "asset": "ruin_wall_full",
+      "position": [
+        -6,
+        0,
+        -16
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "RearWall_3",
+      "asset": "ruin_wall_full",
+      "position": [
+        6,
+        0,
+        -16
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "RearWall_4",
+      "asset": "ruin_wall_full",
+      "position": [
+        10,
+        0,
+        -16
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "RearWall_5",
+      "asset": "ruin_wall_full",
+      "position": [
+        14,
+        0,
+        -16
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SouthParapet_0",
+      "asset": "ruin_wall_broken",
+      "position": [
+        -14,
+        0,
+        16
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        0.26,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SouthParapet_1",
+      "asset": "ruin_wall_broken",
+      "position": [
+        -10,
+        0,
+        16
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        0.26,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SouthParapet_2",
+      "asset": "ruin_wall_broken",
+      "position": [
+        -6,
+        0,
+        16
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        0.26,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SouthParapet_3",
+      "asset": "ruin_wall_broken",
+      "position": [
+        -2,
+        0,
+        16
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        0.26,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SouthParapet_4",
+      "asset": "ruin_wall_broken",
+      "position": [
+        2,
+        0,
+        16
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        0.26,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SouthParapet_5",
+      "asset": "ruin_wall_broken",
+      "position": [
+        6,
+        0,
+        16
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        0.26,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SouthParapet_6",
+      "asset": "ruin_wall_broken",
+      "position": [
+        10,
+        0,
+        16
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        0.26,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "SouthParapet_7",
+      "asset": "ruin_wall_broken",
+      "position": [
+        14,
+        0,
+        16
+      ],
+      "yaw": 0,
+      "scale": [
+        1,
+        0.26,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "RearDistrict_0",
+      "asset": "district_facade",
+      "position": [
+        -16.0,
+        0,
+        -21.2
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": true
+    },
+    {
+      "id": "RooftopUnit_0",
+      "asset": "ventilation_unit",
+      "position": [
+        -16.7,
+        6.4,
+        -21.5
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "RearDistrict_1",
+      "asset": "district_facade",
+      "position": [
+        -7.0,
+        0,
+        -21.2
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1.0,
+        1.18,
+        1.0
+      ],
+      "collision": true
+    },
+    {
+      "id": "RooftopUnit_1",
+      "asset": "ventilation_unit",
+      "position": [
+        -7.7,
+        7.6000000000000005,
+        -21.5
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "RearDistrict_2",
+      "asset": "district_facade",
+      "position": [
+        7.0,
+        0,
+        -21.2
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "collision": true
+    },
+    {
+      "id": "RooftopUnit_2",
+      "asset": "ventilation_unit",
+      "position": [
+        6.3,
+        6.4,
+        -21.5
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "RearDistrict_3",
+      "asset": "district_facade",
+      "position": [
+        16.0,
+        0,
+        -21.2
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1.0,
+        1.18,
+        1.0
+      ],
+      "collision": true
+    },
+    {
+      "id": "RooftopUnit_3",
+      "asset": "ventilation_unit",
+      "position": [
+        15.3,
+        7.6000000000000005,
+        -21.5
+      ],
+      "yaw": 3.141592653589793,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "WallPlanter_0",
+      "asset": "planter_overgrowth",
+      "position": [
+        -14,
+        0,
+        7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "WallPlanter_1",
+      "asset": "planter_overgrowth",
+      "position": [
+        -13.8,
+        0,
+        -5
+      ],
+      "yaw": 0.36,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "WallPlanter_2",
+      "asset": "planter_overgrowth",
+      "position": [
+        13.8,
+        0,
+        8
+      ],
+      "yaw": 0.72,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "WallPlanter_3",
+      "asset": "planter_overgrowth",
+      "position": [
+        14,
+        0,
+        -8
+      ],
+      "yaw": 1.08,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "WallPlanter_4",
+      "asset": "planter_overgrowth",
+      "position": [
+        -6.4,
+        0,
+        14.6
+      ],
+      "yaw": 1.44,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": true
+    },
+    {
+      "id": "Debris_0",
+      "asset": "scattered_debris",
+      "position": [
+        -12.5,
+        -0.025,
+        10.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Debris_1",
+      "asset": "scattered_debris",
+      "position": [
+        12.8,
+        -0.025,
+        12.7
+      ],
+      "yaw": 0.57,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Debris_2",
+      "asset": "scattered_debris",
+      "position": [
+        -14.1,
+        -0.025,
+        -7.8
+      ],
+      "yaw": 1.14,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Debris_3",
+      "asset": "scattered_debris",
+      "position": [
+        13.7,
+        -0.025,
+        -1.8
+      ],
+      "yaw": 1.71,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Debris_4",
+      "asset": "scattered_debris",
+      "position": [
+        -10,
+        -0.025,
+        7
+      ],
+      "yaw": 2.28,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    },
+    {
+      "id": "Debris_5",
+      "asset": "scattered_debris",
+      "position": [
+        10,
+        -0.025,
+        5
+      ],
+      "yaw": 2.8499999999999996,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "collision": false
+    }
+  ],
+  "regions": {
+    "rain_court": {
+      "display_name": "雨庭",
+      "resource_prefix": "rain",
+      "metal_type": "scrap",
+      "lighting_profile": {
+        "ambient_color": "53676b",
+        "ambient_energy": 0.3,
+        "sun_color": "eee0c1",
+        "sun_energy": 1.15,
+        "fog_color": "537076",
+        "fog_density": 0.006,
+        "water_color": "324447",
+        "ground_tint": "919a95",
+        "ground_roughness": 0.55
+      },
+      "placements": [
+        {
+          "id": "WestCargo",
+          "asset": "cargo_crate",
+          "position": [
+            -9,
+            0,
+            5
+          ],
+          "yaw": -0.34,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "EastCargo",
+          "asset": "cargo_crate",
+          "position": [
+            10,
+            0,
+            4
+          ],
+          "yaw": 0.23,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "WestRouteCargo",
+          "asset": "cargo_crate",
+          "position": [
+            -7,
+            0,
+            -5
+          ],
+          "yaw": 0.19,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "EastRouteCargo",
+          "asset": "cargo_crate",
+          "position": [
+            9,
+            0,
+            -3
+          ],
+          "yaw": -0.21,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "WestLowPipe",
+          "asset": "pipe_run",
+          "position": [
+            -14.1,
+            0,
+            2
+          ],
+          "yaw": 1.5707963267948966,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "EastLowPipe",
+          "asset": "pipe_run",
+          "position": [
+            14.1,
+            0,
+            -1
+          ],
+          "yaw": 1.5707963267948966,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "WestTank",
+          "asset": "reservoir_tank",
+          "position": [
+            -13.9,
+            0,
+            10
+          ],
+          "yaw": 0,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "EastTank",
+          "asset": "reservoir_tank",
+          "position": [
+            14,
+            0,
+            3
+          ],
+          "yaw": 0,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "CampLamp",
+          "asset": "industrial_lamp",
+          "position": [
+            -6.1,
+            0,
+            13.9
+          ],
+          "yaw": -1.5707963267948966,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "EastLamp",
+          "asset": "industrial_lamp",
+          "position": [
+            12.1,
+            0,
+            8.4
+          ],
+          "yaw": 0,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "GateLamp",
+          "asset": "industrial_lamp",
+          "position": [
+            -4.7,
+            0,
+            -13.7
+          ],
+          "yaw": 3.141592653589793,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        }
+      ],
+      "practical_lights": [
+        {
+          "position": [
+            -6.3,
+            2.8,
+            12.0
+          ],
+          "color": "ffca8c",
+          "energy": 1.4,
+          "range": 7.5
+        },
+        {
+          "position": [
+            12.1,
+            3.1,
+            8.0
+          ],
+          "color": "ffc992",
+          "energy": 0.9,
+          "range": 6.0
+        },
+        {
+          "position": [
+            0,
+            2.4,
+            -13.7
+          ],
+          "color": "70d9e0",
+          "energy": 0.9,
+          "range": 5.0
+        }
+      ],
+      "puddles": [
+        {
+          "center": [
+            -8,
+            0.011,
+            -6
+          ],
+          "size": [
+            4.2,
+            2.7
+          ],
+          "seed": 18
+        },
+        {
+          "center": [
+            8,
+            0.012,
+            2
+          ],
+          "size": [
+            4.4,
+            2.4
+          ],
+          "seed": 25
+        },
+        {
+          "center": [
+            1,
+            0.014,
+            -7
+          ],
+          "size": [
+            3.1,
+            2.2
+          ],
+          "seed": 32
+        },
+        {
+          "center": [
+            -2,
+            0.012,
+            5
+          ],
+          "size": [
+            3.2,
+            1.9
+          ],
+          "seed": 49
+        }
+      ]
+    },
+    "conduit_yard": {
+      "display_name": "导体工场",
+      "resource_prefix": "conduit",
+      "metal_type": "alloy",
+      "lighting_profile": {
+        "ambient_color": "405963",
+        "ambient_energy": 0.26,
+        "sun_color": "c9dbdc",
+        "sun_energy": 1.05,
+        "fog_color": "456b77",
+        "fog_density": 0.007,
+        "water_color": "24434b",
+        "ground_tint": "7d8e95",
+        "ground_roughness": 0.42
+      },
+      "placements": [
+        {
+          "id": "ConduitCargoA",
+          "asset": "cargo_crate",
+          "position": [
+            -10.5,
+            0,
+            4.5
+          ],
+          "yaw": -0.2,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitCargoB",
+          "asset": "cargo_crate",
+          "position": [
+            10.8,
+            0,
+            3.0
+          ],
+          "yaw": 0.25,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitPipeWest",
+          "asset": "pipe_run",
+          "position": [
+            -13.7,
+            0,
+            1.2
+          ],
+          "yaw": 1.5707963267948966,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitPipeEastA",
+          "asset": "pipe_run",
+          "position": [
+            13.6,
+            0,
+            -2.0
+          ],
+          "yaw": 1.5707963267948966,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitPipeEastB",
+          "asset": "pipe_run",
+          "position": [
+            13.6,
+            0,
+            -7.5
+          ],
+          "yaw": 1.5707963267948966,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitTankWest",
+          "asset": "reservoir_tank",
+          "position": [
+            -13.8,
+            0,
+            8
+          ],
+          "yaw": 0,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitTankEastA",
+          "asset": "reservoir_tank",
+          "position": [
+            13.0,
+            0,
+            6.5
+          ],
+          "yaw": 0,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitTankEastB",
+          "asset": "reservoir_tank",
+          "position": [
+            13.0,
+            0,
+            9.7
+          ],
+          "yaw": 0,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitService",
+          "asset": "ventilation_unit",
+          "position": [
+            -12.3,
+            0,
+            -6.3
+          ],
+          "yaw": -1.5707963267948966,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitRelayWest",
+          "asset": "conductive_anchor",
+          "position": [
+            -11.8,
+            0.03,
+            -8.0
+          ],
+          "yaw": 0,
+          "scale": [
+            1.3,
+            1.3,
+            1.3
+          ],
+          "collision": false
+        },
+        {
+          "id": "ConduitRelayEast",
+          "asset": "conductive_anchor",
+          "position": [
+            11.8,
+            0.03,
+            -4.0
+          ],
+          "yaw": 0,
+          "scale": [
+            1.3,
+            1.3,
+            1.3
+          ],
+          "collision": false
+        },
+        {
+          "id": "ConduitLampA",
+          "asset": "industrial_lamp",
+          "position": [
+            -6.1,
+            0,
+            13.9
+          ],
+          "yaw": -1.5707963267948966,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        },
+        {
+          "id": "ConduitLampB",
+          "asset": "industrial_lamp",
+          "position": [
+            12.2,
+            0,
+            -11.0
+          ],
+          "yaw": 3.141592653589793,
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "collision": true
+        }
+      ],
+      "practical_lights": [
+        {
+          "position": [
+            -6.3,
+            2.8,
+            12
+          ],
+          "color": "ffbf79",
+          "energy": 1.2,
+          "range": 7.0
+        },
+        {
+          "position": [
+            11.6,
+            2.2,
+            -4
+          ],
+          "color": "60ddeb",
+          "energy": 1.15,
+          "range": 6.0
+        },
+        {
+          "position": [
+            -11.5,
+            2.2,
+            -8
+          ],
+          "color": "70e1ef",
+          "energy": 1.15,
+          "range": 6.0
+        }
+      ],
+      "puddles": [
+        {
+          "center": [
+            -9,
+            0.013,
+            3
+          ],
+          "size": [
+            4.7,
+            2.1
+          ],
+          "seed": 61
+        },
+        {
+          "center": [
+            6,
+            0.014,
+            -5
+          ],
+          "size": [
+            4.4,
+            2.8
+          ],
+          "seed": 68
+        },
+        {
+          "center": [
+            1,
+            0.011,
+            3
+          ],
+          "size": [
+            3.2,
+            1.6
+          ],
+          "seed": 81
+        }
+      ]
+    }
+  }
+}

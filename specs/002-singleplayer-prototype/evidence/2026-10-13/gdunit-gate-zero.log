@@ -1,0 +1,5 @@
+Exception: D:\bugu_projects\another_world\tools\run_gdunit.ps1:77
+Line |
+  77 |  … nt -ne 1) { throw "Expected exactly one fresh JUnit report, found $($ …
+     |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Expected exactly one fresh JUnit report, found 0.

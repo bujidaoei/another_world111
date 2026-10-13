@@ -1,5 +1,5 @@
 <!--
-Sync Impact Report: initial template → 1.0.0, adopted from user instructions on 2026-10-13.
+Sync Impact Report: 1.0.0 → 1.1.0, updated autonomy and mandatory tool orchestration on 2026-10-13.
 Added: evidence gates, original asset production, platform acceptance, secure delivery.
 Templates: spec-template.md / plan-template.md / tasks-template.md project requirements appended.
 No principle removed. No deferred placeholder.
@@ -43,8 +43,10 @@ No principle removed. No deferred placeholder.
 
 ## 范围与授权
 
-本轮交付阶段 0。已确认优先离线单人验证，再评估合作；Windows 使用当前电脑，Android 真机后续接入。
-未确认的设备档位、预算、人力、工期、首发规模和合作方案记录为决策门槛，不以默认值冒充同意。
+阶段0已交付；用户明确要求继续完整目标，授权自主调研、设计决策、实施、调试与验证，不询问或自行暂停。
+优先离线单人、后评估合作；Windows当前电脑、Android后接保持有效。
+规则/范围/制作方案自主记录决策并验证；设备与真人事实不得虚构，未提供预算不启用收费服务，不承诺虚构人力/期限。
+整个制作按实际职责使用指定Godot/Blender/本地ComfyUI MCP、GdUnit4、Playwright和两套游戏Skills；能力不足先查根因再推进可独立工作。
 无需重复请求已授权常规动作。敏感源需求不得原样复制；使用已有安全认证，不保存聊天中的密码。
 
 ## 开发流程与质量门槛
@@ -61,4 +63,4 @@ implement 只作用于当前授权阶段，之后收敛检查和状态同步。
 宪章版本使用语义版本：原则不兼容变更升主版本，新增原则升次版本，澄清升补丁版本。
 所有交付必须核对工件和真实产物；通过静态关联检查不代表完成语义审查或游戏验收。
 
-**Version**: 1.0.0 | **Ratified**: 2026-10-13 | **Last Amended**: 2026-10-13
+**Version**: 1.1.0 | **Ratified**: 2026-10-13 | **Last Amended**: 2026-10-13

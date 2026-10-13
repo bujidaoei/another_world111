@@ -1,0 +1,874 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-13",
+  "source_code": "source-assets/scripts/build_district_modules.py",
+  "engine": "Godot 4.7.2",
+  "dcc": "5.2.2 LTS",
+  "units": "metres; Godot Y-up / forward -Z",
+  "pbr_palette": {
+    "atlas_size": [
+      48,
+      48
+    ],
+    "maps": 3,
+    "materials": 1
+  },
+  "approval": "authored source and technical geometry gates; actual game, mobile and final art acceptance pending",
+  "assets": [
+    {
+      "id": "ruin_wall_full",
+      "role": "fortified industrial boundary",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            4.0,
+            4.45,
+            0.7
+          ],
+          "local_offset": [
+            0,
+            2.225,
+            0
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            4.3,
+            0.4,
+            1.05
+          ],
+          "local_offset": [
+            0,
+            0.2,
+            0
+          ]
+        }
+      ],
+      "walkable_intent": "closed wall, no traversal; decorate inside a real boundary",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -2.1500000953674316,
+          -0.5250000357627869,
+          0.0
+        ],
+        "max": [
+          2.1500000953674316,
+          0.6449999809265137,
+          4.47851037979126
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -2.1500000953674316,
+          0.0,
+          -0.6449999809265137
+        ],
+        "max": [
+          2.1500000953674316,
+          4.47851037979126,
+          0.5250000357627869
+        ]
+      },
+      "geometry": {
+        "triangles": 1424,
+        "vertices": 792,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/ruin_wall_full.glb",
+      "sha256": "15ceec73f1e2206bbfc54a9d8e831610963ab0a78994118b8026328b79ae0681",
+      "bytes": 109620,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "ruin_wall_broken",
+      "role": "damaged closed boundary",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            4.0,
+            3.3,
+            0.65
+          ],
+          "local_offset": [
+            0,
+            1.65,
+            0
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            4.2,
+            0.3,
+            1.0
+          ],
+          "local_offset": [
+            0,
+            0.15,
+            0
+          ]
+        }
+      ],
+      "walkable_intent": "closed damaged wall; top damage is not a ground-level doorway; collision may remain a continuous level boundary",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -2.0999999046325684,
+          -0.5,
+          -0.030957207083702087
+        ],
+        "max": [
+          2.1000003814697266,
+          0.8624417781829834,
+          3.808356285095215
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -2.0999999046325684,
+          -0.030957207083702087,
+          -0.8624417781829834
+        ],
+        "max": [
+          2.1000003814697266,
+          3.808356285095215,
+          0.5
+        ]
+      },
+      "geometry": {
+        "triangles": 1176,
+        "vertices": 624,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/ruin_wall_broken.glb",
+      "sha256": "cb4c34d4cdcd92c2617d428c1226994073fc61fe34eb9b82efe8eb9fda71e7db",
+      "bytes": 90408,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "conduit_gateway",
+      "role": "closed realm conduit gate",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            6.6,
+            5.25,
+            1.2
+          ],
+          "local_offset": [
+            0,
+            2.625,
+            0
+          ]
+        }
+      ],
+      "walkable_intent": "closed grille door; signal interaction only, no ground traversal opening at this region boundary",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -3.325000762939453,
+          -0.9662065505981445,
+          0.0
+        ],
+        "max": [
+          3.325000762939453,
+          0.9375000596046448,
+          5.20584774017334
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -3.325000762939453,
+          0.0,
+          -0.9375000596046448
+        ],
+        "max": [
+          3.325000762939453,
+          5.20584774017334,
+          0.9662065505981445
+        ]
+      },
+      "geometry": {
+        "triangles": 1976,
+        "vertices": 1068,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/conduit_gateway.glb",
+      "sha256": "89acd9b1ed6d7076fa93754626656c9f34e43d24cd24f1e84d878e52e4c2bc9e",
+      "bytes": 152116,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "paving_tiles",
+      "role": "2m modular worn courtyard paving",
+      "collision_shapes_godot_m": [],
+      "walkable_intent": "walkable surface decoration; main flat ground supplies continuous collision",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -1.0,
+          -1.0,
+          0.0
+        ],
+        "max": [
+          1.0,
+          1.0,
+          0.1340000033378601
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -1.0,
+          0.0,
+          -1.0
+        ],
+        "max": [
+          1.0,
+          0.1340000033378601,
+          1.0
+        ]
+      },
+      "geometry": {
+        "triangles": 224,
+        "vertices": 128,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/paving_tiles.glb",
+      "sha256": "4c13444aea1b9825028220cc7fc273d76ff8479c6d62d9e139d90335b59a1d02",
+      "bytes": 20148,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "district_facade",
+      "role": "background industrial building facade",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            8.0,
+            6.3,
+            3.6
+          ],
+          "local_offset": [
+            0,
+            3.15,
+            0
+          ]
+        }
+      ],
+      "walkable_intent": "closed background building; place beyond playable boundary; no fake traversable doors",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -4.110000133514404,
+          -1.9200000762939453,
+          -0.005000114440917969
+        ],
+        "max": [
+          4.110000133514404,
+          2.3625001907348633,
+          6.934999942779541
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -4.110000133514404,
+          -0.005000114440917969,
+          -2.3625001907348633
+        ],
+        "max": [
+          4.110000133514404,
+          6.934999942779541,
+          1.9200000762939453
+        ]
+      },
+      "geometry": {
+        "triangles": 1792,
+        "vertices": 1016,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/district_facade.glb",
+      "sha256": "1f75c886ed049983c1bd40486d95b4a788f5e173d5fb3d4c5aa5076815932799",
+      "bytes": 136376,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "maintenance_shelter",
+      "role": "compact side-camp maintenance awning",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            6.0,
+            2.65,
+            0.42
+          ],
+          "local_offset": [
+            0,
+            1.325,
+            1.14
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.22,
+            2.55,
+            0.22
+          ],
+          "local_offset": [
+            -2.72,
+            1.275,
+            -1.13
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.22,
+            2.55,
+            0.22
+          ],
+          "local_offset": [
+            -2.72,
+            1.275,
+            1.13
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.22,
+            2.55,
+            0.22
+          ],
+          "local_offset": [
+            2.72,
+            1.275,
+            -1.13
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            0.22,
+            2.55,
+            0.22
+          ],
+          "local_offset": [
+            2.72,
+            1.275,
+            1.13
+          ]
+        },
+        {
+          "type": "box",
+          "size": [
+            1.55,
+            1.1,
+            0.62
+          ],
+          "local_offset": [
+            -1.8,
+            0.55,
+            0.72
+          ]
+        }
+      ],
+      "walkable_intent": "walkable beneath front canopy; collide only four columns, rear wall and work cabinet; do not use one full footprint box",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -3.1800003051757812,
+          -1.506472110748291,
+          -0.004999995231628418
+        ],
+        "max": [
+          3.1800003051757812,
+          1.5064725875854492,
+          2.9695162773132324
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -3.1800003051757812,
+          -0.004999995231628418,
+          -1.5064725875854492
+        ],
+        "max": [
+          3.1800003051757812,
+          2.9695162773132324,
+          1.506472110748291
+        ]
+      },
+      "geometry": {
+        "triangles": 1152,
+        "vertices": 636,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/maintenance_shelter.glb",
+      "sha256": "a6592198ea49775c8b322a85486324372d067fd261a3fb3e8264024834d6678b",
+      "bytes": 88808,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "pipe_run",
+      "role": "4m wall-side flanged pipe",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            4.25,
+            0.65,
+            0.74
+          ],
+          "local_offset": [
+            0,
+            0.56,
+            0
+          ]
+        }
+      ],
+      "walkable_intent": "solid utility pipe; put next to wall outside combat movement corridors",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -2.0,
+          -0.34999942779541016,
+          0.004999969620257616
+        ],
+        "max": [
+          2.0,
+          0.5225000381469727,
+          0.9199999570846558
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -2.0,
+          0.004999969620257616,
+          -0.5225000381469727
+        ],
+        "max": [
+          2.0,
+          0.9199999570846558,
+          0.34999942779541016
+        ]
+      },
+      "geometry": {
+        "triangles": 1980,
+        "vertices": 1044,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/pipe_run.glb",
+      "sha256": "a525405b6d55e76ff6fc3ee1ad27b81dcc10e7b6d0cc72fcb5333f491a5031e9",
+      "bytes": 143604,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "industrial_lamp",
+      "role": "readable warm industrial path lamp",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            0.5,
+            3.7,
+            0.5
+          ],
+          "local_offset": [
+            0,
+            1.85,
+            0
+          ]
+        }
+      ],
+      "walkable_intent": "solid narrow post; emitting mesh does not create a runtime light; use sparse separately budgeted lights",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -0.3250007629394531,
+          -0.3000001907348633,
+          0.0
+        ],
+        "max": [
+          0.3250007629394531,
+          0.8999996185302734,
+          3.631786346435547
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -0.3250007629394531,
+          0.0,
+          -0.8999996185302734
+        ],
+        "max": [
+          0.3250007629394531,
+          3.631786346435547,
+          0.3000001907348633
+        ]
+      },
+      "geometry": {
+        "triangles": 428,
+        "vertices": 228,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/industrial_lamp.glb",
+      "sha256": "9ae56f8fb756c8d5d9a9fa3f30ab47a941063e2f47bc5ec43c090d831e065d0d",
+      "bytes": 35352,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "planter_overgrowth",
+      "role": "compact opaque-leaf overgrowth planter",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            1.22,
+            0.57,
+            0.91
+          ],
+          "local_offset": [
+            0,
+            0.285,
+            0
+          ]
+        }
+      ],
+      "walkable_intent": "solid planter at wall; upper foliage decorative, no transparent leaf cards or contact-damage implication",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -0.657214879989624,
+          -0.4940776824951172,
+          0.0
+        ],
+        "max": [
+          0.7147210836410522,
+          0.4850006103515625,
+          1.129489541053772
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -0.657214879989624,
+          0.0,
+          -0.4850006103515625
+        ],
+        "max": [
+          0.7147210836410522,
+          1.129489541053772,
+          0.4940776824951172
+        ]
+      },
+      "geometry": {
+        "triangles": 828,
+        "vertices": 476,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/planter_overgrowth.glb",
+      "sha256": "3510cd4c145e27abff1f402032fd1d34e36453737a15569ec3a8723bd3da821c",
+      "bytes": 63776,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "drain_grate",
+      "role": "3.6m recessed drainage strip",
+      "collision_shapes_godot_m": [],
+      "walkable_intent": "walkable flush grate; continuous ground collision supplies support",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -0.2700004577636719,
+          -1.8000011444091797,
+          0.0
+        ],
+        "max": [
+          0.2700004577636719,
+          1.7999992370605469,
+          0.10500000417232513
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -0.2700004577636719,
+          0.0,
+          -1.7999992370605469
+        ],
+        "max": [
+          0.2700004577636719,
+          0.10500000417232513,
+          1.8000011444091797
+        ]
+      },
+      "geometry": {
+        "triangles": 872,
+        "vertices": 480,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/drain_grate.glb",
+      "sha256": "10034a752909eda8921888bc986d5756e863b4bc0174196c8246679eae9054ca",
+      "bytes": 69440,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "ventilation_unit",
+      "role": "roof or wall service intake",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            1.36,
+            1.47,
+            1.08
+          ],
+          "local_offset": [
+            0,
+            0.735,
+            0
+          ]
+        }
+      ],
+      "walkable_intent": "solid machinery; avoid routes and use on roofs/edge service pads",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -0.7399997711181641,
+          -0.5500011444091797,
+          1.4901161193847656e-08
+        ],
+        "max": [
+          0.7399997711181641,
+          0.592498779296875,
+          1.5299999713897705
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -0.7399997711181641,
+          1.4901161193847656e-08,
+          -0.592498779296875
+        ],
+        "max": [
+          0.7399997711181641,
+          1.5299999713897705,
+          0.5500011444091797
+        ]
+      },
+      "geometry": {
+        "triangles": 384,
+        "vertices": 224,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/ventilation_unit.glb",
+      "sha256": "8d09359d3ca2fe0b4400270360b29f6e8cfa0ff1b95d908c23f7ec5266fdc46b",
+      "bytes": 31960,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "reservoir_tank",
+      "role": "industrial coolant reservoir",
+      "collision_shapes_godot_m": [
+        {
+          "type": "box",
+          "size": [
+            1.48,
+            2.7,
+            1.48
+          ],
+          "local_offset": [
+            0,
+            1.35,
+            0
+          ]
+        }
+      ],
+      "walkable_intent": "solid tank placed by walls; no walkable hollow interior",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -1.1399993896484375,
+          -0.6900005340576172,
+          0.0
+        ],
+        "max": [
+          0.6900005340576172,
+          0.7318744659423828,
+          2.669999837875366
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -1.1399993896484375,
+          0.0,
+          -0.7318744659423828
+        ],
+        "max": [
+          0.6900005340576172,
+          2.669999837875366,
+          0.6900005340576172
+        ]
+      },
+      "geometry": {
+        "triangles": 2028,
+        "vertices": 1052,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/reservoir_tank.glb",
+      "sha256": "6bf023daf94ac892eaf972d5176523ed4568c60539f1b9fdd19128817d31a68f",
+      "bytes": 145232,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    },
+    {
+      "id": "scattered_debris",
+      "role": "sparse ground scale/detail cluster",
+      "collision_shapes_godot_m": [],
+      "walkable_intent": "decorative debris under .2m tall; no solid obstruction or loot affordance",
+      "status": "authored_prototype_for_engine_review",
+      "bounds_blender_m": {
+        "min": [
+          -0.8072507381439209,
+          -0.6252059936523438,
+          -0.019388476386666298
+        ],
+        "max": [
+          0.6868448853492737,
+          0.5651130676269531,
+          0.149143785238266
+        ]
+      },
+      "bounds_godot_m": {
+        "min": [
+          -0.8072507381439209,
+          -0.019388476386666298,
+          -0.5651130676269531
+        ],
+        "max": [
+          0.6868448853492737,
+          0.149143785238266,
+          0.6252059936523438
+        ]
+      },
+      "geometry": {
+        "triangles": 412,
+        "vertices": 232,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "runtime_file": "game/assets/models/scattered_debris.glb",
+      "sha256": "3c1f81b6caee5553a1ef1d567ceb3e71421d9dbd72b306acd83514711e96e526",
+      "bytes": 34492,
+      "source": "source-assets/blender/district_modules.blend",
+      "license": "original project-authored geometry; existing original PBR palette",
+      "clips_expected": [],
+      "bounds_method": "actual transformed vertices after dependency-graph update; root translation removed"
+    }
+  ]
+}

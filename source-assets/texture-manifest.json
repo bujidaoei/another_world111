@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-13",
+  "assets": [
+    {
+      "id": "wet_concrete_albedo",
+      "role": "neutral fine-grain pavement color variation sample",
+      "runtime_file": "game/assets/textures/wet_concrete_albedo.png",
+      "source_file": "source-assets/previews/comfy/20adb553_002.png",
+      "workflow": "source-assets/comfy/wet_surface.api.json",
+      "model_source": "CompVis/stable-diffusion-v-1-4-original",
+      "model_revision": "f0bb45b49990512c454cf2c5670b0952ef2f9c71",
+      "model_sha256": "fe4efff1e174c627256e44ec2991ba279b3816e364b49f9be2abc0b3ff3f8556",
+      "model_license": "CreativeML OpenRAIL-M; full license and provenance saved under source-assets/licenses",
+      "size": [512, 512],
+      "format": "RGB PNG",
+      "bytes": 219444,
+      "sha256": "55248ef8750451abe62a3488004904f25dbd7347735c40b74a026dceb8745dae",
+      "color_space": "sRGB albedo",
+      "alpha": false,
+      "wrap": "repeat",
+      "mipmaps_required": true,
+      "edge_difference_max_8bit": {"left_right": 0, "top_bottom": 0},
+      "normalization": "horizontal/vertical mirror averages in native ComfyUI nodes, green-channel monochrome projection, brightness factor 0.78",
+      "visual_review": "3x3 repeat inspected; no objects, logos, letters, strong directional light or visible seams; restrained grain",
+      "status": "technical_sample_ready_for_engine_review",
+      "unmet_acceptance": ["Godot material appearance", "actual game-scale readability", "Android import/performance", "commercial final art review"]
+    }
+  ]
+}

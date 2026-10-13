@@ -1,0 +1,7 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+Vulkan 1.4.312 - Forward Mobile - Using Device #0: NVIDIA - NVIDIA GeForce RTX 4060 Laptop GPU
+
+[godot_ai game_helper] registered mcp capture (debugger active=false, logger=true)
+RENDER_PROBE_STARTED full_no_occlusion
+RENDER_PROBE_FINISHED full_no_occlusion frames=14333
+INPUT_STAGE done completed_runs=2

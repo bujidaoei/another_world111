@@ -1,0 +1,84 @@
+{
+  "completed_runs": 0,
+  "driver": "InputEventKey/MouseMotion/MouseButton through engine input",
+  "results": [
+    {
+      "at_seconds": 0.102456037037037,
+      "data": {
+        "stage": "bindings_enter"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 0.618872666666666,
+      "data": {
+        "stage": "bind_dodge"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 1.13750433333333,
+      "data": {
+        "stage": "capture_dodge"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 1.24120803703703,
+      "data": {
+        "stage": "binding_observe"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 1.36975966666666,
+      "data": {
+        "dodge_key": 71,
+        "preferences": {
+          "code": "preferences_loaded",
+          "data": {
+            "input_bindings": {
+              "bindings": {
+                "anchor": 70,
+                "attack": 0,
+                "camera_lock": 67,
+                "camera_reset": 82,
+                "defend": 0,
+                "dodge": 71,
+                "heal": 72,
+                "interact": 69,
+                "move_back": 83,
+                "move_forward": 87,
+                "move_left": 65,
+                "move_right": 68,
+                "pause": 4194305,
+                "pulse": 81
+              },
+              "schema_version": 1
+            },
+            "settings": {
+              "ambience_volume": 0.45,
+              "camera_locked": false,
+              "camera_shake": 0.3,
+              "language": "zh_CN",
+              "master_volume": 0.75,
+              "music_volume": 0.35,
+              "reduced_flashing": false,
+              "sfx_volume": 0.75,
+              "text_scale": 1.0
+            }
+          },
+          "message": "全局设置与键位已验证读取。",
+          "migrated": false,
+          "ok": true,
+          "recovered": false,
+          "schema_version": 2,
+          "sequence": 1
+        },
+        "started": false
+      },
+      "event": "title_binding_saved"
+    }
+  ],
+  "stage": "binding_observe"
+}

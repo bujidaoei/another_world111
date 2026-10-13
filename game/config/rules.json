@@ -1,0 +1,38 @@
+{
+  "version": "prototype-1.0.0",
+  "progression": {"levels_per_realm": 30, "maximum_realm": 2, "experience_per_level": 20, "maximum_award": 1000000, "ascension_challenge": "rain_warden"},
+  "resources": {
+    "currency": {"weight": 0}, "scrap": {"weight": 1}, "alloy": {"weight": 1}, "crystal": {"weight": 1}, "medkit": {"weight": 1}, "rations": {"weight": 1}
+  },
+  "inventory": {"maximum_quantity": 1000000, "cargo_capacity": 18, "starting_resources": {"currency": 0, "scrap": 0, "alloy": 0, "crystal": 0, "medkit": 2, "rations": 3}},
+  "regions": {
+    "rain_court": {
+      "required_realm": 1, "enemy_ids": ["rain_guard_01", "rain_guard_02", "rain_guard_03", "rain_guard_04", "rain_guard_05", "rain_guard_06"],
+      "nodes": {"rain_scrap_01": {"scrap": 3}, "rain_scrap_02": {"scrap": 3}, "rain_scrap_03": {"scrap": 3}, "rain_crystal_01": {"crystal": 1}},
+      "kill_experience": 6, "kill_reward": {"currency": 2}, "objective": {"kills": 3, "nodes": 2, "experience": 60, "reward": {"currency": 12, "scrap": 3}}
+    },
+    "conduit_yard": {
+      "required_realm": 2, "enemy_ids": ["conduit_guard_01", "conduit_guard_02", "conduit_guard_03", "conduit_guard_04", "conduit_guard_05", "conduit_guard_06"],
+      "nodes": {"conduit_alloy_01": {"alloy": 3}, "conduit_alloy_02": {"alloy": 3}, "conduit_alloy_03": {"alloy": 3}, "conduit_crystal_01": {"crystal": 2}},
+      "kill_experience": 6, "kill_reward": {"currency": 2}, "objective": {"kills": 3, "nodes": 2, "experience": 60, "reward": {"currency": 12, "scrap": 3}}
+    }
+  },
+  "challenge": {"enemy_id": "rain_warden", "minimum_level": 30, "experience": 20, "reward": {"alloy": 8}},
+  "equipment": {
+    "fusion_currency": 12, "fusion_material": 2, "lock_material": 1, "maximum_locks": 2, "expansion_material": 8, "ascension_cost": {"scrap": 10, "alloy": 5},
+    "tiers": {"1": {"material": "scrap", "budget_4": 100, "budget_5": 120, "single_limit": 35}, "2": {"material": "alloy", "budget_4": 150, "budget_5": 180, "single_limit": 52}},
+    "qualities": ["common", "rare"],
+    "affixes": {
+      "power": {"label": "武器功率", "category": "offense", "incompatible": [], "stat": "damage", "scale": 0.01},
+      "haste": {"label": "动作速率", "category": "tempo", "incompatible": ["charge"], "stat": "attack_speed", "scale": 0.004},
+      "charge": {"label": "蓄能效率", "category": "tempo", "incompatible": ["haste"], "stat": "skill_damage", "scale": 0.008},
+      "vitality": {"label": "生命容量", "category": "survival", "incompatible": [], "stat": "maximum_health", "scale": 0.01},
+      "guard": {"label": "防御效率", "category": "defense", "incompatible": [], "stat": "damage_reduction", "scale": 0.003},
+      "reach": {"label": "传导距离", "category": "utility", "incompatible": [], "stat": "chain_range", "scale": 0.015},
+      "stamina": {"label": "体力容量", "category": "endurance", "incompatible": [], "stat": "maximum_stamina", "scale": 0.008},
+      "recovery": {"label": "体力恢复", "category": "recovery", "incompatible": [], "stat": "stamina_recovery", "scale": 0.01}
+    }
+  },
+  "camp": {"bench_cost": {"currency": 6, "scrap": 6}, "medkit_cost": {"scrap": 2, "crystal": 1}, "rations_cost": {"currency": 4}, "ration_healing": 25, "medkit_healing": 45},
+  "combat": {"chain_targets": 3, "chain_range": 4.5, "anchor_range": 7.0, "anchor_required_realm": 2}
+}

@@ -1,0 +1,383 @@
+{
+  "schema": 1,
+  "date": "2026-10-13",
+  "assets": [
+    {
+      "id": "ruin_wall_full",
+      "container": "glTF 2.0 GLB",
+      "sha256": "15ceec73f1e2206bbfc54a9d8e831610963ab0a78994118b8026328b79ae0681",
+      "bytes": 109620,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 1424,
+        "vertices": 792,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "ruin_wall_broken",
+      "container": "glTF 2.0 GLB",
+      "sha256": "cb4c34d4cdcd92c2617d428c1226994073fc61fe34eb9b82efe8eb9fda71e7db",
+      "bytes": 90408,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 1176,
+        "vertices": 624,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "conduit_gateway",
+      "container": "glTF 2.0 GLB",
+      "sha256": "89acd9b1ed6d7076fa93754626656c9f34e43d24cd24f1e84d878e52e4c2bc9e",
+      "bytes": 152116,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 1976,
+        "vertices": 1068,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "paving_tiles",
+      "container": "glTF 2.0 GLB",
+      "sha256": "4c13444aea1b9825028220cc7fc273d76ff8479c6d62d9e139d90335b59a1d02",
+      "bytes": 20148,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 224,
+        "vertices": 128,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "district_facade",
+      "container": "glTF 2.0 GLB",
+      "sha256": "1f75c886ed049983c1bd40486d95b4a788f5e173d5fb3d4c5aa5076815932799",
+      "bytes": 136376,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 1792,
+        "vertices": 1016,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "maintenance_shelter",
+      "container": "glTF 2.0 GLB",
+      "sha256": "a6592198ea49775c8b322a85486324372d067fd261a3fb3e8264024834d6678b",
+      "bytes": 88808,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 1152,
+        "vertices": 636,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "pipe_run",
+      "container": "glTF 2.0 GLB",
+      "sha256": "a525405b6d55e76ff6fc3ee1ad27b81dcc10e7b6d0cc72fcb5333f491a5031e9",
+      "bytes": 143604,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 1980,
+        "vertices": 1044,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "industrial_lamp",
+      "container": "glTF 2.0 GLB",
+      "sha256": "9ae56f8fb756c8d5d9a9fa3f30ab47a941063e2f47bc5ec43c090d831e065d0d",
+      "bytes": 35352,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 428,
+        "vertices": 228,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "planter_overgrowth",
+      "container": "glTF 2.0 GLB",
+      "sha256": "3510cd4c145e27abff1f402032fd1d34e36453737a15569ec3a8723bd3da821c",
+      "bytes": 63776,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 828,
+        "vertices": 476,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "drain_grate",
+      "container": "glTF 2.0 GLB",
+      "sha256": "10034a752909eda8921888bc986d5756e863b4bc0174196c8246679eae9054ca",
+      "bytes": 69440,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 872,
+        "vertices": 480,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "ventilation_unit",
+      "container": "glTF 2.0 GLB",
+      "sha256": "8d09359d3ca2fe0b4400270360b29f6e8cfa0ff1b95d908c23f7ec5266fdc46b",
+      "bytes": 31960,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 384,
+        "vertices": 224,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "reservoir_tank",
+      "container": "glTF 2.0 GLB",
+      "sha256": "6bf023daf94ac892eaf972d5176523ed4568c60539f1b9fdd19128817d31a68f",
+      "bytes": 145232,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 2028,
+        "vertices": 1052,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "scattered_debris",
+      "container": "glTF 2.0 GLB",
+      "sha256": "3c1f81b6caee5553a1ef1d567ceb3e71421d9dbd72b306acd83514711e96e526",
+      "bytes": 34492,
+      "nodes": 2,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [],
+      "animation_channels": {},
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 412,
+        "vertices": 232,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    }
+  ]
+}

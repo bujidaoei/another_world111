@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cdnyite7qdeo1"]
+
+[ext_resource type="Shader" uid="uid://bbt4h1y4sajaa" path="res://presentation/wet_surface.gdshader" id="1_mnawx"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_mnawx")
+shader_parameter/water_color = Color(0.09019608, 0.14901961, 0.16470589, 1)

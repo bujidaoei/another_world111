@@ -12,19 +12,20 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-FEATURE = ROOT / "specs" / "001-project-foundation"
+DEFAULT_FEATURE = ROOT / "specs" / "001-project-foundation"
 REQUIRED = (
-    "spec.md", "plan.md", "tasks.md", "research.md", "research-design.md",
+    "spec.md", "plan.md", "tasks.md", "research.md",
     "decisions.md", "data-model.md", "contracts/gameplay.md", "quickstart.md",
     "validation.md", "checklists/requirements.md", "progress.md", "analysis.md",
-    "evidence/2026-10-13/tool-audit.md", "evidence/2026-10-13/speckit-audit.md",
 )
 
 
-def verify(source_request: Path | None) -> dict:
+def verify(source_request: Path | None, feature: Path = DEFAULT_FEATURE) -> dict:
+    FEATURE = feature.resolve()
     errors: list[str] = []
     texts: dict[str, str] = {}
-    for name in REQUIRED:
+    required = REQUIRED + (("research-design.md", "evidence/2026-10-13/tool-audit.md", "evidence/2026-10-13/speckit-audit.md") if FEATURE.name == "001-project-foundation" else ())
+    for name in required:
         path = FEATURE / name
         if not path.is_file():
             errors.append(f"Missing document: {name}")
@@ -131,10 +132,10 @@ def verify(source_request: Path | None) -> dict:
             ):
                 fingerprints[name] = hashlib.sha256(content).hexdigest()
     return {
-        "kind": "phase0_document_consistency", "time": datetime.now(timezone(timedelta(hours=8), "Asia/Shanghai")).isoformat(),
+        "kind": "feature_document_consistency", "feature": FEATURE.relative_to(ROOT).as_posix(), "time": datetime.now(timezone(timedelta(hours=8), "Asia/Shanghai")).isoformat(),
         "requirements": len(requirement_ids), "acceptance_conditions": len(ac_ids), "tasks": len(task_ids),
         "completed_tasks": sum(record["done"] for record in records),
-        "planned_verification_protocols": len(protocols), "game_tests_executed": 0,
+        "planned_verification_protocols": len(protocols), "tests_executed_by_this_checker": 0,
         "source_sensitive_field_scanned": source_request is not None,
         "reference_media_excluded": not any("Reference media" in error for error in errors),
         "errors": errors, "passed": not errors, "fingerprints_sha256": fingerprints,
@@ -146,8 +147,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-request", type=Path, help="Check source password only in memory; never print it")
     parser.add_argument("--output", type=Path, help="Save JSON evidence")
+    parser.add_argument("--feature", type=Path, default=DEFAULT_FEATURE, help="Spec Kit feature folder; default preserves the foundation audit")
     args = parser.parse_args()
-    result = verify(args.source_request)
+    if not args.feature.resolve().is_relative_to(ROOT / "specs"):
+        parser.error("--feature must identify a folder within this repository's specs")
+    result = verify(args.source_request, args.feature)
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="25" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_progression" package="tests" timestamp="2026-10-12T23:30:47" hostname="localhost" tests="7" failures="0" errors="0" skipped="0" flaky="0" time="0.040">
+		<testcase name="test_level_gate_banks_experience_without_extra_points" classname="test_progression" time="0.004">
+		</testcase>
+		<testcase name="test_ascension_requires_victory_then_releases_bank_once" classname="test_progression" time="0.003">
+		</testcase>
+		<testcase name="test_duplicate_negative_and_invalid_restore_leave_progress_unchanged" classname="test_progression" time="0.003">
+		</testcase>
+		<testcase name="test_restore_preserves_banked_xp_and_operation_deduplication" classname="test_progression" time="0.004">
+		</testcase>
+		<testcase name="test_configuration_rejects_bad_budget_and_unknown_resource" classname="test_progression" time="0.003">
+		</testcase>
+		<testcase name="test_restore_rejects_fabricated_or_inconsistent_ascension_records" classname="test_progression" time="0.003">
+		</testcase>
+		<testcase name="test_configuration_requires_expandable_pools_and_complete_platform_values" classname="test_progression" time="0.004">
+		</testcase>
+	</testsuite>
+	<testsuite id="1" name="test_expedition" package="tests" timestamp="2026-10-12T23:30:47" hostname="localhost" tests="8" failures="0" errors="0" skipped="0" flaky="0" time="0.048">
+		<testcase name="test_real_objective_and_evacuation_commit_once" classname="test_expedition" time="0.005">
+		</testcase>
+		<testcase name="test_failure_discards_loot_and_retains_real_experience" classname="test_expedition" time="0.004">
+		</testcase>
+		<testcase name="test_short_disengagement_does_not_end_encounter_or_enable_camp" classname="test_expedition" time="0.004">
+		</testcase>
+		<testcase name="test_unknown_or_duplicate_kills_and_nodes_cannot_invent_rewards" classname="test_expedition" time="0.003">
+		</testcase>
+		<testcase name="test_challenge_requires_gate_and_actual_guardian_defeat" classname="test_expedition" time="0.004">
+		</testcase>
+		<testcase name="test_inventory_atomic_cost_deduplication_and_restore" classname="test_expedition" time="0.004">
+		</testcase>
+		<testcase name="test_reused_run_id_is_rejected_after_settlement" classname="test_expedition" time="0.003">
+		</testcase>
+		<testcase name="test_restore_rejects_terminal_state_without_outcome_or_real_victory" classname="test_expedition" time="0.003">
+		</testcase>
+	</testsuite>
+	<testsuite id="2" name="test_equipment" package="tests" timestamp="2026-10-12T23:30:47" hostname="localhost" tests="10" failures="0" errors="0" skipped="0" flaky="0" time="0.190">
+		<testcase name="test_fusion_preserves_identity_history_locks_and_cost_exactly_once" classname="test_equipment" time="0.006">
+		</testcase>
+		<testcase name="test_fusion_invalid_context_locks_and_identity_do_not_consume" classname="test_equipment" time="0.005">
+		</testcase>
+		<testcase name="test_expansion_preserves_every_old_affix_and_natural_five_slot_limits" classname="test_equipment" time="0.005">
+		</testcase>
+		<testcase name="test_ascension_requires_personal_realm_and_preserves_history_and_slots" classname="test_equipment" time="0.003">
+		</testcase>
+		<testcase name="test_seeded_generation_and_fusion_outcomes_always_respect_budget_and_exclusions" classname="test_equipment" time="0.075">
+		</testcase>
+		<testcase name="test_inventory_copy_isolation_and_equipped_material_rejection" classname="test_equipment" time="0.005">
+		</testcase>
+		<testcase name="test_previews_reject_insufficient_resources_without_mutation" classname="test_equipment" time="0.005">
+		</testcase>
+		<testcase name="test_all_legal_four_slot_type_sets_expand_at_single_affix_limit" classname="test_equipment" time="0.027">
+		</testcase>
+		<testcase name="test_all_tiers_qualities_slots_and_locks_use_identical_currency_cost" classname="test_equipment" time="0.024">
+		</testcase>
+		<testcase name="test_invalid_budget_or_special_ability_restore_never_replaces_valid_inventory" classname="test_equipment" time="0.005">
+		</testcase>
+	</testsuite>
+</testsuites>

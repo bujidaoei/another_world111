@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="1" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_pass" package="tests/pass" timestamp="2026-10-12T23:29:46" hostname="localhost" tests="1" failures="0" errors="0" skipped="0" flaky="0" time="0.008">
+		<testcase name="test_real_runner_passes" classname="test_pass" time="0.003">
+		</testcase>
+	</testsuite>
+</testsuites>

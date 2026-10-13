@@ -1,5 +1,8 @@
 # Local tools, caches, credentials, and builds
 .godot/
+game/.godot/
+game/reports/
+source-assets/local-only/
 .specify/feature.json
 .specify/extensions/*/local-config.yml
 .codex/

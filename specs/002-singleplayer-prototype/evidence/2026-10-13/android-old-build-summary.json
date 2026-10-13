@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "configuration": "debug-development",
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "source_windows_build": "D:\\bugu_projects\\another_world\\artifacts\\builds\\170f92b3ab4f42a88b8be23a494e7a23",
+  "source_windows_pack_sha256": "D397CFBB434BBC4A6C5DA6FC270142A836B12C128D5553C87C8CF1967E8B3694",
+  "apk": "D:\\bugu_projects\\another_world\\artifacts\\android-builds\\ed8d1a63fc2049c0a9e78a15cbe89389\\android-development\\AnotherWorld-Development-arm64.apk",
+  "apk_bytes": 30439166,
+  "apk_sha256": "299D59B948428F462B3903D3EA7FA548E0698E89251E5C2E4B0156A25BD05A0F",
+  "actual_arm64_only": true,
+  "signature_verified": true,
+  "development_key_location": "C:\\Users\\Administrator\\AppData\\Local\\AnotherWorld\\development-signing",
+  "signing_password_storage": "Windows DPAPI outside repository",
+  "offline_permissions_verified": true,
+  "installed_on_device": false,
+  "device_acceptance_performed": false,
+  "store_release": false
+}

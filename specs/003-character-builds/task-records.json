@@ -1,0 +1,574 @@
+[
+  {
+    "id": "TASK-201",
+    "requirements": [
+      "NFR-201",
+      "NFR-202"
+    ],
+    "acceptance": [
+      "AC-211",
+      "AC-212"
+    ],
+    "path": "specs/003-character-builds/plan.md",
+    "dependencies": [],
+    "test": "TEST-201",
+    "criterion": "实际激活/脚本/文档关联和语义审查一致",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-202",
+    "requirements": [
+      "NFR-201",
+      "REQ-204",
+      "REQ-206",
+      "REQ-207"
+    ],
+    "acceptance": [
+      "AC-204",
+      "AC-206",
+      "AC-207",
+      "AC-211"
+    ],
+    "path": "game/config/character_builds_config.gd",
+    "dependencies": [
+      "TASK-201"
+    ],
+    "test": "TEST-202",
+    "criterion": "真实配置和非法交叉引用非零测试",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-203",
+    "requirements": [
+      "REQ-201",
+      "REQ-204",
+      "REQ-208",
+      "NFR-201"
+    ],
+    "acceptance": [
+      "AC-201",
+      "AC-204",
+      "AC-208",
+      "AC-211"
+    ],
+    "path": "game/features/characters/build_evaluator.gd",
+    "dependencies": [
+      "TASK-202"
+    ],
+    "test": "TEST-203",
+    "criterion": "结构/资格/深复制与派生值实际可用",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-204",
+    "requirements": [
+      "REQ-203",
+      "REQ-206",
+      "REQ-208",
+      "NFR-202"
+    ],
+    "acceptance": [
+      "AC-203",
+      "AC-206",
+      "AC-208",
+      "AC-212"
+    ],
+    "path": "game/tests/test_combat_state.gd",
+    "dependencies": [
+      "TASK-202"
+    ],
+    "test": "TEST-204",
+    "criterion": "可执行业务red证据，不能用解析失败代替",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-205",
+    "requirements": [
+      "REQ-203",
+      "REQ-206",
+      "REQ-208",
+      "NFR-201"
+    ],
+    "acceptance": [
+      "AC-203",
+      "AC-206",
+      "AC-208",
+      "AC-211"
+    ],
+    "path": "game/features/combat/combat_state.gd",
+    "dependencies": [
+      "TASK-203",
+      "TASK-204"
+    ],
+    "test": "TEST-204",
+    "criterion": "共享计时/效果/恢复/快照边界通过",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-206",
+    "requirements": [
+      "REQ-201",
+      "REQ-208"
+    ],
+    "acceptance": [
+      "AC-201",
+      "AC-208"
+    ],
+    "path": "game/features/characters/character_roster.gd",
+    "dependencies": [
+      "TASK-203",
+      "TASK-205"
+    ],
+    "test": "TEST-203",
+    "criterion": "两角色真实切换、Ended守卫与比例守恒",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-207",
+    "requirements": [
+      "REQ-202",
+      "NFR-201"
+    ],
+    "acceptance": [
+      "AC-202",
+      "AC-211"
+    ],
+    "path": "game/features/expedition/expedition_state.gd",
+    "dependencies": [
+      "TASK-206"
+    ],
+    "test": "TEST-205",
+    "criterion": "真实怪币整数/余数/pending/失败/重复守恒",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-208",
+    "requirements": [
+      "REQ-203",
+      "REQ-208"
+    ],
+    "acceptance": [
+      "AC-203",
+      "AC-208"
+    ],
+    "path": "game/presentation/game_session.gd",
+    "dependencies": [
+      "TASK-205",
+      "TASK-206"
+    ],
+    "test": "TEST-204",
+    "criterion": "自疗与物品共享恢复，消费/效果/冷却同存",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-209",
+    "requirements": [
+      "REQ-201",
+      "REQ-202",
+      "REQ-203",
+      "NFR-202"
+    ],
+    "acceptance": [
+      "AC-201",
+      "AC-202",
+      "AC-203",
+      "AC-212"
+    ],
+    "path": "specs/003-character-builds/evidence/2026-10-13/characters.md",
+    "dependencies": [
+      "TASK-207",
+      "TASK-208"
+    ],
+    "test": "TEST-210",
+    "criterion": "真实PC角色金币/治疗/成败/重载证据，不造奖励",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-210",
+    "requirements": [
+      "REQ-204",
+      "REQ-208",
+      "NFR-202"
+    ],
+    "acceptance": [
+      "AC-204",
+      "AC-208",
+      "AC-212"
+    ],
+    "path": "game/tests/test_character_builds.gd",
+    "dependencies": [
+      "TASK-203"
+    ],
+    "test": "TEST-203",
+    "criterion": "预算/草稿/节点/100次属性来回边界非零",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-211",
+    "requirements": [
+      "REQ-204",
+      "REQ-208",
+      "NFR-201"
+    ],
+    "acceptance": [
+      "AC-204",
+      "AC-208",
+      "AC-211"
+    ],
+    "path": "game/features/characters/build_evaluator.gd",
+    "dependencies": [
+      "TASK-206",
+      "TASK-210"
+    ],
+    "test": "TEST-203",
+    "criterion": "九节点属性有界重算与两阶段确认真实通过",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-212",
+    "requirements": [
+      "REQ-204",
+      "NFR-203"
+    ],
+    "acceptance": [
+      "AC-204",
+      "AC-213"
+    ],
+    "path": "game/presentation/build_menu.gd",
+    "dependencies": [
+      "TASK-211"
+    ],
+    "test": "TEST-209",
+    "criterion": "随时编辑不影响生效，场外拒应用可见",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-213",
+    "requirements": [
+      "REQ-205",
+      "REQ-209",
+      "NFR-202"
+    ],
+    "acceptance": [
+      "AC-205",
+      "AC-209",
+      "AC-212"
+    ],
+    "path": "game/tests/test_build_presets.gd",
+    "dependencies": [
+      "TASK-203"
+    ],
+    "test": "TEST-206",
+    "criterion": "六槽/空槽/实例多引用/材料保护真实测试",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-214",
+    "requirements": [
+      "REQ-205",
+      "REQ-209"
+    ],
+    "acceptance": [
+      "AC-205",
+      "AC-209"
+    ],
+    "path": "game/features/characters/character_roster.gd",
+    "dependencies": [
+      "TASK-206",
+      "TASK-211",
+      "TASK-213"
+    ],
+    "test": "TEST-206",
+    "criterion": "预设深复制/引用失效/完整应用和历史守恒",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-215",
+    "requirements": [
+      "REQ-206",
+      "REQ-208"
+    ],
+    "acceptance": [
+      "AC-206",
+      "AC-208"
+    ],
+    "path": "game/presentation/player_controller.gd",
+    "dependencies": [
+      "TASK-205",
+      "TASK-211"
+    ],
+    "test": "TEST-204",
+    "criterion": "屏障真实受击吸收和focus真实武器增益",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-216",
+    "requirements": [
+      "REQ-206",
+      "REQ-210",
+      "NFR-203"
+    ],
+    "acceptance": [
+      "AC-206",
+      "AC-210",
+      "AC-213"
+    ],
+    "path": "game/platform/input_bindings.gd",
+    "dependencies": [
+      "TASK-202"
+    ],
+    "test": "TEST-209",
+    "criterion": "旧自定义键保留、冲突纯迁移和三输入意图",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-217",
+    "requirements": [
+      "REQ-205",
+      "REQ-206",
+      "REQ-209",
+      "NFR-203"
+    ],
+    "acceptance": [
+      "AC-205",
+      "AC-206",
+      "AC-209",
+      "AC-213"
+    ],
+    "path": "game/tests/test_build_presentation.gd",
+    "dependencies": [
+      "TASK-212",
+      "TASK-214",
+      "TASK-215",
+      "TASK-216"
+    ],
+    "test": "TEST-209",
+    "criterion": "两逻辑视口真实滚轮/焦点/GUI消费与提示",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-218",
+    "requirements": [
+      "REQ-207",
+      "NFR-202"
+    ],
+    "acceptance": [
+      "AC-207",
+      "AC-212"
+    ],
+    "path": "game/tests/test_build_resonance.gd",
+    "dependencies": [
+      "TASK-203"
+    ],
+    "test": "TEST-207",
+    "criterion": "所有阈值/阶段/装配条件和阶段上限边界",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-219",
+    "requirements": [
+      "REQ-207"
+    ],
+    "acceptance": [
+      "AC-207"
+    ],
+    "path": "game/features/characters/build_evaluator.gd",
+    "dependencies": [
+      "TASK-211",
+      "TASK-215",
+      "TASK-218"
+    ],
+    "test": "TEST-207",
+    "criterion": "两共鸣真实范围/容量，不能提前高阶",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-220",
+    "requirements": [
+      "REQ-210",
+      "REQ-208",
+      "NFR-202"
+    ],
+    "acceptance": [
+      "AC-210",
+      "AC-208",
+      "AC-212"
+    ],
+    "path": "game/tests/test_build_migration.gd",
+    "dependencies": [
+      "TASK-202",
+      "TASK-203",
+      "TASK-205"
+    ],
+    "test": "TEST-208",
+    "criterion": "旧v2真实副本、未来/部分域、幂等与冷却恢复",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-221",
+    "requirements": [
+      "REQ-210",
+      "REQ-208",
+      "NFR-201"
+    ],
+    "acceptance": [
+      "AC-210",
+      "AC-208",
+      "AC-211"
+    ],
+    "path": "game/persistence/build_migration.gd",
+    "dependencies": [
+      "TASK-214",
+      "TASK-216",
+      "TASK-219",
+      "TASK-220"
+    ],
+    "test": "TEST-208",
+    "criterion": "纯迁移/全候选预检/保有效槽/真实退出重启",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-222",
+    "requirements": [
+      "NFR-203"
+    ],
+    "acceptance": [
+      "AC-213"
+    ],
+    "path": "source-assets/blender/",
+    "dependencies": [
+      "TASK-202"
+    ],
+    "test": "TEST-211",
+    "criterion": "两角色原创源/采用对应、实际游戏内审查",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-223",
+    "requirements": [
+      "NFR-201",
+      "NFR-202",
+      "REQ-201",
+      "REQ-202",
+      "REQ-203",
+      "REQ-204",
+      "REQ-205",
+      "REQ-206",
+      "REQ-207",
+      "REQ-208",
+      "REQ-209",
+      "REQ-210"
+    ],
+    "acceptance": [
+      "AC-201",
+      "AC-202",
+      "AC-203",
+      "AC-204",
+      "AC-205",
+      "AC-206",
+      "AC-207",
+      "AC-208",
+      "AC-209",
+      "AC-210",
+      "AC-211",
+      "AC-212"
+    ],
+    "path": "specs/003-character-builds/evidence/2026-10-13/regression-and-build.md",
+    "dependencies": [
+      "TASK-209",
+      "TASK-217",
+      "TASK-219",
+      "TASK-221",
+      "TASK-222"
+    ],
+    "test": "TEST-210",
+    "criterion": "全量非零/无原生ERROR、PC构建/发布资源/测量真实",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-224",
+    "requirements": [
+      "NFR-202",
+      "NFR-203"
+    ],
+    "acceptance": [
+      "AC-212",
+      "AC-213"
+    ],
+    "path": "specs/003-character-builds/evidence/2026-10-13/device-and-human.md",
+    "dependencies": [
+      "TASK-223"
+    ],
+    "test": "TEST-211",
+    "criterion": "具名真人/设备/构建与实际长期/视听记录",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-225",
+    "requirements": [
+      "NFR-201",
+      "NFR-202"
+    ],
+    "acceptance": [
+      "AC-211",
+      "AC-212"
+    ],
+    "path": "specs/003-character-builds/progress.md",
+    "dependencies": [
+      "TASK-223"
+    ],
+    "test": "TEST-201",
+    "criterion": "局部验收与未完成外部门槛分开，安全交付SHA对应",
+    "status": "未实施/未验收",
+    "done": false,
+    "evidence": []
+  }
+]

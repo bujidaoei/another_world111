@@ -1,0 +1,17 @@
+{
+  "repository": "CompVis/stable-diffusion-v-1-4-original",
+  "gated": false,
+  "selected_file": {
+    "type": "file",
+    "oid": "f57e82f9b6539b56f00dc6139747fceea8de367c",
+    "size": 4265380512,
+    "lfs": {
+      "oid": "fe4efff1e174c627256e44ec2991ba279b3816e364b49f9be2abc0b3ff3f8556",
+      "size": 4265380512,
+      "pointerSize": 135
+    },
+    "xetHash": "fea194533efdfd8f94b292f5d0aaa0c7744ea3394677afbd9bbd686c950ce227",
+    "path": "sd-v1-4.ckpt"
+  },
+  "revision": "f0bb45b49990512c454cf2c5670b0952ef2f9c71"
+}

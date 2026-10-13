@@ -5,3 +5,7 @@
 *.blend binary
 *.wav binary
 *.ogg binary
+
+# Preserve the bytes verified against the upstream release inventories.
+game/addons/godot_ai/** -text
+game/addons/gdUnit4/** -text

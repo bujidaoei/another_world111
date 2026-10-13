@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "platform": "Windows x86_64",
+  "configuration": "release",
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "source_project_sha256": "C9E62B0997AC881DFC522B3E1DA03ADF4FB1D626D0B9499C25D5CD38A347EEE1",
+  "source_files": 185,
+  "removed_debug_autoloads": [
+    "_mcp_game_helper"
+  ],
+  "packaged_files": 265,
+  "debug_test_paths": [],
+  "project_binary_checked": true,
+  "import_seconds": 3.1771976,
+  "export_seconds": 2.818719,
+  "smoke_seconds": 3.4981692,
+  "smoke_exit": 0,
+  "smoke_mode": "offscreen 640x360 OpenGL compatibility/Dummy main scene + real WM_CLOSE, isolated process APPDATA/LOCALAPPDATA",
+  "graphics_acceptance": "startup only, visual/performance/device acceptance not performed",
+  "signed": false,
+  "distribution": "D:\\bugu_projects\\another_world\\artifacts\\builds\\170f92b3ab4f42a88b8be23a494e7a23\\windows",
+  "files": [
+    {
+      "name": "AnotherWorld.exe",
+      "bytes": 109127680,
+      "sha256": "29F45F851A2CE5BEDA1F10CCE547E01D7D24AC751D50B9B38378C18CB08600A6"
+    },
+    {
+      "name": "AnotherWorld.pck",
+      "bytes": 2405172,
+      "sha256": "D397CFBB434BBC4A6C5DA6FC270142A836B12C128D5553C87C8CF1967E8B3694"
+    },
+    {
+      "name": "ASSET_PROVENANCE.json",
+      "bytes": 16357,
+      "sha256": "16BFAE1B423B3CAA958602CAA49ADB50F035B2BEC96098CD23F93F7BBDC2F2C2"
+    },
+    {
+      "name": "AUDIO_PROVENANCE.json",
+      "bytes": 9847,
+      "sha256": "AA2D7FC456BB5899367CD97F30FDA4632129E4FD8289DE15E36B0F2ED9473C10"
+    },
+    {
+      "name": "GODOT_LICENSE.txt",
+      "bytes": 1149,
+      "sha256": "B0435E3B3E4E55238F05F4B306F30524A1B2E20147810D436EAA554FA6855C80"
+    },
+    {
+      "name": "GODOT_THIRD_PARTY.json",
+      "bytes": 108107,
+      "sha256": "BF8C70B87A07AA6714F3BAB87387E14006DB61BCADC6C9CB0602F234DB958142"
+    }
+  ],
+  "pack_audit": "D:\\bugu_projects\\another_world\\artifacts\\builds\\170f92b3ab4f42a88b8be23a494e7a23\\pack-audit.json",
+  "zip": "D:\\bugu_projects\\another_world\\artifacts\\builds\\170f92b3ab4f42a88b8be23a494e7a23\\AnotherWorld-Windows-x64.zip",
+  "zip_bytes": 41083546,
+  "zip_sha256": "DAC64B95928593210559178AC42A4934AA3633A2AB0CB0CC4F9F4869A8D5A252"
+}
