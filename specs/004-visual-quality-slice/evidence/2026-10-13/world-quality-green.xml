@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="3" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_world_quality" package="tests" timestamp="2026-10-13T07:17:23" hostname="localhost" tests="3" failures="0" errors="0" skipped="0" flaky="0" time="0.024">
+		<testcase name="test_current_world_configuration_remains_valid" classname="test_world_quality" time="0.004">
+		</testcase>
+		<testcase name="test_original_quality_model_directory_is_accepted_by_same_registry" classname="test_world_quality" time="0.004">
+		</testcase>
+		<testcase name="test_quality_registry_rejects_remote_traversal_and_similar_prefix_paths" classname="test_world_quality" time="0.009">
+		</testcase>
+	</testsuite>
+</testsuites>

@@ -3,7 +3,7 @@ extends Node3D
 
 const PresentationConfig = preload("res://config/presentation_config.gd")
 const Preferences = preload("res://persistence/user_preferences.gd")
-const DOMAIN_VERSION := 1
+const DOMAIN_VERSION := AWBuildMigration.DOMAIN_VERSION
 
 @export var save_directory := "user://saves"
 
@@ -12,6 +12,11 @@ var progress: AWWorldProgress
 var inventory: AWInventoryLedger
 var expedition: AWExpeditionState
 var equipment: AWEquipmentService
+var character_config: AWCharacterBuildsConfig
+var build_evaluator: AWBuildEvaluator
+var roster: AWCharacterRoster
+var combat: AWCombatState
+var build_controller: AWBuildController
 var repository: SaveRepository
 var settings: Dictionary = {}
 var parameters: Dictionary = {}
@@ -31,14 +36,13 @@ var session_started := false
 var save_available := false
 var save_blocked := false
 var _modal_mode := "title"
-var _attack_cooldown := 0.0
-var _pulse_cooldown := 0.0
-var _anchor_cooldown := 0.0
 var _save_clock := 0.0
 var _hud_clock := 0.0
 var _pending_equipment: Array[Dictionary] = []
 var _anchors: Array[Node3D] = []
 var _stats: Dictionary = {}
+var _derived_build: Dictionary = {}
+var _build_return_mode := "camp"
 var _operation_counter := 0
 var _selected_material := ""
 var _locked_affixes: Array[String] = []
@@ -49,9 +53,16 @@ var preferences: RefCounted
 var _preferences_blocked := false
 var _preferences_dirty := false
 var _preferences_delay := 0.0
+var _preferences_write_failed := false
+var _pending_persistence_action := ""
+var _persistence_return_mode := ""
+var _persistence_return_paused := false
+var _persistence_return_blocked := false
+var _persistence_return_player_active := false
 var _environment: Environment
 var _sun: DirectionalLight3D
 var _future_domain := false
+var _fatal_failure := false
 
 func _ready() -> void:
 	get_tree().auto_accept_quit = false
@@ -74,6 +85,14 @@ func _ready() -> void:
 		_fatal(str(presentation.message))
 		return
 	parameters = presentation.data
+	character_config = AWCharacterBuildsConfig.new()
+	var character_rules := character_config.load_file("res://config/character_builds.json", parameters)
+	if not character_rules.ok:
+		_fatal(str(character_rules.message))
+		return
+	build_evaluator = AWBuildEvaluator.new(character_config, rules, parameters)
+	combat = AWCombatState.new(character_config)
+	roster = AWCharacterRoster.new(character_config, build_evaluator)
 	if not input_adapter.initialization_result.ok:
 		_fatal(str(input_adapter.initialization_result.message))
 		return
@@ -83,7 +102,7 @@ func _ready() -> void:
 		return
 	progress = AWWorldProgress.new(rules)
 	inventory = AWInventoryLedger.new(rules)
-	expedition = AWExpeditionState.new(rules)
+	expedition = AWExpeditionState.new(rules, character_config)
 	equipment = AWEquipmentService.new(rules)
 	repository = SaveRepository.new()
 	var configured := repository.configure(save_directory)
@@ -96,7 +115,7 @@ func _ready() -> void:
 		var restored := _restore_payload(saved.data)
 		if not restored.ok:
 			save_blocked = true
-			_future_domain = restored.get("code", "") == "future_domain"
+			_future_domain = restored.get("code", "") == "future_schema"
 			hud.notify(str(restored.message), 12.0)
 		else:
 			save_available = true
@@ -121,11 +140,19 @@ func _ready() -> void:
 			hud.notify("全局偏好无法读取，原文件已保留。 " + str(preferred.message), 9.0)
 	if inventory.get_equipment(active_weapon_id).is_empty():
 		_create_starter_weapon()
+	if roster.active_character_id.is_empty():
+		var initialized := roster.initialize(active_weapon_id, progress, inventory)
+		if not initialized.ok:
+			_fatal(str(initialized.message))
+			return
 	if not _build_scene("rain_court"):
 		return
 	_apply_settings()
-	_apply_equipment_stats()
+	if not _apply_equipment_stats():
+		return
 	_restore_vitals()
+	if not _configure_build_controller():
+		return
 	_show_title()
 
 func _build_scene(region: String) -> bool:
@@ -154,12 +181,18 @@ func _build_scene(region: String) -> bool:
 		player.process_mode = Node.PROCESS_MODE_PAUSABLE
 		add_child(player)
 		player.configure(parameters.player)
+		if not player.visual_ready:
+			_fatal(str(player.visual_error.get("message", "角色资产验证失败。")))
+			return false
 		player.input_adapter = input_adapter
 		player.died.connect(_on_death)
 		player.hurt.connect(func(_amount: float) -> void:
 			camera_rig.shake_strength = 0.45
 			_sound("hurt"))
 		player.dodge_started.connect(func() -> void: _sound("dodge"))
+		player.shield_absorbed.connect(func(_amount: float) -> void:
+			_burst(player.global_position + Vector3.UP, Color("86b5ef"), 0.6)
+			_sound("impact"))
 		camera_rig = AWCameraRig.new()
 		camera_rig.name = "CameraRig"
 		camera_rig.process_mode = Node.PROCESS_MODE_PAUSABLE
@@ -179,6 +212,7 @@ func _build_scene(region: String) -> bool:
 			audio.call("configure", settings)
 			audio.call("start_environment")
 	player.global_position = Vector3(0, 0.2, 11)
+	player.combat_state = combat
 	camera_rig.global_position = player.global_position
 	camera_rig.occlusion_fader.bind_world(world)
 	_apply_world_lighting()
@@ -235,7 +269,7 @@ func _apply_world_lighting() -> void:
 func _process(delta: float) -> void:
 	if _quitting:
 		return
-	if _preferences_dirty:
+	if _preferences_dirty and not _preferences_write_failed:
 		_preferences_delay -= delta
 		if _preferences_delay <= 0.0:
 			_save_preferences()
@@ -247,11 +281,11 @@ func _process(delta: float) -> void:
 	if _hud_clock > 0.12:
 		_hud_clock = 0.0
 		_update_hud()
+		if _modal_mode == "build" and hud.modal.visible:
+			build_controller.refresh_cooldowns()
 	if get_tree().paused:
 		return
-	_attack_cooldown = maxf(0.0, _attack_cooldown - delta)
-	_pulse_cooldown = maxf(0.0, _pulse_cooldown - delta)
-	_anchor_cooldown = maxf(0.0, _anchor_cooldown - delta)
+	combat.tick(delta, true)
 	_save_clock += delta
 	if _save_clock >= float(parameters.save.checkpoint_interval):
 		_save_clock = 0.0
@@ -261,6 +295,9 @@ func _process(delta: float) -> void:
 
 func _handle_action(action: String) -> void:
 	if action == "pause":
+		if not _pending_persistence_action.is_empty():
+			_cancel_pending_persistence()
+			return
 		if not session_started:
 			return
 		if hud.modal.visible:
@@ -271,8 +308,10 @@ func _handle_action(action: String) -> void:
 	if input_adapter.blocked:
 		return
 	match action:
-		"dodge": player.request_dodge()
-		"pulse": _pulse()
+		"dodge": _dodge()
+		"pulse": _common_skill(0)
+		"skill_secondary": _common_skill(1)
+		"character_ability": _cast_skill("self_heal")
 		"anchor": _place_anchor()
 		"interact": _interact()
 		"heal": _use_consumable("medkit")
@@ -284,6 +323,7 @@ func _handle_action(action: String) -> void:
 
 func _show_title() -> void:
 	_modal_mode = "title"
+	get_tree().paused = true
 	_set_menu_block(true)
 	hud.show_menu("另一个世界", "在雨后的废弃泵站搜集资源、判断撤离时机。\n珍爱的闪电枪随你的世界晋阶，获得新的打法。\n单人可玩原型 · 最终品质与完整内容制作中", [
 		{"label": "继续旅程", "action": "continue", "disabled": not save_available or save_blocked},
@@ -291,6 +331,7 @@ func _show_title() -> void:
 
 func _show_camp() -> void:
 	_modal_mode = "camp"
+	get_tree().paused = false
 	_set_menu_block(true)
 	var challenge_ready := progress.realm == 1 and progress.level == 30
 	var description := "金币 %d  ·  废铁 %d  ·  合金 %d  ·  晶片 %d\n生命 %d/%d · 口粮%d / 药包%d\n%s" % [inventory.count("currency"), inventory.count("scrap"), inventory.count("alloy"), inventory.count("crystal"), int(player.health), int(player.maximum_health), inventory.count("rations"), inventory.count("medkit"), "维护台已建成，可培养装备。" if bench_built else "建成维护台后解锁制作与装备培养。"]
@@ -299,6 +340,7 @@ func _show_camp() -> void:
 		{"label": "出发：导体工场 / 二阶", "action": "explore_conduit", "disabled": progress.realm < 2},
 		{"label": "个人晋阶挑战：雨庭守卫", "action": "challenge", "disabled": not challenge_ready},
 		{"label": "维护台：装备培养与补给", "action": "workbench"},
+		{"label": "角色构筑 · 天赋 / 技能 / 预设", "action": "builds"},
 		{"label": "食用口粮 · 恢复25生命", "action": "use_rations", "disabled": inventory.count("rations") <= 0 or player.health >= player.maximum_health},
 		{"label": "回到营地活动", "action": "resume"}])
 
@@ -338,6 +380,13 @@ func _show_fusion() -> void:
 		_selected_material = materials[0]
 	var preview := equipment.preview_fusion(inventory, active_weapon_id, _selected_material, _locked_affixes, progress.realm, in_camp, _ended())
 	var body := "未锁位置从双方合格普通词条重新抽取；结果不保证更强。\n主装备身份、阶级、品质、槽数、特效与经历保留。\n"
+	var referenced := roster.references_to(_selected_material)
+	if not referenced.is_empty():
+		body += "材料消耗后，下列引用会失效，需重新选择已有装备：\n"
+		for reference: Dictionary in referenced:
+			var character_label := str(character_config.data.characters[reference.character_id].label)
+			var destination := "预设%d「%s」" % [int(reference.slot) + 1, str(reference.name)] if reference.kind == "preset" else ("草稿" if reference.kind == "draft" else "非活动生效构筑")
+			body += character_label + " · " + destination + "\n"
 	if preview.ok:
 		body += "成本 %s\n合法成品组合 %d，每组合 %.2f%%\n候选进入成品的概率：" % [_cost_text(preview.data.cost), preview.data.outcomes.size(), float(preview.data.outcome_probability) * 100.0]
 		for id: String in preview.data.candidate_inclusion_probability:
@@ -356,10 +405,12 @@ func _show_pause() -> void:
 	_modal_mode = "pause"
 	get_tree().paused = true
 	_set_menu_block(true)
-	hud.show_menu("暂停", "世界与战斗冷却暂停。离开当前远征会丢弃本次未入库战利品。", [{"label": "继续", "action": "resume"}, {"label": "设置", "action": "settings"}, {"label": "保存并回到标题", "action": "title"}, {"label": "保存并退出", "action": "quit"}])
+	hud.show_menu("暂停", "世界与战斗冷却暂停。离开当前远征会丢弃本次未入库战利品。", [{"label": "继续", "action": "resume"}, {"label": "查看构筑 / 编辑草稿", "action": "builds"}, {"label": "设置", "action": "settings"}, {"label": "保存并回到标题", "action": "title"}, {"label": "保存并退出", "action": "quit"}])
 
 func _on_command(action: String) -> void:
 	if _quitting:
+		return
+	if _fatal_failure and action not in ["quit", "retry_quit", "discard_quit", "cancel_quit"]:
 		return
 	if _future_domain and action in ["new_game", "confirm_new", "continue"]:
 		hud.notify("已有更新版本进度，本版本不会覆盖它。", 9.0)
@@ -386,17 +437,35 @@ func _on_command(action: String) -> void:
 		_show_fusion()
 		return
 	match action:
+		"retry_quit":
+			if _pending_persistence_action == "quit": _request_quit()
+		"discard_quit":
+			if _pending_persistence_action == "quit": _finish_quit()
+		"cancel_quit", "cancel_title":
+			if not _pending_persistence_action.is_empty(): _cancel_pending_persistence()
+		"retry_title":
+			if _pending_persistence_action == "title": _return_to_title()
+		"retry_settlement":
+			if session_started and not in_camp and expedition.state == AWExpeditionState.State.ENDED and not expedition.rewards_committed:
+				_finish_run(expedition.outcome)
+		"abandon_settlement":
+			if session_started and not in_camp and expedition.state == AWExpeditionState.State.ENDED and not expedition.rewards_committed:
+				expedition = AWExpeditionState.new(rules, character_config)
+				_return_to_camp("discarded")
 		"continue":
 			var saved := repository.load()
 			if not saved.ok or not _restore_payload(saved.data).ok:
 				hud.notify("存档恢复失败，原文件已保留。", 8.0)
 				return
-			expedition = AWExpeditionState.new(rules)
+			expedition = AWExpeditionState.new(rules, character_config)
 			_pending_equipment.clear()
 			if not _build_scene("rain_court"):
 				return
-			_apply_equipment_stats()
-			_restore_vitals()
+			if not _apply_equipment_stats():
+				return
+			_restore_vitals(true)
+			if not _configure_build_controller():
+				return
 			if not _preferences_blocked:
 				var preferred: Dictionary = preferences.load()
 				if preferred.ok:
@@ -406,6 +475,9 @@ func _on_command(action: String) -> void:
 			session_started = true
 			in_camp = true
 			player.active = true
+			if has_meta("failure_checkpoint_recovered"):
+				remove_meta("failure_checkpoint_recovered")
+				_save_progress(false)
 			_close_menu()
 			_show_camp()
 		"new_game":
@@ -417,6 +489,7 @@ func _on_command(action: String) -> void:
 		"resume": _close_menu()
 		"camp": _show_camp()
 		"workbench": _show_workbench()
+		"builds": _show_builds()
 		"fusion":
 			_locked_affixes.clear()
 			_selected_material = ""
@@ -431,17 +504,20 @@ func _on_command(action: String) -> void:
 			_result(equipment.fuse(inventory, active_weapon_id, _selected_material, _locked_affixes, progress.realm, in_camp, _ended(), _operation_id("fusion"), run_counter * 93 + _operation_counter))
 			_selected_material = ""
 			_locked_affixes.clear()
-			_apply_equipment_stats()
+			if not _apply_equipment_stats():
+				return
 			_save_progress()
 			_show_workbench()
 		"expand":
 			_result(equipment.expand_slot(inventory, active_weapon_id, progress.realm, in_camp, _ended(), _operation_id("expansion"), run_counter + _operation_counter))
-			_apply_equipment_stats()
+			if not _apply_equipment_stats():
+				return
 			_save_progress()
 			_show_workbench()
 		"advance":
 			_result(equipment.ascend(inventory, active_weapon_id, progress.realm, in_camp, _ended(), _operation_id("advance"), {"location": "回收营地", "at": Time.get_datetime_string_from_system(true)}))
-			_apply_equipment_stats()
+			if not _apply_equipment_stats():
+				return
 			_save_progress()
 			_show_workbench()
 		"build_bench":
@@ -488,25 +564,29 @@ func _on_command(action: String) -> void:
 			else:
 				_show_pause()
 		"title":
-			_save_progress()
-			get_tree().paused = false
-			session_started = false
-			player.active = false
-			_show_title()
+			_return_to_title()
 		"quit":
 			_request_quit()
 
 func _new_game() -> void:
+	get_tree().paused = false
 	progress = AWWorldProgress.new(rules)
 	inventory = AWInventoryLedger.new(rules)
-	expedition = AWExpeditionState.new(rules)
+	expedition = AWExpeditionState.new(rules, character_config)
+	combat = AWCombatState.new(character_config)
+	roster = AWCharacterRoster.new(character_config, build_evaluator)
 	run_counter = 0
 	_operation_counter = 0
 	bench_built = false
 	save_blocked = false
 	active_weapon_id = "starter-lightning"
 	_create_starter_weapon()
-	_apply_equipment_stats()
+	var initialized := roster.initialize(active_weapon_id, progress, inventory)
+	if not initialized.ok:
+		_fatal(str(initialized.message))
+		return
+	if not _apply_equipment_stats():
+		return
 	player.health = player.maximum_health
 	player.stamina = player.maximum_stamina
 	player.active = true
@@ -514,20 +594,24 @@ func _new_game() -> void:
 	in_camp = true
 	if not _build_scene("rain_court"):
 		return
+	if not _configure_build_controller():
+		return
 	_save_progress()
 	_show_camp()
 
 func _create_starter_weapon() -> void:
 	var result := equipment.create_drop(active_weapon_id, 1, "rare", 4, {"location": "回收营地 · 初始工具", "level": 1, "acquired_at": Time.get_datetime_string_from_system(true)}, 27191)
 	if result.ok:
-		inventory.add_equipment(result.data.equipment)
+		var starter: Dictionary = result.data.equipment.duplicate(true)
+		starter["equipped"] = true
+		inventory.add_equipment(starter)
 
 func _begin_run(region: String, challenge: bool) -> void:
 	if not in_camp or not _ended():
 		hud.notify("必须在营地且上一遭遇已经结束。")
 		return
 	run_counter += 1
-	var result := expedition.begin("run-%d" % run_counter, region, challenge, progress.realm, progress.level)
+	var result := expedition.begin("run-%d" % run_counter, region, challenge, progress.realm, progress.level, roster.active_character_id, roster.thief_coin_remainder)
 	if not result.ok:
 		_result(result)
 		return
@@ -605,18 +689,31 @@ func _finish_run(outcome: String) -> void:
 	for node: Node in enemy_root.get_children():
 		if node is AWEnemyController:
 			node.active = false
-	var resolved := expedition.resolve(outcome, progress)
-	if not resolved.ok:
-		_result(resolved)
-		return
-	expedition.reset()
-	if outcome != "failed":
-		var settled := expedition.commit_rewards(_operation_id("settlement"), inventory)
-		if not settled.ok:
-			_result(settled)
+	if expedition.state != AWExpeditionState.State.ENDED:
+		var resolved := expedition.resolve(outcome, progress)
+		if not resolved.ok:
+			_result(resolved)
 			return
-		for item: Dictionary in _pending_equipment:
-			inventory.add_equipment(item)
+		var reset := expedition.reset()
+		if not reset.ok:
+			_result(reset)
+			return
+	elif expedition.outcome != outcome or expedition.rewards_committed:
+		return
+	if outcome != "failed":
+		var settled := expedition.commit_rewards(inventory, roster, _pending_equipment)
+		if not settled.ok:
+			if settled.code == "settlement_invariant":
+				_fatal(str(settled.message))
+				return
+			_modal_mode = "settlement"
+			_set_menu_block(true)
+			player.active = false
+			hud.show_menu("战利品尚未入库", str(settled.message) + "\n本次资源、装备和金币余数均未入库，可重试或放弃未入库战利品回营。", [{"label": "重试入库", "action": "retry_settlement"}, {"label": "放弃未入库战利品并回营", "action": "abandon_settlement"}])
+			return
+	_return_to_camp(outcome)
+
+func _return_to_camp(outcome: String) -> void:
 	_pending_equipment.clear()
 	for anchor: Node3D in _anchors:
 		if is_instance_valid(anchor):
@@ -626,45 +723,46 @@ func _finish_run(outcome: String) -> void:
 	if not _build_scene("rain_court"):
 		return
 	if outcome == "failed":
-		player.health = maxf(1.0, player.maximum_health * 0.35)
+		_recover_after_failure()
 	player.active = true
-	_sound("failure" if outcome == "failed" else "victory")
+	_sound("failure" if outcome in ["failed", "discarded"] else "victory")
 	if audio:
 		audio.call("set_encounter", false)
 	_save_progress(false)
 	_show_camp()
-	hud.notify("本次未入库战利品已丢失；装备和经验保留。" if outcome == "failed" else ("晋阶成功：导体工场开放！可在维护台进阶原电枪。" if outcome == "victory" else "安全撤离，战利品已入库。"), 7.0)
+	hud.notify("本次未入库战利品已丢失；已入库装备和经验保留。" if outcome in ["failed", "discarded"] else ("晋阶成功：导体工场开放！可在维护台进阶原电枪。" if outcome == "victory" else "安全撤离，战利品已入库。"), 7.0)
 
 func _on_death() -> void:
 	_finish_run("failed")
 
 func _attack() -> void:
-	if _attack_cooldown > 0.0:
+	if combat.cooldown_remaining("attack") > 0.0:
 		return
-	var target := _find_target(player.global_position, player.aim_direction, float(parameters.weapon.range), true, [])
+	var target := _find_target(player.global_position, player.aim_direction, float(_stats.attack_range), true, [])
 	if target == null:
 		return
-	_attack_cooldown = float(parameters.weapon.attack_cooldown) / (1.0 + float(_stats.get("attack_speed", 0.0)))
+	var cast_result := _perform_cast("attack")
+	if not cast_result.ok:
+		return
 	var previous := player.global_position + Vector3.UP * 1.2
-	var tier_multiplier := float(parameters.weapon.tier_damage_multipliers[str(_weapon_tier())])
-	var damage := float(parameters.weapon.attack_damage) * (1.0 + float(_stats.get("damage", 0.0))) * tier_multiplier
+	var damage: float = cast_result.data.effect_spec.damage
 	var visited: Array[AWEnemyController] = []
 	var current := target
-	for _index: int in range(int(rules.data.combat.chain_targets)):
+	for _index: int in range(int(_stats.chain_targets)):
 		if current == null:
 			break
 		visited.append(current)
 		var destination := current.global_position + Vector3.UP
 		_lightning(previous, destination)
 		current.take_damage(damage)
-		damage *= float(parameters.weapon.chain_falloff)
+		damage *= float(_stats.chain_falloff)
 		previous = destination
-		var range_value := float(rules.data.combat.chain_range) * (1.0 + float(_stats.get("chain_range", 0.0)))
+		var range_value := float(_stats.chain_range)
 		current = _find_target(previous, Vector3.ZERO, range_value, false, visited)
 		if current == null and _weapon_tier() >= 2:
 			for anchor: Node3D in _anchors:
-				if is_instance_valid(anchor) and previous.distance_to(anchor.global_position) <= float(rules.data.combat.anchor_range):
-					var across := _find_target(anchor.global_position, Vector3.ZERO, float(rules.data.combat.anchor_range), false, visited)
+				if is_instance_valid(anchor) and previous.distance_to(anchor.global_position) <= float(_stats.anchor_range):
+					var across := _find_target(anchor.global_position, Vector3.ZERO, float(_stats.anchor_range), false, visited)
 					if across:
 						_lightning(previous, anchor.global_position + Vector3.UP)
 						previous = anchor.global_position + Vector3.UP
@@ -700,34 +798,79 @@ func _find_target(origin: Vector3, direction: Vector3, range_value: float, aimed
 	return best
 
 func _pulse() -> void:
-	if in_camp or _pulse_cooldown > 0.0 or player.stamina < float(parameters.weapon.pulse_cost):
+	_cast_skill("pulse")
+
+func _common_skill(slot: int) -> void:
+	var loadout: Array = roster.active_build().skill_loadout
+	_cast_skill(str(loadout[slot]))
+
+func _perform_cast(skill_id: String) -> Dictionary:
+	var preview := combat.preview_cast(skill_id, _combat_context(), _vitals(), _derived_build)
+	if not preview.ok:
+		return preview
+	var cast_result := combat.cast(skill_id, _combat_context(), _vitals(), _derived_build, _operation_id("cast-" + skill_id))
+	if cast_result.ok:
+		_apply_vitals(cast_result.data.new_vitals)
+	return cast_result
+
+func _cast_skill(skill_id: String) -> void:
+	var cast_result := _perform_cast(skill_id)
+	if not cast_result.ok:
+		hud.notify(str(cast_result.message))
 		return
-	player.stamina -= float(parameters.weapon.pulse_cost)
-	_pulse_cooldown = float(parameters.weapon.pulse_cooldown)
-	var radius := float(parameters.weapon.pulse_radius)
+	var effect_spec: Dictionary = cast_result.data.effect_spec
+	match skill_id:
+		"pulse": _resolve_pulse(effect_spec)
+		"barrier":
+			_burst(player.global_position + Vector3.UP * 0.1, Color("86b5ef"), 1.0)
+			_sound("confirm")
+		"focus":
+			_burst(player.global_position + Vector3.UP * 0.1, Color("f3ca89"), 0.8)
+			_sound("confirm")
+		"self_heal":
+			var animated := player.play_self_heal()
+			if not animated.ok:
+				_fatal(str(animated.message))
+				return
+			_burst(player.global_position + Vector3.UP * 0.1, Color("83f7b0"), 0.8)
+			_sound("confirm")
+	_save_progress(false)
+	_update_hud()
+
+func _resolve_pulse(effect_spec: Dictionary) -> void:
+	var radius := float(effect_spec.radius)
 	for node: Node in enemy_root.get_children():
 		if node is AWEnemyController and node.active and node.global_position.distance_to(player.global_position) <= radius:
 			var ray := PhysicsRayQueryParameters3D.create(player.global_position + Vector3.UP, node.global_position + Vector3.UP, 1)
 			if get_world_3d().direct_space_state.intersect_ray(ray).is_empty():
-				node.take_damage(float(parameters.weapon.pulse_damage) * (1.0 + float(_stats.get("skill_damage", 0.0))))
+				node.take_damage(float(effect_spec.damage))
 	_burst(player.global_position + Vector3.UP * 0.1, Color("83f7df"), radius)
 	_sound("pulse")
+
+func _dodge() -> void:
+	var cast_result := _perform_cast("dodge")
+	if cast_result.ok:
+		var moved := player.begin_dodge(cast_result.data.effect_spec)
+		if not moved.ok:
+			_fatal(str(moved.message))
+	else:
+		hud.notify(str(cast_result.message))
 
 func _place_anchor() -> void:
 	if in_camp or _weapon_tier() < 2 or progress.realm < 2:
 		hud.notify("电枪进阶到二阶后解锁导电锚点。")
 		return
-	if _anchor_cooldown > 0.0 or player.stamina < float(parameters.weapon.anchor_cost):
+	var cast_result := _perform_cast("anchor")
+	if not cast_result.ok:
+		hud.notify(str(cast_result.message))
 		return
-	player.stamina -= float(parameters.weapon.anchor_cost)
-	_anchor_cooldown = float(parameters.weapon.anchor_cooldown)
 	var anchor := Node3D.new()
 	effects.add_child(anchor)
 	anchor.global_position = player.global_position + player.aim_direction * 2.5
 	var model := (load("res://assets/models/conductive_anchor.glb") as PackedScene).instantiate() as Node3D
 	anchor.add_child(model)
 	_anchors.append(anchor)
-	var timer := get_tree().create_timer(float(parameters.weapon.anchor_lifetime), false)
+	var timer := get_tree().create_timer(float(cast_result.data.effect_spec.lifetime), false)
 	timer.timeout.connect(_expire_anchor.bind(weakref(anchor)))
 	_sound("anchor")
 
@@ -738,97 +881,175 @@ func _expire_anchor(reference: WeakRef) -> void:
 		anchor.queue_free()
 
 func _use_consumable(id: String) -> void:
-	if player.health >= player.maximum_health:
-		hud.notify("生命已满。")
+	var preview := combat.preview_recovery(id, _combat_context(), _vitals())
+	if not preview.ok:
+		_result(preview)
 		return
-	var result := inventory.apply_operation(_operation_id("consume"), {id: 1})
-	if result.ok:
-		player.health = minf(player.maximum_health, player.health + float(rules.data.camp.medkit_healing if id == "medkit" else rules.data.camp.ration_healing))
-		_sound("confirm")
-	_result(result)
+	var operation := _operation_id("consume")
+	var context := _combat_context()
+	var vitals := _vitals()
+	var cooldown_ready := combat.can_commit_recovery(id, context, vitals, operation)
+	var inventory_ready := inventory.can_apply_operation(operation, preview.data.cost)
+	if not cooldown_ready.ok or not inventory_ready.ok:
+		_result(cooldown_ready if not cooldown_ready.ok else inventory_ready)
+		return
+	# Both pure domains have passed preflight. No signal, callback or await occurs
+	# between their commits; they are saved together in the same validated envelope.
+	var consumed := inventory.apply_operation(operation, preview.data.cost)
+	if not consumed.ok:
+		_result(consumed)
+		return
+	var committed := combat.commit_recovery(id, context, vitals, operation)
+	if not committed.ok:
+		_fatal("恢复事务状态发生冲突，已停止写档。 " + str(committed.message))
+		return
+	player.health = minf(player.maximum_health, player.health + float(rules.data.camp.medkit_healing if id == "medkit" else rules.data.camp.ration_healing))
+	_sound("confirm")
+	hud.notify("已恢复生命；同类恢复进入共享冷却。")
 	_save_progress(false)
 
-func _apply_equipment_stats() -> void:
-	_stats = {}
-	var item := inventory.get_equipment(active_weapon_id)
-	for affix: Dictionary in item.get("affixes", []):
-		var definition: Dictionary = rules.data.equipment.affixes[affix.id]
-		_stats[definition.stat] = float(_stats.get(definition.stat, 0.0)) + float(affix.value) * float(definition.scale)
-	if player:
-		var ratio := player.health / maxf(1.0, player.maximum_health)
-		player.maximum_health = float(parameters.player.maximum_health) * (1.0 + float(_stats.get("maximum_health", 0.0)))
-		player.health = ratio * player.maximum_health
-		player.maximum_stamina = float(parameters.player.maximum_stamina) * (1.0 + float(_stats.get("maximum_stamina", 0.0)))
-		player.stamina = minf(player.stamina, player.maximum_stamina)
-		player.config.stamina_recovery = float(parameters.player.stamina_recovery) * (1.0 + float(_stats.get("stamina_recovery", 0.0)))
-		player.config["passive_damage_reduction"] = float(_stats.get("damage_reduction", 0.0))
-		player.set_weapon_tier(_weapon_tier())
+func _apply_equipment_stats() -> bool:
+	var evaluation := build_evaluator.evaluate(roster.active_build(), progress, inventory)
+	if not evaluation.ok:
+		_fatal(str(evaluation.message))
+		return false
+	var ratio := player.health / player.maximum_health
+	var new_vitals := {"health": ratio * float(evaluation.data.stats.max_health), "stamina": minf(player.stamina, float(evaluation.data.stats.max_stamina)), "max_health": float(evaluation.data.stats.max_health), "max_stamina": float(evaluation.data.stats.max_stamina)}
+	return _apply_derived_build(evaluation.data, new_vitals)
+
+func _apply_derived_build(derived: Dictionary, vitals: Dictionary) -> bool:
+	_derived_build = derived.duplicate(true)
+	_stats = derived.stats.duplicate(true)
+	active_weapon_id = str(roster.active_build().weapon_id)
+	_apply_vitals(vitals)
+	for key: String in ["move_speed", "stamina_recovery", "defense_drain", "passive_damage_reduction"]:
+		player.config[key] = _stats[key]
+	player.combat_state = combat
+	var identity := player.set_character(roster.active_character_id)
+	var weapon := player.set_weapon_tier(_weapon_tier())
+	if not identity.ok or not weapon.ok:
+		_fatal(str(identity.message if not identity.ok else weapon.message))
+		return false
+	_update_hud()
+	return true
+
+func _apply_vitals(vitals: Dictionary) -> void:
+	player.maximum_health = float(vitals.max_health)
+	player.maximum_stamina = float(vitals.max_stamina)
+	player.health = float(vitals.health)
+	player.stamina = float(vitals.stamina)
+
+func _vitals() -> Dictionary:
+	return {"health": player.health, "stamina": player.stamina, "max_health": player.maximum_health, "max_stamina": player.maximum_stamina}
+
+func _combat_context() -> Dictionary:
+	return {"active_character_id": roster.active_character_id, "realm": progress.realm, "skill_loadout": roster.active_build().skill_loadout, "weapon_tier": _weapon_tier(), "gameplay_running": session_started and not _quitting and not get_tree().paused}
 
 func _weapon_tier() -> int:
 	return int(inventory.get_equipment(active_weapon_id).get("tier", 1))
 
-func _save_progress(show_notice: bool = true) -> void:
-	if save_blocked or not session_started or player == null:
-		return
-	var payload := {"domain_version": DOMAIN_VERSION, "world": progress.snapshot(), "inventory": inventory.snapshot(), "active_weapon_id": active_weapon_id, "run_counter": run_counter, "operation_counter": _operation_counter, "bench_built": bench_built, "health": player.health, "stamina": player.stamina, "settings": settings.duplicate(true), "input_bindings": input_adapter.snapshot_bindings(), "interrupted_expedition": not in_camp}
-	var result := repository.save(payload)
+func _save_progress(show_notice: bool = true) -> Dictionary:
+	if not session_started or player == null:
+		return {"ok": true, "code": "save_not_required", "message": "尚未开始旅程。"}
+	if save_blocked:
+		return {"ok": false, "code": "future_schema" if _future_domain else "save_blocked", "message": "保存保护已启用，已有存档保持原样。"}
+	var payload := {"domain_version": DOMAIN_VERSION, "world": progress.snapshot(), "inventory": inventory.snapshot(), "active_weapon_id": active_weapon_id, "run_counter": run_counter, "operation_counter": _operation_counter, "bench_built": bench_built, "health": player.health, "stamina": player.stamina, "settings": settings.duplicate(true), "input_bindings": input_adapter.snapshot_bindings(), "interrupted_expedition": not in_camp, "character_builds": roster.snapshot(), "combat_state": combat.snapshot()}
+	var validated := AWBuildMigration.migrate_payload(payload, character_config, build_evaluator)
+	if not validated.ok:
+		hud.notify("当前进度校验失败，已有文件已保留。 " + str(validated.message), 9.0)
+		push_error(JSON.stringify({"module": "save", "operation": "validate", "code": validated.code}))
+		return validated
+	var result := repository.save(validated.data, _validate_existing_progress)
 	if result.ok:
 		save_available = true
 		if show_notice:
 			hud.notify("进度已验证保存。")
 	else:
+		if result.code == "future_schema":
+			save_blocked = true
+			_future_domain = true
 		hud.notify("保存失败：" + str(result.message), 9.0)
 		push_error(JSON.stringify({"module": "save", "operation": "save", "code": result.code, "version": "0.1.0"}))
+	return result
+
+func _validate_existing_progress(payload: Dictionary) -> Dictionary:
+	return AWBuildMigration.migrate_payload(payload, character_config, build_evaluator)
 
 func _restore_payload(payload: Dictionary) -> Dictionary:
-	var version: Variant = payload.get("domain_version", 1)
-	if not AWGameRules.is_count(version, 1):
-		return {"ok": false, "code": "invalid_domain", "message": "进度领域版本无效。"}
-	if int(version) > DOMAIN_VERSION:
-		return {"ok": false, "code": "future_domain", "message": "进度由更新版本创建，本版本不会覆盖它。"}
-	if not payload.get("world") is Dictionary or not payload.get("inventory") is Dictionary:
-		return {"ok": false, "message": "存档缺少有效世界或库存。"}
+	var migrated := AWBuildMigration.migrate_payload(payload, character_config, build_evaluator)
+	if not migrated.ok:
+		return migrated
+	var candidate: Dictionary = migrated.data
 	var candidate_progress := AWWorldProgress.new(rules)
 	var candidate_inventory := AWInventoryLedger.new(rules)
-	var world_result := candidate_progress.restore(payload.world)
-	var inventory_result := candidate_inventory.restore(payload.inventory)
-	var candidate_settings: Variant = payload.get("settings", {})
-	if not candidate_settings is Dictionary:
-		return {"ok": false, "message": "存档设置结构无效。"}
-	var settings_result := AWGameSettings.normalize(candidate_settings)
-	var candidate_bindings: Variant = payload.get("input_bindings", input_adapter.snapshot_bindings())
-	if not candidate_bindings is Dictionary or not input_adapter.bindings.validate(candidate_bindings).ok:
-		return {"ok": false, "message": "存档按键设置无效。"}
-	if not world_result.ok or not inventory_result.ok or not settings_result.ok:
-		return {"ok": false, "message": "存档领域数据无效，未覆盖原文件。"}
-	var candidate_weapon := str(payload.get("active_weapon_id", "starter-lightning"))
-	var candidate_item := candidate_inventory.get_equipment(candidate_weapon)
-	if candidate_item.is_empty() or not equipment.validate_equipment(candidate_item).ok:
-		return {"ok": false, "message": "存档当前装备不存在。"}
-	if int(candidate_item.tier) > candidate_progress.realm:
-		return {"ok": false, "message": "当前装备超过个人境界。"}
-	for key: String in ["run_counter", "operation_counter"]:
-		if not AWGameRules.is_count(payload.get(key, 0)):
-			return {"ok": false, "message": "存档操作编号无效。"}
-	for key: String in ["health", "stamina"]:
-		var value: Variant = payload.get(key, 100.0)
-		if not (value is float or value is int) or not is_finite(float(value)) or float(value) < 0.0:
-			return {"ok": false, "message": "存档生命或体力无效。"}
-	if not payload.get("bench_built", false) is bool or not payload.get("interrupted_expedition", false) is bool:
-		return {"ok": false, "message": "存档营地状态无效。"}
+	var candidate_roster := AWCharacterRoster.new(character_config, build_evaluator)
+	var candidate_combat := AWCombatState.new(character_config)
+	for restored: Dictionary in [candidate_progress.restore(candidate.world), candidate_inventory.restore(candidate.inventory), candidate_combat.restore(candidate.combat_state)]:
+		if not restored.ok:
+			return restored
+	var restored_roster := candidate_roster.restore(candidate.character_builds, candidate_progress, candidate_inventory)
+	if not restored_roster.ok:
+		return restored_roster
+	var restored_bindings := input_adapter.restore_bindings(candidate.input_bindings)
+	if not restored_bindings.ok:
+		return restored_bindings
+	# All candidate domains and InputMap are validated before the live references move.
 	progress = candidate_progress
 	inventory = candidate_inventory
-	active_weapon_id = candidate_weapon
-	run_counter = int(payload.get("run_counter", 0))
-	_operation_counter = int(payload.get("operation_counter", 0))
-	bench_built = bool(payload.get("bench_built", false))
-	settings = settings_result.data
-	input_adapter.restore_bindings(candidate_bindings)
-	set_meta("restore_health", float(payload.get("health", 100.0)))
-	set_meta("restore_stamina", float(payload.get("stamina", 100.0)))
-	if payload.get("interrupted_expedition", false):
+	roster = candidate_roster
+	combat = candidate_combat
+	active_weapon_id = str(candidate.active_weapon_id)
+	run_counter = int(candidate.run_counter)
+	_operation_counter = int(candidate.operation_counter)
+	bench_built = bool(candidate.bench_built)
+	settings = candidate.settings.duplicate(true)
+	set_meta("restore_health", float(candidate.health))
+	set_meta("restore_stamina", float(candidate.stamina))
+	if bool(candidate.interrupted_expedition):
 		hud.notify("从营地检查点恢复；中断远征的未入库战利品未保留。", 9.0)
-	return {"ok": true}
+	return {"ok": true, "code": "ok", "message": "", "migrated": bool(migrated.migrated)}
+
+func _configure_build_controller() -> bool:
+	if build_controller == null:
+		build_controller = AWBuildController.new()
+		build_controller.name = "BuildController"
+		build_controller.process_mode = Node.PROCESS_MODE_ALWAYS
+		add_child(build_controller)
+		build_controller.edited.connect(func() -> void: _save_progress(false))
+		build_controller.build_applied.connect(_on_build_applied)
+		build_controller.closed.connect(_on_build_closed)
+	var configured := build_controller.configure(hud, character_config, build_evaluator, roster, progress, inventory, combat, _build_context, _vitals, func() -> String: return _operation_id("build"))
+	if not configured.ok:
+		_fatal(str(configured.message))
+		return false
+	return true
+
+func _build_context() -> Dictionary:
+	return {"session_started": session_started, "camp": in_camp, "encounter_ended": _ended()}
+
+func _show_builds() -> void:
+	if not session_started:
+		return
+	_build_return_mode = "pause" if get_tree().paused or not in_camp else "camp"
+	if not in_camp:
+		get_tree().paused = true
+	_modal_mode = "build"
+	_set_menu_block(true)
+	var shown := build_controller.show()
+	if not shown.ok:
+		_result(shown)
+
+func _on_build_applied(data: Dictionary) -> void:
+	if not _apply_derived_build(data.derived_build, data.new_vitals):
+		return
+	_save_progress(false)
+	_sound("confirm")
+
+func _on_build_closed() -> void:
+	if _build_return_mode == "pause":
+		_show_pause()
+	else:
+		_show_camp()
 
 func _apply_settings() -> void:
 	if camera_rig:
@@ -854,7 +1075,7 @@ func _show_bindings() -> void:
 	hud.show_menu("键盘按键", "鼠标、触控与手柄保留独立绑定。ESC、确认和方向键保留菜单导航。", options)
 
 func _input(event: InputEvent) -> void:
-	if _binding_action.is_empty() or not event is InputEventKey or not event.pressed or event.echo:
+	if _quitting or not _pending_persistence_action.is_empty() or _binding_action.is_empty() or not event is InputEventKey or not event.pressed or event.echo:
 		return
 	get_viewport().set_input_as_handled()
 	if event.physical_keycode == KEY_ESCAPE:
@@ -881,18 +1102,26 @@ func _on_setting(key: String, value: Variant) -> void:
 		settings = validation.data
 		_apply_settings()
 		_preferences_dirty = true
+		_preferences_write_failed = false
 		_preferences_delay = 0.35
 
-func _save_preferences() -> void:
-	_preferences_dirty = false
+func _save_preferences() -> Dictionary:
+	_preferences_dirty = true
 	if _preferences_blocked or preferences == null:
-		return
+		_preferences_write_failed = true
+		return {"ok": false, "code": "preferences_blocked", "message": "偏好保存保护已启用，已有文件保持原样。"}
 	var result: Dictionary = preferences.save(settings, input_adapter.snapshot_bindings())
-	if not result.ok:
+	if result.ok:
+		_preferences_dirty = false
+		_preferences_write_failed = false
+	else:
+		_preferences_write_failed = true
 		hud.notify("偏好保存失败：" + str(result.message), 9.0)
 		push_error(JSON.stringify({"module": "preferences", "code": result.code, "operation": "save"}))
+	return result
 
 func _close_menu() -> void:
+	_binding_action = ""
 	get_tree().paused = false
 	hud.hide_menu()
 	_set_menu_block(false)
@@ -905,12 +1134,21 @@ func _set_menu_block(blocked: bool) -> void:
 	if camera_rig:
 		camera_rig.allow_input = not blocked
 
-func _restore_vitals() -> void:
+func _restore_vitals(recover_failed_checkpoint: bool = false) -> void:
 	if has_meta("restore_health"):
-		player.health = clampf(float(get_meta("restore_health")), 1.0, player.maximum_health)
-		player.stamina = clampf(float(get_meta("restore_stamina")), 0.0, player.maximum_stamina)
+		player.health = float(get_meta("restore_health"))
+		player.stamina = float(get_meta("restore_stamina"))
 		remove_meta("restore_health")
 		remove_meta("restore_stamina")
+		if recover_failed_checkpoint and player.health == 0.0:
+			_recover_after_failure()
+			set_meta("failure_checkpoint_recovered", true)
+			hud.notify("已从死亡检查点按失败规则回营，恢复35%生命；冷却和已入库进度保留。", 9.0)
+
+func _recover_after_failure() -> void:
+	combat.clear_effects()
+	_pending_equipment.clear()
+	player.health = maxf(1.0, player.maximum_health * 0.35)
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
@@ -926,11 +1164,68 @@ func _notification(what: int) -> void:
 func _request_quit() -> void:
 	if _quitting:
 		return
-	_quitting = true
+	var results := _save_before_transition()
+	if not results.is_empty():
+		_show_persistence_failure("quit", results)
+		return
+	_finish_quit()
+
+func _save_before_transition() -> Array[Dictionary]:
+	var failures: Array[Dictionary] = []
 	if _preferences_dirty:
-		_save_preferences()
+		var preferred := _save_preferences()
+		if not preferred.ok: failures.append({"label": "偏好", "result": preferred})
 	if session_started:
-		_save_progress(false)
+		var saved := _save_progress(false)
+		if not saved.ok: failures.append({"label": "进度", "result": saved})
+	return failures
+
+func _return_to_title() -> void:
+	var failures := _save_before_transition()
+	if not failures.is_empty():
+		_show_persistence_failure("title", failures)
+		return
+	if not _pending_persistence_action.is_empty(): hud.pop_menu_layer(false)
+	_pending_persistence_action = ""
+	_binding_action = ""
+	session_started = false
+	player.active = false
+	input_adapter.release_all()
+	if audio: audio.call("set_encounter", false)
+	_show_title()
+
+func _show_persistence_failure(action: String, failures: Array[Dictionary]) -> void:
+	if _pending_persistence_action.is_empty():
+		_persistence_return_mode = _modal_mode
+		_persistence_return_paused = get_tree().paused
+		_persistence_return_blocked = input_adapter.blocked
+		_persistence_return_player_active = player.active
+		hud.push_menu_layer()
+	_pending_persistence_action = action
+	_modal_mode = "save_failure"
+	get_tree().paused = true
+	_set_menu_block(true)
+	var description := "当前旅程仍在内存中，已有文件保持原样。\n"
+	for failure: Dictionary in failures:
+		description += str(failure.label) + "：" + str(failure.result.message) + "\n"
+	var options: Array = [{"label": "重试保存并退出" if action == "quit" else "重试保存并回到标题", "action": "retry_quit" if action == "quit" else "retry_title"}]
+	if action == "quit": options.append({"label": "明确放弃未保存内容并退出", "action": "discard_quit"})
+	options.append({"label": "取消退出 / 保留当前旅程" if action == "quit" else "取消 / 保留当前旅程", "action": "cancel_quit" if action == "quit" else "cancel_title"})
+	hud.show_menu("保存未完成", description, options)
+
+func _cancel_pending_persistence() -> void:
+	if _pending_persistence_action.is_empty(): return
+	_pending_persistence_action = ""
+	hud.pop_menu_layer()
+	_modal_mode = _persistence_return_mode
+	get_tree().paused = _persistence_return_paused
+	_set_menu_block(_persistence_return_blocked)
+	player.active = _persistence_return_player_active
+
+func _finish_quit() -> void:
+	if _quitting: return
+	_quitting = true
+	_pending_persistence_action = ""
 	if is_instance_valid(input_adapter):
 		input_adapter.release_all()
 		input_adapter.blocked = true
@@ -952,6 +1247,12 @@ func _update_hud() -> void:
 		if expedition.objective_completed:
 			objective = "目标已完成\n继续搜集或安全撤离\n負载 %d/18" % expedition.cargo_weight()
 	hud.update_state({"region": "回收营地" if in_camp else ("雨庭" if expedition.region_id == "rain_court" else "导体工场"), "level": progress.level, "realm": progress.realm, "talent": progress.earned_talent_points, "objective": objective, "health": player.health, "max_health": player.maximum_health, "stamina": player.stamina, "max_stamina": player.maximum_stamina, "inventory": "金币%d  废铁%d  药包%d  |  电枪%d阶" % [inventory.count("currency"), inventory.count("scrap"), inventory.count("medkit"), _weapon_tier()]})
+	var loadout: Array = roster.active_build().skill_loadout
+	var slots: Array[Dictionary] = []
+	for skill_id: String in loadout:
+		slots.append({"id": skill_id, "label": str(character_config.data.skills[skill_id].label), "remaining": combat.cooldown_remaining(skill_id)})
+	var state := combat.snapshot()
+	hud.update_skill_state({"character_label": str(character_config.data.characters[roster.active_character_id].label), "slots": slots, "exclusive_available": roster.active_character_id == "healer", "exclusive_remaining": combat.cooldown_remaining("self_heal"), "recovery_remaining": combat.cooldown_remaining("recovery_family"), "barrier_capacity": state.effects.barrier_capacity, "focus_remaining": state.effects.focus_remaining}, input_adapter.bindings)
 
 func _operation_id(kind: String) -> String:
 	_operation_counter += 1
@@ -975,6 +1276,12 @@ func _sound(event: String) -> void:
 
 func _fatal(message: String) -> void:
 	save_blocked = true
+	_fatal_failure = true
+	session_started = false
+	if is_instance_valid(player):
+		player.active = false
+	_set_menu_block(true)
+	get_tree().paused = true
 	hud.show_menu("无法启动", message + "\n请保留诊断与已有存档。", [{"label": "退出", "action": "quit"}])
 	push_error(JSON.stringify({"module": "startup", "code": "configuration_error", "message": message}))
 

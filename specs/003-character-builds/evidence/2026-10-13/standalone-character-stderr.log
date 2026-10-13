@@ -1,0 +1,2 @@
+ERROR: Parameter "particles" is null.
+   at: particles_get_instance_buffer_motion_vectors_offsets (servers/rendering/renderer_rd/storage_rd/particles_storage.cpp:759)

@@ -1,8 +1,8 @@
 # Implementation Plan: 角色、天赋与流派预设
 
-**Branch**: `codex/003-character-builds`（待根协调激活） | **Date**: 2026-10-13 | **Spec**: [spec.md](spec.md)
+**Branch**: `codex/003-character-builds`（已实际激活） | **Date**: 2026-10-13 | **Spec**: [spec.md](spec.md)
 
-**Input**: `specs/003-character-builds/spec.md`；所有新路径为拟建，不能将本计划当实现证据。
+**Input**: `specs/003-character-builds/spec.md`；源码已进入实施，本文是方案，实际结果由task-records与evidence记录。
 
 ## Summary
 
@@ -30,9 +30,9 @@
 
 ## Constitution Check
 
-研究前：用户已授权自主决策；范围与完整后继明确；无设备/付费/真人推断。设计后：领域配置集中，规则与适配分离；所有任务未完成，测试协议与状态分开；双槽及历史保护沿用；资产原源与实际游戏内门槛独立。未发现需要例外的宪章冲突。
+研究前：用户已授权自主决策；范围与完整后继明确；无设备/付费/真人推断。设计后：领域配置集中，规则与适配分离；测试协议与真实执行状态分开；双槽及历史保护沿用；资产原源与实际游戏内门槛独立。实施期遵守相同边界，未发现需要例外的宪章冲突。
 
-Spec Kit templates已读；本子任务不改`.specify/feature.json`或根AGENTS，根协调激活并运行正式setup-plan/tasks脚本。分析前在单个子进程显式设置feature目录执行check-prerequisites，避免漂移到002。
+Spec Kit templates已读。根已切换真实分支与feature.json，运行setup-plan、完整填入收敛计划、setup-tasks与RequireTasks/IncludeTasks的check-prerequisites；所有路径返回003正确目录，AGENTS已更新。正式脚本证据见evidence/2026-10-13/activation.md。
 
 ## Project Structure
 
@@ -49,22 +49,22 @@ specs/003-character-builds/
 ### Source Code (repository root)
 
 ```text
-game/config/character_builds.json             # 拟建角色/天赋/技能/共鸣配置
-game/config/character_builds_config.gd        # 拟建有限schema与交叉校验
-game/features/characters/character_roster.gd # 拟建草稿/预设/两阶段应用
-game/features/characters/build_evaluator.gd  # 拟建资格/推导属性/共鸣
-game/features/combat/combat_state.gd         # 拟建共享cooldown/状态/恢复
+game/config/character_builds.json             # 已实现角色/天赋/技能/共鸣配置
+game/config/character_builds_config.gd        # 已实现有限schema与交叉校验
+game/features/characters/character_roster.gd # 已实现草稿/预设/两阶段应用
+game/features/characters/build_evaluator.gd  # 已实现资格/推导属性/共鸣
+game/features/combat/combat_state.gd         # 已实现共享cooldown/状态/恢复
 game/features/expedition/expedition_state.gd # 已有，追加真实怪币pending余数
-game/persistence/build_migration.gd          # 拟建领域迁移，原envelope不变
+game/persistence/build_migration.gd          # 已实现领域迁移，原envelope不变
 game/platform/input_bindings.gd              # 已有，schema2+纯旧版迁移
 game/platform/input_adapter.gd               # 已有，追加两命名意图
-game/presentation/build_menu.gd              # 拟建查看/草稿/应用/预设UI
+game/presentation/build_menu.gd              # 已实现查看/草稿/应用/预设UI
 game/presentation/game_session.gd            # 已有，协调真实输入/提交/保存
 game/presentation/player_controller.gd       # 已有，推导属性和屏障命中
-game/tests/test_character_builds.gd           # 拟建规则边界
-game/tests/test_combat_state.gd               # 拟建共享冷却/真实计算
-game/tests/test_build_migration.gd            # 拟建旧档/未来/拒绝
-game/tests/test_build_presentation.gd         # 拟建真实GUI/主场景集成
+game/tests/test_character_builds.gd           # 已实现规则边界
+game/tests/test_combat_state.gd               # 已实现共享冷却/真实计算
+game/tests/test_build_migration.gd            # 已实现旧档/未来/拒绝
+game/tests/test_build_session.gd              # 实际真实GUI/主场景集成
 source-assets/blender/                       # 已有，角色形象实际源
 ```
 
@@ -77,6 +77,8 @@ Phase0完成来源/数值/时钟/迁移研究，见[research.md](research.md)。
 预设应用：检查session开始、camp、Ended、存活、角色ID/点数/技能阶段/真实weapon → 生成库存穿戴更新与推导属性/vitals → inventory.can_apply_operation → 一次inventory.apply_operation → 纯赋值提交roster/vitals → 事件更新场景/HUD并保存。确认需重新预检，不能复用陈旧preview；任意前置失败不变更计数/资源/效果。
 
 恢复：原envelope读取 → payload.domain_version门槛（缺字段按1，future阻写）→ 纯领域迁移 → 候选world/inventory/全部profile结构/runtime/input/settings校验 → 当前live build资格与vitals范围校验 → 一次替换 → 重建场景并应用派生值。非活动丢失装备引用仅作为失效配置保留，当前live缺武器必须失败。未来域或部分域不能当旧版补默认。002旧客户端须先落地domain_version>1拒读/阻写及标题新档不覆盖未来域的保护，才有新域可安全演进。
+
+CR-003-03：保存也需在SaveRepository现有process mutex内逐一纯校验两个有效槽，不能只验证内存候选或最新槽。Main与Prefs都绑定真实领域守卫；拒绝不写tmp/槽。Main保存返回Result，dirty只有成功才清除；错误暂停自动偏好重试直到新编辑或明确重试，退出/标题转换失败保留内存会话。错误菜单支持重试/取消，退出另提供明确放弃；取消恢复进入前菜单、暂停和可见性状态。真实IO错误以隔离tmp空目录阻断验证，实际quit于独立headless子进程验证，脚本/未知Native错误仍是失败。现有互斥保证限于同进程，不虚称跨进程并发安全。
 
 冷却/增益由AWCombatState唯一拥有：场景只投递实际命中/施放意图、调用tick，不各角色另起Timer。tick使用受暂停定义约束的玩法delta；保存剩余秒，重启不使用墙钟衰减。技能和恢复成功及时checkpoint，同次快照含消费/生命/冷却；突然强制结束的最后周期损失仍按002明确限额记录，不伪零损失。
 

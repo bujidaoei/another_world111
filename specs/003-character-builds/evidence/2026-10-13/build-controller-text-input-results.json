@@ -1,0 +1,30 @@
+{
+  "kind": "build_controller_unsubmitted_input_regression",
+  "ok": true,
+  "engine": "4.7.2.stable.ed1daf0bf",
+  "gdunit": "6.2.2",
+  "exit_code": 0,
+  "tests": 17,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "orphans": 0,
+  "engine_errors": 0,
+  "report": "artifacts/build-controller-unsubmitted-final/report_1/results.xml",
+  "log": "artifacts/build-controller-unsubmitted-final.log",
+  "old_path_corrected_baseline": "artifacts/build-controller-unsubmitted-baseline-events-stable/report_1/results.xml",
+  "product_red_reproduced": false,
+  "actual_input_events": true,
+  "actual_native_spinbox_submission": true,
+  "actual_combat_cast_and_tick": true,
+  "pc_hardware_input": false,
+  "gpu_or_mcp_used": false,
+  "global_import_run": false,
+  "task_checkboxes_changed": false,
+  "source_sha256": {
+    "game/presentation/build_controller.gd": "7fadc9b1665eb5a5c123885440c7150e9939e64bd0395d9473bec30f2c197fb8",
+    "game/presentation/build_menu.gd": "11635fab11a5675867927a7ae25cc9eff1deebb7284cae4c66562a2dbfe8dbe9",
+    "game/tests/test_build_menu.gd": "a0d1f6e54ea81ef8cba420b117186c60b30c159974f00c7c5218513379bac6fe"
+  }
+}

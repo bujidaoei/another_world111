@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="13" failures="9" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_input_bindings" package="tests" timestamp="2026-10-13T01:20:31" hostname="localhost" tests="13" failures="9" errors="0" skipped="0" flaky="0" time="0.087">
+		<testcase name="test_default_file_and_remap_replace_real_keyboard_events" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_conflicts_invalid_keys_navigation_and_required_unbinds_are_rejected" classname="test_input_bindings" time="0.005">
+		</testcase>
+		<testcase name="test_atomic_full_restore_accepts_swaps_and_rejects_late_invalid_fields" classname="test_input_bindings" time="0.006">
+		</testcase>
+		<testcase name="test_snapshot_schema_rejects_unknown_fields_versions_and_missing_actions_atomically" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_remap_preserves_gamepad_mouse_events_and_unrelated_ui_actions" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_snapshot_is_detached_and_reset_defaults_applies_to_input_map" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_radial_deadzone_is_scaled_and_rotation_symmetric" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_focus_release_does_not_resume_movement_from_global_input_poll_or_echo" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_unhandled_keyboard_movement_release_and_mouse_hold_share_ui_safe_adapter" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_configure_is_atomic_and_remapping_releases_old_held_state" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_legacy_migration_preserves_custom_bindings_without_applying_inputmap" classname="test_input_bindings" time="0.004">
+			<failure message="FAILED: res://tests/test_input_bindings.gd:224" type="FAILURE">
+<![CDATA[
+Expecting:
+ 2
+ but was
+ 1
+	at 'test_legacy_migration_preserves_custom_bindings_without_applying_inputmap' in res://tests/test_input_bindings.gd:224
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_input_bindings.gd:226" type="FAILURE">
+<![CDATA[
+Expecting:
+ 88
+ but was
+ 0
+	at 'test_legacy_migration_preserves_custom_bindings_without_applying_inputmap' in res://tests/test_input_bindings.gd:226
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_input_bindings.gd:227" type="FAILURE">
+<![CDATA[
+Expecting:
+ 84
+ but was
+ 0
+	at 'test_legacy_migration_preserves_custom_bindings_without_applying_inputmap' in res://tests/test_input_bindings.gd:227
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_legacy_default_collisions_choose_fixed_unused_keys_without_replacing_players_keys" classname="test_input_bindings" time="0.003">
+			<failure message="FAILED: res://tests/test_input_bindings.gd:245" type="FAILURE">
+<![CDATA[
+Expecting:
+ 74
+ but was
+ 0
+	at 'test_legacy_default_collisions_choose_fixed_unused_keys_without_replacing_players_keys' in res://tests/test_input_bindings.gd:245
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_input_bindings.gd:246" type="FAILURE">
+<![CDATA[
+Expecting:
+ 75
+ but was
+ 0
+	at 'test_legacy_default_collisions_choose_fixed_unused_keys_without_replacing_players_keys' in res://tests/test_input_bindings.gd:246
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_legacy_exhausted_migration_preserves_original_and_actual_input_events" classname="test_input_bindings" time="0.004">
+			<failure message="FAILED: res://tests/test_input_bindings.gd:260" type="FAILURE">
+<![CDATA[
+Expecting: 'false' but is 'true'
+	at 'test_legacy_exhausted_migration_preserves_original_and_actual_input_events' in res://tests/test_input_bindings.gd:260
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_input_bindings.gd:261" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'binding_migration_conflict'
+ but was
+ 'binding_migration_conflictk'
+	at 'test_legacy_exhausted_migration_preserves_original_and_actual_input_events' in res://tests/test_input_bindings.gd:261
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_input_bindings.gd:263" type="FAILURE">
+<![CDATA[
+Expecting:
+ '{
+	"bindings": {
+	"anchor": 70,
+	"attack": 0,
+	"camera_lock": 67,
+	"camera_reset": 82,
+	"defend": 0,
+	"dodge": 32,
+	"heal": 72,
+	"interact": 69,
+	"move_back": 83,
+	"move_forward": 87,
+	"move_left": 65,
+	"move_right": 68,
+	"pause": 4194305,
+	"pulse": 81
+	},
+	"schema_version": 1
+  }'
+ but was
+ '{
+	"bindings": {
+	"anchor": 70,
+	"attack": 73,
+	"camera_lock": 67,
+	"camera_reset": 82,
+	"defend": 74,
+	"dodge": 75,
+	"heal": 72,
+	"interact": 69,
+	"move_back": 84,
+	"move_forward": 88,
+	"move_left": 65,
+	"move_right": 68,
+	"pause": 4194305,
+	"pulse": 76
+	},
+	"schema_version": 1
+  }'
+	at 'test_legacy_exhausted_migration_preserves_original_and_actual_input_events' in res://tests/test_input_bindings.gd:263
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_input_bindings.gd:264" type="FAILURE">
+<![CDATA[
+Expecting: 'true' but is 'false'
+	at 'test_legacy_exhausted_migration_preserves_original_and_actual_input_events' in res://tests/test_input_bindings.gd:264
+]]>
+			</failure>
+		</testcase>
+	</testsuite>
+</testsuites>

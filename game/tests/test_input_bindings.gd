@@ -93,7 +93,7 @@ func test_atomic_full_restore_accepts_swaps_and_rejects_late_invalid_fields() ->
 	assert_bool(_key(KEY_A).is_action_pressed("move_forward")).is_true()
 	assert_bool(_key(KEY_J).is_action_pressed("move_forward")).is_false()
 	invalid = original.duplicate(true)
-	invalid.schema_version = 2
+	invalid.schema_version = Bindings.SCHEMA_VERSION + 1
 	assert_bool(bindings.restore(invalid).ok).is_false()
 
 func test_snapshot_schema_rejects_unknown_fields_versions_and_missing_actions_atomically() -> void:
@@ -102,7 +102,7 @@ func test_snapshot_schema_rejects_unknown_fields_versions_and_missing_actions_at
 	var extra := original.duplicate(true)
 	extra.labels = {"move_forward": "unexpected metadata"}
 	var future := original.duplicate(true)
-	future.schema_version = 2
+	future.schema_version = Bindings.SCHEMA_VERSION + 1
 	var fraction := original.duplicate(true)
 	fraction.schema_version = 1.5
 	var boolean := original.duplicate(true)
@@ -206,3 +206,104 @@ func test_configure_is_atomic_and_remapping_releases_old_held_state() -> void:
 	adapter._unhandled_input(_key(KEY_I))
 	adapter._process(0.016)
 	assert_vector(adapter.movement).is_equal(Vector2.UP)
+
+func _legacy_snapshot(bindings: RefCounted) -> Dictionary:
+	var legacy: Dictionary = bindings.snapshot()
+	legacy["schema_version"] = 1
+	legacy.bindings.erase("skill_secondary")
+	legacy.bindings.erase("character_ability")
+	return legacy
+
+func test_legacy_migration_preserves_custom_bindings_without_applying_inputmap() -> void:
+	var bindings := _bindings()
+	var legacy := _legacy_snapshot(bindings)
+	legacy.bindings["move_forward"] = KEY_Z
+	var before: Dictionary = bindings.snapshot()
+	var migrated: Dictionary = bindings.validate(legacy)
+	assert_bool(migrated.ok).is_true()
+	assert_int(int(migrated.data.schema_version)).is_equal(2)
+	assert_int(int(migrated.data.bindings.move_forward)).is_equal(KEY_Z)
+	assert_int(int(migrated.data.bindings.get("skill_secondary", 0))).is_equal(KEY_X)
+	assert_int(int(migrated.data.bindings.get("character_ability", 0))).is_equal(KEY_T)
+	assert_dict(bindings.snapshot()).is_equal(before)
+	assert_bool(_key(KEY_W).is_action_pressed("move_forward")).is_true()
+	assert_bool(_key(KEY_Z).is_action_pressed("move_forward")).is_false()
+	var second: Dictionary = bindings.validate(migrated.data)
+	assert_dict(second.data).is_equal(migrated.data)
+
+func test_legacy_default_collisions_choose_fixed_unused_keys_without_replacing_players_keys() -> void:
+	var bindings := _bindings()
+	var legacy := _legacy_snapshot(bindings)
+	legacy.bindings["move_forward"] = KEY_X
+	legacy.bindings["move_back"] = KEY_T
+	legacy.bindings["attack"] = KEY_I
+	var migrated: Dictionary = bindings.validate(legacy)
+	assert_bool(migrated.ok).is_true()
+	assert_int(int(migrated.data.bindings.move_forward)).is_equal(KEY_X)
+	assert_int(int(migrated.data.bindings.move_back)).is_equal(KEY_T)
+	assert_int(int(migrated.data.bindings.attack)).is_equal(KEY_I)
+	assert_int(int(migrated.data.bindings.get("skill_secondary", 0))).is_equal(KEY_J)
+	assert_int(int(migrated.data.bindings.get("character_ability", 0))).is_equal(KEY_K)
+
+func test_legacy_exhausted_migration_preserves_original_and_actual_input_events() -> void:
+	var bindings := _bindings()
+	var legacy := _legacy_snapshot(bindings)
+	legacy.bindings["move_forward"] = KEY_X
+	legacy.bindings["move_back"] = KEY_T
+	legacy.bindings["attack"] = KEY_I
+	legacy.bindings["defend"] = KEY_J
+	legacy.bindings["dodge"] = KEY_K
+	legacy.bindings["pulse"] = KEY_L
+	var legacy_before := legacy.duplicate(true)
+	var live_before: Dictionary = bindings.snapshot()
+	var rejected: Dictionary = bindings.restore(legacy)
+	assert_bool(rejected.ok).is_false()
+	assert_str(rejected.code).is_equal("binding_migration_conflict")
+	assert_dict(legacy).is_equal(legacy_before)
+	assert_dict(bindings.snapshot()).is_equal(live_before)
+	assert_bool(_key(KEY_W).is_action_pressed("move_forward")).is_true()
+
+func test_legacy_snapshot_rejects_partial_new_actions_instead_of_dropping_them() -> void:
+	var bindings := _bindings()
+	var legacy := _legacy_snapshot(bindings)
+	legacy.bindings["skill_secondary"] = KEY_X
+	var before: Dictionary = bindings.snapshot()
+	assert_str(bindings.validate(legacy).code).is_equal("bindings_actions_invalid")
+	assert_dict(bindings.snapshot()).is_equal(before)
+
+func test_new_named_keyboard_touch_and_gamepad_commands_are_consumed_once_and_blocked() -> void:
+	var adapter := _adapter()
+	adapter._unhandled_input(_key(KEY_X))
+	adapter._unhandled_input(_key(KEY_T))
+	assert_array(adapter.consume_actions()).is_equal(["skill_secondary", "character_ability"])
+	assert_array(adapter.consume_actions()).is_empty()
+	adapter._unhandled_input(_key(KEY_X, true, true))
+	adapter._unhandled_input(_key(KEY_T, false))
+	assert_array(adapter.consume_actions()).is_empty()
+	for pair: Array in [["skill_secondary", JOY_BUTTON_DPAD_RIGHT], ["character_ability", JOY_BUTTON_DPAD_UP]]:
+		var event := InputEventJoypadButton.new()
+		event.button_index = int(pair[1]) as JoyButton
+		event.pressed = true
+		assert_bool(event.is_action_pressed(str(pair[0]))).is_true()
+		adapter._unhandled_input(event)
+	assert_array(adapter.consume_actions()).is_equal(["skill_secondary", "character_ability"])
+	adapter.queue_touch("skill_secondary")
+	adapter.queue_touch("character_ability")
+	assert_array(adapter.consume_actions()).is_equal(["skill_secondary", "character_ability"])
+	adapter.blocked = true
+	adapter.queue_touch("skill_secondary")
+	adapter._unhandled_input(_key(KEY_T))
+	assert_array(adapter.consume_actions()).is_empty()
+	adapter._unhandled_input(_key(KEY_ESCAPE, true, true))
+	assert_array(adapter.consume_actions()).is_empty()
+	adapter._unhandled_input(_key(KEY_ESCAPE))
+	assert_array(adapter.consume_actions()).is_equal(["pause"])
+
+func test_large_future_binding_version_still_reports_future_without_applying() -> void:
+	var bindings := _bindings()
+	var future: Dictionary = bindings.snapshot()
+	future["schema_version"] = 2147483647
+	var before: Dictionary = bindings.snapshot()
+	assert_str(bindings.validate(future).code).is_equal("future_schema")
+	assert_str(Bindings.normalize_snapshot(future).code).is_equal("future_schema")
+	assert_dict(bindings.snapshot()).is_equal(before)

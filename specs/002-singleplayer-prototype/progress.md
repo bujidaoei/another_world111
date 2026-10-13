@@ -8,3 +8,4 @@ Windows release已真实独立导出/包审计/正常WM_CLOSE关闭，禁止debu
 分位性能管线已实际测旧release包60秒合法玩法，因原生particles null与7个反射图集RID泄漏严格失败。已改Sky环境反射及Shader批量雨；错误最终对照指向Fader运行中替换/还原材质路径。CR-005已改区域预绑定稳定材质，冷完整游戏2次真实远征60秒正常退出0ERROR/0泄漏；见evidence/2026-10-13/renderer-cold-lifecycle.log。BUG-112-01仍等待更长完整及当前生产构建回归，不据此断言引擎C++具体错误根因。Android开发APK旧快照已真实导出、签名和内容审计，不代表手机安装启动或当前源码版。
 Android实际debug签名/AAPT2 manifest/ZIP CRC/helper排除的small JSON已归档evidence/2026-10-13/android-build-verification.json，APK/key未复制进仓库；provider同值authority为待官方实现/设备验证观察，暂未判缺陷。TASK-115/117仍开放。
 真人、Android/物理手柄和最终优于参考品质没有证据，不标通过。完整角色/天赋/预设/三阶/分支/共鸣/内容与合作评估继续下一Spec Kit功能；003已备好计划，所有25项实现任务未勾选。
+新增冻结002生产证据：278原源SHA一致重导abd86f0482134dd18b8553c77d5806e2；282包文件无helper/tests、ZIP条目完整、主窗WM_CLOSE正常。release同游戏资源QA包Mobile/Vulkan实测5秒热身+60.009081秒、14389帧/4次远征、PC client1920×1080/实际viewport2304×1296，P95 8.310ms，正常exit0、零ERROR/ObjectDB/RID。详见evidence/2026-10-13/windows-current-performance.md；先前辅助窗关闭/重复纹理import失败保留。TASK-115整体、长期/设备/真人仍开放，003代码不包含在此冻结产物。

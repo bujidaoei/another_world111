@@ -1,0 +1,10 @@
+{
+  "qa_original": "[gd_scene load_steps=2 format=3]\n\n[ext_resource type=\"PackedScene\" path=\"res://presentation/main.tscn\" id=\"1_main\"]\n\n[node name=\"CharacterPlaytest\" instance=ExtResource(\"1_main\")]\nsave_directory = \"user://tests/character_playtest/20261013_003_b\"\n",
+  "qa_adapted": "[gd_scene load_steps=2 format=3]\n\n[ext_resource type=\"PackedScene\" path=\"res://presentation/main.tscn\" id=\"1_main\"]\n\n[node name=\"CharacterPlaytest\" instance=ExtResource(\"1_main\")]\nsave_directory = \"user://tests/engine_native_runtime/20261013_003_native\"\n",
+  "probe_source_sha256": "02a36ba9f8c11ea7e6533540bbe1c4853d9ea9ac0f3af62172f184d131ae5980",
+  "production_files_changed": false,
+  "modifications": [
+    "QA save path",
+    "standalone probe report path only"
+  ]
+}

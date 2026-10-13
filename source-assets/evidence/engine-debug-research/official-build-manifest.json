@@ -1,0 +1,51 @@
+{
+  "commit": "ed1daf0bf001b61586d9930840f2f1394092c079",
+  "archive_sha256": "e607e9985e1c201bc9cdc1aec8a120f0c3f53b9603f1f828e2b748534a2471ef",
+  "files": [
+    {
+      "path": "SConstruct",
+      "bytes": 53054,
+      "sha256": "b67bd31bf2d3bc1d91d4a1c5b2e4117c3d2dbd9c066ba3bb040cdd61226845f7"
+    },
+    {
+      "path": "platform/windows/detect.py",
+      "bytes": 39273,
+      "sha256": "5f61fc39f4f3d0a2b1f89fed6ffa3c2f945502e8dabb1c122880b4e14700e0c8"
+    },
+    {
+      "path": "platform/windows/SCsub",
+      "bytes": 6702,
+      "sha256": "c13b8a2e49b880f25ba7e8911c002fccec40686876990202c5fc347d7c116094"
+    },
+    {
+      "path": "methods.py",
+      "bytes": 65515,
+      "sha256": "5d860ccce735661b778edaf37478317c1b8e763af272d5355de1bc43688da154"
+    },
+    {
+      "path": "version.py",
+      "bytes": 159,
+      "sha256": "fec90e72622f0025e13b5a14a82d76387833bcdac44c62162bda826742815ef1"
+    },
+    {
+      "path": "core/templates/rid.h",
+      "bytes": 3437,
+      "sha256": "ef76a58b9a554ad2c01ae842eb630e04954b5e6b85a7df642f4ca47edf8b5dae"
+    },
+    {
+      "path": "misc/scripts/install_accesskit.py",
+      "bytes": 1533,
+      "sha256": "c2ce8c848762a14ebd993786f6eda1ff45fbf20be9ca247be14e5b8b74ec5dd2"
+    },
+    {
+      "path": "misc/scripts/install_winrt.py",
+      "bytes": 1455,
+      "sha256": "5dd6605786068c535e523096fe5c5bf1997ed0ab500fb80a42f54d82cfe656ab"
+    },
+    {
+      "path": "misc/scripts/install_angle.py",
+      "bytes": 2498,
+      "sha256": "b380c7f6672ba3c975fa6bdedf0fc97dfeb5b78831847a3f74919320d045bb30"
+    }
+  ]
+}

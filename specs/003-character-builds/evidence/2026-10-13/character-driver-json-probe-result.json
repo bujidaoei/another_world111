@@ -1,0 +1,7 @@
+{
+	"checks": 24,
+	"failures": [],
+	"kind": "QA comparator regression, not gameplay acceptance",
+	"ok": true,
+	"source": "fresh-editor-run1 actual paused checkpoint plus observed one-ULP representation difference"
+}

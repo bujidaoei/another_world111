@@ -35,6 +35,7 @@ func load() -> Dictionary:
 	if not validation.ok:
 		return validation
 	stored["data"] = validation.data
+	stored["migrated"] = bool(stored.get("migrated", false)) or bool(validation.get("migrated", false))
 	stored["code"] = "preferences_loaded"
 	stored["message"] = "全局设置与键位已验证读取。"
 	return stored
@@ -46,16 +47,9 @@ func save(settings: Dictionary, input_bindings: Dictionary) -> Dictionary:
 	var validation := _validate_payload({"settings": settings, "input_bindings": input_bindings})
 	if not validation.ok:
 		return validation
-	# A valid replacement is not permission to clear existing unreadable data.
-	# Keep future/structurally damaged/domain-invalid preferences until recovery.
-	var existing: Dictionary = _repository.load()
-	if existing.ok:
-		var existing_validation := _validate_payload(existing.data)
-		if not existing_validation.ok:
-			return existing_validation
-	elif existing.code != "not_found":
-		return existing
-	var result: Dictionary = _repository.save(validation.data)
+	# Existing domain validation and promotion share the repository's process mutex.
+	# Validate both supported generations; a newer current slot cannot hide a future one.
+	var result: Dictionary = _repository.save(validation.data, _validate_payload)
 	if result.ok:
 		result["code"] = "preferences_saved"
 		result["message"] = "全局设置与键位已写入并回读验证。"
@@ -77,7 +71,7 @@ func _validate_payload(payload: Dictionary) -> Dictionary:
 	var bindings_validation: Dictionary = _binding_validator.validate(candidate_bindings)
 	if not bindings_validation.ok:
 		return bindings_validation
-	return {"ok": true, "code": "preferences_valid", "message": "偏好候选已验证。", "data": {"settings": settings_validation.data, "input_bindings": bindings_validation.data}}
+	return {"ok": true, "code": "preferences_valid", "message": "偏好候选已验证。", "migrated": bool(bindings_validation.get("migrated", false)), "data": {"settings": settings_validation.data, "input_bindings": bindings_validation.data}}
 
 
 func _failure(code: String, message: String) -> Dictionary:

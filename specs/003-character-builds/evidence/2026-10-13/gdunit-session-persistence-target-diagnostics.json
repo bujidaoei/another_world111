@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "policy_version": 1,
+  "expected_diagnostics": [
+    {
+      "rule": "test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds:save:io_error:case-line-225",
+      "case": "test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 1
+    },
+    {
+      "rule": "test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds:preferences:io_error:case-line-248",
+      "case": "test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds",
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stream": "stderr",
+      "line": 18
+    },
+    {
+      "rule": "test_already_running_session_preserves_external_future_domain_slot_on_next_save:save:future_schema:case-line-271",
+      "case": "test_already_running_session_preserves_external_future_domain_slot_on_next_save",
+      "json": {
+        "code": "future_schema",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 42
+    },
+    {
+      "rule": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:preferences:io_error:case-line-292",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stream": "stderr",
+      "line": 66
+    },
+    {
+      "rule": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:save:io_error:case-line-292",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 94
+    },
+    {
+      "rule": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:preferences:io_error:case-line-309",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stream": "stderr",
+      "line": 122
+    },
+    {
+      "rule": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:save:io_error:case-line-309",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 150
+    },
+    {
+      "rule": "test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards:save:io_error:case-line-371",
+      "case": "test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 178
+    },
+    {
+      "rule": "test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity:save:io_error:case-line-426",
+      "case": "test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 204
+    }
+  ],
+  "unexpected_diagnostics": [],
+  "unexpected_native": [],
+  "unexpected_script": [],
+  "budget_failures": []
+}

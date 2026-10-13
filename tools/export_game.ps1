@@ -13,11 +13,17 @@ if (-not $IsWindows) { throw 'This pipeline requires Windows to validate the exp
 if (-not ('AWBuildWindow' -as [type])) {
     Add-Type -TypeDefinition @'
 using System;
+using System.Text;
 using System.Runtime.InteropServices;
 public static class AWBuildWindow {
     private delegate bool WindowCallback(IntPtr window, IntPtr state);
     [DllImport("user32.dll")] private static extern bool EnumWindows(WindowCallback callback, IntPtr state);
     [DllImport("user32.dll")] private static extern uint GetWindowThreadProcessId(IntPtr window, out uint processId);
+    [DllImport("user32.dll")] private static extern bool IsWindowVisible(IntPtr window);
+    [StructLayout(LayoutKind.Sequential)] private struct Rect { public int Left, Top, Right, Bottom; }
+    [DllImport("user32.dll")] private static extern bool GetClientRect(IntPtr window, out Rect rect);
+    [DllImport("user32.dll", CharSet=CharSet.Unicode)] private static extern int GetWindowText(IntPtr window, StringBuilder text, int length);
+    [DllImport("user32.dll", CharSet=CharSet.Unicode)] private static extern int GetClassName(IntPtr window, StringBuilder text, int length);
     [DllImport("user32.dll")] private static extern bool ShowWindow(IntPtr window, int command);
     [DllImport("user32.dll", SetLastError=true)] private static extern bool PostMessage(IntPtr window, uint message, IntPtr wparam, IntPtr lparam);
     public static IntPtr FindWindow(uint processId) {
@@ -25,7 +31,8 @@ public static class AWBuildWindow {
         EnumWindows((window, state) => {
             uint owner;
             GetWindowThreadProcessId(window, out owner);
-            if (owner == processId) { match = window; return false; }
+            Rect rect;
+            if (owner == processId && GetClientRect(window, out rect) && rect.Right - rect.Left > 100 && rect.Bottom - rect.Top > 100) { match = window; return false; }
             return true;
         }, IntPtr.Zero);
         return match;
@@ -33,6 +40,11 @@ public static class AWBuildWindow {
     public static bool HideAndClose(IntPtr window) {
         ShowWindow(window, 0);
         return PostMessage(window, 0x0010, IntPtr.Zero, IntPtr.Zero);
+    }
+    public static string Describe(IntPtr window) {
+        StringBuilder title=new StringBuilder(512), cls=new StringBuilder(128); Rect rect;
+        GetWindowText(window,title,title.Capacity); GetClassName(window,cls,cls.Capacity); GetClientRect(window,out rect);
+        return cls.ToString()+" | "+title.ToString()+" | client="+(rect.Right-rect.Left)+"x"+(rect.Bottom-rect.Top)+" | visible="+IsWindowVisible(window);
     }
 }
 '@
@@ -102,6 +114,7 @@ function Invoke-BuildProcess {
             while ($elapsed.Elapsed.TotalSeconds -lt 3.0 -and -not $process.HasExited) { [Threading.Thread]::Sleep(50) }
             if ($process.HasExited) { throw "$Name exited before its real close request." }
             $window = [AWBuildWindow]::FindWindow([uint32]$process.Id)
+            [AWBuildWindow]::Describe($window) | Set-Content -LiteralPath (Join-Path $logPath "$Name.window.log") -Encoding utf8NoBOM
             if ($window -eq [IntPtr]::Zero -or -not [AWBuildWindow]::HideAndClose($window)) {
                 throw "$Name window for its exact process ID could not receive WM_CLOSE."
             }
@@ -151,7 +164,7 @@ if (-not $audit.ok -or $audit.file_count -le 0) { throw 'Production PCK audit di
 $smokeRoaming = Join-Path $runPath 'smoke-userdata' 'roaming'
 $smokeLocal = Join-Path $runPath 'smoke-userdata' 'local'
 New-Item -ItemType Directory -Force -Path $smokeRoaming, $smokeLocal | Out-Null
-$smoke = Invoke-BuildProcess -Executable $executable -Arguments @('--position', '-32000,-32000', '--resolution', '640x360', '--rendering-method', 'gl_compatibility', '--audio-driver', 'Dummy', '--log-file', (Join-Path $logPath 'smoke.engine.log')) -Name 'smoke' -WorkingDirectory $distributionPath -ProcessEnvironment @{ APPDATA = $smokeRoaming; LOCALAPPDATA = $smokeLocal } -CloseWindowAfterStartup
+$smoke = Invoke-BuildProcess -Executable $executable -Arguments @('--verbose', '--position', '-32000,-32000', '--resolution', '640x360', '--rendering-method', 'gl_compatibility', '--audio-driver', 'Dummy', '--log-file', (Join-Path $logPath 'smoke.engine.log')) -Name 'smoke' -WorkingDirectory $distributionPath -ProcessEnvironment @{ APPDATA = $smokeRoaming; LOCALAPPDATA = $smokeLocal } -CloseWindowAfterStartup
 if (Test-Path -LiteralPath (Join-Path $logPath 'smoke.engine.log')) {
     if ((Get-Content -LiteralPath (Join-Path $logPath 'smoke.engine.log') -Raw) -match '(?m)SCRIPT ERROR:|Parse Error:|ERROR:|ObjectDB instances were leaked|resources still in use at exit') { throw 'Exported smoke engine log contains an error.' }
 }

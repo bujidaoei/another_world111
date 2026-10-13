@@ -1,0 +1,52 @@
+{
+  "kind": "real_main_persistence_fault_integration",
+  "ok": true,
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "orphans": 0,
+  "exit_code": 0,
+  "report": "artifacts/session-persistence-final-green/report_1/results.xml",
+  "log": "artifacts/session-persistence-final-green.log",
+  "actual_expected_error_headers": [
+    "ERROR: {\"code\":\"io_error\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}",
+    "ERROR: {\"code\":\"io_error\",\"module\":\"preferences\",\"operation\":\"save\"}",
+    "ERROR: {\"code\":\"future_schema\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}",
+    "ERROR: {\"code\":\"io_error\",\"module\":\"preferences\",\"operation\":\"save\"}",
+    "ERROR: {\"code\":\"io_error\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}",
+    "ERROR: {\"code\":\"io_error\",\"module\":\"preferences\",\"operation\":\"save\"}",
+    "ERROR: {\"code\":\"io_error\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}"
+  ],
+  "expected_error_count": 7,
+  "unexpected_error_count": 0,
+  "case_names": [
+    "test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds",
+    "test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds",
+    "test_already_running_session_preserves_external_future_domain_slot_on_next_save",
+    "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+    "test_failed_quit_survives_real_write_fault_and_cancel_restores_menu_in_child_process"
+  ],
+  "child_evidence": [
+    "D:\\bugu_projects\\another_world\\artifacts\\session-persistence-probes\\5172_1675048-preferences",
+    "D:\\bugu_projects\\another_world\\artifacts\\session-persistence-probes\\5172_1675048-progress"
+  ],
+  "child_expected_error_count_per_mode": 1,
+  "source_sha256_at_freeze": {
+    "game/tests/test_session_persistence.gd": "590d8bf6da8cf90280af37ce92a2ec6628aaf81aad7b43f65c34668fc8a9d5d1",
+    "game/tests/test_session_persistence.gd.uid": "1d5e61a01abd26fa7934f22a503d04c1f40dc6b58a03e0eb5117378787cf9328",
+    "game/presentation/game_session.gd": "1a043272ea04ba6abf32beda11be045f8620504d085b7ae7dffeba19ed43f96f",
+    "game/persistence/save_repository.gd": "2b2779aa879d0e8c86007bba1dd0f1fa964440a283b19a613b2bfa34c2aff626",
+    "game/persistence/user_preferences.gd": "3f9a5ce5311ba2a635ddf138279289148cc3c47fc69aea508f3d5051c6d7b2d5"
+  },
+  "business_red": "artifacts/session-persistence-business-red/report_1/results.xml",
+  "new_title_case_first_false_dirty_expectation": "artifacts/session-persistence-first-green/report_1/results.xml",
+  "actual_fileaccess_fault": true,
+  "official_gdunit_error_expectations": true,
+  "production_quit_isolated_in_real_child": true,
+  "mocks_used": false,
+  "gpu_or_mcp_used": false,
+  "global_import_used": false,
+  "root_wrapper_run_by_this_agent": false
+}

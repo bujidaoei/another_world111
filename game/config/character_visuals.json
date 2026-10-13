@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "default_character": "thief",
+  "model_scale": 0.76,
+  "weapon": {
+    "mount_position": [0.42, 1.15, -0.28],
+    "scale": 0.62,
+    "models": {
+      "1": "res://assets/models/lightning_rifle_t1.glb",
+      "2": "res://assets/models/lightning_rifle_t2.glb"
+    }
+  },
+  "animation": {
+    "walk_nominal_speed": 2.584,
+    "movement_threshold": 0.04,
+    "transition_seconds": 0.12,
+    "self_heal_fadein": 0.08,
+    "self_heal_fadeout": 0.12,
+    "self_heal_filter_bones": ["Spine", "Head", "Clavicle_L", "UpperArm_L", "Forearm_L", "Hand_L"]
+  },
+  "characters": {
+    "thief": {
+      "scene_path": "res://assets/models/thief_robot.glb",
+      "skeleton_path": "thief_robot/thief_robot_Rig/Skeleton3D",
+      "idle_clip": "Idle",
+      "walk_clip": "Walk",
+      "self_heal_clip": ""
+    },
+    "healer": {
+      "scene_path": "res://assets/models/healer_robot.glb",
+      "skeleton_path": "healer_robot/healer_robot_Rig/Skeleton3D",
+      "idle_clip": "Idle",
+      "walk_clip": "Walk",
+      "self_heal_clip": "SelfHeal"
+    }
+  }
+}

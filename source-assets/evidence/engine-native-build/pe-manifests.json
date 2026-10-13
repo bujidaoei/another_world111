@@ -1,0 +1,25 @@
+{
+  "binary": "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\src\\bin\\godot.windows.editor.x86_64.exe",
+  "load_flags": 34,
+  "engine_entry_point_executed": false,
+  "GPU_or_Main_or_GDB_executed": false,
+  "resources": [
+    {
+      "resource_id": 1,
+      "exists": true,
+      "bytes": 613,
+      "sha256": "a5afce46ab0f79f53ad3f1f16d3975f026ff01e3681b0241aa52548e7c820bd1",
+      "path": "D:\\bugu_projects\\another_world\\artifacts\\engine-native-debug\\pe-manifest-1.xml"
+    },
+    {
+      "resource_id": 2,
+      "exists": false,
+      "win32_error": 1814
+    },
+    {
+      "resource_id": 3,
+      "exists": false,
+      "win32_error": 1814
+    }
+  ]
+}

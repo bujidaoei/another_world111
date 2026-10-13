@@ -1,0 +1,25 @@
+Symbol "RendererRD::ParticlesStorage::particles_get_instance_buffer_motion_vectors_offsets(RID, unsigned int&, unsigned int&)" is a function at address 0x14454c1c0.
+Line 759 of "servers\rendering\renderer_rd\storage_rd\particles_storage.cpp" starts at address 0x14454c4fc <_ZN10RendererRD16ParticlesStorage52particles_get_instance_buffer_motion_vectors_offsetsE3RIDRjS2_+828> and ends at 0x14454c543 <_ZN10RendererRD16ParticlesStorage52particles_get_instance_buffer_motion_vectors_offsetsE3RIDRjS2_+899>.
+Line 2653 of "servers\rendering\renderer_rd\forward_mobile\render_forward_mobile.cpp" starts at address 0x144487f8d <_ZN33RendererSceneRenderImplementation19RenderForwardMobile12_render_listExxPNS0_20RenderListParametersEjj+6779> and ends at 0x144487f98 <_ZN33RendererSceneRenderImplementation19RenderForwardMobile12_render_listExxPNS0_20RenderListParametersEjj+6790>.
+Line 3173 of "servers\rendering\renderer_rd\forward_mobile\render_forward_mobile.cpp" starts at address 0x14449abc5 <_ZN33RendererSceneRenderImplementation19RenderForwardMobile25_geometry_instance_updateEP22RenderGeometryInstance+15831> and ends at 0x14449abcf <_ZN33RendererSceneRenderImplementation19RenderForwardMobile25_geometry_instance_updateEP22RenderGeometryInstance+15841>.
+Breakpoint 1 at 0x14454c4fc: file servers\rendering\renderer_rd\storage_rd\particles_storage.cpp, line 759.
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x000000014454c4fc in RendererRD::ParticlesStorage::particles_get_instance_buffer_motion_vectors_offsets(RID, unsigned int&, unsigned int&) at servers\rendering\renderer_rd\storage_rd\particles_storage.cpp:759
+	stop only if particles == 0
+The directory where separate debug symbols are searched for is "D:/R/winlibs_staging_ucrt64/inst_gdb-17.2/share/gdb/lib/debug".
+Symbols from "D:\bugu_software\ai-game-toolchain\native-debug-ed1daf0bf\src\bin\godot.windows.editor.x86_64.exe".
+Local exec file:
+	`D:\bugu_software\ai-game-toolchain\native-debug-ed1daf0bf\src\bin\godot.windows.editor.x86_64.exe', file type pei-x86-64.
+	Entry point: 0x1400017a4
+	0x0000000140001000 - 0x00000001489bc190 is .text
+	0x00000001489bd000 - 0x0000000148ab9580 is .data
+	0x0000000148aba000 - 0x000000014c0fd4e8 is .rdata
+	0x000000014c0fe000 - 0x000000014c0fe004 is .eh_frame
+	0x000000014c0ff000 - 0x000000014c595920 is .pdata
+	0x000000014c596000 - 0x000000014ca69010 is .xdata
+	0x000000014ca6a000 - 0x000000014cc5a148 is .bss
+	0x000000014cc5b000 - 0x000000014cc5b0aa is .edata
+	0x000000014cc5c000 - 0x000000014cc63254 is .idata
+	0x000000014cc64000 - 0x000000014cc64010 is .tls
+	0x000000014cc65000 - 0x000000014cc887b0 is .rsrc
+	0x000000014cc89000 - 0x000000014cd2cdd4 is .reloc

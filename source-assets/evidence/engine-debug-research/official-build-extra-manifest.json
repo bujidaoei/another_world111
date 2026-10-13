@@ -1,0 +1,21 @@
+{
+  "commit": "ed1daf0bf001b61586d9930840f2f1394092c079",
+  "archive_sha256": "e607e9985e1c201bc9cdc1aec8a120f0c3f53b9603f1f828e2b748534a2471ef",
+  "files": [
+    {
+      "path": "platform/windows/platform_windows_builders.py",
+      "bytes": 570,
+      "sha256": "fcf971985e8e16bee12ba072fd91464409cbd0df4f22884cb95f3d37d2bdaa7f"
+    },
+    {
+      "path": "core/templates/rid_owner.h",
+      "bytes": 16104,
+      "sha256": "bea6d57585f8eac1db219ec254c64c938237386c366977e7aabe6fefe652ce19"
+    },
+    {
+      "path": "servers/rendering/renderer_geometry_instance.h",
+      "bytes": 7186,
+      "sha256": "dee0ae5eca129d5d5877416e9a51518434adc226b699928442e2bddc22fd0329"
+    }
+  ]
+}

@@ -92,7 +92,7 @@ func test_future_container_blocks_load_and_save_without_overwrite() -> void:
 
 func test_future_binding_schema_blocks_save_of_old_defaults() -> void:
 	var future_bindings := _defaults.duplicate(true)
-	future_bindings.schema_version = 2
+	future_bindings.schema_version = Bindings.SCHEMA_VERSION + 1
 	var raw_repo := SaveRepository.new()
 	assert_bool(raw_repo.configure(_directory).ok).is_true()
 	assert_bool(raw_repo.save({"settings": AWGameSettings.default_settings(), "input_bindings": future_bindings}).ok).is_true()
@@ -100,6 +100,42 @@ func test_future_binding_schema_blocks_save_of_old_defaults() -> void:
 	assert_str(_preferences.load().code).is_equal("future_schema")
 	assert_str(_preferences.save(AWGameSettings.default_settings(), _defaults).code).is_equal("future_schema")
 	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(before)
+
+
+func test_older_future_binding_generation_blocks_save_even_when_latest_is_supported() -> void:
+	var future_bindings := _defaults.duplicate(true)
+	future_bindings["schema_version"] = Bindings.SCHEMA_VERSION + 1
+	var raw_repo := SaveRepository.new()
+	assert_bool(raw_repo.configure(_directory).ok).is_true()
+	assert_bool(raw_repo.save({"settings": AWGameSettings.default_settings(), "input_bindings": future_bindings}).ok).is_true()
+	assert_bool(raw_repo.save({"settings": AWGameSettings.default_settings(), "input_bindings": _defaults}).ok).is_true()
+	assert_bool(_preferences.load().ok).is_true()
+	var before_a := FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))
+	var before_b := FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))
+	var result: Dictionary = _preferences.save(AWGameSettings.default_settings(), _defaults)
+	assert_bool(result.ok).is_false()
+	assert_str(result.code).is_equal("future_schema")
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(before_a)
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))).is_equal(before_b)
+	assert_bool(FileAccess.file_exists(_directory.path_join("slot_a.json.tmp"))).is_false()
+	assert_bool(FileAccess.file_exists(_directory.path_join("slot_b.json.tmp"))).is_false()
+
+
+func test_older_domain_invalid_preferences_are_preserved_by_save_guard() -> void:
+	var conflict := _defaults.duplicate(true)
+	conflict.bindings["dodge"] = conflict.bindings.move_left
+	var raw_repo := SaveRepository.new()
+	assert_bool(raw_repo.configure(_directory).ok).is_true()
+	assert_bool(raw_repo.save({"settings": AWGameSettings.default_settings(), "input_bindings": conflict}).ok).is_true()
+	assert_bool(raw_repo.save({"settings": AWGameSettings.default_settings(), "input_bindings": _defaults}).ok).is_true()
+	var before_a := FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))
+	var before_b := FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))
+	var result: Dictionary = _preferences.save(AWGameSettings.default_settings(), _defaults)
+	assert_bool(result.ok).is_false()
+	assert_str(result.code).is_equal("binding_conflict")
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(before_a)
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))).is_equal(before_b)
+	assert_bool(FileAccess.file_exists(_directory.path_join("slot_a.json.tmp"))).is_false()
 
 
 func test_corrupt_latest_preferences_recovers_previous_valid_generation() -> void:
@@ -179,6 +215,51 @@ func test_unconfigured_service_and_loaded_candidate_mutation_are_safe() -> void:
 	var unchanged: Dictionary = _preferences.load()
 	assert_float(float(unchanged.data.settings.master_volume)).is_equal(0.75)
 	assert_int(int(unchanged.data.input_bindings.bindings.interact)).is_equal(KEY_E)
+
+func test_legacy_preference_load_normalizes_purely_then_explicit_save_upgrades_valid_slots() -> void:
+	var legacy := _defaults.duplicate(true)
+	legacy["schema_version"] = 1
+	legacy.bindings.erase("skill_secondary")
+	legacy.bindings.erase("character_ability")
+	legacy.bindings["move_forward"] = KEY_X
+	legacy.bindings["move_back"] = KEY_T
+	var raw_repo := SaveRepository.new()
+	assert_bool(raw_repo.configure(_directory).ok).is_true()
+	assert_bool(raw_repo.save({"settings": AWGameSettings.default_settings(), "input_bindings": legacy}).ok).is_true()
+	var original := FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))
+	var loaded: Dictionary = _preferences.load()
+	assert_bool(loaded.ok).is_true()
+	assert_bool(loaded.migrated).is_true()
+	assert_int(int(loaded.data.input_bindings.schema_version)).is_equal(2)
+	assert_int(int(loaded.data.input_bindings.bindings.move_forward)).is_equal(KEY_X)
+	assert_int(int(loaded.data.input_bindings.bindings.skill_secondary)).is_equal(KEY_I)
+	assert_int(int(loaded.data.input_bindings.bindings.character_ability)).is_equal(KEY_J)
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(original)
+	assert_bool(FileAccess.file_exists(_directory.path_join("slot_b.json"))).is_false()
+	assert_dict(_input_map_snapshot()).is_equal(_input_map_before)
+	assert_bool(_preferences.save(loaded.data.settings, loaded.data.input_bindings).ok).is_true()
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(original)
+	var second: Dictionary = _preferences.load()
+	assert_bool(second.migrated).is_false()
+	assert_dict(second.data).is_equal(loaded.data)
+	assert_int(int(second.sequence)).is_equal(2)
+
+func test_exhausted_legacy_preferences_reject_load_and_overwrite_without_touching_map() -> void:
+	var legacy := _defaults.duplicate(true)
+	legacy["schema_version"] = 1
+	legacy.bindings.erase("skill_secondary")
+	legacy.bindings.erase("character_ability")
+	for pair: Array in [["move_forward", KEY_X], ["move_back", KEY_T], ["attack", KEY_I], ["defend", KEY_J], ["dodge", KEY_K], ["pulse", KEY_L]]:
+		legacy.bindings[str(pair[0])] = pair[1]
+	var raw_repo := SaveRepository.new()
+	assert_bool(raw_repo.configure(_directory).ok).is_true()
+	assert_bool(raw_repo.save({"settings": AWGameSettings.default_settings(), "input_bindings": legacy}).ok).is_true()
+	var original := FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))
+	assert_str(_preferences.load().code).is_equal("binding_migration_conflict")
+	assert_str(_preferences.save(AWGameSettings.default_settings(), _defaults).code).is_equal("binding_migration_conflict")
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(original)
+	assert_bool(FileAccess.file_exists(_directory.path_join("slot_b.json"))).is_false()
+	assert_dict(_input_map_snapshot()).is_equal(_input_map_before)
 
 
 func _input_map_snapshot() -> Dictionary:

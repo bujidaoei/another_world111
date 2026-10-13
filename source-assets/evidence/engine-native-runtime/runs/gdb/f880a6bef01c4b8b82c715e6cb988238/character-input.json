@@ -1,0 +1,246 @@
+{
+	"completed": true,
+	"coverage": {
+		"android": false,
+		"healer_actual_death": false,
+		"healer_switch": false,
+		"healer_three_presets": false,
+		"pause_freeze": false,
+		"physical_gamepad": false,
+		"self_heal": false,
+		"skill_slot_edit": false,
+		"talent_draft_and_apply": false,
+		"thief_presets": false,
+		"thief_two_runs": false,
+		"title_continue_cooldown": false
+	},
+	"driver": "character InputEvent/UI QA",
+	"ok": false,
+	"results": [
+		{
+			"at_seconds": 0.0,
+			"data": {
+				"stage": "thief_runs"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 0.0,
+			"data": {
+				"display": "Windows",
+				"input": "Viewport.push_input real keyboard/mouse/GUI; observe domains only",
+				"renderer": "mobile",
+				"save_directory": "C:/Users/Administrator/AppData/Roaming/Godot/app_userdata/另一个世界 · Another World/tests/engine_native_runtime/f880a6bef01c4b8b82c715e6cb988238"
+			},
+			"event": "start"
+		},
+		{
+			"at_seconds": 0.250390250002965,
+			"data": {
+				"observed": {
+					"active_character": "thief",
+					"apply_allowed": false,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@268",
+					"section": "overview",
+					"selected_character": "thief"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						369.5
+					],
+					"name": "@Button@152",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@152",
+					"text": "开始新旅程"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 0.815909090909089,
+			"data": {
+				"observed": {
+					"active_character": "thief",
+					"apply_allowed": false,
+					"apply_reason": "",
+					"focus": "",
+					"section": "overview",
+					"selected_character": "thief"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						314.5
+					],
+					"name": "@Button@268",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@268",
+					"text": "出发：雨庭 / 一阶"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 21.4166666666661,
+			"data": {
+				"message": "Expedition input pilot failed",
+				"state": {
+					"active_character": "thief",
+					"camp": true,
+					"coin_remainder": 0,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 3.3809111212122,
+							"recovery_family": 7.2608331212126,
+							"self_heal": 0.0
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"gui": {
+						"active_character": "thief",
+						"apply_allowed": false,
+						"apply_reason": "",
+						"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@521",
+						"section": "overview",
+						"selected_character": "thief"
+					},
+					"health": 43.75,
+					"level": 1,
+					"max_health": 125.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0,
+						"crystal": 0,
+						"currency": 0,
+						"medkit": 1,
+						"rations": 3,
+						"scrap": 0
+					},
+					"run": 1,
+					"stamina": 120.0
+				}
+			},
+			"event": "failure"
+		}
+	],
+	"stage": "error"
+}

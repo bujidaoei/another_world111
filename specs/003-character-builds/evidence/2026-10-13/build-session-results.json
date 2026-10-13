@@ -1,0 +1,51 @@
+{
+  "kind": "main_scene_build_integration_units",
+  "ok": true,
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "engine_errors": 0,
+  "report": "artifacts\\build-session-capacity-and-viewports\\report_1\\results.xml",
+  "cases": [
+    "test_real_main_controller_draft_apply_saves_domain_two_without_free_vitals",
+    "test_real_barrier_cast_absorbs_player_damage_and_debits_stamina",
+    "test_real_focus_cast_increases_production_attack_against_registered_enemy",
+    "test_real_recovery_family_survives_identity_preset_and_scene_reload",
+    "test_real_item_use_prevents_self_heal_until_shared_gameplay_clock_expires",
+    "test_lethal_player_damage_returns_camp_clears_only_effects_and_preserves_cooldowns",
+    "test_zero_health_checkpoint_title_does_not_heal_continue_explicitly_recovers_failure",
+    "test_future_domain_three_blocks_writes_and_new_journey_preserving_both_slots",
+    "test_frozen_real_domain_one_save_migrates_without_copying_gear_or_resources",
+    "test_settlement_capacity_failure_and_real_retry_commit_rewards_gear_remainder_once",
+    "test_abandon_pending_settlement_discards_rewards_without_failure_healing",
+    "test_build_menu_both_logical_viewports_real_wheel_focus_and_gui_click_route"
+  ],
+  "source_sha256_at_archive": {
+    "game/tests/test_build_session.gd": "004cd8af1c60b7c52c3dd9c7e87454475d7c9b31174635ec8fbcf2dc1d8ccef8",
+    "game/presentation/game_session.gd": "fcbee72e7a4087d2b31d569f3e51f3b8c082ff89d7bb4f4f797594d9c664a73c",
+    "game/presentation/player_controller.gd": "ac815f4814a22093ecd5802dcf8a25a5f7953047752d8eb417cd18f8942ec7ee",
+    "game/presentation/build_controller.gd": "0bf45ca9aa20d00c5f171a87a82ee872f2d8c626e800a3517c9816b9fa8036fa",
+    "game/presentation/build_menu.gd": "7bf9374628e3e0924305ef4779478fa82bdda9fec482d87a37bbee60d9481b40",
+    "game/features/expedition/inventory_ledger.gd": "d8023c4956dc982b5d5b7759a510bddc9e86bd35fdbac328c7067a367e5b6ece",
+    "game/features/expedition/expedition_state.gd": "0acd6c0f3bcbca0430e5ca7ea10f16da100ad0b84caf503ba2c52d730637d824"
+  },
+  "explicit_injury_realm_position_capacity_fixtures": true,
+  "rewards_via_production_attacks_and_registered_interactions": true,
+  "actual_gui_input_viewports": [
+    [
+      1600,
+      900
+    ],
+    [
+      1280,
+      720
+    ]
+  ],
+  "pc_hardware_playtest": false,
+  "android_or_gamepad_device_acceptance": false,
+  "native_gpu_used": false,
+  "global_import_performed": false,
+  "shared_task_checkboxes_changed": false
+}

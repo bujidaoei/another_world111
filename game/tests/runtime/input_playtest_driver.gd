@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 	if _clock < 0.1:
 		return
 	_clock = 0.0
-	if get_tree().paused:
+	if get_tree().paused and session.session_started:
 		_release()
 		_click("继续")
 		return
@@ -207,7 +207,8 @@ func _combat() -> void:
 		# Strafe the stationary ranged tell while remaining in weapon range.
 		var tangent := Vector3(-away.z, 0, away.x).normalized()
 		_move_direction(tangent)
-	if best < 3.8 and session._pulse_cooldown <= 0.0 and session.player.stamina >= float(session.parameters.weapon.pulse_cost):
+	var primary_skill := str(session.roster.active_build().skill_loadout[0])
+	if best < 3.8 and session.combat.cooldown_remaining(primary_skill) <= 0.0 and session.player.stamina >= float(session.character_config.skill(primary_skill).cost):
 		_press(KEY_Q)
 	if session.player.health < session.player.maximum_health * 0.6 and session.inventory.count("medkit") > 0:
 		_press(KEY_H)
@@ -335,8 +336,8 @@ func _key(code: int, down: bool) -> void:
 		return
 	_held_keys[code] = down
 	var event := InputEventKey.new()
-	event.physical_keycode = code
-	event.keycode = code
+	event.physical_keycode = code as Key
+	event.keycode = code as Key
 	event.pressed = down
 	Input.parse_input_event(event)
 
@@ -349,7 +350,7 @@ func _mouse(button: int, down: bool) -> void:
 		return
 	_held_mouse[button] = down
 	var event := InputEventMouseButton.new()
-	event.button_index = button
+	event.button_index = button as MouseButton
 	event.position = get_viewport().get_final_transform() * get_viewport().get_mouse_position()
 	event.global_position = event.position
 	event.pressed = down

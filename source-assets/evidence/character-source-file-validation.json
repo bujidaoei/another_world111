@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "path": "D:\\bugu_projects\\another_world\\source-assets\\blender\\characters-v1.blend",
+  "bytes": 517816,
+  "isolated_scene": [
+    "AnotherWorld_CharacterIdentities"
+  ],
+  "assets": [
+    {
+      "id": "thief_robot",
+      "owned": true,
+      "bones": 17,
+      "mesh_parent_is_armature": true,
+      "uv_layers": [
+        "AW_SourceUV",
+        "AW_PaletteUV"
+      ],
+      "clips": [
+        "Idle",
+        "Walk"
+      ],
+      "packed_images": 3,
+      "all_images_packed": true
+    },
+    {
+      "id": "healer_robot",
+      "owned": true,
+      "bones": 17,
+      "mesh_parent_is_armature": true,
+      "uv_layers": [
+        "AW_SourceUV",
+        "AW_PaletteUV"
+      ],
+      "clips": [
+        "Idle",
+        "Walk",
+        "SelfHeal"
+      ],
+      "packed_images": 3,
+      "all_images_packed": true
+    }
+  ],
+  "ok": true
+}

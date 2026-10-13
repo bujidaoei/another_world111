@@ -1,0 +1,534 @@
+{
+	"completed": true,
+	"coverage": {
+		"android": false,
+		"healer_actual_death": false,
+		"healer_switch": false,
+		"healer_three_presets": false,
+		"pause_freeze": false,
+		"physical_gamepad": false,
+		"self_heal": false,
+		"skill_slot_edit": false,
+		"talent_draft_and_apply": false,
+		"thief_presets": false,
+		"thief_two_runs": true,
+		"title_continue_cooldown": false
+	},
+	"driver": "character InputEvent/UI QA",
+	"ok": false,
+	"results": [
+		{
+			"at_seconds": 0.0,
+			"data": {
+				"stage": "thief_runs"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 0.0,
+			"data": {
+				"display": "Windows",
+				"input": "Viewport.push_input real keyboard/mouse/GUI; observe domains only",
+				"renderer": "mobile",
+				"save_directory": "C:/Users/Administrator/AppData/Roaming/Godot/app_userdata/另一个世界 · Another World/tests/character_playtest/20261013_003_b"
+			},
+			"event": "start"
+		},
+		{
+			"at_seconds": 16.6005539999994,
+			"data": {
+				"bonus_this_run": 0,
+				"expected_remainder": 12,
+				"expected_total": 24,
+				"kills": 6,
+				"run": 1,
+				"state": {
+					"active_character": "thief",
+					"camp": true,
+					"coin_remainder": 12,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 0.0,
+							"recovery_family": 0.0,
+							"self_heal": 0.0
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"health": 125.0,
+					"level": 5,
+					"max_health": 125.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0,
+						"crystal": 1,
+						"currency": 24,
+						"medkit": 2,
+						"rations": 3,
+						"scrap": 9
+					},
+					"run": 1,
+					"stamina": 120.0
+				}
+			},
+			"event": "actual_thief_settlement"
+		},
+		{
+			"at_seconds": 32.609639703703,
+			"data": {
+				"bonus_this_run": 1,
+				"expected_remainder": 4,
+				"expected_total": 49,
+				"kills": 6,
+				"run": 2,
+				"state": {
+					"active_character": "thief",
+					"camp": true,
+					"coin_remainder": 4,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 0.0,
+							"recovery_family": 0.0,
+							"self_heal": 0.0
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"health": 125.0,
+					"level": 10,
+					"max_health": 125.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0,
+						"crystal": 2,
+						"currency": 49,
+						"medkit": 2,
+						"rations": 3,
+						"scrap": 18
+					},
+					"run": 2,
+					"stamina": 120.0
+				}
+			},
+			"event": "actual_thief_settlement"
+		},
+		{
+			"at_seconds": 32.7124999999993,
+			"data": {
+				"stage": "build_enter"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 32.8332222727266,
+			"data": {
+				"stage": "select_healer"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 33.2003787878782,
+			"data": {
+				"stage": "apply_healer"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 34.1701933333334,
+			"data": {
+				"stage": "healer_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 134.161111111072,
+			"data": {
+				"message": "Stage timeout: healer_observe",
+				"state": {
+					"active_character": "thief",
+					"camp": true,
+					"coin_remainder": 4,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 0.0,
+							"recovery_family": 0.0,
+							"self_heal": 0.0
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"health": 125.0,
+					"level": 10,
+					"max_health": 125.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0,
+						"crystal": 2,
+						"currency": 49,
+						"medkit": 2,
+						"rations": 3,
+						"scrap": 18
+					},
+					"run": 2,
+					"stamina": 120.0
+				}
+			},
+			"event": "failure"
+		}
+	],
+	"stage": "error"
+}

@@ -1,0 +1,2365 @@
+{
+	"display_server": "Windows",
+	"engine": "4.7.2-stable (official)",
+	"frames_drawn": 14355,
+	"generations": 12,
+	"initializations": 1,
+	"mode": "actual_player_reconfigure",
+	"reconfigurations": 11,
+	"samples": [
+		{
+			"animation_player_active": false,
+			"elapsed": 0.0,
+			"event": "spawn",
+			"frame": 0,
+			"generation": 0,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3070901616642,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3075196583936,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3100966387715,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 0.082228,
+			"event": "sample",
+			"frame": 0,
+			"generation": 0,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3070901616642,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3075196583936,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3100966387715,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 1.003194,
+			"event": "sample",
+			"frame": 209,
+			"generation": 0,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3070901616642,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3075196583936,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3100966387715,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 2.00346933333333,
+			"event": "sample",
+			"frame": 449,
+			"generation": 0,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3070901616642,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3075196583936,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3100966387715,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 3.00391100000004,
+			"event": "sample",
+			"frame": 689,
+			"generation": 0,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3070901616642,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3075196583936,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3100966387715,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 4.00405233333342,
+			"event": "sample",
+			"frame": 927,
+			"generation": 0,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3070901616642,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3075196583936,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3100966387715,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 5.00000000000003,
+			"event": "sample",
+			"frame": 1166,
+			"generation": 0,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3070901616642,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3075196583936,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3100966387715,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 5.00000000000003,
+			"event": "retire_or_reconfigure",
+			"frame": 1166,
+			"generation": 0,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3070901616642,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3075196583936,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3100966387715,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 5.00000000000003,
+			"event": "reconfigured",
+			"frame": 1166,
+			"generation": 1,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3418793967622,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3423088934914,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3448858738695,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 6.00416666666664,
+			"event": "sample",
+			"frame": 1407,
+			"generation": 1,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3418793967622,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3423088934914,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3448858738695,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 7.00416666666658,
+			"event": "sample",
+			"frame": 1647,
+			"generation": 1,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3418793967622,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3423088934914,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3448858738695,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 8.00416666666652,
+			"event": "sample",
+			"frame": 1887,
+			"generation": 1,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3418793967622,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3423088934914,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3448858738695,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 9.00416666666647,
+			"event": "sample",
+			"frame": 2127,
+			"generation": 1,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3418793967622,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3423088934914,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3448858738695,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 10.0041666666664,
+			"event": "sample",
+			"frame": 2367,
+			"generation": 1,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3418793967622,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3423088934914,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3448858738695,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 10.0041666666664,
+			"event": "retire_or_reconfigure",
+			"frame": 2367,
+			"generation": 1,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3418793967622,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3423088934914,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3448858738695,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 10.0041666666664,
+			"event": "reconfigured",
+			"frame": 2367,
+			"generation": 2,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3517578215426,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3521873182720,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3547642986499,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 11.0041666666664,
+			"event": "sample",
+			"frame": 2607,
+			"generation": 2,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3517578215426,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3521873182720,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3547642986499,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 12.0041666666663,
+			"event": "sample",
+			"frame": 2847,
+			"generation": 2,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3517578215426,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3521873182720,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3547642986499,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 13.0041666666662,
+			"event": "sample",
+			"frame": 3087,
+			"generation": 2,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3517578215426,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3521873182720,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3547642986499,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 14.0041666666662,
+			"event": "sample",
+			"frame": 3327,
+			"generation": 2,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3517578215426,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3521873182720,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3547642986499,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 15.0041666666661,
+			"event": "sample",
+			"frame": 3567,
+			"generation": 2,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3517578215426,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3521873182720,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3547642986499,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 15.0041666666661,
+			"event": "retire_or_reconfigure",
+			"frame": 3567,
+			"generation": 2,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3517578215426,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3521873182720,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3547642986499,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 15.0041666666661,
+			"event": "reconfigured",
+			"frame": 3567,
+			"generation": 3,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3616362463238,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3620657430530,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3646427234311,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 16.0041666666661,
+			"event": "sample",
+			"frame": 3807,
+			"generation": 3,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3616362463238,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3620657430530,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3646427234311,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 17.004166666666,
+			"event": "sample",
+			"frame": 4047,
+			"generation": 3,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3616362463238,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3620657430530,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3646427234311,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 18.000768666666,
+			"event": "sample",
+			"frame": 4286,
+			"generation": 3,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3616362463238,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3620657430530,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3646427234311,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 19.0007686666659,
+			"event": "sample",
+			"frame": 4526,
+			"generation": 3,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3616362463238,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3620657430530,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3646427234311,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 20.0007686666658,
+			"event": "sample",
+			"frame": 4766,
+			"generation": 3,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3616362463238,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3620657430530,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3646427234311,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 20.0007686666658,
+			"event": "retire_or_reconfigure",
+			"frame": 4766,
+			"generation": 3,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3616362463238,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3620657430530,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3646427234311,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 20.0007686666658,
+			"event": "reconfigured",
+			"frame": 4766,
+			"generation": 4,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3715146711042,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3719441678336,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3745211482115,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 21.0007686666658,
+			"event": "sample",
+			"frame": 5006,
+			"generation": 4,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3715146711042,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3719441678336,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3745211482115,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 22.0007686666657,
+			"event": "sample",
+			"frame": 5246,
+			"generation": 4,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3715146711042,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3719441678336,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3745211482115,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 23.0007686666657,
+			"event": "sample",
+			"frame": 5486,
+			"generation": 4,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3715146711042,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3719441678336,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3745211482115,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 24.0007686666656,
+			"event": "sample",
+			"frame": 5726,
+			"generation": 4,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3715146711042,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3719441678336,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3745211482115,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 25.0007686666656,
+			"event": "sample",
+			"frame": 5966,
+			"generation": 4,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3715146711042,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3719441678336,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3745211482115,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 25.0007686666656,
+			"event": "retire_or_reconfigure",
+			"frame": 5966,
+			"generation": 4,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3715146711042,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3719441678336,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3745211482115,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 25.0007686666656,
+			"event": "reconfigured",
+			"frame": 5966,
+			"generation": 5,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3813930958854,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3818225926146,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3843995729927,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 26.0007686666655,
+			"event": "sample",
+			"frame": 6206,
+			"generation": 5,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3813930958854,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3818225926146,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3843995729927,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 27.0007686666654,
+			"event": "sample",
+			"frame": 6446,
+			"generation": 5,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3813930958854,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3818225926146,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3843995729927,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 28.0007686666654,
+			"event": "sample",
+			"frame": 6686,
+			"generation": 5,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3813930958854,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3818225926146,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3843995729927,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 29.0007686666653,
+			"event": "sample",
+			"frame": 6926,
+			"generation": 5,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3813930958854,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3818225926146,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3843995729927,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 30.0007686666653,
+			"event": "sample",
+			"frame": 7166,
+			"generation": 5,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3813930958854,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3818225926146,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3843995729927,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 30.0007686666653,
+			"event": "retire_or_reconfigure",
+			"frame": 7166,
+			"generation": 5,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 3813930958854,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 3818225926146,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3843995729927,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 30.0007686666653,
+			"event": "reconfigured",
+			"frame": 7166,
+			"generation": 6,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3912715206658,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3917010173952,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3942779977731,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 31.0007686666652,
+			"event": "sample",
+			"frame": 7406,
+			"generation": 6,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3912715206658,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3917010173952,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3942779977731,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 32.0007686666652,
+			"event": "sample",
+			"frame": 7646,
+			"generation": 6,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3912715206658,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3917010173952,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3942779977731,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 33.000768666666,
+			"event": "sample",
+			"frame": 7886,
+			"generation": 6,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3912715206658,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3917010173952,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3942779977731,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 34.0045454545453,
+			"event": "sample",
+			"frame": 8123,
+			"generation": 6,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3912715206658,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3917010173952,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3942779977731,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 35.0000000000003,
+			"event": "sample",
+			"frame": 8362,
+			"generation": 6,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3912715206658,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3917010173952,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3942779977731,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 35.0000000000003,
+			"event": "retire_or_reconfigure",
+			"frame": 8362,
+			"generation": 6,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 3912715206658,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 3917010173952,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 3942779977731,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 35.0000000000003,
+			"event": "reconfigured",
+			"frame": 8362,
+			"generation": 7,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4011499454470,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4015794421762,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4041564225543,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 36.0000000000008,
+			"event": "sample",
+			"frame": 8602,
+			"generation": 7,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4011499454470,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4015794421762,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4041564225543,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 37.0000000000012,
+			"event": "sample",
+			"frame": 8842,
+			"generation": 7,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4011499454470,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4015794421762,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4041564225543,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 38.0000000000017,
+			"event": "sample",
+			"frame": 9082,
+			"generation": 7,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4011499454470,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4015794421762,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4041564225543,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 39.0000000000021,
+			"event": "sample",
+			"frame": 9322,
+			"generation": 7,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4011499454470,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4015794421762,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4041564225543,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 40.001852484851,
+			"event": "sample",
+			"frame": 9561,
+			"generation": 7,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4011499454470,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4015794421762,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4041564225543,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 40.001852484851,
+			"event": "retire_or_reconfigure",
+			"frame": 9561,
+			"generation": 7,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4011499454470,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4015794421762,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4041564225543,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 40.001852484851,
+			"event": "reconfigured",
+			"frame": 9561,
+			"generation": 8,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4110283702274,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4114578669568,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4140348473347,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 41.0000000000032,
+			"event": "sample",
+			"frame": 9798,
+			"generation": 8,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4110283702274,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4114578669568,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4140348473347,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 42.0000000000037,
+			"event": "sample",
+			"frame": 10038,
+			"generation": 8,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4110283702274,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4114578669568,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4140348473347,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 43.0000000000042,
+			"event": "sample",
+			"frame": 10278,
+			"generation": 8,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4110283702274,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4114578669568,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4140348473347,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 44.0000000000046,
+			"event": "sample",
+			"frame": 10518,
+			"generation": 8,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4110283702274,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4114578669568,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4140348473347,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 45.0000000000051,
+			"event": "sample",
+			"frame": 10758,
+			"generation": 8,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4110283702274,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4114578669568,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4140348473347,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 45.0000000000051,
+			"event": "retire_or_reconfigure",
+			"frame": 10758,
+			"generation": 8,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4110283702274,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4114578669568,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4140348473347,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 45.0000000000051,
+			"event": "reconfigured",
+			"frame": 10758,
+			"generation": 9,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4209067950086,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4213362917378,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4239132721159,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 46.0000000000055,
+			"event": "sample",
+			"frame": 10998,
+			"generation": 9,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4209067950086,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4213362917378,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4239132721159,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 47.0000000000059,
+			"event": "sample",
+			"frame": 11238,
+			"generation": 9,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4209067950086,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4213362917378,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4239132721159,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 48.0018376666731,
+			"event": "sample",
+			"frame": 11476,
+			"generation": 9,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4209067950086,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4213362917378,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4239132721159,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 49.0021660000072,
+			"event": "sample",
+			"frame": 11716,
+			"generation": 9,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4209067950086,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4213362917378,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4239132721159,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 50.0023396666747,
+			"event": "sample",
+			"frame": 11956,
+			"generation": 9,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4209067950086,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4213362917378,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4239132721159,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 50.0023396666747,
+			"event": "retire_or_reconfigure",
+			"frame": 11956,
+			"generation": 9,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4209067950086,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4213362917378,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4239132721159,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 50.0023396666747,
+			"event": "reconfigured",
+			"frame": 11956,
+			"generation": 10,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4307852197890,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4312147165184,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4337916968963,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 51.0026073333421,
+			"event": "sample",
+			"frame": 12196,
+			"generation": 10,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4307852197890,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4312147165184,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4337916968963,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 52.0029843333429,
+			"event": "sample",
+			"frame": 12436,
+			"generation": 10,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4307852197890,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4312147165184,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4337916968963,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 53.0027193333437,
+			"event": "sample",
+			"frame": 12676,
+			"generation": 10,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4307852197890,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4312147165184,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4337916968963,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 54.0029400000111,
+			"event": "sample",
+			"frame": 12916,
+			"generation": 10,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4307852197890,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4312147165184,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4337916968963,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 55.0015756666786,
+			"event": "sample",
+			"frame": 13154,
+			"generation": 10,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4307852197890,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4312147165184,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4337916968963,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 55.0015756666786,
+			"event": "retire_or_reconfigure",
+			"frame": 13154,
+			"generation": 10,
+			"identity": "thief",
+			"meshes": [
+				{
+					"instance_rid": 4307852197890,
+					"mesh_rid": 2456721293313,
+					"node_path": "CharacterVisual/thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_rid": 4312147165184,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4337916968963,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 55.0015756666786,
+			"event": "reconfigured",
+			"frame": 13154,
+			"generation": 11,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4406636445702,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4410931412994,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4436701216775,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 56.0000000000125,
+			"event": "sample",
+			"frame": 13395,
+			"generation": 11,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4406636445702,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4410931412994,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4436701216775,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 57.0000000000131,
+			"event": "sample",
+			"frame": 13635,
+			"generation": 11,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4406636445702,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4410931412994,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4436701216775,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 58.0000000000137,
+			"event": "sample",
+			"frame": 13875,
+			"generation": 11,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4406636445702,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4410931412994,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4436701216775,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 59.0000000000143,
+			"event": "sample",
+			"frame": 14115,
+			"generation": 11,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4406636445702,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4410931412994,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4436701216775,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		},
+		{
+			"animation_player_active": false,
+			"elapsed": 60.0000000000149,
+			"event": "sample",
+			"frame": 14355,
+			"generation": 11,
+			"identity": "healer",
+			"meshes": [
+				{
+					"instance_rid": 4406636445702,
+					"mesh_rid": 2744484102146,
+					"node_path": "CharacterVisual/healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_rid": 4410931412994,
+					"skin_binds": 17
+				},
+				{
+					"instance_rid": 4436701216775,
+					"mesh_rid": 2890512990212,
+					"node_path": "CharacterVisual/WeaponMount/AnotherWorld_AssetProduction/lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_rid": 0,
+					"skin_binds": 0
+				}
+			],
+			"model_cache": 2,
+			"tree_active": true,
+			"visual_ready": true,
+			"weapon_cache": 2
+		}
+	],
+	"scope": "synthetic isolated native renderer Player/preflight diagnosis; not gameplay, acceptance or performance",
+	"seconds_observed": 60.0000000000149
+}

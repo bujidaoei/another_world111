@@ -98,7 +98,8 @@ func test_real_main_scene_initializes_title_and_original_assets_without_save_mut
 	assert_str(session.save_directory).is_equal(_directory)
 	assert_bool(FileAccess.file_exists(_directory.path_join("slot_a.json"))).is_false()
 	assert_bool(session.inventory.get_equipment("starter-lightning").is_empty()).is_false()
-	assert_bool(ResourceLoader.exists("res://assets/models/survivor_robot.glb")).is_true()
+	assert_bool(ResourceLoader.exists("res://assets/models/thief_robot.glb")).is_true()
+	assert_str(session.player.character_id).is_equal("thief")
 	assert_bool(session.player.visual.get_child_count() > 0).is_true()
 
 @warning_ignore("unused_parameter")
@@ -186,20 +187,22 @@ func test_pause_stops_ai_windup_and_combat_cooldowns_until_resume() -> void:
 	var enemy: AWEnemyController = session.enemy_root.get_child(0)
 	enemy._prepared = true
 	enemy.windup = 1.0
-	session._attack_cooldown = 2.0
-	session._pulse_cooldown = 4.0
+	assert_bool(session._perform_cast("attack").ok).is_true()
+	assert_bool(session._perform_cast("pulse").ok).is_true()
+	var attack_cooldown := session.combat.cooldown_remaining("attack")
+	var pulse_cooldown := session.combat.cooldown_remaining("pulse")
 	session._show_pause()
 	for frame: int in range(12):
 		await get_tree().process_frame
 	assert_float(enemy.windup).is_equal(1.0)
-	assert_float(session._attack_cooldown).is_equal(2.0)
-	assert_float(session._pulse_cooldown).is_equal(4.0)
+	assert_float(session.combat.cooldown_remaining("attack")).is_equal(attack_cooldown)
+	assert_float(session.combat.cooldown_remaining("pulse")).is_equal(pulse_cooldown)
 	assert_bool(session.input_adapter.blocked).is_true()
 	session._close_menu()
 	for frame: int in range(4):
 		await get_tree().physics_frame
 	assert_float(enemy.windup).is_less(1.0)
-	assert_float(session._attack_cooldown).is_less(2.0)
+	assert_float(session.combat.cooldown_remaining("attack")).is_less(attack_cooldown)
 
 func test_viewport_ui_dispatch_consumes_mouse_attack_before_world_adapter() -> void:
 	var session := _new_game_session()
@@ -379,7 +382,8 @@ func test_long_fusion_menu_scrolls_with_real_wheel_events_and_last_button_is_cli
 	assert_str(session._modal_mode).is_equal("workbench")
 	assert_bool(session.input_adapter._mouse_attack).is_false()
 
-func test_anchor_timeout_after_expedition_cleanup_does_not_capture_freed_nodes() -> void:
+@warning_ignore("unused_parameter")
+func test_anchor_timeout_after_expedition_cleanup_does_not_capture_freed_nodes(timeout := 25000) -> void:
 	var session := _new_game_session()
 	# Legal unit fixture for testing node lifetime, separate from the real-input run.
 	session.progress.award_experience(580, "unit-qualification")
@@ -387,7 +391,6 @@ func test_anchor_timeout_after_expedition_cleanup_does_not_capture_freed_nodes()
 	session.inventory.grant({"scrap": 10, "alloy": 5}, "unit-equipment-materials")
 	assert_bool(session.equipment.ascend(session.inventory, session.active_weapon_id, 2, true, true, "unit-equipment-ascension", {"location": "unit-fixture", "at": "2026-10-13T00:00:00Z"}).ok).is_true()
 	session._apply_equipment_stats()
-	session.parameters.weapon.anchor_lifetime = 0.05
 	session._begin_run("rain_court", false)
 	session._place_anchor()
 	assert_int(session._anchors.size()).is_equal(1)
@@ -396,7 +399,7 @@ func test_anchor_timeout_after_expedition_cleanup_does_not_capture_freed_nodes()
 	await get_tree().process_frame
 	assert_that(reference.get_ref()).is_null()
 	assert_array(session._anchors).is_empty()
-	await await_millis(160)
+	await await_millis(int(float(session.parameters.weapon.anchor_lifetime) * 1000.0) + 100)
 	assert_array(session._anchors).is_empty()
 	assert_bool(session.in_camp).is_true()
 	assert_bool(session.player.active).is_true()
@@ -472,11 +475,10 @@ func _slot_hashes() -> Dictionary:
 func test_future_progress_domain_is_blocked_and_title_commands_preserve_both_slots() -> void:
 	var session := _new_game_session()
 	var saved: Dictionary = session.repository.load().data
-	assert_int(int(saved.domain_version)).is_equal(1)
+	assert_int(int(saved.domain_version)).is_equal(2)
 	# This is a future-format unit fixture, not a fabricated gameplay result.
 	var future := saved.duplicate(true)
-	future.domain_version = 2
-	future["character_builds"] = {"schema_version": 1, "unrecognized_future_content": true}
+	future.domain_version = 3
 	var written: Dictionary = session.repository.save(future)
 	assert_str(str(written.code)).is_equal("saved")
 	assert_bool(written.ok).is_true()
@@ -519,6 +521,8 @@ func test_progress_domain_legacy_is_supported_and_invalid_versions_are_atomic() 
 		assert_dict(session.input_adapter.snapshot_bindings()).is_equal(original_bindings)
 	var legacy := saved.duplicate(true)
 	legacy.erase("domain_version")
+	legacy.erase("character_builds")
+	legacy.erase("combat_state")
 	assert_bool(session._restore_payload(legacy).ok).is_true()
 	assert_dict(session.progress.snapshot()).is_equal(original_world)
 	assert_dict(session.inventory.snapshot()).is_equal(saved.inventory)

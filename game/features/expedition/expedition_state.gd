@@ -2,6 +2,7 @@ extends RefCounted
 class_name AWExpeditionState
 
 const Result = preload("res://config/rule_result.gd")
+const SNAPSHOT_FIELDS: Array[String] = ["state", "run_id", "region_id", "challenge", "outcome", "pending_loot", "defeated_enemy_ids", "gathered_node_ids", "objective_completed", "rewards_committed", "used_run_ids", "character_id", "starting_coin_remainder", "pending_coin_remainder"]
 enum State { DORMANT, ACTIVE, VICTORY, FAILURE, EVACUATION_PENDING, ENDED }
 var _rules: RefCounted
 var state: State = State.DORMANT
@@ -15,13 +16,20 @@ var gathered_node_ids: Array[String] = []
 var objective_completed: bool = false
 var rewards_committed: bool = false
 var _used_run_ids: Dictionary = {}
+var _characters: RefCounted
+var _character_id := ""
+var _starting_coin_remainder := 0
+var _pending_coin_remainder := 0
 
-func _init(rules: RefCounted) -> void:
+func _init(rules: RefCounted, characters: RefCounted = null) -> void:
 	_rules = rules
+	_characters = characters
 
-func begin(new_run_id: String, new_region_id: String, is_challenge: bool = false, realm: int = 1, world_level: int = 1) -> Dictionary:
+func begin(new_run_id: String, new_region_id: String, is_challenge: bool = false, realm: int = 1, world_level: int = 1, character_id: String = "", starting_coin_remainder: int = 0) -> Dictionary:
 	if not _rules.ready:
 		return Result.failure("rules_unavailable", "规则尚未载入。")
+	if not _valid_bonus_context(character_id, starting_coin_remainder, false):
+		return Result.failure("character_reward_invalid", "远征身份或金币余数无效。")
 	if state != State.DORMANT and state != State.ENDED:
 		return Result.failure("encounter_active", "上一遭遇尚未结束。")
 	if state == State.ENDED and outcome != "failed" and not rewards_committed:
@@ -43,6 +51,9 @@ func begin(new_run_id: String, new_region_id: String, is_challenge: bool = false
 	gathered_node_ids.clear()
 	objective_completed = false
 	rewards_committed = false
+	_character_id = character_id
+	_starting_coin_remainder = starting_coin_remainder
+	_pending_coin_remainder = starting_coin_remainder
 	_used_run_ids[run_id] = true
 	state = State.ACTIVE
 	return Result.success({"enemy_ids": enemy_ids(), "nodes": node_definitions()})
@@ -70,7 +81,17 @@ func record_kill(enemy_id: String, progress: RefCounted) -> Dictionary:
 		return Result.failure("enemy_reward_invalid", "敌人未登记或奖励已记录。")
 	var region: Dictionary = _rules.data.regions[region_id]
 	var xp := int(_rules.data.challenge.experience if challenge else region.kill_experience)
-	var reward: Dictionary = {} if challenge else region.kill_reward
+	var reward: Dictionary = {} if challenge else region.kill_reward.duplicate(true)
+	var next_remainder := _pending_coin_remainder
+	var extra_coins := 0
+	if not challenge and _characters != null:
+		var character: Dictionary = _characters.data.characters[_character_id]
+		var accumulated := _pending_coin_remainder + int(reward.get("currency", 0)) * int(character.monster_coin_numerator)
+		var denominator := int(character.monster_coin_denominator)
+		extra_coins = floori(float(accumulated) / float(denominator))
+		next_remainder = accumulated % denominator
+		if extra_coins > 0:
+			reward["currency"] = int(reward.get("currency", 0)) + extra_coins
 	var cargo_check := _can_add_loot(reward)
 	if not cargo_check.ok:
 		return cargo_check
@@ -79,7 +100,8 @@ func record_kill(enemy_id: String, progress: RefCounted) -> Dictionary:
 		return award
 	defeated_enemy_ids.append(enemy_id)
 	_add_loot(reward)
-	return Result.success({"experience": xp, "pending_loot": pending_loot.duplicate(true), "enemy_id": enemy_id})
+	_pending_coin_remainder = next_remainder
+	return Result.success({"experience": xp, "pending_loot": pending_loot.duplicate(true), "enemy_id": enemy_id, "extra_monster_coins": extra_coins, "pending_coin_remainder": _pending_coin_remainder})
 
 func gather(node_id: String) -> Dictionary:
 	if state != State.ACTIVE:
@@ -139,6 +161,7 @@ func resolve(result_outcome: String, progress: RefCounted) -> Dictionary:
 	outcome = result_outcome
 	if outcome == "failed":
 		pending_loot.clear()
+		_pending_coin_remainder = _starting_coin_remainder
 		state = State.FAILURE
 	elif outcome == "victory":
 		state = State.VICTORY
@@ -155,16 +178,36 @@ func reset() -> Dictionary:
 func is_ended() -> bool:
 	return state == State.DORMANT or state == State.ENDED
 
-func commit_rewards(operation_id: String, inventory: RefCounted) -> Dictionary:
+func settlement_operation_id() -> String:
+	return "expedition-settlement:" + run_id
+
+func commit_rewards(inventory: AWInventoryLedger, roster: AWCharacterRoster = null, new_equipment: Array[Dictionary] = []) -> Dictionary:
 	if state != State.ENDED or outcome == "failed":
 		return Result.failure("settlement_unavailable", "需要成功撤离且完成遭遇重置才能入库。")
 	if rewards_committed:
 		return Result.failure("rewards_already_committed", "远征战利品已经入库。")
-	var transaction: Dictionary = inventory.grant(pending_loot, operation_id)
+	var operation_id := settlement_operation_id()
+	var remove_ids: Array[String] = []
+	if _characters != null:
+		if roster == null or roster.active_character_id != _character_id:
+			return Result.failure("character_reward_invalid", "角色收益需要与库存共同结算。")
+		var remainder_check := roster.can_commit_coin_remainder(_starting_coin_remainder, _pending_coin_remainder)
+		if not remainder_check.ok:
+			return remainder_check
+	var inventory_check: Dictionary = inventory.can_apply_operation(operation_id, {}, pending_loot, {}, remove_ids, new_equipment)
+	if not inventory_check.ok:
+		return inventory_check
+	var transaction: Dictionary = inventory.apply_operation(operation_id, {}, pending_loot, {}, remove_ids, new_equipment)
 	if not transaction.ok:
 		return transaction
+	# Both domains are synchronous RefCounted rules without signals or callbacks.
+	# The preflighted scalar CAS cannot change between these two assignments.
+	if _characters != null:
+		var remainder_committed := roster.commit_coin_remainder(_starting_coin_remainder, _pending_coin_remainder)
+		if not remainder_committed.ok:
+			return Result.failure("settlement_invariant", "角色收益事务验证异常，请保留已有存档和诊断。")
 	rewards_committed = true
-	return Result.success({"resources": pending_loot.duplicate(true)})
+	return Result.success({"resources": pending_loot.duplicate(true), "coin_remainder": _pending_coin_remainder})
 
 func cargo_weight() -> int:
 	var weight: int = 0
@@ -188,12 +231,19 @@ func _add_loot(resources: Dictionary) -> void:
 		pending_loot[resource] = int(pending_loot.get(resource, 0)) + int(resources[resource])
 
 func snapshot() -> Dictionary:
-	return {"state": state, "run_id": run_id, "region_id": region_id, "challenge": challenge, "outcome": outcome, "pending_loot": pending_loot.duplicate(true), "defeated_enemy_ids": defeated_enemy_ids.duplicate(), "gathered_node_ids": gathered_node_ids.duplicate(), "objective_completed": objective_completed, "rewards_committed": rewards_committed, "used_run_ids": _used_run_ids.duplicate(true)}
+	return {"state": state, "run_id": run_id, "region_id": region_id, "challenge": challenge, "outcome": outcome, "pending_loot": pending_loot.duplicate(true), "defeated_enemy_ids": defeated_enemy_ids.duplicate(), "gathered_node_ids": gathered_node_ids.duplicate(), "objective_completed": objective_completed, "rewards_committed": rewards_committed, "used_run_ids": _used_run_ids.duplicate(true), "character_id": _character_id, "starting_coin_remainder": _starting_coin_remainder, "pending_coin_remainder": _pending_coin_remainder}
 
 func restore(saved: Dictionary) -> Dictionary:
+	if saved.size() != SNAPSHOT_FIELDS.size():
+		return Result.failure("expedition_invalid", "远征状态字段缺失或包含未知字段。")
+	for key: Variant in saved:
+		if not key is String or not key in SNAPSHOT_FIELDS:
+			return Result.failure("expedition_invalid", "远征状态包含未知字段。")
 	if not _rules.ready or not _rules.is_count(saved.get("state"), State.DORMANT, State.ENDED) or not saved.get("run_id") is String or not saved.get("region_id") is String or not saved.get("outcome") is String or not saved.get("challenge") is bool or not saved.get("objective_completed") is bool or not saved.get("rewards_committed") is bool or not saved.get("pending_loot") is Dictionary or not saved.get("defeated_enemy_ids") is Array or not saved.get("gathered_node_ids") is Array or not saved.get("used_run_ids") is Dictionary:
 		return Result.failure("expedition_invalid", "远征存档结构无效。")
 	var saved_state := int(saved.state)
+	if not saved.get("character_id") is String or not _rules.is_count(saved.get("starting_coin_remainder"), 0, 19) or not _rules.is_count(saved.get("pending_coin_remainder"), 0, 19) or not _valid_bonus_context(str(saved.character_id), int(saved.starting_coin_remainder), saved_state == State.DORMANT):
+		return Result.failure("character_reward_invalid", "远征身份或金币余数无效。")
 	if saved_state in [State.DORMANT, State.ACTIVE] and saved.outcome != "":
 		return Result.failure("expedition_invalid", "未结束遭遇不能含结算结果。")
 	if saved_state == State.DORMANT and (saved.run_id != "" or saved.region_id != "" or saved.challenge or not saved.pending_loot.is_empty() or not saved.defeated_enemy_ids.is_empty() or not saved.gathered_node_ids.is_empty() or saved.objective_completed or saved.rewards_committed):
@@ -230,6 +280,15 @@ func restore(saved: Dictionary) -> Dictionary:
 	for id: Variant in saved.used_run_ids:
 		if not id is String or id.is_empty() or saved.used_run_ids[id] != true:
 			return Result.failure("expedition_invalid", "远征操作标识无效。")
+	var expected_remainder := int(saved.starting_coin_remainder)
+	if saved.outcome != "failed" and not saved.challenge and _characters != null and saved_state != State.DORMANT:
+		var character: Dictionary = _characters.data.characters[saved.character_id]
+		var base_coins := int(_rules.data.regions[saved.region_id].kill_reward.get("currency", 0))
+		expected_remainder = (expected_remainder + saved.defeated_enemy_ids.size() * base_coins * int(character.monster_coin_numerator)) % int(character.monster_coin_denominator)
+	if int(saved.pending_coin_remainder) != expected_remainder:
+		return Result.failure("character_reward_invalid", "金币余数与真实敌人事件不一致。")
+	if saved.pending_loot != _expected_pending_loot(saved):
+		return Result.failure("expedition_invalid", "战利品与真实击杀、采集和目标事件不一致。")
 	state = saved_state as State
 	run_id = saved.run_id
 	region_id = saved.region_id
@@ -241,4 +300,43 @@ func restore(saved: Dictionary) -> Dictionary:
 	objective_completed = saved.objective_completed
 	rewards_committed = saved.rewards_committed
 	_used_run_ids = saved.used_run_ids.duplicate(true)
+	_character_id = str(saved.character_id)
+	_starting_coin_remainder = int(saved.starting_coin_remainder)
+	_pending_coin_remainder = int(saved.pending_coin_remainder)
 	return Result.success()
+
+func _valid_bonus_context(character_id: String, remainder: int, dormant: bool) -> bool:
+	if _characters == null:
+		return character_id.is_empty() and remainder == 0
+	if not _characters.ready or remainder < 0 or remainder >= 20:
+		return false
+	if dormant:
+		return character_id.is_empty() and remainder == 0
+	return _characters.data.characters.has(character_id)
+
+func _expected_pending_loot(saved: Dictionary) -> Dictionary:
+	var expected: Dictionary = {}
+	if saved.outcome == "failed" or int(saved.state) == State.DORMANT:
+		return expected
+	if saved.challenge:
+		if saved.outcome == "victory":
+			_merge_reward(expected, _rules.data.challenge.reward)
+		return expected
+	var region: Dictionary = _rules.data.regions[saved.region_id]
+	for _id: String in saved.defeated_enemy_ids:
+		_merge_reward(expected, region.kill_reward)
+	if _characters != null:
+		var character: Dictionary = _characters.data.characters[saved.character_id]
+		var accumulated: int = int(saved.starting_coin_remainder) + saved.defeated_enemy_ids.size() * int(region.kill_reward.get("currency", 0)) * int(character.monster_coin_numerator)
+		var extra_coins := floori(float(accumulated) / float(character.monster_coin_denominator))
+		if extra_coins > 0:
+			expected["currency"] = int(expected.get("currency", 0)) + extra_coins
+	for node_id: String in saved.gathered_node_ids:
+		_merge_reward(expected, region.nodes[node_id])
+	if saved.objective_completed:
+		_merge_reward(expected, region.objective.reward)
+	return expected
+
+static func _merge_reward(target: Dictionary, reward: Dictionary) -> void:
+	for key: String in reward:
+		target[key] = int(target.get(key, 0)) + int(reward[key])

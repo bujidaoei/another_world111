@@ -6,7 +6,7 @@ signal diagnostic(result: Dictionary)
 const Bindings = preload("res://platform/input_bindings.gd")
 const Result = preload("res://config/rule_result.gd")
 const MOVE_ACTIONS: Array[String] = ["move_left", "move_right", "move_forward", "move_back"]
-const COMMAND_ACTIONS: Array[String] = ["dodge", "pulse", "anchor", "interact", "heal", "camera_lock", "camera_reset"]
+const COMMAND_ACTIONS: Array[String] = ["dodge", "pulse", "anchor", "interact", "heal", "camera_lock", "camera_reset", "skill_secondary", "character_ability"]
 var bindings: RefCounted = Bindings.new()
 var initialization_result: Dictionary = {}
 var movement := Vector2.ZERO
@@ -45,7 +45,7 @@ func _install_device_actions() -> void:
 		event.button_index = MOUSE_BUTTON_LEFT if action == "attack" else MOUSE_BUTTON_RIGHT
 		if not InputMap.action_has_event(action, event):
 			InputMap.action_add_event(action, event)
-	var pad := {"dodge": JOY_BUTTON_A, "interact": JOY_BUTTON_X, "heal": JOY_BUTTON_Y, "pulse": JOY_BUTTON_LEFT_SHOULDER, "anchor": JOY_BUTTON_RIGHT_SHOULDER, "pause": JOY_BUTTON_START, "camera_reset": JOY_BUTTON_RIGHT_STICK, "camera_lock": JOY_BUTTON_BACK}
+	var pad := {"dodge": JOY_BUTTON_A, "interact": JOY_BUTTON_X, "heal": JOY_BUTTON_Y, "pulse": JOY_BUTTON_LEFT_SHOULDER, "anchor": JOY_BUTTON_RIGHT_SHOULDER, "pause": JOY_BUTTON_START, "camera_reset": JOY_BUTTON_RIGHT_STICK, "camera_lock": JOY_BUTTON_BACK, "skill_secondary": JOY_BUTTON_DPAD_RIGHT, "character_ability": JOY_BUTTON_DPAD_UP}
 	for action: String in pad:
 		var event := InputEventJoypadButton.new()
 		event.button_index = int(pad[action]) as JoyButton
@@ -114,7 +114,7 @@ func _input(event: InputEvent) -> void:
 		_mouse_defend = false
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not bindings.ready:
+	if not bindings.ready or event.is_echo():
 		return
 	if event.is_action_pressed("pause"):
 		queued_actions.append("pause")

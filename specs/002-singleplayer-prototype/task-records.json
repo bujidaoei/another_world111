@@ -368,9 +368,13 @@
     ],
     "test": "TEST-115",
     "criterion": "运行构建/资源合法、测试非零、FPS分位/加载/内存与对应设备",
-    "evidence": ["evidence/2026-10-13/performance-tooling.md", "evidence/2026-10-13/android-development-build.md"],
+    "evidence": [
+      "evidence/2026-10-13/performance-tooling.md",
+      "evidence/2026-10-13/android-development-build.md",
+      "evidence/2026-10-13/windows-current-performance.md"
+    ],
     "done": false,
-    "status": "进行中/未验收（renderer门禁开放）"
+    "status": "进行中/未验收（冻结002 PC生产/Vulkan短期门禁通过；完整及长稳/设备证据未全）"
   },
   {
     "id": "TASK-116",
@@ -412,7 +416,10 @@
     ],
     "test": "TEST-117",
     "criterion": "实际设备/参与者才验收；缺证据不暂停可独立完整制作",
-    "evidence": ["evidence/2026-10-13/android-development-build.md", "evidence/2026-10-13/android-build-verification.json"],
+    "evidence": [
+      "evidence/2026-10-13/android-development-build.md",
+      "evidence/2026-10-13/android-build-verification.json"
+    ],
     "done": false,
     "status": "进行中/未验收（无手机运行证据）"
   },

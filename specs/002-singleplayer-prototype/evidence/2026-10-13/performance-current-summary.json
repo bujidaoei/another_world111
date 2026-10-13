@@ -1,0 +1,263 @@
+{
+  "ok": true,
+  "failure": null,
+  "engine_exit": 0,
+  "forced_termination": false,
+  "runtime_errors": false,
+  "run_directory": "D:\\bugu_projects\\another_world\\artifacts\\performance\\9dd871aca9fb458c887d80d4fca8945f",
+  "identity": {
+    "kind": "release template / byte-identical production gameplay resources / QA launch pack",
+    "production_build": "D:\\bugu_projects\\another_world\\artifacts\\builds\\abd86f0482134dd18b8553c77d5806e2",
+    "production_exe_sha256": "50FA1736CBEEF195857D62BDFB87BFAF1070F0C2D667028F4D5BFF443631B51B",
+    "production_pack_sha256": "2C6AA3FCF54EE79BEC8D8357FC2A6C1EB236827203C96A2049DE340A71A6CAEE",
+    "qa_pack_sha256": "745F5EA04766CA990D6FCF8F2B1544A10FA767D2206CD8D1CC3A3058E81A83F9",
+    "external_runner_sha256": "F02620BC01056476B08C59B6AC4CD74040593E8620AC97D2375AA44E9A8C3F79",
+    "input_driver_sha256": "379E9AFEB25D67ABA2178EC011ADA8DDEF476E2AE6C69A6DB40E970CD9A74A2B",
+    "driver_logger_adapter_sha256": "8BB70B6848D73E9A2E282208EA4DF5F53C66D928F7B3B560C1511859ABEC2D7F",
+    "prepared_utc": "2026-10-13T01:17:58.9119743Z",
+    "prepared_only": false
+  },
+  "rss_peak_os_bytes": 905555968,
+  "rss_peak_sampled_bytes": 905400320.0,
+  "native_window_checks": 62,
+  "measurement_seconds": 60.009081,
+  "warmup_seconds": 5.0,
+  "completed_runs": 4,
+  "coverage_verified": true,
+  "engine_process_frame_count": 14389,
+  "close_method": "Production AWGameSession._request_quit, save and audio lifecycle awaited by production code",
+  "metadata": {
+    "clock": "Time.get_ticks_usec / consecutive SceneTree process_frame",
+    "debug": false,
+    "display_server": "Windows",
+    "engine": {
+      "build": "official",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (official)",
+      "timestamp": 0
+    },
+    "engine_max_fps": 0,
+    "gpu_api_version": "1.4.312",
+    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_vendor": "NVIDIA",
+    "limitations": [
+      "External input driver and measurement main loop add QA overhead; no subtraction or extrapolation.",
+      "Short representative PC exposure, not two-hour stability or Android acceptance.",
+      "Release MEMORY_STATIC and MEMORY_STATIC_MAX are debug-only and unavailable; reported as null.",
+      "GPU timing is null if no positive hardware timing sample is observed."
+    ],
+    "monitor_semantics": {
+      "engine_fps": "Previous approximately one-second engine window; sampled once per second",
+      "physics_peak_1s_ms": "Maximum physics step duration in previous approximately one-second window, not every frame",
+      "process_peak_1s_ms": "Maximum process + rendering sync/draw duration in previous approximately one-second window, not per-frame CPU duration",
+      "render_cpu_ms": "Viewport rendering CPU duration in milliseconds",
+      "render_gpu_ms": "Viewport GPU timestamp duration in milliseconds when supported"
+    },
+    "release": true,
+    "render_time_collection": "RenderingServer.viewport_set_measure_render_time enabled",
+    "renderer": "mobile",
+    "rendering_driver": "vulkan",
+    "save_directory": "D:/bugu_projects/another_world/artifacts/performance/9dd871aca9fb458c887d80d4fca8945f/isolated-saves",
+    "screen_refresh_rate_hz": 240.0,
+    "startup_viewport_texture_size": [
+      2304.0,
+      1296.0
+    ],
+    "user_data_directory": "D:/bugu_projects/another_world/artifacts/performance/9dd871aca9fb458c887d80d4fca8945f/appdata/Godot/app_userdata/另一个世界 · Another World",
+    "viewport_texture_size": [
+      2304.0,
+      1296.0
+    ],
+    "vsync_mode": 1,
+    "window_client_size": [
+      1920,
+      1080
+    ]
+  },
+  "frame_ms": {
+    "max": 20.232,
+    "mean": 4.1699805406908,
+    "min": 0.5,
+    "over_100_ms": 0,
+    "over_33_33_ms": 0,
+    "over_50_ms": 0,
+    "p50": 2.641,
+    "p95": 8.31,
+    "p99": 11.371,
+    "percentile_method": "nearest rank",
+    "samples": 14389
+  },
+  "monitors": {
+    "buffer_bytes": {
+      "max": 9559224.0,
+      "mean": 9260573.98762944,
+      "min": 9240108.0,
+      "p50": 9240108.0,
+      "p95": 9410796.0,
+      "p99": 9501072.0,
+      "percentile_method": "nearest rank",
+      "samples": 14389
+    },
+    "draw_calls": {
+      "max": 285.0,
+      "mean": 189.199179929113,
+      "min": 133.0,
+      "p50": 180.0,
+      "p95": 270.0,
+      "p99": 279.0,
+      "percentile_method": "nearest rank",
+      "samples": 14389
+    },
+    "engine_fps": {
+      "max": 242.0,
+      "mean": 239.833333333333,
+      "min": 237.0,
+      "p50": 240.0,
+      "p95": 241.0,
+      "p99": 242.0,
+      "percentile_method": "nearest rank",
+      "samples": 60
+    },
+    "physics_peak_1s_ms": {
+      "max": 9.185,
+      "mean": 1.41591666666667,
+      "min": 0.53,
+      "p50": 0.839,
+      "p95": 7.674,
+      "p99": 9.185,
+      "percentile_method": "nearest rank",
+      "samples": 60
+    },
+    "process_peak_1s_ms": {
+      "max": 19.929,
+      "mean": 12.1238833333333,
+      "min": 6.811,
+      "p50": 11.153,
+      "p95": 17.673,
+      "p99": 19.929,
+      "percentile_method": "nearest rank",
+      "samples": 60
+    },
+    "render_cpu_ms": {
+      "max": 1.35599994659424,
+      "mean": 0.22662638105435,
+      "min": 0.125,
+      "p50": 0.219999998807907,
+      "p95": 0.314000010490417,
+      "p99": 0.426999986171722,
+      "percentile_method": "nearest rank",
+      "samples": 14389
+    },
+    "render_gpu_ms": {
+      "max": 2.58999991416931,
+      "mean": 1.73074376235968,
+      "min": 1.30999994277954,
+      "p50": 1.71200001239777,
+      "p95": 2.05999994277954,
+      "p99": 2.14599990844727,
+      "percentile_method": "nearest rank",
+      "samples": 14389
+    },
+    "render_objects": {
+      "max": 404.0,
+      "mean": 270.511084856488,
+      "min": 202.0,
+      "p50": 261.0,
+      "p95": 372.0,
+      "p99": 398.0,
+      "percentile_method": "nearest rank",
+      "samples": 14389
+    },
+    "render_primitives": {
+      "max": 250722.0,
+      "mean": 180822.317603725,
+      "min": 125400.0,
+      "p50": 185338.0,
+      "p95": 230870.0,
+      "p99": 243810.0,
+      "percentile_method": "nearest rank",
+      "samples": 14389
+    },
+    "static_memory_bytes": null,
+    "static_memory_peak_bytes": null,
+    "texture_bytes": {
+      "max": 133563392.0,
+      "mean": 133563392.0,
+      "min": 133563392.0,
+      "p50": 133563392.0,
+      "p95": 133563392.0,
+      "p99": 133563392.0,
+      "percentile_method": "nearest rank",
+      "samples": 14389
+    },
+    "vram_bytes": {
+      "max": 174224928.0,
+      "mean": 173925901.615957,
+      "min": 173905392.0,
+      "p50": 173905392.0,
+      "p95": 174076208.0,
+      "p99": 174166656.0,
+      "percentile_method": "nearest rank",
+      "samples": 14389
+    }
+  },
+  "stages_frame_ms": {
+    "camp": {
+      "max": 11.592,
+      "mean": 4.19767,
+      "min": 0.734,
+      "over_100_ms": 0,
+      "over_33_33_ms": 0,
+      "over_50_ms": 0,
+      "p50": 4.168,
+      "p95": 7.473,
+      "p99": 11.384,
+      "percentile_method": "nearest rank",
+      "samples": 100
+    },
+    "combat": {
+      "max": 20.0,
+      "mean": 4.17179712301587,
+      "min": 0.5,
+      "over_100_ms": 0,
+      "over_33_33_ms": 0,
+      "over_50_ms": 0,
+      "p50": 2.597,
+      "p95": 8.691,
+      "p99": 11.687,
+      "percentile_method": "nearest rank",
+      "samples": 4032
+    },
+    "gather": {
+      "max": 15.366,
+      "mean": 4.16860866824272,
+      "min": 0.593,
+      "over_100_ms": 0,
+      "over_33_33_ms": 0,
+      "over_50_ms": 0,
+      "p50": 2.758,
+      "p95": 8.132,
+      "p99": 11.337,
+      "percentile_method": "nearest rank",
+      "samples": 6345
+    },
+    "return": {
+      "max": 20.232,
+      "mean": 4.16962551124744,
+      "min": 0.655,
+      "over_100_ms": 0,
+      "over_33_33_ms": 0,
+      "over_50_ms": 0,
+      "p50": 2.521,
+      "p95": 8.19,
+      "p99": 10.818,
+      "percentile_method": "nearest rank",
+      "samples": 3912
+    }
+  }
+}

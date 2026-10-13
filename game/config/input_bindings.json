@@ -1,13 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "bindings": {
     "move_left": 65, "move_right": 68, "move_forward": 87, "move_back": 83,
     "attack": 0, "defend": 0, "dodge": 32, "pulse": 81, "anchor": 70,
-    "interact": 69, "heal": 72, "camera_lock": 67, "camera_reset": 82, "pause": 4194305
+    "interact": 69, "heal": 72, "camera_lock": 67, "camera_reset": 82, "pause": 4194305,
+    "skill_secondary": 88, "character_ability": 84
   },
   "labels": {
     "move_left": "向左移动", "move_right": "向右移动", "move_forward": "向前移动", "move_back": "向后移动",
-    "attack": "武器攻击", "defend": "防御", "dodge": "闪避", "pulse": "冲击", "anchor": "导电锚点",
-    "interact": "交互", "heal": "使用药包", "camera_lock": "锁定镜头", "camera_reset": "恢复镜头", "pause": "暂停 / 返回"
+    "attack": "武器攻击", "defend": "防御", "dodge": "闪避", "pulse": "主通用技能", "anchor": "导电锚点",
+    "interact": "交互", "heal": "使用药包", "camera_lock": "锁定镜头", "camera_reset": "恢复镜头", "pause": "暂停 / 返回",
+    "skill_secondary": "次通用技能", "character_ability": "角色专属能力"
   }
 }

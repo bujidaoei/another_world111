@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "version": "character-builds-1.0.0",
+  "characters": {
+    "thief": {
+      "exclusive_skill": "",
+      "monster_coin_numerator": 1,
+      "monster_coin_denominator": 20,
+      "label": "盗窃者",
+      "description": "个人怪物金币提高5%，整数余数随成功战利品共同结算。"
+    },
+    "healer": {
+      "exclusive_skill": "self_heal",
+      "monster_coin_numerator": 0,
+      "monster_coin_denominator": 20,
+      "label": "疗愈者",
+      "description": "可支付35体力自疗最大生命的30%，与恢复物品共享20秒冷却。"
+    }
+  },
+  "talents": {
+    "weapon_training": {
+      "branch": "attack",
+      "rank_limit": 8,
+      "cost": 1,
+      "stat": "damage",
+      "per_rank": 0.015,
+      "label": "武器训练",
+      "description": "每点增加1.5%武器伤害。"
+    },
+    "pulse_mastery": {
+      "branch": "attack",
+      "rank_limit": 8,
+      "cost": 1,
+      "stat": "skill_damage",
+      "per_rank": 0.02,
+      "label": "脉冲精通",
+      "description": "每点增加2%通用伤害技能伤害。"
+    },
+    "conduction": {
+      "branch": "attack",
+      "rank_limit": 8,
+      "cost": 1,
+      "stat": "chain_falloff",
+      "per_rank": 0.0125,
+      "label": "导电",
+      "description": "每点增加0.0125连锁衰减系数，最终至多0.98。"
+    },
+    "vitality": {
+      "branch": "guard",
+      "rank_limit": 8,
+      "cost": 1,
+      "stat": "maximum_health",
+      "per_rank": 0.02,
+      "label": "生命储备",
+      "description": "每点增加2%最大生命。"
+    },
+    "reserve": {
+      "branch": "guard",
+      "rank_limit": 8,
+      "cost": 1,
+      "stat": "maximum_stamina",
+      "per_rank": 0.02,
+      "label": "体力储备",
+      "description": "每点增加2%最大体力。"
+    },
+    "defense_efficiency": {
+      "branch": "guard",
+      "rank_limit": 8,
+      "cost": 1,
+      "stat": "defense_drain_reduction",
+      "per_rank": 0.02,
+      "label": "防御效率",
+      "description": "每点减少2%防御体力消耗，满级消耗乘数0.84。"
+    },
+    "mobility": {
+      "branch": "utility",
+      "rank_limit": 8,
+      "cost": 1,
+      "stat": "move_speed",
+      "per_rank": 0.01,
+      "label": "机动",
+      "description": "每点增加1%移动速度。"
+    },
+    "stamina_recovery": {
+      "branch": "utility",
+      "rank_limit": 8,
+      "cost": 1,
+      "stat": "stamina_recovery",
+      "per_rank": 0.02,
+      "label": "自然恢复",
+      "description": "每点增加2%自然体力恢复。"
+    },
+    "skill_haste": {
+      "branch": "utility",
+      "rank_limit": 8,
+      "cost": 1,
+      "stat": "common_cooldown_reduction",
+      "per_rank": 0.01,
+      "label": "技能熟练",
+      "description": "每点减少1%通用技能冷却，满级乘数0.92；不缩短自疗和恢复冷却。"
+    }
+  },
+  "skills": {
+    "pulse": {
+      "kind": "common",
+      "required_realm": 1,
+      "stage": 1,
+      "source": "presentation.weapon",
+      "label": "脉冲",
+      "description": "对周围可见敌人释放脉冲，伤害、范围、成本和冷却取中央技能配置。"
+    },
+    "barrier": {
+      "kind": "common",
+      "required_realm": 1,
+      "stage": 1,
+      "cost": 20.0,
+      "cooldown": 10.0,
+      "duration": 3.0,
+      "capacity": 24.0,
+      "label": "屏障",
+      "description": "支付20体力，获得持续3秒、吸收24伤害的屏障，冷却10秒。"
+    },
+    "focus": {
+      "kind": "common",
+      "required_realm": 2,
+      "stage": 2,
+      "cost": 24.0,
+      "cooldown": 12.0,
+      "duration": 4.0,
+      "damage_bonus": 0.15,
+      "label": "聚焦",
+      "description": "二阶解锁；支付24体力，4秒内武器伤害提高15%，冷却12秒。"
+    },
+    "self_heal": {
+      "kind": "exclusive",
+      "required_realm": 1,
+      "stage": 1,
+      "cost": 35.0,
+      "cooldown": 20.0,
+      "heal_fraction": 0.3,
+      "label": "自疗",
+      "description": "疗愈者专属；受伤时支付35体力恢复最大生命的30%，冷却20秒。"
+    }
+  },
+  "resonances": {
+    "wandering_conductor": {
+      "branch": "utility",
+      "points": 8,
+      "weapon_type": "lightning_spear",
+      "weapon_tier": 2,
+      "required_skill": "anchor",
+      "required_skill_stage": 2,
+      "stat": "anchor_range",
+      "value": 1.5,
+      "label": "游走导体",
+      "description": "机动分支达到8点且持二阶电枪，锚点连接范围增加1.5米。"
+    },
+    "charged_guard": {
+      "branch": "guard",
+      "points": 8,
+      "weapon_type": "lightning_spear",
+      "weapon_tier": 1,
+      "required_skill": "barrier",
+      "required_skill_stage": 1,
+      "stat": "barrier_capacity_multiplier",
+      "value": 1.15,
+      "label": "蓄雷护体",
+      "description": "守护分支达到8点且装配屏障，屏障施放容量提高15%。"
+    }
+  },
+  "recovery": {
+    "family_cooldown": 20.0
+  },
+  "limits": {
+    "preset_slots": 3,
+    "preset_name_length": 24,
+    "weapon_id_length": 128,
+    "common_skill_slots": 2,
+    "chain_falloff_maximum": 0.98,
+    "passive_damage_reduction_maximum": 0.4,
+    "defense_drain_multiplier_minimum": 0.84,
+    "common_cooldown_multiplier_minimum": 0.92
+  }
+}

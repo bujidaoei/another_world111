@@ -1,0 +1,176 @@
+{
+  "mode": "actual_player_reconfigure",
+  "pid": 63828,
+  "started_utc": "2026-10-13T03:42:50.349Z",
+  "engine": "D:/bugu_software/ai-game-toolchain/godot/Godot_v4.7.2-stable_win64_console.exe",
+  "arguments": [
+    "--path",
+    "D:\\bugu_projects\\another_world\\artifacts\\actual-player-renderer-probe",
+    "--rendering-method",
+    "mobile",
+    "--rendering-driver",
+    "vulkan",
+    "--script",
+    "actual_player_probe.gd",
+    "--",
+    "actual_player_reconfigure",
+    "60"
+  ],
+  "scope": "isolated actual Player preflight/assembly renderer diagnostic",
+  "probe_sha256": "e33d6963bd68dca5d592b7e911929ea95c2482b7859206850c52bd349fa9439c",
+  "input_manifest": {
+    "scope": "exact production Player and dependencies; no fake interfaces; no execution or production modification",
+    "files": [
+      {
+        "path": "presentation/player_controller.gd",
+        "bytes": 12472,
+        "sha256": "ac815f4814a22093ecd5802dcf8a25a5f7953047752d8eb417cd18f8942ec7ee"
+      },
+      {
+        "path": "presentation/character_animator.gd",
+        "bytes": 7901,
+        "sha256": "bf30315cbfbf31c29cc159e216f2310ddbdfc9db226ee956d46ccf7acf7b61f0"
+      },
+      {
+        "path": "config/rule_result.gd",
+        "bytes": 301,
+        "sha256": "2530dc3021994138dfc9639756d643fd86546699a003dd726e4b98978b6bc097"
+      },
+      {
+        "path": "config/character_visuals_config.gd",
+        "bytes": 4416,
+        "sha256": "aebdde3f6adc96cdc1ad0676777e18cb0798f5e641b44808728f92f6c162cb74"
+      },
+      {
+        "path": "config/character_visuals.json",
+        "bytes": 1064,
+        "sha256": "688bb8ef7ed6dff52079125da44db6bc4b2464870bd6dda80d355cc226b127d2"
+      },
+      {
+        "path": "config/character_builds_config.gd",
+        "bytes": 9792,
+        "sha256": "72d106e134d93f751e1943b8d0484aa7983a47990930104475eedce0ad1f50ee"
+      },
+      {
+        "path": "config/character_builds.json",
+        "bytes": 5432,
+        "sha256": "51e80937c27dbf4034e1ff0e69163a08f19284b33b25883bd731ef81bd2ef87b"
+      },
+      {
+        "path": "config/rules_config.gd",
+        "bytes": 10349,
+        "sha256": "9a88f2b9d39fd52710884d79d51404fe0a868fa8423b369ccf4011e9338b4bb6"
+      },
+      {
+        "path": "config/presentation_config.gd",
+        "bytes": 4523,
+        "sha256": "8fd83553c0d3cc1077b6e3ebab1f1fdfe96ff97d898a4e84d8efcfde1632ebf4"
+      },
+      {
+        "path": "config/presentation.json",
+        "bytes": 1287,
+        "sha256": "f8fa317b098be69c4a6b37fae623c05dd0068f2e10c83312b74096629723c35a"
+      },
+      {
+        "path": "config/input_bindings.json",
+        "bytes": 824,
+        "sha256": "264ac0deae85a85defe9d8cd4d773c9f62785b00c2b48f2b180fbe44b9b31e2d"
+      },
+      {
+        "path": "platform/input_adapter.gd",
+        "bytes": 7878,
+        "sha256": "6de2c0e0e1e76d5c2a7cb4023c068298429053966c513ded872c0b8d166c3322"
+      },
+      {
+        "path": "platform/input_bindings.gd",
+        "bytes": 9295,
+        "sha256": "0e06c57bfa48059f21f4d9cb7af7f5390da8b9989795a3de677f6749fde9bcca"
+      },
+      {
+        "path": "features/combat/combat_state.gd",
+        "bytes": 15291,
+        "sha256": "31eec6c6cfbcbeba0ced0939f1d35e39f4e44a6ecf7dfd9cd1a0e385eaae097d"
+      },
+      {
+        "path": "assets/models/thief_robot.glb",
+        "bytes": 358736,
+        "sha256": "d768cfb93981971d2926776d338fe59c9c1bc4494c3105afcf4f4d3552d8ed73"
+      },
+      {
+        "path": "assets/models/thief_robot_palette_basecolor.png",
+        "bytes": 436,
+        "sha256": "0ef0673e594363d81a57d6aa905d7dee066d7ef9a89246e34a6fc8d2ae5d6c0a"
+      },
+      {
+        "path": "assets/models/thief_robot_palette_emission.png",
+        "bytes": 333,
+        "sha256": "bd1da0b88f37d7aadf5e3c85f3a6766cffd490a8b3358fb30ae397eb868f6fe0"
+      },
+      {
+        "path": "assets/models/thief_robot_palette_metal_rough.png",
+        "bytes": 419,
+        "sha256": "da9fb7c9e1e13c70f8f45b475587e4ec29d1931d070619943ecd113af57f2667"
+      },
+      {
+        "path": "assets/models/healer_robot.glb",
+        "bytes": 413468,
+        "sha256": "7bc6753a8e968c088c9f3be0c6900acdae25e2b29548fbc68eb574286ab00039"
+      },
+      {
+        "path": "assets/models/healer_robot_palette_basecolor.png",
+        "bytes": 436,
+        "sha256": "0ef0673e594363d81a57d6aa905d7dee066d7ef9a89246e34a6fc8d2ae5d6c0a"
+      },
+      {
+        "path": "assets/models/healer_robot_palette_emission.png",
+        "bytes": 333,
+        "sha256": "bd1da0b88f37d7aadf5e3c85f3a6766cffd490a8b3358fb30ae397eb868f6fe0"
+      },
+      {
+        "path": "assets/models/healer_robot_palette_metal_rough.png",
+        "bytes": 419,
+        "sha256": "da9fb7c9e1e13c70f8f45b475587e4ec29d1931d070619943ecd113af57f2667"
+      },
+      {
+        "path": "assets/models/lightning_rifle_t1.glb",
+        "bytes": 59956,
+        "sha256": "1569ffb15b3399900f4653f3b43f4086c0fd16e817769c1c1cbb15cdabf19aaf"
+      },
+      {
+        "path": "assets/models/lightning_rifle_t1_palette_basecolor.png",
+        "bytes": 436,
+        "sha256": "0ef0673e594363d81a57d6aa905d7dee066d7ef9a89246e34a6fc8d2ae5d6c0a"
+      },
+      {
+        "path": "assets/models/lightning_rifle_t1_palette_emission.png",
+        "bytes": 333,
+        "sha256": "bd1da0b88f37d7aadf5e3c85f3a6766cffd490a8b3358fb30ae397eb868f6fe0"
+      },
+      {
+        "path": "assets/models/lightning_rifle_t1_palette_metal_rough.png",
+        "bytes": 419,
+        "sha256": "da9fb7c9e1e13c70f8f45b475587e4ec29d1931d070619943ecd113af57f2667"
+      },
+      {
+        "path": "assets/models/lightning_rifle_t2.glb",
+        "bytes": 76988,
+        "sha256": "5a74c300c757bca36db4b0f050e8532d901190f1e134b2f7c23129a3e889317e"
+      },
+      {
+        "path": "assets/models/lightning_rifle_t2_palette_basecolor.png",
+        "bytes": 436,
+        "sha256": "0ef0673e594363d81a57d6aa905d7dee066d7ef9a89246e34a6fc8d2ae5d6c0a"
+      },
+      {
+        "path": "assets/models/lightning_rifle_t2_palette_emission.png",
+        "bytes": 333,
+        "sha256": "bd1da0b88f37d7aadf5e3c85f3a6766cffd490a8b3358fb30ae397eb868f6fe0"
+      },
+      {
+        "path": "assets/models/lightning_rifle_t2_palette_metal_rough.png",
+        "bytes": 419,
+        "sha256": "da9fb7c9e1e13c70f8f45b475587e4ec29d1931d070619943ecd113af57f2667"
+      }
+    ]
+  }
+}

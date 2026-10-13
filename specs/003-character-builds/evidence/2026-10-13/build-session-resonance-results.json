@@ -1,0 +1,80 @@
+{
+  "kind": "main_scene_actual_resonance_threshold_integration_units",
+  "ok": true,
+  "engine": "4.7.2.stable.ed1daf0bf",
+  "gdunit": "6.2.2",
+  "exit_code": 0,
+  "tests": 14,
+  "new_cases": 2,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "orphans": 0,
+  "engine_errors": 0,
+  "report": "artifacts/build-session-resonance-target-path-stable/report_1/results.xml",
+  "log": "artifacts/build-session-resonance-target-path-stable.log",
+  "case_names": [
+    "test_real_main_controller_draft_apply_saves_domain_two_without_free_vitals",
+    "test_real_barrier_cast_absorbs_player_damage_and_debits_stamina",
+    "test_real_focus_cast_increases_production_attack_against_registered_enemy",
+    "test_real_wandering_conductor_threshold_bridges_anchor_with_three_target_limit",
+    "test_real_charged_guard_threshold_changes_cast_capacity_and_player_health_damage",
+    "test_real_recovery_family_survives_identity_preset_and_scene_reload",
+    "test_real_item_use_prevents_self_heal_until_shared_gameplay_clock_expires",
+    "test_lethal_player_damage_returns_camp_clears_only_effects_and_preserves_cooldowns",
+    "test_zero_health_checkpoint_title_does_not_heal_continue_explicitly_recovers_failure",
+    "test_future_domain_three_blocks_writes_and_new_journey_preserving_both_slots",
+    "test_frozen_real_domain_one_save_migrates_without_copying_gear_or_resources",
+    "test_settlement_capacity_failure_and_real_retry_commit_rewards_gear_remainder_once",
+    "test_abandon_pending_settlement_discards_rewards_without_failure_healing",
+    "test_build_menu_both_logical_viewports_real_wheel_focus_and_gui_click_route"
+  ],
+  "thresholds": {
+    "barrier_cooldown": 10,
+    "chain_range": 4.5,
+    "chain_targets": 3,
+    "guard": [
+      7,
+      8
+    ],
+    "anchor_range": [
+      7,
+      8.5
+    ],
+    "utility": [
+      7,
+      8
+    ],
+    "health_damage": [
+      6,
+      2.4
+    ],
+    "barrier_capacity": [
+      24,
+      27.6
+    ]
+  },
+  "actual_anchor_production_path": true,
+  "actual_attack_registered_enemies_and_raycast": true,
+  "fourth_target_proven_reachable": true,
+  "actual_player_absorption_path": true,
+  "positions_calibrated": false,
+  "original_world_collision": true,
+  "explicit_realm_equipment_talent_position_fixtures": true,
+  "pc_hardware_playtest": false,
+  "native_gpu_or_mcp_used": false,
+  "global_import_performed": false,
+  "root_business_files_modified": false,
+  "task_checkboxes_changed": false,
+  "source_sha256_at_archive": {
+    "game/tests/test_build_session.gd": "4980c6cf4326e5df46d2c636ff47ec456f520450b194e5a468e510027d7c31c5",
+    "game/presentation/game_session.gd": "fcbee72e7a4087d2b31d569f3e51f3b8c082ff89d7bb4f4f797594d9c664a73c",
+    "game/presentation/player_controller.gd": "ac815f4814a22093ecd5802dcf8a25a5f7953047752d8eb417cd18f8942ec7ee",
+    "game/presentation/enemy_controller.gd": "7ee3af59824783a31efe75d351edd990f31e63bec9395676fe0af71f8c8abb7e",
+    "game/features/characters/build_evaluator.gd": "05feb12af97526e64eae7579147131a32b810015ec084fcb8bce7cdfb8abe3c6",
+    "game/features/combat/combat_state.gd": "31eec6c6cfbcbeba0ced0939f1d35e39f4e44a6ecf7dfd9cd1a0e385eaae097d",
+    "game/config/character_builds.json": "51e80937c27dbf4034e1ff0e69163a08f19284b33b25883bd731ef81bd2ef87b",
+    "game/config/world_assets.json": "dbd82023650bb0af2225d6c4a63fc96eef924ea56f334832b784b65ad6676fb5"
+  }
+}

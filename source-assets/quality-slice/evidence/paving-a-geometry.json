@@ -1,0 +1,50 @@
+{
+  "kind": "actual_blender_authored_geometry",
+  "blender": "5.2.2 LTS",
+  "scene": "AnotherWorld_AssetProduction",
+  "owner": "another_world_quality_environment_v1",
+  "records": [
+    {
+      "id": "repair_paving_a",
+      "object": "AWQ_Runtime_repair_paving_a",
+      "triangles": 3320,
+      "vertices": 1760,
+      "materials": 5,
+      "uv": "QualityUV",
+      "bounds_blender_xyz": {
+        "min": [
+          -2.0,
+          -2.0,
+          -0.13750000298023224
+        ],
+        "max": [
+          2.0,
+          2.0,
+          0.06049998849630356
+        ]
+      },
+      "bounds_godot_xyz": {
+        "min": [
+          -2.0,
+          -0.13750000298023224,
+          -2.0
+        ],
+        "max": [
+          2.0,
+          0.06049998849630356,
+          2.0
+        ]
+      },
+      "pivot": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nonfinite_uv": 0,
+      "source_objects": 50,
+      "status": "authored_geometry_runtime_uv_only_not_baked_or_game_accepted"
+    }
+  ],
+  "bake_executed": false,
+  "engine_acceptance": false
+}

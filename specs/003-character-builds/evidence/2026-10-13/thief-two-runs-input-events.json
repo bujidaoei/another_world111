@@ -1,0 +1,1140 @@
+{
+  "completed_runs": 2,
+  "driver": "InputEventKey/MouseMotion/MouseButton through engine input",
+  "results": [
+    {
+      "at_seconds": 0.0,
+      "data": {
+        "fresh": true,
+        "requested_runs": 2
+      },
+      "event": "start"
+    },
+    {
+      "at_seconds": 0.100499333333335,
+      "data": {
+        "stage": "confirm_new"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 0.202880777777778,
+      "data": {
+        "stage": "camp"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 0.608455925925927,
+      "data": {
+        "stage": "combat"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 4.95950566666665,
+      "data": {
+        "banked_xp": 0,
+        "camp": false,
+        "cargo": {
+          "crystal": 1,
+          "currency": 24,
+          "scrap": 9
+        },
+        "gathers": 0,
+        "health": 125.0,
+        "inventory": {
+          "applied_operations": {},
+          "equipment": {
+            "starter-lightning": {
+              "affixes": [
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "power",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "stamina",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": true,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:04",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "回收营地 · 初始工具"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "starter-lightning",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            }
+          },
+          "resources": {
+            "alloy": 0,
+            "crystal": 0,
+            "currency": 0,
+            "medkit": 2,
+            "rations": 3,
+            "scrap": 0
+          }
+        },
+        "kills": 6,
+        "level": 2,
+        "objective": false,
+        "position": "(-2.009456, 0.000918, -3.091219)",
+        "realm": 1,
+        "run": 1,
+        "xp": 16
+      },
+      "event": "all_enemies_defeated"
+    },
+    {
+      "at_seconds": 4.95950566666665,
+      "data": {
+        "stage": "gather"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 11.9200116666663,
+      "data": {
+        "banked_xp": 0,
+        "camp": false,
+        "cargo": {
+          "crystal": 1,
+          "currency": 24,
+          "scrap": 9
+        },
+        "gathers": 3,
+        "health": 125.0,
+        "inventory": {
+          "applied_operations": {},
+          "equipment": {
+            "starter-lightning": {
+              "affixes": [
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "power",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "stamina",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": true,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:04",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "回收营地 · 初始工具"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "starter-lightning",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            }
+          },
+          "resources": {
+            "alloy": 0,
+            "crystal": 0,
+            "currency": 0,
+            "medkit": 2,
+            "rations": 3,
+            "scrap": 0
+          }
+        },
+        "kills": 6,
+        "level": 5,
+        "objective": true,
+        "position": "(1.478727, 0.000918, -10.99888)",
+        "realm": 1,
+        "run": 1,
+        "xp": 16
+      },
+      "event": "objective_and_cargo"
+    },
+    {
+      "at_seconds": 11.9200116666663,
+      "data": {
+        "stage": "return"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 15.974946666666,
+      "data": {
+        "banked_xp": 0,
+        "camp": true,
+        "cargo": {
+          "crystal": 1,
+          "currency": 24,
+          "scrap": 9
+        },
+        "gathers": 3,
+        "health": 125.0,
+        "inventory": {
+          "applied_operations": {
+            "expedition-settlement:run-1": true
+          },
+          "equipment": {
+            "run-1-rain_guard_03": {
+              "affixes": [
+                {
+                  "id": "stamina",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "recovery",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:06",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_03",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "run-1-rain_guard_06": {
+              "affixes": [
+                {
+                  "id": "reach",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "guard",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:09",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 2,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_06",
+              "name": "闪电枪",
+              "quality": "common",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "starter-lightning": {
+              "affixes": [
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "power",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "stamina",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": true,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:04",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "回收营地 · 初始工具"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "starter-lightning",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            }
+          },
+          "resources": {
+            "alloy": 0,
+            "crystal": 1,
+            "currency": 24,
+            "medkit": 2,
+            "rations": 3,
+            "scrap": 9
+          }
+        },
+        "kills": 6,
+        "level": 5,
+        "objective": true,
+        "position": "(0.0, 0.033333, 11.0)",
+        "realm": 1,
+        "run": 1,
+        "xp": 16
+      },
+      "event": "settled"
+    },
+    {
+      "at_seconds": 15.974946666666,
+      "data": {
+        "stage": "camp"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 16.0791133333327,
+      "data": {
+        "stage": "combat"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 20.4158193703696,
+      "data": {
+        "banked_xp": 0,
+        "camp": false,
+        "cargo": {
+          "crystal": 1,
+          "currency": 25,
+          "scrap": 9
+        },
+        "gathers": 0,
+        "health": 125.0,
+        "inventory": {
+          "applied_operations": {
+            "expedition-settlement:run-1": true
+          },
+          "equipment": {
+            "run-1-rain_guard_03": {
+              "affixes": [
+                {
+                  "id": "stamina",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "recovery",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:06",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_03",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "run-1-rain_guard_06": {
+              "affixes": [
+                {
+                  "id": "reach",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "guard",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:09",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 2,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_06",
+              "name": "闪电枪",
+              "quality": "common",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "starter-lightning": {
+              "affixes": [
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "power",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "stamina",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": true,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:04",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "回收营地 · 初始工具"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "starter-lightning",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            }
+          },
+          "resources": {
+            "alloy": 0,
+            "crystal": 1,
+            "currency": 24,
+            "medkit": 2,
+            "rations": 3,
+            "scrap": 9
+          }
+        },
+        "kills": 6,
+        "level": 7,
+        "objective": false,
+        "position": "(-2.406336, 0.000918, -3.140526)",
+        "realm": 1,
+        "run": 2,
+        "xp": 12
+      },
+      "event": "all_enemies_defeated"
+    },
+    {
+      "at_seconds": 20.4158193703696,
+      "data": {
+        "stage": "gather"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 27.1830956666655,
+      "data": {
+        "banked_xp": 0,
+        "camp": false,
+        "cargo": {
+          "crystal": 1,
+          "currency": 25,
+          "scrap": 9
+        },
+        "gathers": 3,
+        "health": 125.0,
+        "inventory": {
+          "applied_operations": {
+            "expedition-settlement:run-1": true
+          },
+          "equipment": {
+            "run-1-rain_guard_03": {
+              "affixes": [
+                {
+                  "id": "stamina",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "recovery",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:06",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_03",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "run-1-rain_guard_06": {
+              "affixes": [
+                {
+                  "id": "reach",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "guard",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:09",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 2,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_06",
+              "name": "闪电枪",
+              "quality": "common",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "starter-lightning": {
+              "affixes": [
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "power",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "stamina",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": true,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:04",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "回收营地 · 初始工具"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "starter-lightning",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            }
+          },
+          "resources": {
+            "alloy": 0,
+            "crystal": 1,
+            "currency": 24,
+            "medkit": 2,
+            "rations": 3,
+            "scrap": 9
+          }
+        },
+        "kills": 6,
+        "level": 10,
+        "objective": true,
+        "position": "(1.122263, 0.000918, -11.21674)",
+        "realm": 1,
+        "run": 2,
+        "xp": 12
+      },
+      "event": "objective_and_cargo"
+    },
+    {
+      "at_seconds": 27.1830956666655,
+      "data": {
+        "stage": "return"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 31.4485039999986,
+      "data": {
+        "banked_xp": 0,
+        "camp": true,
+        "cargo": {
+          "crystal": 1,
+          "currency": 25,
+          "scrap": 9
+        },
+        "gathers": 3,
+        "health": 125.0,
+        "inventory": {
+          "applied_operations": {
+            "expedition-settlement:run-1": true,
+            "expedition-settlement:run-2": true
+          },
+          "equipment": {
+            "run-1-rain_guard_03": {
+              "affixes": [
+                {
+                  "id": "stamina",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "recovery",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:06",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_03",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "run-1-rain_guard_06": {
+              "affixes": [
+                {
+                  "id": "reach",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "guard",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:09",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 2,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_06",
+              "name": "闪电枪",
+              "quality": "common",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "run-2-rain_guard_03": {
+              "affixes": [
+                {
+                  "id": "charge",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "guard",
+                  "value": 25
+                },
+                {
+                  "id": "recovery",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:21",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 6,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-2-rain_guard_03",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "run-2-rain_guard_06": {
+              "affixes": [
+                {
+                  "id": "stamina",
+                  "value": 25
+                },
+                {
+                  "id": "charge",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "guard",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:24",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 7,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-2-rain_guard_06",
+              "name": "闪电枪",
+              "quality": "common",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "starter-lightning": {
+              "affixes": [
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "power",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "stamina",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": true,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:04",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "回收营地 · 初始工具"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "starter-lightning",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            }
+          },
+          "resources": {
+            "alloy": 0,
+            "crystal": 2,
+            "currency": 49,
+            "medkit": 2,
+            "rations": 3,
+            "scrap": 18
+          }
+        },
+        "kills": 6,
+        "level": 10,
+        "objective": true,
+        "position": "(0.0, 0.0, 11.0)",
+        "realm": 1,
+        "run": 2,
+        "xp": 12
+      },
+      "event": "settled"
+    },
+    {
+      "at_seconds": 31.4485039999986,
+      "data": {
+        "stage": "camp"
+      },
+      "event": "stage"
+    },
+    {
+      "at_seconds": 31.5526706666652,
+      "data": {
+        "banked_xp": 0,
+        "camp": true,
+        "cargo": {
+          "crystal": 1,
+          "currency": 25,
+          "scrap": 9
+        },
+        "gathers": 3,
+        "health": 125.0,
+        "inventory": {
+          "applied_operations": {
+            "expedition-settlement:run-1": true,
+            "expedition-settlement:run-2": true
+          },
+          "equipment": {
+            "run-1-rain_guard_03": {
+              "affixes": [
+                {
+                  "id": "stamina",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "recovery",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:06",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_03",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "run-1-rain_guard_06": {
+              "affixes": [
+                {
+                  "id": "reach",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "guard",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:09",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 2,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-1-rain_guard_06",
+              "name": "闪电枪",
+              "quality": "common",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "run-2-rain_guard_03": {
+              "affixes": [
+                {
+                  "id": "charge",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "guard",
+                  "value": 25
+                },
+                {
+                  "id": "recovery",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:21",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 6,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-2-rain_guard_03",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "run-2-rain_guard_06": {
+              "affixes": [
+                {
+                  "id": "stamina",
+                  "value": 25
+                },
+                {
+                  "id": "charge",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "guard",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": false,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:24",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 7,
+                "location": "rain_court"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "run-2-rain_guard_06",
+              "name": "闪电枪",
+              "quality": "common",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            },
+            "starter-lightning": {
+              "affixes": [
+                {
+                  "id": "haste",
+                  "value": 25
+                },
+                {
+                  "id": "power",
+                  "value": 25
+                },
+                {
+                  "id": "vitality",
+                  "value": 25
+                },
+                {
+                  "id": "stamina",
+                  "value": 25
+                }
+              ],
+              "branch_id": "",
+              "equipped": true,
+              "history": {
+                "acquired_at": "2026-10-13T02:27:04",
+                "ascensions": [],
+                "branches": [],
+                "first_six_chain": null,
+                "level": 1,
+                "location": "回收营地 · 初始工具"
+              },
+              "inherent_effect_id": "chain_lightning",
+              "instance_id": "starter-lightning",
+              "name": "闪电枪",
+              "quality": "rare",
+              "slot": "weapon",
+              "slot_count": 4,
+              "tier": 1,
+              "type": "lightning_spear"
+            }
+          },
+          "resources": {
+            "alloy": 0,
+            "crystal": 2,
+            "currency": 49,
+            "medkit": 2,
+            "rations": 3,
+            "scrap": 18
+          }
+        },
+        "kills": 6,
+        "level": 10,
+        "objective": true,
+        "position": "(0.0, 0.0, 11.0)",
+        "realm": 1,
+        "run": 2,
+        "xp": 12
+      },
+      "event": "done"
+    }
+  ],
+  "stage": "done"
+}

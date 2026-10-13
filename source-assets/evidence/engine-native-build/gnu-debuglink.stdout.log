@@ -1,0 +1,8 @@
+
+D:\bugu_software\ai-game-toolchain\native-debug-ed1daf0bf\src\bin\godot.windows.editor.x86_64.exe:     file format pei-x86-64
+
+Contents of section .gnu_debuglink:
+ 14cd2d000 676f646f 742e7769 6e646f77 732e6564  godot.windows.ed
+ 14cd2d010 69746f72 2e783836 5f36342e 6578652e  itor.x86_64.exe.
+ 14cd2d020 64656275 6773796d 626f6c73 00000000  debugsymbols....
+ 14cd2d030 f1cba7fd                             ....            

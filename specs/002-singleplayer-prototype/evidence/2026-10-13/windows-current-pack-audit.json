@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "pack_format": 4,
+  "engine_version": "4.7.2",
+  "file_count": 282,
+  "pck_sha256": "2c6aa3fcf54ee79bec8d8357fc2a6c1eb236827203c96a2049de340a71a6caee",
+  "pck_bytes": 2552228,
+  "verified_md5_files": 282,
+  "debug_test_paths": [],
+  "debug_settings_markers": [],
+  "project_binary_checked": true
+}

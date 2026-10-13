@@ -3,6 +3,7 @@ extends Node3D
 ## Authored scene layout and collision, independent of gameplay rewards and state.
 
 const CONFIGURATION_PATH := "res://config/world_assets.json"
+const MODEL_DIRECTORIES := ["res://assets/models/", "res://assets/quality/"]
 const COLORS := {"floor": Color("354447"), "cold": Color("71e1df"), "warm": Color("ffc475")}
 var materials: Dictionary = {}
 var region_id := "rain_court"
@@ -69,7 +70,7 @@ static func validate_configuration(raw: Variant) -> PackedStringArray:
 			continue
 		var definition: Dictionary = definitions[id]
 		var path: Variant = definition.get("path")
-		if not path is String or not str(path).begins_with("res://assets/models/") or not str(path).ends_with(".glb") or ".." in str(path):
+		if not _valid_model_path(path):
 			issues.append("Invalid local model path: " + str(id))
 		if not definition.get("camera_occluder") is bool:
 			issues.append("Missing occlusion policy: " + str(id))
@@ -150,6 +151,14 @@ static func validate_configuration(raw: Variant) -> PackedStringArray:
 		if not resource is Dictionary or not _valid_vector(resource.get("position")) or not resource.get("type") in ["metal", "crystal"] or not resource.get("number") is String:
 			issues.append("Invalid resource location")
 	return issues
+
+static func _valid_model_path(value: Variant) -> bool:
+	if not value is String or not str(value).ends_with(".glb") or ".." in str(value) or "\\" in str(value):
+		return false
+	for directory: String in MODEL_DIRECTORIES:
+		if str(value).begins_with(directory):
+			return true
+	return false
 
 static func _validate_placements(placements: Array, definitions: Dictionary, issues: PackedStringArray) -> void:
 	var ids: Dictionary = {}
@@ -279,8 +288,8 @@ func _build_floor() -> void:
 	for x in range(count):
 		for z in range(count):
 			var origin := Vector3((x - count * 0.5) * spacing + spacing * 0.5, surface_y + float(floor_data["tile_origin_y"]), (z - count * 0.5) * spacing + spacing * 0.5)
-			var basis := Basis(Vector3.UP, float(rng.randi_range(0, 3)) * PI * 0.5)
-			multimesh.set_instance_transform(index, Transform3D(basis, origin) * _paving_transform)
+			var tile_basis := Basis(Vector3.UP, float(rng.randi_range(0, 3)) * PI * 0.5)
+			multimesh.set_instance_transform(index, Transform3D(tile_basis, origin) * _paving_transform)
 			var value := rng.randf_range(0.88, 1.08)
 			multimesh.set_instance_color(index, Color(value, value, value, 1))
 			index += 1
@@ -385,11 +394,11 @@ func _build_resources() -> void:
 		var is_crystal := str(data["type"]) == "crystal"
 		var type_name := "crystal" if is_crystal else metal_type
 		var id := prefix + "_" + type_name + "_" + str(data["number"])
-		var position := _vector(data["position"])
-		resource_positions[id] = position
+		var resource_position := _vector(data["position"])
+		resource_positions[id] = resource_position
 		var pickup := Node3D.new()
 		pickup.name = id
-		pickup.position = position
+		pickup.position = resource_position
 		add_child(pickup)
 		var model_id := "conductive_anchor" if is_crystal else "cargo_crate"
 		var visual := (_models[model_id] as PackedScene).instantiate() as Node3D

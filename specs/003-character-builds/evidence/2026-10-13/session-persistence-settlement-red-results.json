@@ -1,0 +1,24 @@
+{
+  "kind": "real_pending_settlement_cancel_business_red",
+  "tests": 6,
+  "errors": 0,
+  "assertion_failures": 3,
+  "failed_cases": 1,
+  "exit_code": 100,
+  "report": "artifacts/session-persistence-settlement-red/report_1/results.xml",
+  "log": "artifacts/session-persistence-settlement-red.log",
+  "expected_diagnostic_count": 8,
+  "failure": "pending settlement mode replaced by pause and two settlement commands lost",
+  "actual_registered_node_interaction": true,
+  "full_stock_is_explicit_capacity_fixture": true,
+  "direct_enemy_damage_or_reward_injection_used": false,
+  "source_sha256_at_archive_after_root_fix": {
+    "game/tests/test_session_persistence.gd": "cf881fbb86398c88388a48c6a73185e3f93a5a3867881bd003304fb99f7d37ed",
+    "game/presentation/game_session.gd": "c86d34d70352058d0a620fea14163ba596f13f6f1b72c4bf6672be94827912a3",
+    "game/presentation/game_hud.gd": "d0f49979200efaeff5ff5839b7a8ba7a2dd2b85fa0862b4428edb468882ab987"
+  },
+  "source_sha256_confirmed_at_red": {
+    "game/tests/test_session_persistence.gd": "cf881fbb86398c88388a48c6a73185e3f93a5a3867881bd003304fb99f7d37ed",
+    "game/presentation/game_session.gd": "1a043272ea04ba6abf32beda11be045f8620504d085b7ae7dffeba19ed43f96f"
+  }
+}

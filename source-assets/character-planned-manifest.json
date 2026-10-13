@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "production_plan_implemented_technical_evidence_in_actual_manifest",
+  "specification": "specs/003-character-builds/spec.md",
+  "task": "TASK-222",
+  "brief": "source-assets/character-identity-brief.md",
+  "planned_source_scene": "AnotherWorld_CharacterIdentities",
+  "planned_source_file": "source-assets/blender/characters-v1.blend",
+  "planned_assets": [
+    {
+      "id": "thief",
+      "asset_id": "thief_robot",
+      "role": "playable thief identity; passive monster-coin remainder belongs to rules",
+      "status": "authored_technical_gates_passed_live_game_review_pending",
+      "runtime_file": "game/assets/models/thief_robot.glb",
+      "planned_clips": [
+        "Idle",
+        "Walk"
+      ],
+      "measured_geometry": {
+        "triangles": 2776,
+        "vertices": 1500,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "sha256": "d768cfb93981971d2926776d338fe59c9c1bc4494c3105afcf4f4d3552d8ed73",
+      "in_engine_acceptance": "headless_skeleton_import_passed_active_game_pending"
+    },
+    {
+      "id": "healer",
+      "asset_id": "healer_robot",
+      "role": "playable healer identity; successful self-heal feedback follows real ability result",
+      "status": "authored_technical_gates_passed_live_game_review_pending",
+      "runtime_file": "game/assets/models/healer_robot.glb",
+      "planned_clips": [
+        "Idle",
+        "Walk",
+        "SelfHeal"
+      ],
+      "measured_geometry": {
+        "triangles": 3164,
+        "vertices": 1704,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "sha256": "7bc6753a8e968c088c9f3be0c6900acdae25e2b29548fbc68eb574286ab00039",
+      "in_engine_acceptance": "headless_skeleton_import_passed_active_game_pending"
+    }
+  ],
+  "target_budget_per_asset": {
+    "triangles_min": 2500,
+    "triangles_max": 4500,
+    "mesh_primitives_max": 6,
+    "materials": 1
+  },
+  "provenance_plan": "original project-authored Blender geometry/materials/node animation; no paid or unknown external models",
+  "production_executed": true,
+  "actual_manifest": "source-assets/character-manifest.json",
+  "actual_source_file": "source-assets/blender/characters-v1.blend"
+}

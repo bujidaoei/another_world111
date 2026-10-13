@@ -1,0 +1,467 @@
+{
+  "runs": [
+    {
+      "relative_path": "runs/baseline/0ff7dc2abf38415682a7c7f53cf74c80",
+      "mode": "baseline",
+      "run_id": "0ff7dc2abf38415682a7c7f53cf74c80",
+      "exit_code": 0,
+      "elapsed_seconds": 60.39865849999842,
+      "post_input_changed": [],
+      "report_exists": true,
+      "stdout_bytes": 15243,
+      "stderr_bytes": 0,
+      "native_owner_null_traps": 0,
+      "finish_lines": [
+        "CHARACTER_PROBE_FINISH {\"completed\":true,\"coverage\":{\"android\":false,\"healer_actual_death\":true,\"healer_switch\":true,\"healer_three_presets\":true,\"pause_freeze\":true,\"physical_gamepad\":false,\"self_heal\":true,\"skill_slot_edit\":false,\"talent_draft_and_apply\":true,\"thief_presets\":false,\"thief_two_runs\":true,\"title_continue_cooldown\":true},\"drawn_frames\":13163,\"elapsed\":57.0043783333478,\"ok\":true,\"stage\":\"done\"}"
+      ],
+      "cpp759_source_mentions": 0,
+      "native_particles_null_errors": 0,
+      "driver_completed": true,
+      "driver_succeeded": true,
+      "driver_coverage": {
+        "android": false,
+        "healer_actual_death": true,
+        "healer_switch": true,
+        "healer_three_presets": true,
+        "pause_freeze": true,
+        "physical_gamepad": false,
+        "self_heal": true,
+        "skill_slot_edit": false,
+        "talent_draft_and_apply": true,
+        "thief_presets": false,
+        "thief_two_runs": true,
+        "title_continue_cooldown": true
+      },
+      "failure_events": []
+    },
+    {
+      "relative_path": "runs/baseline/aab25f90b974458ab6a9c0c4b7ed71e8",
+      "mode": "baseline",
+      "run_id": "aab25f90b974458ab6a9c0c4b7ed71e8",
+      "exit_code": 0,
+      "elapsed_seconds": 40.202229099999386,
+      "post_input_changed": [],
+      "report_exists": true,
+      "stdout_bytes": 1032,
+      "stderr_bytes": 0,
+      "native_owner_null_traps": 0,
+      "finish_lines": [
+        "CHARACTER_PROBE_FINISH {\"completed\":true,\"coverage\":{\"android\":false,\"healer_actual_death\":false,\"healer_switch\":false,\"healer_three_presets\":false,\"pause_freeze\":false,\"physical_gamepad\":false,\"self_heal\":false,\"skill_slot_edit\":false,\"talent_draft_and_apply\":false,\"thief_presets\":false,\"thief_two_runs\":false,\"title_continue_cooldown\":false},\"drawn_frames\":8147,\"elapsed\":35.3867566666704,\"ok\":false,\"stage\":\"error\"}"
+      ],
+      "cpp759_source_mentions": 0,
+      "native_particles_null_errors": 0,
+      "driver_completed": true,
+      "driver_succeeded": false,
+      "driver_coverage": {
+        "android": false,
+        "healer_actual_death": false,
+        "healer_switch": false,
+        "healer_three_presets": false,
+        "pause_freeze": false,
+        "physical_gamepad": false,
+        "self_heal": false,
+        "skill_slot_edit": false,
+        "talent_draft_and_apply": false,
+        "thief_presets": false,
+        "thief_two_runs": false,
+        "title_continue_cooldown": false
+      },
+      "failure_events": [
+        {
+          "at_seconds": 35.2354916666702,
+          "data": {
+            "message": "Expedition input pilot failed",
+            "state": {
+              "active_character": "thief",
+              "camp": false,
+              "coin_remainder": 12,
+              "combat": {
+                "cooldowns": {
+                  "anchor": 0.0,
+                  "attack": 0.0,
+                  "barrier": 0.0,
+                  "dodge": 0.0,
+                  "focus": 0.0,
+                  "pulse": 0.0,
+                  "recovery_family": 0.0,
+                  "self_heal": 0.0
+                },
+                "effects": {
+                  "barrier_capacity": 0.0,
+                  "barrier_remaining": 0.0,
+                  "focus_remaining": 0.0
+                },
+                "schema_version": 1
+              },
+              "gui": {
+                "active_character": "thief",
+                "apply_allowed": false,
+                "apply_reason": "",
+                "focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@677",
+                "section": "overview",
+                "selected_character": "thief"
+              },
+              "health": 125.0,
+              "level": 10,
+              "max_health": 125.0,
+              "max_stamina": 120.0,
+              "profiles": {
+                "healer": {
+                  "applied_build": {
+                    "skill_loadout": [
+                      "pulse",
+                      "barrier"
+                    ],
+                    "talents": {
+                      "conduction": 0,
+                      "defense_efficiency": 0,
+                      "mobility": 0,
+                      "pulse_mastery": 0,
+                      "reserve": 0,
+                      "skill_haste": 0,
+                      "stamina_recovery": 0,
+                      "vitality": 0,
+                      "weapon_training": 0
+                    },
+                    "weapon_id": "starter-lightning"
+                  },
+                  "character_id": "healer",
+                  "draft": {
+                    "skill_loadout": [
+                      "pulse",
+                      "barrier"
+                    ],
+                    "talents": {
+                      "conduction": 0,
+                      "defense_efficiency": 0,
+                      "mobility": 0,
+                      "pulse_mastery": 0,
+                      "reserve": 0,
+                      "skill_haste": 0,
+                      "stamina_recovery": 0,
+                      "vitality": 0,
+                      "weapon_training": 0
+                    },
+                    "weapon_id": "starter-lightning"
+                  },
+                  "presets": [
+                    {
+                      "build": null,
+                      "name": ""
+                    },
+                    {
+                      "build": null,
+                      "name": ""
+                    },
+                    {
+                      "build": null,
+                      "name": ""
+                    }
+                  ]
+                },
+                "thief": {
+                  "applied_build": {
+                    "skill_loadout": [
+                      "pulse",
+                      "barrier"
+                    ],
+                    "talents": {
+                      "conduction": 0,
+                      "defense_efficiency": 0,
+                      "mobility": 0,
+                      "pulse_mastery": 0,
+                      "reserve": 0,
+                      "skill_haste": 0,
+                      "stamina_recovery": 0,
+                      "vitality": 0,
+                      "weapon_training": 0
+                    },
+                    "weapon_id": "starter-lightning"
+                  },
+                  "character_id": "thief",
+                  "draft": {
+                    "skill_loadout": [
+                      "pulse",
+                      "barrier"
+                    ],
+                    "talents": {
+                      "conduction": 0,
+                      "defense_efficiency": 0,
+                      "mobility": 0,
+                      "pulse_mastery": 0,
+                      "reserve": 0,
+                      "skill_haste": 0,
+                      "stamina_recovery": 0,
+                      "vitality": 0,
+                      "weapon_training": 0
+                    },
+                    "weapon_id": "starter-lightning"
+                  },
+                  "presets": [
+                    {
+                      "build": null,
+                      "name": ""
+                    },
+                    {
+                      "build": null,
+                      "name": ""
+                    },
+                    {
+                      "build": null,
+                      "name": ""
+                    }
+                  ]
+                }
+              },
+              "realm": 1,
+              "resources": {
+                "alloy": 0,
+                "crystal": 1,
+                "currency": 24,
+                "medkit": 2,
+                "rations": 3,
+                "scrap": 9
+              },
+              "run": 2,
+              "stamina": 120.0
+            }
+          },
+          "event": "failure"
+        }
+      ]
+    },
+    {
+      "relative_path": "runs/gdb/f880a6bef01c4b8b82c715e6cb988238",
+      "mode": "gdb",
+      "run_id": "f880a6bef01c4b8b82c715e6cb988238",
+      "exit_code": 0,
+      "elapsed_seconds": 62.34062240000276,
+      "post_input_changed": [],
+      "report_exists": true,
+      "stdout_bytes": 7558,
+      "stderr_bytes": 201,
+      "native_owner_null_traps": 0,
+      "finish_lines": [
+        "CHARACTER_PROBE_FINISH {\"completed\":true,\"coverage\":{\"android\":false,\"healer_actual_death\":false,\"healer_switch\":false,\"healer_three_presets\":false,\"pause_freeze\":false,\"physical_gamepad\":false,\"self_heal\":false,\"skill_slot_edit\":false,\"talent_draft_and_apply\":false,\"thief_presets\":false,\"thief_two_runs\":false,\"title_continue_cooldown\":false},\"drawn_frames\":4580,\"elapsed\":21.5833333333327,\"ok\":false,\"stage\":\"error\"}"
+      ],
+      "cpp759_source_mentions": 1,
+      "native_particles_null_errors": 0,
+      "driver_completed": true,
+      "driver_succeeded": false,
+      "driver_coverage": {
+        "android": false,
+        "healer_actual_death": false,
+        "healer_switch": false,
+        "healer_three_presets": false,
+        "pause_freeze": false,
+        "physical_gamepad": false,
+        "self_heal": false,
+        "skill_slot_edit": false,
+        "talent_draft_and_apply": false,
+        "thief_presets": false,
+        "thief_two_runs": false,
+        "title_continue_cooldown": false
+      },
+      "failure_events": [
+        {
+          "at_seconds": 21.4166666666661,
+          "data": {
+            "message": "Expedition input pilot failed",
+            "state": {
+              "active_character": "thief",
+              "camp": true,
+              "coin_remainder": 0,
+              "combat": {
+                "cooldowns": {
+                  "anchor": 0.0,
+                  "attack": 0.0,
+                  "barrier": 0.0,
+                  "dodge": 0.0,
+                  "focus": 0.0,
+                  "pulse": 3.3809111212122,
+                  "recovery_family": 7.2608331212126,
+                  "self_heal": 0.0
+                },
+                "effects": {
+                  "barrier_capacity": 0.0,
+                  "barrier_remaining": 0.0,
+                  "focus_remaining": 0.0
+                },
+                "schema_version": 1
+              },
+              "gui": {
+                "active_character": "thief",
+                "apply_allowed": false,
+                "apply_reason": "",
+                "focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@521",
+                "section": "overview",
+                "selected_character": "thief"
+              },
+              "health": 43.75,
+              "level": 1,
+              "max_health": 125.0,
+              "max_stamina": 120.0,
+              "profiles": {
+                "healer": {
+                  "applied_build": {
+                    "skill_loadout": [
+                      "pulse",
+                      "barrier"
+                    ],
+                    "talents": {
+                      "conduction": 0,
+                      "defense_efficiency": 0,
+                      "mobility": 0,
+                      "pulse_mastery": 0,
+                      "reserve": 0,
+                      "skill_haste": 0,
+                      "stamina_recovery": 0,
+                      "vitality": 0,
+                      "weapon_training": 0
+                    },
+                    "weapon_id": "starter-lightning"
+                  },
+                  "character_id": "healer",
+                  "draft": {
+                    "skill_loadout": [
+                      "pulse",
+                      "barrier"
+                    ],
+                    "talents": {
+                      "conduction": 0,
+                      "defense_efficiency": 0,
+                      "mobility": 0,
+                      "pulse_mastery": 0,
+                      "reserve": 0,
+                      "skill_haste": 0,
+                      "stamina_recovery": 0,
+                      "vitality": 0,
+                      "weapon_training": 0
+                    },
+                    "weapon_id": "starter-lightning"
+                  },
+                  "presets": [
+                    {
+                      "build": null,
+                      "name": ""
+                    },
+                    {
+                      "build": null,
+                      "name": ""
+                    },
+                    {
+                      "build": null,
+                      "name": ""
+                    }
+                  ]
+                },
+                "thief": {
+                  "applied_build": {
+                    "skill_loadout": [
+                      "pulse",
+                      "barrier"
+                    ],
+                    "talents": {
+                      "conduction": 0,
+                      "defense_efficiency": 0,
+                      "mobility": 0,
+                      "pulse_mastery": 0,
+                      "reserve": 0,
+                      "skill_haste": 0,
+                      "stamina_recovery": 0,
+                      "vitality": 0,
+                      "weapon_training": 0
+                    },
+                    "weapon_id": "starter-lightning"
+                  },
+                  "character_id": "thief",
+                  "draft": {
+                    "skill_loadout": [
+                      "pulse",
+                      "barrier"
+                    ],
+                    "talents": {
+                      "conduction": 0,
+                      "defense_efficiency": 0,
+                      "mobility": 0,
+                      "pulse_mastery": 0,
+                      "reserve": 0,
+                      "skill_haste": 0,
+                      "stamina_recovery": 0,
+                      "vitality": 0,
+                      "weapon_training": 0
+                    },
+                    "weapon_id": "starter-lightning"
+                  },
+                  "presets": [
+                    {
+                      "build": null,
+                      "name": ""
+                    },
+                    {
+                      "build": null,
+                      "name": ""
+                    },
+                    {
+                      "build": null,
+                      "name": ""
+                    }
+                  ]
+                }
+              },
+              "realm": 1,
+              "resources": {
+                "alloy": 0,
+                "crystal": 0,
+                "currency": 0,
+                "medkit": 1,
+                "rations": 3,
+                "scrap": 0
+              },
+              "run": 1,
+              "stamina": 120.0
+            }
+          },
+          "event": "failure"
+        }
+      ]
+    },
+    {
+      "relative_path": "runs/official/7d67193e80714deaad264ffac745e8d9",
+      "mode": "official",
+      "run_id": "7d67193e80714deaad264ffac745e8d9",
+      "exit_code": 0,
+      "elapsed_seconds": 58.10123509999903,
+      "post_input_changed": [],
+      "report_exists": true,
+      "stdout_bytes": 15251,
+      "stderr_bytes": 338,
+      "native_owner_null_traps": 0,
+      "finish_lines": [
+        "CHARACTER_PROBE_FINISH {\"completed\":true,\"coverage\":{\"android\":false,\"healer_actual_death\":true,\"healer_switch\":true,\"healer_three_presets\":true,\"pause_freeze\":true,\"physical_gamepad\":false,\"self_heal\":true,\"skill_slot_edit\":false,\"talent_draft_and_apply\":true,\"thief_presets\":false,\"thief_two_runs\":true,\"title_continue_cooldown\":true},\"drawn_frames\":13238,\"elapsed\":55.9590100000116,\"ok\":true,\"stage\":\"done\"}"
+      ],
+      "cpp759_source_mentions": 2,
+      "native_particles_null_errors": 2,
+      "driver_completed": true,
+      "driver_succeeded": true,
+      "driver_coverage": {
+        "android": false,
+        "healer_actual_death": true,
+        "healer_switch": true,
+        "healer_three_presets": true,
+        "pause_freeze": true,
+        "physical_gamepad": false,
+        "self_heal": true,
+        "skill_slot_edit": false,
+        "talent_draft_and_apply": true,
+        "thief_presets": false,
+        "thief_two_runs": true,
+        "title_continue_cooldown": true
+      },
+      "failure_events": []
+    }
+  ],
+  "bug_closed": false,
+  "official_symbols_unsupported": true,
+  "counts_note": "cpp759_source_mentions includes GDB breakpoint descriptions; native_particles_null_errors requires the actual ERROR line."
+}

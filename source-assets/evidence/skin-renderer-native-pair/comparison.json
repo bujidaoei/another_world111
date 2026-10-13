@@ -1,0 +1,58 @@
+{
+  "timestamp_utc": "2026-10-13T02:57:16.157Z",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "device": "RTX4060 Laptop GPU",
+  "renderer": "Forward Mobile",
+  "driver": "Vulkan1.4.312",
+  "scope": "isolated synthetic native GPU lifecycle diagnostics; not full gameplay, bug closure, performance or human/device acceptance",
+  "runs": [
+    {
+      "mode": "skin_tree_lifecycle",
+      "exit_code": 0,
+      "gpu_confirmed": true,
+      "native_error_lines": 0,
+      "script_error_lines": 0,
+      "particles_function_errors": 0,
+      "elapsed": 60.0013810000152,
+      "frames": 14368,
+      "rebuilds": 11,
+      "samples": 84,
+      "generations": 12,
+      "first_skin_binds": [
+        17,
+        0
+      ],
+      "first_skeleton_rids": [
+        2542620639232,
+        0
+      ],
+      "stdout_sha256": "50bcade36ad943090bee9bcbac7350949127f06919a8a88167939c16389f4eb1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_sha256": "b120eedd52418dfb9dad16a6dc16007b6bb9a2770d0117202f12b43a24535556"
+    },
+    {
+      "mode": "skin_unbound_lifecycle",
+      "exit_code": 0,
+      "gpu_confirmed": true,
+      "native_error_lines": 0,
+      "script_error_lines": 0,
+      "particles_function_errors": 0,
+      "elapsed": 60.0041640000238,
+      "frames": 14369,
+      "rebuilds": 11,
+      "samples": 84,
+      "generations": 12,
+      "first_skin_binds": [
+        0,
+        0
+      ],
+      "first_skeleton_rids": [
+        0,
+        0
+      ],
+      "stdout_sha256": "b8a08585c76e90b30050b570bf9c649ec6b82060ba0307fcbc4d9c3b887c833a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_sha256": "f1c6b41fa8bdf3d09ed74c20d8fa6ae9b5b5602d8376df4f562b08392247d74d"
+    }
+  ]
+}

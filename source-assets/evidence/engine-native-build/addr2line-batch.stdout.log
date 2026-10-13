@@ -1,0 +1,8 @@
+RendererRD::ParticlesStorage::particles_get_instance_buffer_motion_vectors_offsets(RID, unsigned int&, unsigned int&)
+D:\bugu_software\ai-game-toolchain\native-debug-ed1daf0bf\src/servers/rendering/renderer_rd/storage_rd/particles_storage.cpp:757
+RendererSceneRenderImplementation::RenderForwardMobile::geometry_instance_free(RenderGeometryInstance*)
+D:\bugu_software\ai-game-toolchain\native-debug-ed1daf0bf\src/servers/rendering/renderer_rd/forward_mobile/render_forward_mobile.cpp:2755
+RendererSceneRenderImplementation::RenderForwardMobile::geometry_instance_create(RID)
+D:\bugu_software\ai-game-toolchain\native-debug-ed1daf0bf\src/servers/rendering/renderer_rd/forward_mobile/render_forward_mobile.cpp:2702
+RendererSceneRenderImplementation::RenderForwardMobile::_geometry_instance_update(RenderGeometryInstance*)
+D:\bugu_software\ai-game-toolchain\native-debug-ed1daf0bf\src/servers/rendering/renderer_rd/forward_mobile/render_forward_mobile.cpp:3063

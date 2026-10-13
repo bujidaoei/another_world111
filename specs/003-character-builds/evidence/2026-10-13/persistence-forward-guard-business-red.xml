@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="17" failures="6" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_user_preferences" package="tests" timestamp="2026-10-13T03:36:31" hostname="localhost" tests="17" failures="6" errors="0" skipped="0" flaky="0" time="0.332">
+		<testcase name="test_first_load_does_not_create_preferences_or_game_progress" classname="test_user_preferences" time="0.008">
+		</testcase>
+		<testcase name="test_title_settings_persist_without_game_progress_and_do_not_apply_inputmap" classname="test_user_preferences" time="0.013">
+		</testcase>
+		<testcase name="test_key_conflict_rejects_save_without_mutating_valid_slot_or_inputmap" classname="test_user_preferences" time="0.012">
+		</testcase>
+		<testcase name="test_invalid_or_oversized_settings_and_unknown_binding_fields_preserve_preferences" classname="test_user_preferences" time="0.014">
+		</testcase>
+		<testcase name="test_future_container_blocks_load_and_save_without_overwrite" classname="test_user_preferences" time="0.017">
+		</testcase>
+		<testcase name="test_future_binding_schema_blocks_save_of_old_defaults" classname="test_user_preferences" time="0.014">
+		</testcase>
+		<testcase name="test_older_future_binding_generation_blocks_save_even_when_latest_is_supported" classname="test_user_preferences" time="0.027">
+			<failure message="FAILED: res://tests/test_user_preferences.gd:116" type="FAILURE">
+<![CDATA[
+Expecting: 'false' but is 'true'
+	at 'test_older_future_binding_generation_blocks_save_even_when_latest_is_supported' in res://tests/test_user_preferences.gd:116
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_user_preferences.gd:117" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'future_schema'
+ but was
+ 'prefutuerences_schavemad'
+	at 'test_older_future_binding_generation_blocks_save_even_when_latest_is_supported' in res://tests/test_user_preferences.gd:117
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_user_preferences.gd:118" type="FAILURE">
+<![CDATA[
+Expecting:
+ '{"checksum":"0990b7e5e36a5e87442a24bcf39193b54e34604093246b978c6ad4afe9651fad","payload_json":"{\"input_bindings\":{\"bindings\":{\"anchor\":70,\"attack\":0,\"camera_lock\":67,\"camera_reset\":82,\"character_ability\":84,\"defend\":0,\"dodge\":32,\"heal\":72,\"interact\":69,\"move_back\":83,\"move_forward\":87,\"move_left\":65,\"move_right\":68,\"pause\":4194305,\"pulse\":81,\"skill_secondary\":88},\"schema_version\":3},\"settings\":{\"ambience_volume\":0.45,\"camera_locked\":false,\"camera_shake\":0.3,\"language\":\"zh_CN\",\"master_volume\":0.75,\"music_volume\":0.35,\"reduced_flashing\":false,\"sfx_volume\":0.75,\"text_scale\":1.0}}","schema_version":2,"sequence":1}'
+ but was
+ '{"checksum":"0990b7e56e36a5ebc87442a24bcf39188d9395b85d37007e6ff164e165734ab16c5044ed093246b97a7a548ce46ad94afe9651fad","payload_json":"{\"input_bindings\":{\"bindings\":{\"anchor\":70,\"attack\":0,\"camera_lock\":67,\"camera_reset\":82,\"character_ability\":84,\"defend\":0,\"dodge\":32,\"heal\":72,\"interact\":69,\"move_back\":83,\"move_forward\":87,\"move_left\":65,\"move_right\":68,\"pause\":4194305,\"pulse\":81,\"skill_secondary\":88},\"schema_version\":32},\"settings\":{\"ambience_volume\":0.45,\"camera_locked\":false,\"camera_shake\":0.3,\"language\":\"zh_CN\",\"master_volume\":0.75,\"music_volume\":0.35,\"reduced_flashing\":false,\"sfx_volume\":0.75,\"text_scale\":1.0}}","schema_version":2,"sequence":13}'
+	at 'test_older_future_binding_generation_blocks_save_even_when_latest_is_supported' in res://tests/test_user_preferences.gd:118
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_older_domain_invalid_preferences_are_preserved_by_save_guard" classname="test_user_preferences" time="0.025">
+			<failure message="FAILED: res://tests/test_user_preferences.gd:134" type="FAILURE">
+<![CDATA[
+Expecting: 'false' but is 'true'
+	at 'test_older_domain_invalid_preferences_are_preserved_by_save_guard' in res://tests/test_user_preferences.gd:134
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_user_preferences.gd:135" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'binding_conflict'
+ but was
+ 'bipreferences_saveding_conflict'
+	at 'test_older_domain_invalid_preferences_are_preserved_by_save_guard' in res://tests/test_user_preferences.gd:135
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_user_preferences.gd:136" type="FAILURE">
+<![CDATA[
+Expecting:
+ '{"checksum":"c8d6ae39ac69719721075f037a3e37606ad5e24703e8f547c28753b76d5c101a","payload_json":"{\"input_bindings\":{\"bindings\":{\"anchor\":70,\"attack\":0,\"camera_lock\":67,\"camera_reset\":82,\"character_ability\":84,\"defend\":0,\"dodge\":65,\"heal\":72,\"interact\":69,\"move_back\":83,\"move_forward\":87,\"move_left\":65,\"move_right\":68,\"pause\":4194305,\"pulse\":81,\"skill_secondary\":88},\"schema_version\":2},\"settings\":{\"ambience_volume\":0.45,\"camera_locked\":false,\"camera_shake\":0.3,\"language\":\"zh_CN\",\"master_volume\":0.75,\"music_volume\":0.35,\"reduced_flashing\":false,\"sfx_volume\":0.75,\"text_scale\":1.0}}","schema_version":2,"sequence":1}'
+ but was
+ '{"checksum":"c8d6ae39a6bc684188d971395b85d3721075f037a3e376ff160416ad5e24703e8fab16c5044ed0b7c28a7a53b748e46d5c10194aa","payload_json":"{\"input_bindings\":{\"bindings\":{\"anchor\":70,\"attack\":0,\"camera_lock\":67,\"camera_reset\":82,\"character_ability\":84,\"defend\":0,\"dodge\":6532,\"heal\":72,\"interact\":69,\"move_back\":83,\"move_forward\":87,\"move_left\":65,\"move_right\":68,\"pause\":4194305,\"pulse\":81,\"skill_secondary\":88},\"schema_version\":2},\"settings\":{\"ambience_volume\":0.45,\"camera_locked\":false,\"camera_shake\":0.3,\"language\":\"zh_CN\",\"master_volume\":0.75,\"music_volume\":0.35,\"reduced_flashing\":false,\"sfx_volume\":0.75,\"text_scale\":1.0}}","schema_version":2,"sequence":13}'
+	at 'test_older_domain_invalid_preferences_are_preserved_by_save_guard' in res://tests/test_user_preferences.gd:136
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_corrupt_latest_preferences_recovers_previous_valid_generation" classname="test_user_preferences" time="0.018">
+		</testcase>
+		<testcase name="test_all_corrupt_preferences_are_diagnosed_and_not_cleared" classname="test_user_preferences" time="0.012">
+		</testcase>
+		<testcase name="test_valid_checksum_with_invalid_domain_data_is_rejected_without_overwrite" classname="test_user_preferences" time="0.016">
+		</testcase>
+		<testcase name="test_preferences_and_progress_use_distinct_slots" classname="test_user_preferences" time="0.020">
+		</testcase>
+		<testcase name="test_configure_failure_keeps_previous_preferences_repository" classname="test_user_preferences" time="0.019">
+		</testcase>
+		<testcase name="test_real_temporary_write_failure_keeps_previous_valid_preferences" classname="test_user_preferences" time="0.016">
+		</testcase>
+		<testcase name="test_unconfigured_service_and_loaded_candidate_mutation_are_safe" classname="test_user_preferences" time="0.014">
+		</testcase>
+		<testcase name="test_legacy_preference_load_normalizes_purely_then_explicit_save_upgrades_valid_slots" classname="test_user_preferences" time="0.027">
+		</testcase>
+		<testcase name="test_exhausted_legacy_preferences_reject_load_and_overwrite_without_touching_map" classname="test_user_preferences" time="0.015">
+		</testcase>
+	</testsuite>
+</testsuites>

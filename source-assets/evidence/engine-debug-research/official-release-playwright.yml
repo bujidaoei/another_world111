@@ -1,0 +1,60 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e9]:
+      - heading "Navigation Menu" [level=2] [ref=e10]
+      - generic [ref=e11]:
+        - link "Homepage" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e16]:
+          - navigation "Global" [ref=e17]
+          - generic [ref=e46]
+  - main [ref=e68]:
+    - generic "Global navigation menu" [ref=e71]:
+      - navigation "Breadcrumbs" [ref=e74]:
+        - list [ref=e75]:
+          - listitem [ref=e76]
+          - listitem [ref=e79]
+      - heading "Repository navigation" [level=2] [ref=e83]
+      - navigation "Repository" [ref=e84]:
+        - list [ref=e85]:
+          - listitem [ref=e86]
+          - listitem [ref=e92]
+          - listitem [ref=e102]
+          - listitem [ref=e111]
+          - listitem [ref=e117]
+          - listitem [ref=e123]
+          - listitem [ref=e129]
+    - generic [ref=e137]:
+      - navigation "Breadcrumb" [ref=e138]:
+        - list [ref=e139]:
+          - listitem [ref=e140]
+          - listitem [ref=e142]
+      - generic [ref=e145]:
+        - generic [ref=e146]:
+          - generic [ref=e147]
+          - generic [ref=e161]
+          - generic [ref=e181]
+        - generic [ref=e201]:
+          - group [ref=e204]
+          - generic [ref=e217]
+  - contentinfo [ref=e239]:
+    - heading "Footer" [level=2] [ref=e240]
+    - generic [ref=e241]:
+      - generic [ref=e242]:
+        - link "GitHub Homepage" [ref=e243] [cursor=pointer]:
+          - /url: https://github.com
+        - generic [ref=e246]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e247]:
+        - heading "Footer navigation" [level=3] [ref=e248]
+        - list "Footer navigation" [ref=e249]:
+          - listitem [ref=e250]
+          - listitem [ref=e252]
+          - listitem [ref=e254]
+          - listitem [ref=e256]
+          - listitem [ref=e258]
+          - listitem [ref=e260]
+          - listitem [ref=e262]
+          - listitem [ref=e264]
+          - listitem [ref=e267]

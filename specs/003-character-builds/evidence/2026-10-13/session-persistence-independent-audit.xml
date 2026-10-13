@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="7" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_session_persistence" package="tests" timestamp="2026-10-13T06:35:49" hostname="localhost" tests="7" failures="0" errors="0" skipped="0" flaky="0" time="2.466">
+		<testcase name="test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds" classname="test_session_persistence" time="0.155">
+		</testcase>
+		<testcase name="test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds" classname="test_session_persistence" time="0.106">
+		</testcase>
+		<testcase name="test_already_running_session_preserves_external_future_domain_slot_on_next_save" classname="test_session_persistence" time="0.102">
+		</testcase>
+		<testcase name="test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry" classname="test_session_persistence" time="0.143">
+		</testcase>
+		<testcase name="test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards" classname="test_session_persistence" time="0.113">
+		</testcase>
+		<testcase name="test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity" classname="test_session_persistence" time="0.168">
+		</testcase>
+		<testcase name="test_failed_quit_survives_real_write_fault_and_cancel_restores_menu_in_child_process" classname="test_session_persistence" time="1.651">
+		</testcase>
+	</testsuite>
+</testsuites>

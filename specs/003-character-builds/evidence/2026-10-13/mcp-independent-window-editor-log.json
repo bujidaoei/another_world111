@@ -1,0 +1,487 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"source\":\"editor\",\"lines\":[{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":96,\"path\":\"res://config/character_builds_config.gd\",\"text\":\"INCOMPATIBLE_TERNARY\"},{\"label\":\"<GDScript 源文件>\",\"line\":96,\"path\":\"res://config/character_builds_config.gd\",\"text\":\"character_builds_config.gd:96 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: Values of the ternary operator are not mutually compatible.\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":96,\"path\":\"res://config/character_builds_config.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":96,\"path\":\"res://config/character_builds_config.gd\"},\"time\":\"0:00:00:930\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":96,\"path\":\"res://config/character_builds_config.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: Values of the ternary operator are not mutually compatible.\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":152,\"path\":\"res://presentation/character_animator.gd\",\"text\":\"SHADOWED_VARIABLE_BASE_CLASS\"},{\"label\":\"<GDScript 源文件>\",\"line\":152,\"path\":\"res://presentation/character_animator.gd\",\"text\":\"character_animator.gd:152 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: The local function parameter \\\"name\\\" is shadowing an already-declared property in the base class \\\"Node\\\".\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":152,\"path\":\"res://presentation/character_animator.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":152,\"path\":\"res://presentation/character_animator.gd\"},\"time\":\"0:00:01:024\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":152,\"path\":\"res://presentation/character_animator.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: The local function parameter \\\"name\\\" is shadowing an already-declared property in the base class \\\"Node\\\".\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":152,\"path\":\"res://presentation/player_controller.gd\",\"text\":\"SHADOWED_VARIABLE_BASE_CLASS\"},{\"label\":\"<GDScript 源文件>\",\"line\":152,\"path\":\"res://presentation/player_controller.gd\",\"text\":\"player_controller.gd:152 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: The local variable \\\"position\\\" is shadowing an already-declared property in the base class \\\"Node3D\\\".\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":152,\"path\":\"res://presentation/player_controller.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":152,\"path\":\"res://presentation/player_controller.gd\"},\"time\":\"0:00:01:026\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":152,\"path\":\"res://presentation/player_controller.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: The local variable \\\"position\\\" is shadowing an already-declared property in the base class \\\"Node3D\\\".\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":282,\"path\":\"res://presentation/world_builder.gd\",\"text\":\"SHADOWED_VARIABLE_BASE_CLASS\"},{\"label\":\"<GDScript 源文件>\",\"line\":282,\"path\":\"res://presentation/world_builder.gd\",\"text\":\"world_builder.gd:282 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: The local variable \\\"basis\\\" is shadowing an already-declared property in the base class \\\"Node3D\\\".\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":282,\"path\":\"res://presentation/world_builder.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":282,\"path\":\"res://presentation/world_builder.gd\"},\"time\":\"0:00:01:038\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":282,\"path\":\"res://presentation/world_builder.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: The local variable \\\"basis\\\" is shadowing an already-declared property in the base class \\\"Node3D\\\".\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":388,\"path\":\"res://presentation/world_builder.gd\",\"text\":\"SHADOWED_VARIABLE_BASE_CLASS\"},{\"label\":\"<GDScript 源文件>\",\"line\":388,\"path\":\"res://presentation/world_builder.gd\",\"text\":\"world_builder.gd:388 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: The local variable \\\"position\\\" is shadowing an already-declared property in the base class \\\"Node3D\\\".\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":388,\"path\":\"res://presentation/world_builder.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":388,\"path\":\"res://presentation/world_builder.gd\"},\"time\":\"0:00:01:038\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":388,\"path\":\"res://presentation/world_builder.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: The local variable \\\"position\\\" is shadowing an already-declared property in the base class \\\"Node3D\\\".\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":378,\"path\":\"res://presentation/game_session.gd\",\"text\":\"SHADOWED_VARIABLE_BASE_CLASS\"},{\"label\":\"<GDScript 源文件>\",\"line\":378,\"path\":\"res://presentation/game_session.gd\",\"text\":\"game_session.gd:378 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: The local variable \\\"owner\\\" is shadowing an already-declared property in the base class \\\"Node\\\".\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":378,\"path\":\"res://presentation/game_session.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":378,\"path\":\"res://presentation/game_session.gd\"},\"time\":\"0:00:01:046\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":378,\"path\":\"res://presentation/game_session.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: The local variable \\\"owner\\\" is shadowing an already-declared property in the base class \\\"Node\\\".\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":339,\"path\":\"res://tests/runtime/input_playtest_driver.gd\",\"text\":\"INT_AS_ENUM_WITHOUT_CAST\"},{\"label\":\"<GDScript 源文件>\",\"line\":339,\"path\":\"res://tests/runtime/input_playtest_driver.gd\",\"text\":\"input_playtest_driver.gd:339 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \\\"as\\\" keyword.\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":339,\"path\":\"res://tests/runtime/input_playtest_driver.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":339,\"path\":\"res://tests/runtime/input_playtest_driver.gd\"},\"time\":\"0:00:14:887\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":339,\"path\":\"res://tests/runtime/input_playtest_driver.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \\\"as\\\" keyword.\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":340,\"path\":\"res://tests/runtime/input_playtest_driver.gd\",\"text\":\"INT_AS_ENUM_WITHOUT_CAST\"},{\"label\":\"<GDScript 源文件>\",\"line\":340,\"path\":\"res://tests/runtime/input_playtest_driver.gd\",\"text\":\"input_playtest_driver.gd:340 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \\\"as\\\" keyword.\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":340,\"path\":\"res://tests/runtime/input_playtest_driver.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":340,\"path\":\"res://tests/runtime/input_playtest_driver.gd\"},\"time\":\"0:00:14:887\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":340,\"path\":\"res://tests/runtime/input_playtest_driver.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \\\"as\\\" keyword.\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":353,\"path\":\"res://tests/runtime/input_playtest_driver.gd\",\"text\":\"INT_AS_ENUM_WITHOUT_CAST\"},{\"label\":\"<GDScript 源文件>\",\"line\":353,\"path\":\"res://tests/runtime/input_playtest_driver.gd\",\"text\":\"input_playtest_driver.gd:353 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \\\"as\\\" keyword.\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":353,\"path\":\"res://tests/runtime/input_playtest_driver.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":353,\"path\":\"res://tests/runtime/input_playtest_driver.gd\"},\"time\":\"0:00:14:887\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":353,\"path\":\"res://tests/runtime/input_playtest_driver.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \\\"as\\\" keyword.\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":417,\"path\":\"res://tests/runtime/character_playtest_driver.gd\",\"text\":\"SHADOWED_VARIABLE_BASE_CLASS\"},{\"label\":\"<GDScript 源文件>\",\"line\":417,\"path\":\"res://tests/runtime/character_playtest_driver.gd\",\"text\":\"character_playtest_driver.gd:417 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: The local function parameter \\\"name\\\" is shadowing an already-declared property in the base class \\\"Node\\\".\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":417,\"path\":\"res://tests/runtime/character_playtest_driver.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":417,\"path\":\"res://tests/runtime/character_playtest_driver.gd\"},\"time\":\"0:00:14:892\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":417,\"path\":\"res://tests/runtime/character_playtest_driver.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: The local function parameter \\\"name\\\" is shadowing an already-declared property in the base class \\\"Node\\\".\"},{\"details\":{\"children\":[{\"label\":\"<GDScript 错误>\",\"line\":420,\"path\":\"res://tests/runtime/character_playtest_driver.gd\",\"text\":\"SHADOWED_VARIABLE_BASE_CLASS\"},{\"label\":\"<GDScript 源文件>\",\"line\":420,\"path\":\"res://tests/runtime/character_playtest_driver.gd\",\"text\":\"character_playtest_driver.gd:420 @ GDScript::reload()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"warning\",\"frames\":[],\"message\":\"GDScript::reload: The local function parameter \\\"name\\\" is shadowing an already-declared property in the base class \\\"Node\\\".\",\"resolved\":{\"function\":\"GDScript::reload\",\"line\":420,\"path\":\"res://tests/runtime/character_playtest_driver.gd\"},\"source\":{\"function\":\"GDScript::reload\",\"line\":420,\"path\":\"res://tests/runtime/character_playtest_driver.gd\"},\"time\":\"0:00:14:892\"},\"function\":\"GDScript::reload\",\"level\":\"warn\",\"line\":420,\"path\":\"res://tests/runtime/character_playtest_driver.gd\",\"source\":\"editor\",\"text\":\"GDScript::reload: The local function parameter \\\"name\\\" is shadowing an already-declared property in the base class \\\"Node\\\".\"},{\"details\":{\"children\":[{\"label\":\"<C++ 源文件>\",\"line\":0,\"path\":\"\",\"text\":\"servers/rendering/renderer_rd/storage_rd/particles_storage.cpp:759 @ particles_get_instance_buffer_motion_vectors_offsets()\"}],\"debugger_tab\":\"Errors\",\"error_type_name\":\"error\",\"frames\":[],\"message\":\"particles_get_instance_buffer_motion_vectors_offsets: Parameter \\\"particles\\\" is null.\",\"resolved\":{\"function\":\"particles_get_instance_buffer_motion_vectors_offsets\",\"line\":0,\"path\":\"\"},\"source\":{\"function\":\"particles_get_instance_buffer_motion_vectors_offsets\",\"line\":0,\"path\":\"\"},\"time\":\"0:00:46:497\"},\"function\":\"particles_get_instance_buffer_motion_vectors_offsets\",\"level\":\"error\",\"line\":0,\"path\":\"\",\"source\":\"editor\",\"text\":\"particles_get_instance_buffer_motion_vectors_offsets: Parameter \\\"particles\\\" is null.\"}],\"total_count\":12,\"returned_count\":12,\"offset\":0,\"limit\":100,\"has_more\":false,\"run_id\":\"\",\"is_running\":false,\"dropped_count\":0,\"stale_run_id\":false,\"next_cursor\":0,\"appended_total\":0}"
+    }
+  ],
+  "structuredContent": {
+    "source": "editor",
+    "lines": [
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 96,
+              "path": "res://config/character_builds_config.gd",
+              "text": "INCOMPATIBLE_TERNARY"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 96,
+              "path": "res://config/character_builds_config.gd",
+              "text": "character_builds_config.gd:96 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: Values of the ternary operator are not mutually compatible.",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 96,
+            "path": "res://config/character_builds_config.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 96,
+            "path": "res://config/character_builds_config.gd"
+          },
+          "time": "0:00:00:930"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 96,
+        "path": "res://config/character_builds_config.gd",
+        "source": "editor",
+        "text": "GDScript::reload: Values of the ternary operator are not mutually compatible."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 152,
+              "path": "res://presentation/character_animator.gd",
+              "text": "SHADOWED_VARIABLE_BASE_CLASS"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 152,
+              "path": "res://presentation/character_animator.gd",
+              "text": "character_animator.gd:152 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: The local function parameter \"name\" is shadowing an already-declared property in the base class \"Node\".",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 152,
+            "path": "res://presentation/character_animator.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 152,
+            "path": "res://presentation/character_animator.gd"
+          },
+          "time": "0:00:01:024"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 152,
+        "path": "res://presentation/character_animator.gd",
+        "source": "editor",
+        "text": "GDScript::reload: The local function parameter \"name\" is shadowing an already-declared property in the base class \"Node\"."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 152,
+              "path": "res://presentation/player_controller.gd",
+              "text": "SHADOWED_VARIABLE_BASE_CLASS"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 152,
+              "path": "res://presentation/player_controller.gd",
+              "text": "player_controller.gd:152 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: The local variable \"position\" is shadowing an already-declared property in the base class \"Node3D\".",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 152,
+            "path": "res://presentation/player_controller.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 152,
+            "path": "res://presentation/player_controller.gd"
+          },
+          "time": "0:00:01:026"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 152,
+        "path": "res://presentation/player_controller.gd",
+        "source": "editor",
+        "text": "GDScript::reload: The local variable \"position\" is shadowing an already-declared property in the base class \"Node3D\"."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 282,
+              "path": "res://presentation/world_builder.gd",
+              "text": "SHADOWED_VARIABLE_BASE_CLASS"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 282,
+              "path": "res://presentation/world_builder.gd",
+              "text": "world_builder.gd:282 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: The local variable \"basis\" is shadowing an already-declared property in the base class \"Node3D\".",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 282,
+            "path": "res://presentation/world_builder.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 282,
+            "path": "res://presentation/world_builder.gd"
+          },
+          "time": "0:00:01:038"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 282,
+        "path": "res://presentation/world_builder.gd",
+        "source": "editor",
+        "text": "GDScript::reload: The local variable \"basis\" is shadowing an already-declared property in the base class \"Node3D\"."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 388,
+              "path": "res://presentation/world_builder.gd",
+              "text": "SHADOWED_VARIABLE_BASE_CLASS"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 388,
+              "path": "res://presentation/world_builder.gd",
+              "text": "world_builder.gd:388 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: The local variable \"position\" is shadowing an already-declared property in the base class \"Node3D\".",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 388,
+            "path": "res://presentation/world_builder.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 388,
+            "path": "res://presentation/world_builder.gd"
+          },
+          "time": "0:00:01:038"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 388,
+        "path": "res://presentation/world_builder.gd",
+        "source": "editor",
+        "text": "GDScript::reload: The local variable \"position\" is shadowing an already-declared property in the base class \"Node3D\"."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 378,
+              "path": "res://presentation/game_session.gd",
+              "text": "SHADOWED_VARIABLE_BASE_CLASS"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 378,
+              "path": "res://presentation/game_session.gd",
+              "text": "game_session.gd:378 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: The local variable \"owner\" is shadowing an already-declared property in the base class \"Node\".",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 378,
+            "path": "res://presentation/game_session.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 378,
+            "path": "res://presentation/game_session.gd"
+          },
+          "time": "0:00:01:046"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 378,
+        "path": "res://presentation/game_session.gd",
+        "source": "editor",
+        "text": "GDScript::reload: The local variable \"owner\" is shadowing an already-declared property in the base class \"Node\"."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 339,
+              "path": "res://tests/runtime/input_playtest_driver.gd",
+              "text": "INT_AS_ENUM_WITHOUT_CAST"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 339,
+              "path": "res://tests/runtime/input_playtest_driver.gd",
+              "text": "input_playtest_driver.gd:339 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \"as\" keyword.",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 339,
+            "path": "res://tests/runtime/input_playtest_driver.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 339,
+            "path": "res://tests/runtime/input_playtest_driver.gd"
+          },
+          "time": "0:00:14:887"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 339,
+        "path": "res://tests/runtime/input_playtest_driver.gd",
+        "source": "editor",
+        "text": "GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \"as\" keyword."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 340,
+              "path": "res://tests/runtime/input_playtest_driver.gd",
+              "text": "INT_AS_ENUM_WITHOUT_CAST"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 340,
+              "path": "res://tests/runtime/input_playtest_driver.gd",
+              "text": "input_playtest_driver.gd:340 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \"as\" keyword.",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 340,
+            "path": "res://tests/runtime/input_playtest_driver.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 340,
+            "path": "res://tests/runtime/input_playtest_driver.gd"
+          },
+          "time": "0:00:14:887"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 340,
+        "path": "res://tests/runtime/input_playtest_driver.gd",
+        "source": "editor",
+        "text": "GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \"as\" keyword."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 353,
+              "path": "res://tests/runtime/input_playtest_driver.gd",
+              "text": "INT_AS_ENUM_WITHOUT_CAST"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 353,
+              "path": "res://tests/runtime/input_playtest_driver.gd",
+              "text": "input_playtest_driver.gd:353 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \"as\" keyword.",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 353,
+            "path": "res://tests/runtime/input_playtest_driver.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 353,
+            "path": "res://tests/runtime/input_playtest_driver.gd"
+          },
+          "time": "0:00:14:887"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 353,
+        "path": "res://tests/runtime/input_playtest_driver.gd",
+        "source": "editor",
+        "text": "GDScript::reload: Integer used when an enum value is expected. If this is intended, cast the integer to the enum type using the \"as\" keyword."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 417,
+              "path": "res://tests/runtime/character_playtest_driver.gd",
+              "text": "SHADOWED_VARIABLE_BASE_CLASS"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 417,
+              "path": "res://tests/runtime/character_playtest_driver.gd",
+              "text": "character_playtest_driver.gd:417 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: The local function parameter \"name\" is shadowing an already-declared property in the base class \"Node\".",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 417,
+            "path": "res://tests/runtime/character_playtest_driver.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 417,
+            "path": "res://tests/runtime/character_playtest_driver.gd"
+          },
+          "time": "0:00:14:892"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 417,
+        "path": "res://tests/runtime/character_playtest_driver.gd",
+        "source": "editor",
+        "text": "GDScript::reload: The local function parameter \"name\" is shadowing an already-declared property in the base class \"Node\"."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<GDScript 错误>",
+              "line": 420,
+              "path": "res://tests/runtime/character_playtest_driver.gd",
+              "text": "SHADOWED_VARIABLE_BASE_CLASS"
+            },
+            {
+              "label": "<GDScript 源文件>",
+              "line": 420,
+              "path": "res://tests/runtime/character_playtest_driver.gd",
+              "text": "character_playtest_driver.gd:420 @ GDScript::reload()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "warning",
+          "frames": [],
+          "message": "GDScript::reload: The local function parameter \"name\" is shadowing an already-declared property in the base class \"Node\".",
+          "resolved": {
+            "function": "GDScript::reload",
+            "line": 420,
+            "path": "res://tests/runtime/character_playtest_driver.gd"
+          },
+          "source": {
+            "function": "GDScript::reload",
+            "line": 420,
+            "path": "res://tests/runtime/character_playtest_driver.gd"
+          },
+          "time": "0:00:14:892"
+        },
+        "function": "GDScript::reload",
+        "level": "warn",
+        "line": 420,
+        "path": "res://tests/runtime/character_playtest_driver.gd",
+        "source": "editor",
+        "text": "GDScript::reload: The local function parameter \"name\" is shadowing an already-declared property in the base class \"Node\"."
+      },
+      {
+        "details": {
+          "children": [
+            {
+              "label": "<C++ 源文件>",
+              "line": 0,
+              "path": "",
+              "text": "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp:759 @ particles_get_instance_buffer_motion_vectors_offsets()"
+            }
+          ],
+          "debugger_tab": "Errors",
+          "error_type_name": "error",
+          "frames": [],
+          "message": "particles_get_instance_buffer_motion_vectors_offsets: Parameter \"particles\" is null.",
+          "resolved": {
+            "function": "particles_get_instance_buffer_motion_vectors_offsets",
+            "line": 0,
+            "path": ""
+          },
+          "source": {
+            "function": "particles_get_instance_buffer_motion_vectors_offsets",
+            "line": 0,
+            "path": ""
+          },
+          "time": "0:00:46:497"
+        },
+        "function": "particles_get_instance_buffer_motion_vectors_offsets",
+        "level": "error",
+        "line": 0,
+        "path": "",
+        "source": "editor",
+        "text": "particles_get_instance_buffer_motion_vectors_offsets: Parameter \"particles\" is null."
+      }
+    ],
+    "total_count": 12,
+    "returned_count": 12,
+    "offset": 0,
+    "limit": 100,
+    "has_more": false,
+    "run_id": "",
+    "is_running": false,
+    "dropped_count": 0,
+    "stale_run_id": false,
+    "next_cursor": 0,
+    "appended_total": 0
+  },
+  "isError": false
+}

@@ -13,9 +13,11 @@
     "dependencies": [],
     "test": "TEST-201",
     "criterion": "实际激活/脚本/文档关联和语义审查一致",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（规划激活局部门槛）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/activation.md"
+    ]
   },
   {
     "id": "TASK-202",
@@ -37,9 +39,11 @@
     ],
     "test": "TEST-202",
     "criterion": "真实配置和非法交叉引用非零测试",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务独立自动化门槛；功能整体验收另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-core.md"
+    ]
   },
   {
     "id": "TASK-203",
@@ -61,9 +65,11 @@
     ],
     "test": "TEST-203",
     "criterion": "结构/资格/深复制与派生值实际可用",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务独立自动化门槛；功能整体验收另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-core.md"
+    ]
   },
   {
     "id": "TASK-204",
@@ -85,9 +91,11 @@
     ],
     "test": "TEST-204",
     "criterion": "可执行业务red证据，不能用解析失败代替",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务独立自动化门槛；功能整体验收另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/combat-input-migration.md"
+    ]
   },
   {
     "id": "TASK-205",
@@ -110,9 +118,12 @@
     ],
     "test": "TEST-204",
     "criterion": "共享计时/效果/恢复/快照边界通过",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务独立自动化门槛；功能整体验收另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/combat-input-migration.md",
+      "evidence/2026-10-13/build-core.md"
+    ]
   },
   {
     "id": "TASK-206",
@@ -131,9 +142,12 @@
     ],
     "test": "TEST-203",
     "criterion": "两角色真实切换、Ended守卫与比例守恒",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务规则/主场景独立技术门槛；完整PC/发布/设备另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-session.md",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-207",
@@ -151,9 +165,13 @@
     ],
     "test": "TEST-205",
     "criterion": "真实怪币整数/余数/pending/失败/重复守恒",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务规则/主场景独立技术门槛；完整PC/发布/设备另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/expedition-bonus.md",
+      "evidence/2026-10-13/build-session.md",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-208",
@@ -172,9 +190,12 @@
     ],
     "test": "TEST-204",
     "criterion": "自疗与物品共享恢复，消费/效果/冷却同存",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务规则/主场景独立技术门槛；完整PC/发布/设备另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-session.md",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-209",
@@ -197,9 +218,12 @@
     ],
     "test": "TEST-210",
     "criterion": "真实PC角色金币/治疗/成败/重载证据，不造奖励",
-    "status": "未实施/未验收",
+    "status": "已执行部分真实PC输入，NativeERROR及剩余覆盖开放",
     "done": false,
-    "evidence": []
+    "evidence": [
+      "evidence/2026-10-13/main-integration.md",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-210",
@@ -219,9 +243,11 @@
     ],
     "test": "TEST-203",
     "criterion": "预算/草稿/节点/100次属性来回边界非零",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务独立自动化门槛；功能整体验收另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-core.md"
+    ]
   },
   {
     "id": "TASK-211",
@@ -242,9 +268,13 @@
     ],
     "test": "TEST-203",
     "criterion": "九节点属性有界重算与两阶段确认真实通过",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务规则/主场景独立技术门槛；完整PC/发布/设备另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-core.md",
+      "evidence/2026-10-13/build-session.md",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-212",
@@ -262,9 +292,13 @@
     ],
     "test": "TEST-209",
     "criterion": "随时编辑不影响生效，场外拒应用可见",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务规则/主场景独立技术门槛；完整PC/发布/设备另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-controller-text-input.md",
+      "evidence/2026-10-13/build-session.md",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-213",
@@ -284,9 +318,11 @@
     ],
     "test": "TEST-206",
     "criterion": "六槽/空槽/实例多引用/材料保护真实测试",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务独立自动化门槛；功能整体验收另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-core.md"
+    ]
   },
   {
     "id": "TASK-214",
@@ -306,9 +342,13 @@
     ],
     "test": "TEST-206",
     "criterion": "预设深复制/引用失效/完整应用和历史守恒",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务规则/主场景独立技术门槛；完整PC/发布/设备另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-core.md",
+      "evidence/2026-10-13/build-session.md",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-215",
@@ -327,9 +367,12 @@
     ],
     "test": "TEST-204",
     "criterion": "屏障真实受击吸收和focus真实武器增益",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务规则/主场景独立技术门槛；完整PC/发布/设备另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-session.md",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-216",
@@ -349,9 +392,11 @@
     ],
     "test": "TEST-209",
     "criterion": "旧自定义键保留、冲突纯迁移和三输入意图",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务独立自动化门槛；功能整体验收另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/combat-input-migration.md"
+    ]
   },
   {
     "id": "TASK-217",
@@ -367,7 +412,7 @@
       "AC-209",
       "AC-213"
     ],
-    "path": "game/tests/test_build_presentation.gd",
+    "path": "game/tests/test_build_session.gd",
     "dependencies": [
       "TASK-212",
       "TASK-214",
@@ -376,9 +421,13 @@
     ],
     "test": "TEST-209",
     "criterion": "两逻辑视口真实滚轮/焦点/GUI消费与提示",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务规则/主场景独立技术门槛；完整PC/发布/设备另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-controller-text-input.md",
+      "evidence/2026-10-13/build-session.md",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-218",
@@ -396,9 +445,11 @@
     ],
     "test": "TEST-207",
     "criterion": "所有阈值/阶段/装配条件和阶段上限边界",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务独立自动化门槛；功能整体验收另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-core.md"
+    ]
   },
   {
     "id": "TASK-219",
@@ -416,9 +467,14 @@
     ],
     "test": "TEST-207",
     "criterion": "两共鸣真实范围/容量，不能提前高阶",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（真实主场景14/14含两共鸣物理/受击对照，严格全量225通过；完整PC另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/build-core.md",
+      "evidence/2026-10-13/integration-status.md",
+      "evidence/2026-10-13/build-session-resonance.md",
+      "evidence/2026-10-13/gdunit-unified-225-summary.json"
+    ]
   },
   {
     "id": "TASK-220",
@@ -440,9 +496,11 @@
     ],
     "test": "TEST-208",
     "criterion": "旧v2真实副本、未来/部分域、幂等与冷却恢复",
-    "status": "未实施/未验收",
-    "done": false,
-    "evidence": []
+    "status": "已验收（该任务独立自动化门槛；功能整体验收另列）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/combat-input-migration.md"
+    ]
   },
   {
     "id": "TASK-221",
@@ -465,9 +523,14 @@
     ],
     "test": "TEST-208",
     "criterion": "纯迁移/全候选预检/保有效槽/真实退出重启",
-    "status": "未实施/未验收",
+    "status": "既有迁移/真实重启已验收；CR-003-03新增锁内守卫/保存失败转换正在真实故障与全量回归",
     "done": false,
-    "evidence": []
+    "evidence": [
+      "evidence/2026-10-13/combat-input-migration.md",
+      "evidence/2026-10-13/build-session.md",
+      "evidence/2026-10-13/actual-process-restart-cooldown.json",
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-222",
@@ -483,9 +546,11 @@
     ],
     "test": "TEST-211",
     "criterion": "两角色原创源/采用对应、实际游戏内审查",
-    "status": "未实施/未验收",
+    "status": "原创源/GLB/动作/局部Avatar验证已交付，最终游戏内品质未验收",
     "done": false,
-    "evidence": []
+    "evidence": [
+      "evidence/2026-10-13/integration-status.md"
+    ]
   },
   {
     "id": "TASK-223",
@@ -527,9 +592,11 @@
     ],
     "test": "TEST-210",
     "criterion": "全量非零/无原生ERROR、PC构建/发布资源/测量真实",
-    "status": "未实施/未验收",
+    "status": "严格225/225通过，003构建/可比性能与原生错误收敛未验收",
     "done": false,
-    "evidence": []
+    "evidence": [
+      "evidence/2026-10-13/regression-and-build.md"
+    ]
   },
   {
     "id": "TASK-224",

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="6" failures="21" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_rebinding_transition" package="tests" timestamp="2026-10-13T06:38:11" hostname="localhost" tests="6" failures="21" errors="0" skipped="0" flaky="0" time="0.954">
+		<testcase name="test_failed_quit_layer_receives_navigation_and_enter_before_rebinding_capture" classname="test_rebinding_transition" time="0.222">
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:136" type="FAILURE">
+<![CDATA[
+Expecting:
+ <Button>
+ to refer to the same object
+ <Button>
+	at 'test_failed_quit_layer_receives_navigation_and_enter_before_rebinding_capture' in res://tests/test_rebinding_transition.gd:136
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:141" type="FAILURE">
+<![CDATA[
+Expecting:
+ must be empty but was
+ 'quit'
+	at 'test_failed_quit_layer_receives_navigation_and_enter_before_rebinding_capture' in res://tests/test_rebinding_transition.gd:141
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:142" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'settings'
+ but was
+ 'savett_faingslure'
+	at 'test_failed_quit_layer_receives_navigation_and_enter_before_rebinding_capture' in res://tests/test_rebinding_transition.gd:142
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:145" type="FAILURE">
+<![CDATA[
+Expecting:
+ must be empty but was
+ '[{ "content": @VBoxContainer@24:<VBoxContainer#156531427240>, "visible": true, "content_visible": true, "scroll": 0, "focus": <WeakRef#-9223371823666688202> }]'
+	at 'test_failed_quit_layer_receives_navigation_and_enter_before_rebinding_capture' in res://tests/test_rebinding_transition.gd:145
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer" classname="test_rebinding_transition" time="0.129">
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:162" type="FAILURE">
+<![CDATA[
+Expecting:
+ must be empty but was
+ 'quit'
+	at 'test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer' in res://tests/test_rebinding_transition.gd:162
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:163" type="FAILURE">
+<![CDATA[
+Expecting:
+ <VBoxContainer>
+ to refer to the same object
+ <VBoxContainer>
+	at 'test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer' in res://tests/test_rebinding_transition.gd:163
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:164" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'move_forward'
+ but was
+ 'move_forward'
+	at 'test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer' in res://tests/test_rebinding_transition.gd:164
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:165" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'settings'
+ but was
+ 'savett_faingslure'
+	at 'test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer' in res://tests/test_rebinding_transition.gd:165
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:166" type="FAILURE">
+<![CDATA[
+Expecting:
+ must be empty but was
+ '[{ "content": @VBoxContainer@351:<VBoxContainer#220200961927>, "visible": true, "content_visible": true, "scroll": 0, "focus": <WeakRef#-9223371764627664972> }]'
+	at 'test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer' in res://tests/test_rebinding_transition.gd:166
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_normal_main_build_preset_text_and_talent_submission_reach_native_controls" classname="test_rebinding_transition" time="0.181">
+		</testcase>
+		<testcase name="test_synthetic_pad_pause_cancels_capture_before_gameplay_or_next_menu" classname="test_rebinding_transition" time="0.138">
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:218" type="FAILURE">
+<![CDATA[
+Expecting:
+ must be empty but was
+ 'move_forward'
+	at 'test_synthetic_pad_pause_cancels_capture_before_gameplay_or_next_menu' in res://tests/test_rebinding_transition.gd:218
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:231" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'X'
+ but was
+ 'X'
+	at 'test_synthetic_pad_pause_cancels_capture_before_gameplay_or_next_menu' in res://tests/test_rebinding_transition.gd:231
+	at '_settle_gui' in res://tests/test_rebinding_transition.gd:90
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write" classname="test_rebinding_transition" time="0.134">
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:253" type="FAILURE">
+<![CDATA[
+Expecting: 'true' but is 'false'
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:253
+	at 'test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:234
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:257" type="FAILURE">
+<![CDATA[
+Expecting: push_error() is called.
+	expected: '{"code":"io_error","module":"preferences","operation":"save"}'
+	current: 'no errors'
+
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:257
+	at 'test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:234
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:258" type="FAILURE">
+<![CDATA[
+Expecting: 'true' but is 'false'
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:258
+	at 'test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:234
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:259" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'title'
+ but was
+ 'title'
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:259
+	at 'test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:234
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:260" type="FAILURE">
+<![CDATA[
+Expecting: 'true' but is 'false'
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:260
+	at 'test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:234
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write" classname="test_rebinding_transition" time="0.129">
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:253" type="FAILURE">
+<![CDATA[
+Expecting: 'true' but is 'false'
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:253
+	at 'test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:237
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:257" type="FAILURE">
+<![CDATA[
+Expecting: push_error() is called.
+	expected: '{"code":"io_error","module":"preferences","operation":"save"}'
+	current: 'no errors'
+
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:257
+	at 'test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:237
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:258" type="FAILURE">
+<![CDATA[
+Expecting: 'true' but is 'false'
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:258
+	at 'test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:237
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:259" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'title'
+ but was
+ 'title'
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:259
+	at 'test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:237
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_rebinding_transition.gd:260" type="FAILURE">
+<![CDATA[
+Expecting: 'true' but is 'false'
+	at '_verify_preferences_failure' in res://tests/test_rebinding_transition.gd:260
+	at 'test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write' in res://tests/test_rebinding_transition.gd:237
+	at 'after_test' in res://tests/test_rebinding_transition.gd:36
+]]>
+			</failure>
+		</testcase>
+	</testsuite>
+</testsuites>

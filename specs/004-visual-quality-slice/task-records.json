@@ -1,0 +1,374 @@
+[
+  {
+    "id": "TASK-301",
+    "requirements": [
+      "REQ-301",
+      "NFR-301",
+      "NFR-303"
+    ],
+    "acceptance": [
+      "AC-301",
+      "AC-308",
+      "AC-310"
+    ],
+    "path": "specs/004-visual-quality-slice/spec.md",
+    "dependencies": [],
+    "test": "TEST-301",
+    "criterion": "实际Spec Kit激活、研究/原创边界、完整规划和独立审查一致",
+    "status": "已验收（规划激活与独立语义审查局部门槛）",
+    "done": true,
+    "evidence": [
+      "evidence/2026-10-13/activation-and-review.json",
+      "evidence/2026-10-13/document-validation.json"
+    ]
+  },
+  {
+    "id": "TASK-302",
+    "requirements": [
+      "REQ-301",
+      "REQ-302",
+      "REQ-303",
+      "REQ-304"
+    ],
+    "acceptance": [
+      "AC-301",
+      "AC-302",
+      "AC-303",
+      "AC-304"
+    ],
+    "path": "source-assets/quality-slice/art-direction.md",
+    "dependencies": [
+      "TASK-301"
+    ],
+    "test": "TEST-302",
+    "criterion": "代表视觉合同与家族manifest明确，实际概念/原型观察后采用",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-303",
+    "requirements": [
+      "REQ-307",
+      "NFR-301"
+    ],
+    "acceptance": [
+      "AC-307",
+      "AC-308"
+    ],
+    "path": "source-assets/engine-native-runtime.md",
+    "dependencies": [
+      "TASK-301"
+    ],
+    "test": "TEST-303",
+    "criterion": "cpp759真实owner生命周期根因、修复、同完整流程和重建错误0",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-304",
+    "requirements": [
+      "REQ-303",
+      "NFR-301"
+    ],
+    "acceptance": [
+      "AC-303",
+      "AC-308"
+    ],
+    "path": "source-assets/quality-slice/materials/",
+    "dependencies": [
+      "TASK-302"
+    ],
+    "test": "TEST-304",
+    "criterion": "五材料类原源/UV/maps/hash及近中玩法样区实际验证",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-305",
+    "requirements": [
+      "REQ-302",
+      "REQ-303",
+      "NFR-301"
+    ],
+    "acceptance": [
+      "AC-302",
+      "AC-303",
+      "AC-308"
+    ],
+    "path": "source-assets/quality-slice/scripts/environment_factory.py",
+    "dependencies": [
+      "TASK-317"
+    ],
+    "test": "TEST-305",
+    "criterion": "四铺装变体/排水/源与GLB及几何map审计、实际尺度接地",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-306",
+    "requirements": [
+      "REQ-301",
+      "REQ-302",
+      "REQ-303",
+      "NFR-301"
+    ],
+    "acceptance": [
+      "AC-301",
+      "AC-302",
+      "AC-303",
+      "AC-308"
+    ],
+    "path": "source-assets/quality-slice/scripts/environment_factory.py",
+    "dependencies": [
+      "TASK-317"
+    ],
+    "test": "TEST-306",
+    "criterion": "代表立面/屋顶/检修/植物三级层次、原创源/GLB/真实预览",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-307",
+    "requirements": [
+      "REQ-302",
+      "REQ-303",
+      "NFR-304"
+    ],
+    "acceptance": [
+      "AC-302",
+      "AC-303",
+      "AC-311"
+    ],
+    "path": "game/presentation/world_builder.gd",
+    "dependencies": [
+      "TASK-305",
+      "TASK-306"
+    ],
+    "test": "TEST-307",
+    "criterion": "五取景空间承接、碰撞/路线/资源真实保持、新配置回归",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-308",
+    "requirements": [
+      "REQ-301",
+      "REQ-304",
+      "NFR-301"
+    ],
+    "acceptance": [
+      "AC-301",
+      "AC-304",
+      "AC-308"
+    ],
+    "path": "source-assets/quality-slice/characters/",
+    "dependencies": [
+      "TASK-302"
+    ],
+    "test": "TEST-308",
+    "criterion": "两角色原创分层高模/UV/PBR/运行LOD/rig和近玩法尺度审计",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-309",
+    "requirements": [
+      "REQ-304",
+      "REQ-305",
+      "NFR-304"
+    ],
+    "acceptance": [
+      "AC-304",
+      "AC-305",
+      "AC-311"
+    ],
+    "path": "game/presentation/character_animator.gd",
+    "dependencies": [
+      "TASK-308"
+    ],
+    "test": "TEST-309",
+    "criterion": "真实输入连续动作/武器/脚部缺陷关闭、状态返回及规则守恒",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-310",
+    "requirements": [
+      "REQ-305",
+      "NFR-304"
+    ],
+    "acceptance": [
+      "AC-305",
+      "AC-311"
+    ],
+    "path": "game/presentation/game_session.gd",
+    "dependencies": [
+      "TASK-307",
+      "TASK-309"
+    ],
+    "test": "TEST-310",
+    "criterion": "真实命中/屏障/自疗/预备及弱闪烁片段，起止回收正确",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-311",
+    "requirements": [
+      "REQ-303",
+      "REQ-305",
+      "NFR-302"
+    ],
+    "acceptance": [
+      "AC-303",
+      "AC-305",
+      "AC-309"
+    ],
+    "path": "game/presentation/world_builder.gd",
+    "dependencies": [
+      "TASK-307"
+    ],
+    "test": "TEST-311",
+    "criterion": "同Mobile支持的实际探针/灯/湿度/雨落点/30秒运动片段与成本",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-312",
+    "requirements": [
+      "REQ-306"
+    ],
+    "acceptance": [
+      "AC-306"
+    ],
+    "path": "game/presentation/game_hud.gd",
+    "dependencies": [
+      "TASK-302"
+    ],
+    "test": "TEST-312",
+    "criterion": "1280x720/1920x1080/2340x1080横屏模拟、默认及最大文字尺度，六状态不裁切/遮挡；设备输入安全区另归315",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-313",
+    "requirements": [
+      "REQ-307",
+      "NFR-304"
+    ],
+    "acceptance": [
+      "AC-307",
+      "AC-311"
+    ],
+    "path": "tools/export_game.ps1",
+    "dependencies": [
+      "TASK-303",
+      "TASK-307",
+      "TASK-309",
+      "TASK-310",
+      "TASK-311",
+      "TASK-312"
+    ],
+    "test": "TEST-313",
+    "criterion": "严格全量非零/当前源、真实完整输入、EXE正常启动关闭无错误泄漏",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-314",
+    "requirements": [
+      "NFR-302",
+      "NFR-303"
+    ],
+    "acceptance": [
+      "AC-309",
+      "AC-310"
+    ],
+    "path": "specs/004-visual-quality-slice/evidence/2026-10-13/quality-comparison.md",
+    "dependencies": [
+      "TASK-313"
+    ],
+    "test": "TEST-314",
+    "criterion": "完整取景/动作对照和独立10维证据，所有主要可比较维度不低于参考且通用≥2/均值≥2.3，可比生产帧时达预算",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-315",
+    "requirements": [
+      "NFR-302",
+      "REQ-306"
+    ],
+    "acceptance": [
+      "AC-309",
+      "AC-306"
+    ],
+    "path": "specs/004-visual-quality-slice/evidence/2026-10-13/device-and-human.md",
+    "dependencies": [
+      "TASK-314"
+    ],
+    "test": "TEST-315",
+    "criterion": "真实Android/实体手柄/参与者和长期稳定证据，缺事实不pass",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-316",
+    "requirements": [
+      "NFR-301",
+      "NFR-303",
+      "NFR-304"
+    ],
+    "acceptance": [
+      "AC-308",
+      "AC-310",
+      "AC-311"
+    ],
+    "path": "specs/004-visual-quality-slice/progress.md",
+    "dependencies": [
+      "TASK-314"
+    ],
+    "test": "TEST-316",
+    "criterion": "独立审查闭环、工件状态真实、安全Git技术交付及远端SHA",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  },
+  {
+    "id": "TASK-317",
+    "requirements": [
+      "REQ-302",
+      "REQ-303",
+      "NFR-301",
+      "NFR-304"
+    ],
+    "acceptance": [
+      "AC-302",
+      "AC-303",
+      "AC-308",
+      "AC-311"
+    ],
+    "path": "game/presentation/world_builder.gd",
+    "dependencies": [
+      "TASK-304"
+    ],
+    "test": "TEST-317",
+    "criterion": "单个A样区真实源/GLB/通道/UV审计并进入Main，实际固定光/相机/步行观察，采用结论与退回修改明确；之后才扩族",
+    "status": "未验收（待实施/实际验证）",
+    "done": false,
+    "evidence": []
+  }
+]

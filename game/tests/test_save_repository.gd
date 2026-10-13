@@ -186,6 +186,111 @@ func test_diagnostic_event_contains_metadata_without_payload_or_path() -> void:
 	assert_bool(events[0].has("private_test_value")).is_false()
 
 
+func test_guard_rejects_latest_future_payload_before_any_temporary_or_slot_write() -> void:
+	assert_bool(_repository.save({"domain_version": 2, "progress": 1}).ok).is_true()
+	var later_writer := Repository.new()
+	assert_bool(later_writer.configure(_directory).ok).is_true()
+	assert_bool(later_writer.save({"domain_version": 3, "progress": 2}).ok).is_true()
+	var before_a := FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))
+	var before_b := FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))
+	var result: Dictionary = _repository.save({"domain_version": 2, "progress": 3}, _supported_domain)
+	assert_bool(result.ok).is_false()
+	assert_str(result.code).is_equal("future_schema")
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(before_a)
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))).is_equal(before_b)
+	assert_bool(FileAccess.file_exists(_directory.path_join("slot_a.json.tmp"))).is_false()
+	assert_bool(FileAccess.file_exists(_directory.path_join("slot_b.json.tmp"))).is_false()
+
+
+func test_guard_inspects_older_future_payload_and_keeps_preexisting_temporary_file() -> void:
+	assert_bool(_repository.save({"domain_version": 3, "progress": 1}).ok).is_true()
+	assert_bool(_repository.save({"domain_version": 2, "progress": 2}).ok).is_true()
+	_write_text("slot_a.json.tmp", "old interrupted temporary generation")
+	var before_a := FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))
+	var before_b := FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))
+	var result: Dictionary = _repository.save({"domain_version": 2, "progress": 3}, _supported_domain)
+	assert_bool(result.ok).is_false()
+	assert_str(result.code).is_equal("future_schema")
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(before_a)
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))).is_equal(before_b)
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json.tmp"))).is_equal("old interrupted temporary generation")
+
+
+func test_guard_accepts_supported_generations_and_first_save_with_no_existing_slots() -> void:
+	assert_bool(_repository.save({"domain_version": 2, "progress": 1}, _supported_domain).ok).is_true()
+	assert_bool(_repository.save({"domain_version": 2, "progress": 2}, _supported_domain).ok).is_true()
+	var previous := FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))
+	assert_bool(_repository.save({"domain_version": 2, "progress": 3}, _supported_domain).ok).is_true()
+	assert_int(_repository.load().sequence).is_equal(3)
+	assert_int(int(_repository.load().data.progress)).is_equal(3)
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))).is_equal(previous)
+
+
+func test_guard_only_receives_verified_payloads_and_corrupt_slot_still_recovers() -> void:
+	assert_bool(_repository.save({"domain_version": 2, "progress": 1}).ok).is_true()
+	assert_bool(_repository.save({"domain_version": 3, "progress": 2}).ok).is_true()
+	var corrupted := _read_json("slot_b.json")
+	corrupted["checksum"] = "not the actual checksum"
+	_write_text("slot_b.json", JSON.stringify(corrupted))
+	assert_bool(_repository.save({"domain_version": 2, "progress": 3}, _supported_domain).ok).is_true()
+	assert_int(_repository.load().sequence).is_equal(2)
+	assert_int(int(_repository.load().data.progress)).is_equal(3)
+
+
+func test_invalid_guard_result_refuses_to_write_and_preserves_both_generations() -> void:
+	assert_bool(_repository.save({"domain_version": 2, "progress": 1}).ok).is_true()
+	assert_bool(_repository.save({"domain_version": 2, "progress": 2}).ok).is_true()
+	var before_a := FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))
+	var before_b := FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))
+	for guard: Callable in [_invalid_guard_type, _invalid_guard_failure]:
+		var result: Dictionary = _repository.save({"domain_version": 2, "progress": 3}, guard)
+		assert_bool(result.ok).is_false()
+		assert_str(result.code).is_equal("existing_validator_invalid")
+		assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(before_a)
+		assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_b.json"))).is_equal(before_b)
+		assert_bool(FileAccess.file_exists(_directory.path_join("slot_a.json.tmp"))).is_false()
+
+
+func test_validator_receives_detached_payload_copy_and_preserves_new_candidate() -> void:
+	assert_bool(_repository.save({"domain_version": 2, "nested": {"progress": 1}}).ok).is_true()
+	var before := FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))
+	var candidate := {"domain_version": 2, "nested": {"progress": 2}}
+	assert_bool(_repository.save(candidate, _detached_copy_guard).ok).is_true()
+	assert_int(candidate.nested.progress).is_equal(2)
+	assert_int(int(_repository.load().data.nested.progress)).is_equal(2)
+	assert_str(FileAccess.get_file_as_string(_directory.path_join("slot_a.json"))).is_equal(before)
+
+
+func test_generic_save_without_domain_guard_keeps_original_json_repository_contract() -> void:
+	assert_bool(_repository.save({"domain_version": 3, "progress": 1}).ok).is_true()
+	assert_bool(_repository.save({"domain_version": 2, "progress": 2}).ok).is_true()
+	assert_bool(_repository.save({"arbitrary_json_owner": "Repository intentionally does not know game schema"}).ok).is_true()
+	assert_int(_repository.load().sequence).is_equal(3)
+	assert_str(_repository.load().data.arbitrary_json_owner).is_equal("Repository intentionally does not know game schema")
+
+
+func _supported_domain(existing: Dictionary) -> Dictionary:
+	var version: Variant = existing.get("domain_version", 1)
+	if typeof(version) not in [TYPE_INT, TYPE_FLOAT] or not is_finite(float(version)) or float(version) != floorf(float(version)) or float(version) < 1.0:
+		return AWRuleResult.failure("invalid_domain", "进度领域版本无效。")
+	return AWRuleResult.failure("future_schema", "进度领域版本较新。") if float(version) > 2.0 else AWRuleResult.success()
+
+
+func _invalid_guard_type(_existing: Dictionary) -> Variant:
+	return false
+
+
+func _invalid_guard_failure(_existing: Dictionary) -> Dictionary:
+	return {"ok": false, "code": "", "message": "Malformed caller guard response"}
+
+
+func _detached_copy_guard(existing: Dictionary) -> Dictionary:
+	# Deliberately mutate the supplied copy to verify isolation against a bad caller.
+	# Production guards stay pure; this does not replace or mock repository IO.
+	existing.nested["progress"] = -100
+	return _supported_domain(existing)
+
+
 func _read_json(file_name: String) -> Dictionary:
 	return JSON.parse_string(FileAccess.get_file_as_string(_directory.path_join(file_name))) as Dictionary
 

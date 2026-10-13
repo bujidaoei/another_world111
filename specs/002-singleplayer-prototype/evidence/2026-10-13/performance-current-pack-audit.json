@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "production_pck_sha256": "2c6aa3fcf54ee79bec8d8357fc2a6c1eb236827203c96a2049de340a71a6caee",
+  "qa_pck_sha256": "745f5ea04766ca990d6fcf8f2b1544a10fa767d2206cd8d1cc3a3058e81a83f9",
+  "production_resource_count": 282,
+  "unchanged_resource_count": 280,
+  "modified_paths": [
+    ".godot/global_script_class_cache.cfg",
+    "project.binary"
+  ],
+  "modified_settings": [
+    "application/run/main_loop_type",
+    "application/run/main_scene"
+  ],
+  "gameplay_resources_byte_identical": true,
+  "debug_test_paths": [],
+  "measurement_scripts_packed": false,
+  "external_startup_scene": "D:/bugu_projects/another_world/artifacts/performance/9dd871aca9fb458c887d80d4fca8945f/external/qa-main.tscn"
+}

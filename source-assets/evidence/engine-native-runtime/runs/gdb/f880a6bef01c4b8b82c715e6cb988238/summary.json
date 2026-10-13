@@ -1,0 +1,15 @@
+{
+  "mode": "gdb",
+  "run_id": "f880a6bef01c4b8b82c715e6cb988238",
+  "exit_code": 0,
+  "elapsed_seconds": 62.34062240000276,
+  "post_input_changed": [],
+  "report_exists": true,
+  "stdout_bytes": 7558,
+  "stderr_bytes": 201,
+  "cpp759_occurrences": 1,
+  "native_owner_null_traps": 0,
+  "finish_lines": [
+    "CHARACTER_PROBE_FINISH {\"completed\":true,\"coverage\":{\"android\":false,\"healer_actual_death\":false,\"healer_switch\":false,\"healer_three_presets\":false,\"pause_freeze\":false,\"physical_gamepad\":false,\"self_heal\":false,\"skill_slot_edit\":false,\"talent_draft_and_apply\":false,\"thief_presets\":false,\"thief_two_runs\":false,\"title_continue_cooldown\":false},\"drawn_frames\":4580,\"elapsed\":21.5833333333327,\"ok\":false,\"stage\":\"error\"}"
+  ]
+}

@@ -1,0 +1,47 @@
+
+D:\bugu_software\ai-game-toolchain\native-debug-ed1daf0bf\src\bin\godot.windows.editor.x86_64.exe.debugsymbols:     file format pei-x86-64
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         089bb190  0000000140001000  0000000140001000  00000000  2**4
+                  ALLOC, LOAD, READONLY, CODE
+  1 .data         000fc580  00000001489bd000  00000001489bd000  00000000  2**4
+                  ALLOC, LOAD, DATA
+  2 .rdata        036434e8  0000000148aba000  0000000148aba000  00000000  2**4
+                  ALLOC, LOAD, READONLY, DATA
+  3 .eh_frame     00000004  000000014c0fe000  000000014c0fe000  00000000  2**2
+                  ALLOC, LOAD, DATA
+  4 .pdata        00496920  000000014c0ff000  000000014c0ff000  00000000  2**2
+                  ALLOC, LOAD, READONLY, DATA
+  5 .xdata        004d3010  000000014c596000  000000014c596000  00000000  2**2
+                  ALLOC, LOAD, READONLY, DATA
+  6 .bss          001f0148  000000014ca6a000  000000014ca6a000  00000000  2**4
+                  ALLOC
+  7 .edata        000000aa  000000014cc5b000  000000014cc5b000  00000000  2**2
+                  ALLOC, LOAD, READONLY, DATA
+  8 .idata        00007254  000000014cc5c000  000000014cc5c000  00000000  2**2
+                  ALLOC, LOAD, READONLY, DATA
+  9 .tls          00000010  000000014cc64000  000000014cc64000  00000000  2**2
+                  ALLOC, LOAD, DATA
+ 10 .rsrc         000237b0  000000014cc65000  000000014cc65000  00000000  2**2
+                  ALLOC, LOAD, READONLY, DATA
+ 11 .reloc        000a3dd4  000000014cc89000  000000014cc89000  00000600  2**2
+                  CONTENTS, LOAD, READONLY, DATA
+ 12 .debug_aranges 00a58180  000000014cd2d000  000000014cd2d000  000a4400  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_info   45df63fb  000000014d786000  000000014d786000  00afc600  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_abbrev 00c842c5  000000019357d000  000000019357d000  468f2a00  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_line   06c0d5a2  0000000194202000  0000000194202000  47576e00  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_frame  017a2608  000000019ae10000  000000019ae10000  4e184400  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .debug_str    00db8085  000000019c5b3000  000000019c5b3000  4f926c00  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 18 .debug_line_str 0053ac05  000000019d36c000  000000019d36c000  506dee00  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 19 .debug_loclists 007256da  000000019d8a7000  000000019d8a7000  50c19c00  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 20 .debug_rnglists 008a7ea9  000000019dfcd000  000000019dfcd000  5133f400  2**0
+                  CONTENTS, READONLY, DEBUGGING

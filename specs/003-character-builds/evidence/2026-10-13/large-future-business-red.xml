@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="29" failures="3" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_combat_state" package="tests" timestamp="2026-10-13T01:40:15" hostname="localhost" tests="13" failures="1" errors="0" skipped="0" flaky="0" time="0.099">
+		<testcase name="test_self_heal_real_vitals_cost_and_shared_family_survive_restore" classname="test_combat_state" time="0.006">
+		</testcase>
+		<testcase name="test_healing_identity_full_health_dead_pause_and_resource_rejections_are_atomic" classname="test_combat_state" time="0.004">
+		</testcase>
+		<testcase name="test_item_recovery_preflight_is_readonly_and_duplicate_cannot_consume_twice" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_barrier_absorbs_remaining_capacity_then_expires_without_health_creation" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_common_haste_changes_skill_cooldown_but_never_recovery_family" classname="test_combat_state" time="0.004">
+		</testcase>
+		<testcase name="test_focus_uses_real_realm_and_effect_cannot_stack_or_survive_expiration" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_attack_dodge_anchor_share_finite_authority_and_clear_effects_preserves_cooldowns" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_tick_and_damage_invalid_values_fail_without_partial_state_changes" classname="test_combat_state" time="0.004">
+		</testcase>
+		<testcase name="test_invalid_vitals_context_and_derived_build_cannot_commit_cooldowns" classname="test_combat_state" time="0.006">
+		</testcase>
+		<testcase name="test_snapshot_is_exact_deep_copied_and_rejects_future_missing_and_nonfinite_values" classname="test_combat_state" time="0.004">
+		</testcase>
+		<testcase name="test_restore_rejects_unpaired_effect_cooldowns_and_recovery_family_atomically" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_confirm_recovery_revalidates_after_preview_and_never_reserves_cooldown" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_large_future_combat_schema_is_distinct_from_corruption_and_preserves_state" classname="test_combat_state" time="0.004">
+			<failure message="FAILED: res://tests/test_combat_state.gd:220" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'future_schema'
+ but was
+ 'fucombature_schema_invalid'
+	at 'test_large_future_combat_schema_is_distinct_from_corruption_and_preserves_state' in res://tests/test_combat_state.gd:220
+]]>
+			</failure>
+		</testcase>
+	</testsuite>
+	<testsuite id="1" name="test_input_bindings" package="tests" timestamp="2026-10-13T01:40:15" hostname="localhost" tests="16" failures="2" errors="0" skipped="0" flaky="0" time="0.099">
+		<testcase name="test_default_file_and_remap_replace_real_keyboard_events" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_conflicts_invalid_keys_navigation_and_required_unbinds_are_rejected" classname="test_input_bindings" time="0.005">
+		</testcase>
+		<testcase name="test_atomic_full_restore_accepts_swaps_and_rejects_late_invalid_fields" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_snapshot_schema_rejects_unknown_fields_versions_and_missing_actions_atomically" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_remap_preserves_gamepad_mouse_events_and_unrelated_ui_actions" classname="test_input_bindings" time="0.005">
+		</testcase>
+		<testcase name="test_snapshot_is_detached_and_reset_defaults_applies_to_input_map" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_radial_deadzone_is_scaled_and_rotation_symmetric" classname="test_input_bindings" time="0.002">
+		</testcase>
+		<testcase name="test_focus_release_does_not_resume_movement_from_global_input_poll_or_echo" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_unhandled_keyboard_movement_release_and_mouse_hold_share_ui_safe_adapter" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_configure_is_atomic_and_remapping_releases_old_held_state" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_legacy_migration_preserves_custom_bindings_without_applying_inputmap" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_legacy_default_collisions_choose_fixed_unused_keys_without_replacing_players_keys" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_legacy_exhausted_migration_preserves_original_and_actual_input_events" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_legacy_snapshot_rejects_partial_new_actions_instead_of_dropping_them" classname="test_input_bindings" time="0.003">
+		</testcase>
+		<testcase name="test_new_named_keyboard_touch_and_gamepad_commands_are_consumed_once_and_blocked" classname="test_input_bindings" time="0.004">
+		</testcase>
+		<testcase name="test_large_future_binding_version_still_reports_future_without_applying" classname="test_input_bindings" time="0.002">
+			<failure message="FAILED: res://tests/test_input_bindings.gd:307" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'future_schema'
+ but was
+ 'futurebindings_schema_invalid'
+	at 'test_large_future_binding_version_still_reports_future_without_applying' in res://tests/test_input_bindings.gd:307
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_input_bindings.gd:308" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'future_schema'
+ but was
+ 'futurebindings_schema_invalid'
+	at 'test_large_future_binding_version_still_reports_future_without_applying' in res://tests/test_input_bindings.gd:308
+]]>
+			</failure>
+		</testcase>
+	</testsuite>
+</testsuites>

@@ -1,0 +1,76 @@
+{
+  "scope": "Research/preparation only; no compiler package download, installation, build, GDB execution or GPU run",
+  "commit": "ed1daf0bf001b61586d9930840f2f1394092c079",
+  "files": [
+    {
+      "name": "build-host-inventory.json",
+      "bytes": 1146,
+      "sha256": "27f9586566005abc749d5b0c0c7c444bad77838e569d92651f23c3a7e428d878"
+    },
+    {
+      "name": "build-metadata.json",
+      "bytes": 1434,
+      "sha256": "013e05d0947c08313edb4360ddba193e8a264c496a5cb2820f578a142ba722bc"
+    },
+    {
+      "name": "native-owner-fields.gdb",
+      "bytes": 714,
+      "sha256": "1a707a7fe0741c0c9d4f79c6ae16c5903b73a16c19e517c7be5c37c9847ee088"
+    },
+    {
+      "name": "native-owner-trap.gdb",
+      "bytes": 739,
+      "sha256": "d77e6dc64ef89a3b401a9fdbea2f2c6dcdfb3bf1db11992b0810c4d88902e979"
+    },
+    {
+      "name": "official-build-extra-manifest.json",
+      "bytes": 705,
+      "sha256": "9ee81ad933e95a489a2af15550a10e8df9edb3a74ccea2e5dd5f6f98e7763de4"
+    },
+    {
+      "name": "official-build-manifest.json",
+      "bytes": 1619,
+      "sha256": "f22464889fe69d531553b86cfa82905dab09370394ebca7bbfa213041d5b1620"
+    },
+    {
+      "name": "official-release-playwright.yml",
+      "bytes": 2075,
+      "sha256": "0b4911b87fe47ea294f1138b1d49eb79911424c5a2e30e60f2d3fcf933eed281"
+    },
+    {
+      "name": "primary-links.json",
+      "bytes": 2416,
+      "sha256": "674913064efb4a7da2866d3aecabd4ae8a7bcb01f2a19337beafca0b540a8343"
+    },
+    {
+      "name": "release-assets-dom.json",
+      "bytes": 6772,
+      "sha256": "530c59722c55ec562be3ab63543dc6cd6d2a5f54a836d9bff91cd9d74ed242af"
+    },
+    {
+      "name": "windows-build-github-dom.json",
+      "bytes": 26782,
+      "sha256": "3da8cca5076027a9c741dbba0fc9aebbfcd8206e3f9c88d8d2042f5a92c03726"
+    },
+    {
+      "name": "windows-build-playwright.yml",
+      "bytes": 788,
+      "sha256": "5248bf4b87e8b33ad4ab4edebbd1e9f222217dd19b7d43657bb1c5790613a9d5"
+    },
+    {
+      "name": "winlibs-assets-dom.json",
+      "bytes": 5744,
+      "sha256": "49c3328f8a62e5b466c662afb73bbe5e6fb421c1d1e66c8ed988cda19c98cf95"
+    },
+    {
+      "name": "winlibs-release-dom.json",
+      "bytes": 1716,
+      "sha256": "ee23c08caee705bbe5917e6381dc0c68b938c5aa815e3a46cf43046b06327ddd"
+    },
+    {
+      "name": "winlibs-release-playwright.yml",
+      "bytes": 2075,
+      "sha256": "d58c54f400483764ca23875893adc9753ac665139ea42e8839bbefa287b040ce"
+    }
+  ]
+}

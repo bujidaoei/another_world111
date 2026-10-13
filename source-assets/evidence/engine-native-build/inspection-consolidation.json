@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-13T04:36:07.1466169Z",
+  "reason": "Consolidate repeated 1.58GB DWARF parsing into one batch; preserve first inspection failure/raw output",
+  "pid": 11144,
+  "command_line": "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\addr2line.exe --exe D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\src\\bin\\godot.windows.editor.x86_64.exe.debugsymbols --functions --demangle 0000000144496dee",
+  "GPU_or_GDB": false
+}

@@ -1,10 +1,10 @@
 # 实施与验证入口
 
-**当前状态**：仅计划，不存在新模块执行通过证据。先按[tasks.md](tasks.md)实现，以下场景不能靠夹具发经验/资源冒充实际流程。
+**当前状态**：已完成主场景整合，19/25任务通过独立技术门槛，CR-003-03之前冻结源码225/225通过；当前新保存变更正待新的严格报告。真实PC部分行为和跨进程CD恢复已发生，但Native错误及完整覆盖/构建/设备/商业品质仍开放。最新结果见progress/evidence。按[tasks.md](tasks.md)推进，以下场景不能靠夹具发经验/资源冒充实际流程。
 
 ## Spec Kit
 
-根协调在适当检查点激活`.specify/feature.json`至`specs/003-character-builds`并按实际skills运行setup-plan、setup-tasks、check-prerequisites。setup-plan会覆盖plan.md，激活时须保留本已收敛设计内容并重新填入模板；本子任务不修改根活动feature或AGENTS。
+根已激活`.specify/feature.json`至`specs/003-character-builds`并实际运行setup-plan、setup-tasks、check-prerequisites，收敛计划已完整填回模板，AGENTS已更新。新检出可在单个脚本进程设置SPECIFY_FEATURE_DIRECTORY为该目录执行检查，避免codex前缀分支误识别；本地feature.json不入Git。
 
 文档检查：`python tools/verify_spec.py --feature specs/003-character-builds --output artifacts/spec003-document-validation.json`。只证明结构/关联/状态，无游戏测试。
 
@@ -12,7 +12,7 @@
 
 PowerShell7运行既有严格wrapper：`pwsh -File tools/run_gdunit.ps1 -GodotExecutable <固定Godot4.7.2 console绝对路径> -Suite res://tests -ReportRoot <新的独立报告绝对目录>`。运行前由实现者确认新增suite真实存在；不得把0测试、原生错误、skip或旧报告当成功。
 
-新suite计划：test_character_builds、test_combat_state、test_build_migration、test_build_presentation，加既有progression/equipment/expedition/input/save/主场景回归。所有存档夹具位于明确隔离的user://tests/builds目录，结束清理验证绝对范围和不跟随链接，不能触及正式用户存档。
+实际新增suite包括test_character_builds、test_combat_state、test_build_migration、test_build_menu、test_build_session、test_build_presets、test_build_resonance、test_character_visuals、test_expedition_bonus，加既有progression/equipment/expedition/input/save/主场景回归。存档夹具分别使用suite声明的user://tests子目录；角色原生QA使用user://tests/character_playtest/20261013_003_b，报告使用独立artifacts，结束清理验证绝对范围和不跟随链接，不能触及正式用户存档。
 
 ## 真实PC角色流程
 

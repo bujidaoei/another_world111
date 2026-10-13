@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "started_utc": "2026-10-13T06:35:47.6565282Z",
+  "completed_utc": "2026-10-13T06:35:52.1718207Z",
+  "engine_executable": "D:\\bugu_software\\ai-game-toolchain\\godot\\Godot_v4.7.2-stable_win64_console.exe",
+  "engine_version": "4.7.2.stable.official.ed1daf0bf",
+  "gdunit4_version": "6.2.2",
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "runner_exit_code": 0,
+  "imported": false,
+  "report_path": "D:\\bugu_projects\\another_world\\artifacts\\session-persistence-independent-b4806fc60079401889d2a0ac7eb61301\\report_1\\results.xml",
+  "source_sha256": {
+    "game/tests/test_session_persistence.gd": "2E80AB6059D47E657E499956584CD1E1CDCA84BB2FB9BDBFDCC9A7B2D2C8A5CF",
+    "game/presentation/game_session.gd": "C86D34D70352058D0A620FEA14163BA596F13F6F1B72C4BF6672BE94827912A3",
+    "game/presentation/game_hud.gd": "D0F49979200EFAEFF5FF5839B7A8BA7A2DD2B85FA0862B4428EDB468882AB987",
+    "game/persistence/save_repository.gd": "2B2779AA879D0E8C86007BBA1DD0F1FA964440A283B19A613B2BFA34C2AFF626",
+    "game/persistence/user_preferences.gd": "3F9A5CE5311BA2A635DDF138279289148CC3C47FC69AEA508F3D5051C6D7B2D5",
+    "game/addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd": "3A14BEE1FF7587CCA99F17A463A3F31127FF4659C7412D0607A914473C296BAB"
+  },
+  "expected_diagnostic_count": 9,
+  "unexpected_native": 0,
+  "unexpected_script": 0,
+  "unexpected_diagnostics": 0,
+  "policy_sha256": "49C69C307AD8D309F8E718698609D9F9573DB52112B08BF9388C0180DE071C70"
+}

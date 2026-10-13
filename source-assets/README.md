@@ -64,3 +64,15 @@ MCP 在本机 `127.0.0.1:8188` 启动并验证本地 ComfyUI 0.39.2；硬件是 
 石板通过 256 实例 MultiMesh 提交；物理地面是连续无可见网格的盒体，顶面 Y=0。源石板最高维修片实际为 .134m，放置偏移由清单计算为 -.134m，可见底座另置于 -.136m，避免不透明物理地面网格盖掉所有石板。Godot headless 的 Dummy RenderingServer 对 MultiMesh 变换读回 identity / 空 buffer，因此 headless 测试只证明真实导入顶点与配置对齐以及物理面高度，GPU 实例的显示与脚部接触仍由实际渲染验证；不会把 dummy 读回当作渲染证据。
 
 `../game/tests/test_world_builder.gd` 的 6 项 GdUnit4 专项在固定工具链严格门禁中真实通过：配置拒绝无界/错误输入、两区布局与资源类型不同、导入石板与物理平面高度、泵站尺寸/视觉关联/可进入棚、资源及互动通路、闭合四边，以及导体工场中央通路。最新专项 XML 为 `../artifacts/world-builder-verified/80f1726614554062805219792b4a2294/report_1/results.xml`；它不代替修改后的完整输入回归、画面验收或设备性能检查。场景 API 与截图审查要求见 `world-layout.md`。
+
+## 阶段003身份样本
+
+根协调实际激活003后已通过Blender MCP生产盗窃者/疗愈者两个原创骨架代表：真实文件 `../game/assets/models/thief_robot.glb` / `healer_robot.glb`，新独立源 `blender/characters-v1.blend`，制作脚本 `scripts/character_factory.py`。各1mesh/1material/1skin/17骨关节，实际2776/3164tri，0.76缩放后高约1.73/1.72m，旧23GLB哈希保持。
+
+真实Idle/Walk与疗愈者SelfHeal已由源求值、GLB二进制独立skin数学和Godot4.7.2导入骨pose三层核验，独立腿/膝/足和维护腕实际运动、权重/贴地/loop检查均通过。相应清单为 `character-manifest.json`，17张原生PBR图位于 `previews/characters/`。初次冻结首姿势与parent警告均有发现/修复记录，没有仅据动画名报通过。制作、证据、名义步速和主工程集成/开放验收合同见 `characters-production.md`。
+
+本轮未改world_builder/player/session/UI/core配置，没有新增无目的Comfy生产。角色源技术/头less导入通过不等于实际可玩视听或最终商业品质；当前转入根MCP正常游戏中的同位辨识、技能成功/失败反馈、动作衔接与性能/设备/真人验收。
+
+随后按根分配实际接入Player、独立CharacterAnimator、集中视觉配置及11项真实骨骼/碰撞/暂停/共享受击与闪避测试，严格局部11/11通过。AnimationTree独占运行时写入，疗愈者自疗使用只过滤指定上身骨的OneShot，步态速度来自碰撞后实际水平速度；没有将此次技术结果列为最终视听或设备验收。调用契约、实际报告、导入轨道预检缺陷与修复见 [character-runtime-integration.md](character-runtime-integration.md)。
+
+Mobile原生BUG-112-01仍开放。完整Main禁嵌入和完全独立运行均复现，孤立角色矩阵与原Player预检替换仅在各60秒观察内未复现；实际失败/无错组与限制见 [character-renderer-investigation.md](character-renderer-investigation.md)。固定提交的Windows符号清单、便携编译依赖和精确owner/flags断点见 [engine-native-debug-plan.md](engine-native-debug-plan.md)，原始网页/主机/元数据证据在 `evidence/engine-debug-research/`。首轮只读准备后根已授权实际诊断构建，exit0、自身符号静态配对与source SHA核查的实际记录见 [engine-native-build.md](engine-native-build.md)；链接资源消息保留，尚未运行该引擎、GPU或GDB，不作为原生问题修复或产品验收。

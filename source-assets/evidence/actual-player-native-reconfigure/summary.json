@@ -1,0 +1,21 @@
+{
+  "mode": "actual_player_reconfigure",
+  "started_utc": "2026-10-13T03:42:50.349Z",
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 61.6305074,
+  "gpu_confirmed": true,
+  "native_error_lines": 0,
+  "script_error_lines": 0,
+  "particles_function_errors": 0,
+  "completed": true,
+  "observation_verified": true,
+  "error_free_diagnostic": true,
+  "changed_input_paths": [],
+  "scope": "isolated synthetic Player diagnostic only; not bug closure, PC input or performance acceptance",
+  "evidence": "D:\\bugu_projects\\another_world\\artifacts\\actual-player-renderer-probe\\runs\\actual_player_reconfigure\\4c0af54f030c4ca3b90e2268016d4e5d",
+  "frames_drawn": 14355,
+  "initializations": 1,
+  "reconfigurations": 11,
+  "seconds_observed": 60.0000000000149
+}

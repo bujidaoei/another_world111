@@ -1,0 +1,2886 @@
+{
+	"completed": true,
+	"coverage": {
+		"android": false,
+		"healer_actual_death": true,
+		"healer_switch": true,
+		"healer_three_presets": true,
+		"pause_freeze": true,
+		"physical_gamepad": false,
+		"self_heal": true,
+		"skill_slot_edit": false,
+		"talent_draft_and_apply": true,
+		"thief_presets": false,
+		"thief_two_runs": true,
+		"title_continue_cooldown": true
+	},
+	"driver": "character InputEvent/UI QA",
+	"ok": true,
+	"results": [
+		{
+			"at_seconds": 0.0,
+			"data": {
+				"stage": "thief_runs"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 0.0,
+			"data": {
+				"display": "Windows",
+				"input": "Viewport.push_input real keyboard/mouse/GUI; observe domains only",
+				"renderer": "mobile",
+				"save_directory": "C:/Users/Administrator/AppData/Roaming/Godot/app_userdata/另一个世界 · Another World/tests/character_playtest/20261013_003_b"
+			},
+			"event": "start"
+		},
+		{
+			"at_seconds": 0.115073222222223,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": false,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@161",
+					"section": "overview",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						369.5
+					],
+					"name": "@Button@154",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@154",
+					"text": "开始新旅程"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 0.536880581529582,
+			"data": {
+				"observed": {
+					"active_character": "thief",
+					"apply_allowed": false,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@277",
+					"section": "overview",
+					"selected_character": "thief"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						270.5
+					],
+					"name": "@Button@161",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@161",
+					"text": "明确开始新旅程"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 0.959896454545453,
+			"data": {
+				"observed": {
+					"active_character": "thief",
+					"apply_allowed": false,
+					"apply_reason": "",
+					"focus": "",
+					"section": "overview",
+					"selected_character": "thief"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						314.5
+					],
+					"name": "@Button@277",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@277",
+					"text": "出发：雨庭 / 一阶"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 16.0298404848479,
+			"data": {
+				"bonus_this_run": 0,
+				"expected_remainder": 12,
+				"expected_total": 24,
+				"kills": 6,
+				"run": 1,
+				"state": {
+					"active_character": "thief",
+					"camp": true,
+					"coin_remainder": 12,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 0.0,
+							"recovery_family": 0.0,
+							"self_heal": 0.0
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"gui": {
+						"active_character": "thief",
+						"apply_allowed": false,
+						"apply_reason": "",
+						"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@536",
+						"section": "overview",
+						"selected_character": "thief"
+					},
+					"health": 125.0,
+					"level": 5,
+					"max_health": 125.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0,
+						"crystal": 1,
+						"currency": 24,
+						"medkit": 2,
+						"rations": 3,
+						"scrap": 9
+					},
+					"run": 1,
+					"stamina": 120.0
+				}
+			},
+			"event": "actual_thief_settlement"
+		},
+		{
+			"at_seconds": 16.1423404848479,
+			"data": {
+				"observed": {
+					"active_character": "thief",
+					"apply_allowed": false,
+					"apply_reason": "",
+					"focus": "",
+					"section": "overview",
+					"selected_character": "thief"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						314.5
+					],
+					"name": "@Button@536",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@536",
+					"text": "出发：雨庭 / 一阶"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 30.9946379999988,
+			"data": {
+				"bonus_this_run": 1,
+				"expected_remainder": 4,
+				"expected_total": 49,
+				"kills": 6,
+				"run": 2,
+				"state": {
+					"active_character": "thief",
+					"camp": true,
+					"coin_remainder": 4,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 0.0,
+							"recovery_family": 0.0,
+							"self_heal": 0.0
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"gui": {
+						"active_character": "thief",
+						"apply_allowed": false,
+						"apply_reason": "",
+						"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@796",
+						"section": "overview",
+						"selected_character": "thief"
+					},
+					"health": 125.0,
+					"level": 10,
+					"max_health": 125.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0,
+						"crystal": 2,
+						"currency": 49,
+						"medkit": 2,
+						"rations": 3,
+						"scrap": 18
+					},
+					"run": 2,
+					"stamina": 120.0
+				}
+			},
+			"event": "actual_thief_settlement"
+		},
+		{
+			"at_seconds": 31.0987879999988,
+			"data": {
+				"stage": "build_enter"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 31.2279339999989,
+			"data": {
+				"observed": {
+					"active_character": "thief",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@805/BuildTab_overview",
+					"section": "overview",
+					"selected_character": "thief"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						534.5
+					],
+					"name": "@Button@800",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@800",
+					"text": "角色构筑 · 天赋 / 技能 / 预设"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 31.3487673333322,
+			"data": {
+				"stage": "select_healer"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 31.7196006666655,
+			"data": {
+				"observed": {
+					"active_character": "thief",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@823/BuildTab_overview",
+					"section": "overview",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						796.0,
+						431.0
+					],
+					"name": "Character_healer",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/Character_healer",
+					"text": "疗愈者"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 31.8431079999989,
+			"data": {
+				"active_character": "thief",
+				"apply_allowed": true,
+				"apply_reason": "",
+				"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@823/BuildTab_overview",
+				"section": "overview",
+				"selected_character": "healer"
+			},
+			"event": "healer_selected_gui_observed"
+		},
+		{
+			"at_seconds": 31.8431079999989,
+			"data": {
+				"stage": "apply_healer"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 33.6969766666648,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@843/BuildTab_overview",
+					"section": "overview",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						796.0,
+						673.0
+					],
+					"name": "ApplyBuild",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/ApplyBuild",
+					"text": "确认应用草稿"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 33.8196109999981,
+			"data": {
+				"stage": "healer_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 33.9404249999981,
+			"data": {
+				"active_character": "healer",
+				"camp": true,
+				"coin_remainder": 4,
+				"combat": {
+					"cooldowns": {
+						"anchor": 0.0,
+						"attack": 0.0,
+						"barrier": 0.0,
+						"dodge": 0.0,
+						"focus": 0.0,
+						"pulse": 0.0,
+						"recovery_family": 0.0,
+						"self_heal": 0.0
+					},
+					"effects": {
+						"barrier_capacity": 0.0,
+						"barrier_remaining": 0.0,
+						"focus_remaining": 0.0
+					},
+					"schema_version": 1
+				},
+				"gui": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@843/BuildTab_overview",
+					"section": "overview",
+					"selected_character": "healer"
+				},
+				"health": 125.0,
+				"level": 10,
+				"max_health": 125.0,
+				"max_stamina": 120.0,
+				"profiles": {
+					"healer": {
+						"applied_build": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"character_id": "healer",
+						"draft": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"presets": [
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							}
+						]
+					},
+					"thief": {
+						"applied_build": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"character_id": "thief",
+						"draft": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"presets": [
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							}
+						]
+					}
+				},
+				"realm": 1,
+				"resources": {
+					"alloy": 0,
+					"crystal": 2,
+					"currency": 49,
+					"medkit": 2,
+					"rations": 3,
+					"scrap": 18
+				},
+				"run": 2,
+				"stamina": 120.0
+			},
+			"event": "healer_selected_and_applied"
+		},
+		{
+			"at_seconds": 33.9404249999981,
+			"data": {
+				"stage": "talents_enter"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 34.1903849999979,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@861/BuildTab_talents",
+					"section": "talents",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						716.0,
+						273.0
+					],
+					"name": "BuildTab_talents",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@843/BuildTab_talents",
+					"text": "天赋"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 34.3111989999979,
+			"data": {
+				"stage": "talent_type"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 34.7595176666644,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@885/Talent_vitality/@SpinBoxLineEdit@883",
+					"section": "talents",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						1044.0,
+						579.0
+					],
+					"name": "@SpinBoxLineEdit@883",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@885/Talent_vitality/@SpinBoxLineEdit@883",
+					"text": "0"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 34.8803509999978,
+			"data": {
+				"before": "0",
+				"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@885/Talent_vitality/@SpinBoxLineEdit@883",
+				"requested": "1",
+				"submit": true
+			},
+			"event": "gui_text_focus_observed"
+		},
+		{
+			"at_seconds": 34.8803509999978,
+			"data": {
+				"stage": "talent_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 34.8968086666644,
+			"data": {
+				"observed": "1",
+				"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@885/Talent_vitality/@SpinBoxLineEdit@883",
+				"requested": "1",
+				"submit": true
+			},
+			"event": "gui_text_delivered"
+		},
+		{
+			"at_seconds": 35.017623333331,
+			"data": {
+				"active_character": "healer",
+				"camp": true,
+				"coin_remainder": 4,
+				"combat": {
+					"cooldowns": {
+						"anchor": 0.0,
+						"attack": 0.0,
+						"barrier": 0.0,
+						"dodge": 0.0,
+						"focus": 0.0,
+						"pulse": 0.0,
+						"recovery_family": 0.0,
+						"self_heal": 0.0
+					},
+					"effects": {
+						"barrier_capacity": 0.0,
+						"barrier_remaining": 0.0,
+						"focus_remaining": 0.0
+					},
+					"schema_version": 1
+				},
+				"gui": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@885/Talent_vitality/@SpinBoxLineEdit@883",
+					"section": "talents",
+					"selected_character": "healer"
+				},
+				"health": 125.0,
+				"level": 10,
+				"max_health": 125.0,
+				"max_stamina": 120.0,
+				"profiles": {
+					"healer": {
+						"applied_build": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"character_id": "healer",
+						"draft": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 1,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"presets": [
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							}
+						]
+					},
+					"thief": {
+						"applied_build": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"character_id": "thief",
+						"draft": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"presets": [
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							}
+						]
+					}
+				},
+				"realm": 1,
+				"resources": {
+					"alloy": 0,
+					"crystal": 2,
+					"currency": 49,
+					"medkit": 2,
+					"rations": 3,
+					"scrap": 18
+				},
+				"run": 2,
+				"stamina": 120.0
+			},
+			"event": "actual_talent_draft_only"
+		},
+		{
+			"at_seconds": 35.017623333331,
+			"data": {
+				"stage": "talent_apply"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 38.1121297037033,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@919/BuildTab_talents",
+					"section": "talents",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						796.0,
+						673.0
+					],
+					"name": "ApplyBuild",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/ApplyBuild",
+					"text": "确认应用草稿"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 38.2346149999995,
+			"data": {
+				"stage": "talent_apply_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 38.3576658148144,
+			"data": {
+				"active_character": "healer",
+				"camp": true,
+				"coin_remainder": 4,
+				"combat": {
+					"cooldowns": {
+						"anchor": 0.0,
+						"attack": 0.0,
+						"barrier": 0.0,
+						"dodge": 0.0,
+						"focus": 0.0,
+						"pulse": 0.0,
+						"recovery_family": 0.0,
+						"self_heal": 0.0
+					},
+					"effects": {
+						"barrier_capacity": 0.0,
+						"barrier_remaining": 0.0,
+						"focus_remaining": 0.0
+					},
+					"schema_version": 1
+				},
+				"gui": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@919/BuildTab_talents",
+					"section": "talents",
+					"selected_character": "healer"
+				},
+				"health": 127.0,
+				"level": 10,
+				"max_health": 127.0,
+				"max_stamina": 120.0,
+				"profiles": {
+					"healer": {
+						"applied_build": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 1,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"character_id": "healer",
+						"draft": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 1,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"presets": [
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							}
+						]
+					},
+					"thief": {
+						"applied_build": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"character_id": "thief",
+						"draft": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"presets": [
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							}
+						]
+					}
+				},
+				"realm": 1,
+				"resources": {
+					"alloy": 0,
+					"crystal": 2,
+					"currency": 49,
+					"medkit": 2,
+					"rations": 3,
+					"scrap": 18
+				},
+				"run": 2,
+				"stamina": 120.0
+			},
+			"event": "actual_talent_applied"
+		},
+		{
+			"at_seconds": 38.3576658148144,
+			"data": {
+				"stage": "presets_enter"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 38.6095176666661,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@977/BuildTab_presets",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						1035.0,
+						273.0
+					],
+					"name": "BuildTab_presets",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@919/BuildTab_presets",
+					"text": "预设"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 38.7320946666661,
+			"data": {
+				"stage": "preset_type"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 38.983886666666,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_0",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						796.0,
+						409.0
+					],
+					"name": "PresetName_0",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_0",
+					"text": ""
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 39.1064706666659,
+			"data": {
+				"before": "",
+				"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_0",
+				"requested": "Healer QA 1",
+				"submit": false
+			},
+			"event": "gui_text_focus_observed"
+		},
+		{
+			"at_seconds": 39.1064706666659,
+			"data": {
+				"stage": "preset_save"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 39.160632666666,
+			"data": {
+				"observed": "Healer QA 1",
+				"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_0",
+				"requested": "Healer QA 1",
+				"submit": false
+			},
+			"event": "gui_text_delivered"
+		},
+		{
+			"at_seconds": 39.4106326666662,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@993/BuildTab_presets",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						636.5,
+						469.0
+					],
+					"name": "@Button@979",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@981/@Button@979",
+					"text": "保存当前草稿"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 39.5329061111106,
+			"data": {
+				"stage": "preset_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 39.6560416666661,
+			"data": {
+				"preset": {
+					"build": {
+						"skill_loadout": [
+							"pulse",
+							"barrier"
+						],
+						"talents": {
+							"conduction": 0,
+							"defense_efficiency": 0,
+							"mobility": 0,
+							"pulse_mastery": 0,
+							"reserve": 0,
+							"skill_haste": 0,
+							"stamina_recovery": 0,
+							"vitality": 1,
+							"weapon_training": 0
+						},
+						"weapon_id": "starter-lightning"
+					},
+					"name": "Healer QA 1"
+				},
+				"slot": 0
+			},
+			"event": "actual_preset_saved"
+		},
+		{
+			"at_seconds": 39.6560416666661,
+			"data": {
+				"stage": "preset_type"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 39.9106929999994,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_1",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						796.0,
+						567.0
+					],
+					"name": "PresetName_1",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_1",
+					"text": ""
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 40.0315263333328,
+			"data": {
+				"before": "",
+				"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_1",
+				"requested": "Healer QA 2",
+				"submit": false
+			},
+			"event": "gui_text_focus_observed"
+		},
+		{
+			"at_seconds": 40.0315263333328,
+			"data": {
+				"stage": "preset_save"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 40.0856929999995,
+			"data": {
+				"observed": "Healer QA 2",
+				"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_1",
+				"requested": "Healer QA 2",
+				"submit": false
+			},
+			"event": "gui_text_delivered"
+		},
+		{
+			"at_seconds": 40.3356929999997,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@1009/BuildTab_presets",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						636.5,
+						627.0
+					],
+					"name": "@Button@999",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@1001/@Button@999",
+					"text": "保存当前草稿"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 40.4572503333332,
+			"data": {
+				"stage": "preset_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 40.5780836666666,
+			"data": {
+				"preset": {
+					"build": {
+						"skill_loadout": [
+							"pulse",
+							"barrier"
+						],
+						"talents": {
+							"conduction": 0,
+							"defense_efficiency": 0,
+							"mobility": 0,
+							"pulse_mastery": 0,
+							"reserve": 0,
+							"skill_haste": 0,
+							"stamina_recovery": 0,
+							"vitality": 1,
+							"weapon_training": 0
+						},
+						"weapon_id": "starter-lightning"
+					},
+					"name": "Healer QA 2"
+				},
+				"slot": 1
+			},
+			"event": "actual_preset_saved"
+		},
+		{
+			"at_seconds": 40.5780836666666,
+			"data": {
+				"stage": "preset_type"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 40.8280836666668,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_2",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						796.0,
+						725.0
+					],
+					"name": "PresetName_2",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_2",
+					"text": ""
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 40.9489170000002,
+			"data": {
+				"before": "",
+				"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_2",
+				"requested": "Healer QA 3",
+				"submit": false
+			},
+			"event": "gui_text_focus_observed"
+		},
+		{
+			"at_seconds": 40.9489170000002,
+			"data": {
+				"stage": "preset_save"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 41.0030836666669,
+			"data": {
+				"observed": "Healer QA 3",
+				"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/PresetName_2",
+				"requested": "Healer QA 3",
+				"submit": false
+			},
+			"event": "gui_text_delivered"
+		},
+		{
+			"at_seconds": 41.6239170000007,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@1025/BuildTab_presets",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						636.5,
+						709.0
+					],
+					"name": "@Button@1019",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@HBoxContainer@1021/@Button@1019",
+					"text": "保存当前草稿"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 41.7447503333342,
+			"data": {
+				"stage": "preset_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 41.8655836666676,
+			"data": {
+				"preset": {
+					"build": {
+						"skill_loadout": [
+							"pulse",
+							"barrier"
+						],
+						"talents": {
+							"conduction": 0,
+							"defense_efficiency": 0,
+							"mobility": 0,
+							"pulse_mastery": 0,
+							"reserve": 0,
+							"skill_haste": 0,
+							"stamina_recovery": 0,
+							"vitality": 1,
+							"weapon_training": 0
+						},
+						"weapon_id": "starter-lightning"
+					},
+					"name": "Healer QA 3"
+				},
+				"slot": 2
+			},
+			"event": "actual_preset_saved"
+		},
+		{
+			"at_seconds": 41.8655836666676,
+			"data": {
+				"stage": "build_back"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 44.3405836666696,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1041",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						796.0,
+						733.0
+					],
+					"name": "@Button@1038",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1038",
+					"text": "返回"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 44.461417000003,
+			"data": {
+				"stage": "healer_enter"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 44.7092060000032,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						314.5
+					],
+					"name": "@Button@1041",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1041",
+					"text": "出发：雨庭 / 一阶"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 44.8300393333366,
+			"data": {
+				"stage": "wait_real_injury"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 46.4008726666712,
+			"data": {
+				"stage": "heal_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 46.4050393333379,
+			"data": {
+				"after": {
+					"active_character": "healer",
+					"camp": false,
+					"coin_remainder": 4,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 0.0,
+							"recovery_family": 19.9958333333333,
+							"self_heal": 19.9958333333333
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"gui": {
+						"active_character": "healer",
+						"apply_allowed": true,
+						"apply_reason": "",
+						"focus": "",
+						"section": "presets",
+						"selected_character": "healer"
+					},
+					"health": 127.0,
+					"level": 10,
+					"max_health": 127.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 1,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 1,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 1"
+								},
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 2"
+								},
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 3"
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0,
+						"crystal": 2,
+						"currency": 49,
+						"medkit": 2,
+						"rations": 3,
+						"scrap": 18
+					},
+					"run": 3,
+					"stamina": 85.0
+				},
+				"before": {
+					"active_character": "healer",
+					"camp": false,
+					"coin_remainder": 4,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 0.0,
+							"recovery_family": 0.0,
+							"self_heal": 0.0
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"gui": {
+						"active_character": "healer",
+						"apply_allowed": true,
+						"apply_reason": "",
+						"focus": "",
+						"section": "presets",
+						"selected_character": "healer"
+					},
+					"health": 112.0,
+					"level": 10,
+					"max_health": 127.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 1,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 1,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 1"
+								},
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 2"
+								},
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 3"
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0,
+						"crystal": 2,
+						"currency": 49,
+						"medkit": 2,
+						"rations": 3,
+						"scrap": 18
+					},
+					"run": 3,
+					"stamina": 120.0
+				},
+				"cost": 35.0,
+				"expected_health": 127.0
+			},
+			"event": "actual_self_heal"
+		},
+		{
+			"at_seconds": 46.4050393333379,
+			"data": {
+				"stage": "pause_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 46.4140843333379,
+			"data": {
+				"stage": "pause_hold"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 48.4470950000036,
+			"data": {
+				"combat": {
+					"cooldowns": {
+						"anchor": 0.0,
+						"attack": 0.0,
+						"barrier": 0.0,
+						"dodge": 0.0,
+						"focus": 0.0,
+						"pulse": 0.0,
+						"recovery_family": 19.9958333333333,
+						"self_heal": 19.9958333333333
+					},
+					"effects": {
+						"barrier_capacity": 0.0,
+						"barrier_remaining": 0.0,
+						"focus_remaining": 0.0
+					},
+					"schema_version": 1
+				}
+			},
+			"event": "pause_frozen_two_real_seconds"
+		},
+		{
+			"at_seconds": 48.4470950000036,
+			"data": {
+				"stage": "to_title"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 48.5762410000036,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": true,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1175",
+					"section": "presets",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						435.5
+					],
+					"name": "@Button@1171",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1171",
+					"text": "保存并回到标题"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 48.6970550000035,
+			"data": {
+				"stage": "title_observe"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 48.8178690000034,
+			"data": {
+				"combat": {
+					"cooldowns": {
+						"anchor": 0.0,
+						"attack": 0.0,
+						"barrier": 0.0,
+						"dodge": 0.0,
+						"focus": 0.0,
+						"pulse": 0.0,
+						"recovery_family": 19.9958333333333,
+						"self_heal": 19.9958333333333
+					},
+					"effects": {
+						"barrier_capacity": 0.0,
+						"barrier_remaining": 0.0,
+						"focus_remaining": 0.0
+					},
+					"schema_version": 1.0
+				},
+				"health": 127.0,
+				"sequence": 177,
+				"stamina": 85.3166666666667
+			},
+			"event": "saved_title_checkpoint"
+		},
+		{
+			"at_seconds": 48.8178690000034,
+			"data": {
+				"stage": "continue_click"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 48.9465547037072,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": false,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1291",
+					"section": "overview",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						314.5
+					],
+					"name": "@Button@1175",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1175",
+					"text": "继续旅程"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 49.0692106666702,
+			"data": {
+				"expected": {
+					"cooldowns": {
+						"anchor": 0.0,
+						"attack": 0.0,
+						"barrier": 0.0,
+						"dodge": 0.0,
+						"focus": 0.0,
+						"pulse": 0.0,
+						"recovery_family": 19.8694736666666,
+						"self_heal": 19.8694736666666
+					},
+					"effects": {
+						"barrier_capacity": 0.0,
+						"barrier_remaining": 0.0,
+						"focus_remaining": 0.0
+					},
+					"schema_version": 1.0
+				},
+				"gameplay_seconds": 0.126359666666694,
+				"state": {
+					"active_character": "healer",
+					"camp": true,
+					"coin_remainder": 4,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 0.0,
+							"recovery_family": 19.8694736666667,
+							"self_heal": 19.8694736666667
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"gui": {
+						"active_character": "healer",
+						"apply_allowed": false,
+						"apply_reason": "",
+						"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1291",
+						"section": "overview",
+						"selected_character": "healer"
+					},
+					"health": 127.0,
+					"level": 10,
+					"max_health": 127.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 1,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 1,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 1"
+								},
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 2"
+								},
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 3"
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0.0,
+						"crystal": 2.0,
+						"currency": 49.0,
+						"medkit": 2.0,
+						"rations": 3.0,
+						"scrap": 18.0
+					},
+					"run": 3,
+					"stamina": 87.5333333333333
+				},
+				"stored": {
+					"cooldowns": {
+						"anchor": 0.0,
+						"attack": 0.0,
+						"barrier": 0.0,
+						"dodge": 0.0,
+						"focus": 0.0,
+						"pulse": 0.0,
+						"recovery_family": 19.9958333333333,
+						"self_heal": 19.9958333333333
+					},
+					"effects": {
+						"barrier_capacity": 0.0,
+						"barrier_remaining": 0.0,
+						"focus_remaining": 0.0
+					},
+					"schema_version": 1.0
+				}
+			},
+			"event": "actual_continue_cooldown_preserved"
+		},
+		{
+			"at_seconds": 49.0692106666702,
+			"data": {
+				"stage": "death_enter"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 49.43998466667,
+			"data": {
+				"observed": {
+					"active_character": "healer",
+					"apply_allowed": false,
+					"apply_reason": "",
+					"focus": "",
+					"section": "overview",
+					"selected_character": "healer"
+				},
+				"target": {
+					"logical_point": [
+						800.0,
+						314.5
+					],
+					"name": "@Button@1291",
+					"path": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1291",
+					"text": "出发：雨庭 / 一阶"
+				}
+			},
+			"event": "gui_click_delivered"
+		},
+		{
+			"at_seconds": 49.5626810000033,
+			"data": {
+				"stage": "death_wait"
+			},
+			"event": "stage"
+		},
+		{
+			"at_seconds": 56.1086113333407,
+			"data": {
+				"active_character": "healer",
+				"camp": true,
+				"coin_remainder": 4,
+				"combat": {
+					"cooldowns": {
+						"anchor": 0.0,
+						"attack": 0.0,
+						"barrier": 0.0,
+						"dodge": 0.0,
+						"focus": 0.0,
+						"pulse": 0.0,
+						"recovery_family": 12.8300729999999,
+						"self_heal": 12.8300729999999
+					},
+					"effects": {
+						"barrier_capacity": 0.0,
+						"barrier_remaining": 0.0,
+						"focus_remaining": 0.0
+					},
+					"schema_version": 1
+				},
+				"gui": {
+					"active_character": "healer",
+					"apply_allowed": false,
+					"apply_reason": "",
+					"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1536",
+					"section": "overview",
+					"selected_character": "healer"
+				},
+				"health": 44.45,
+				"level": 10,
+				"max_health": 127.0,
+				"max_stamina": 120.0,
+				"profiles": {
+					"healer": {
+						"applied_build": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 1,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"character_id": "healer",
+						"draft": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 1,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"presets": [
+							{
+								"build": {
+									"skill_loadout": [
+										"pulse",
+										"barrier"
+									],
+									"talents": {
+										"conduction": 0,
+										"defense_efficiency": 0,
+										"mobility": 0,
+										"pulse_mastery": 0,
+										"reserve": 0,
+										"skill_haste": 0,
+										"stamina_recovery": 0,
+										"vitality": 1,
+										"weapon_training": 0
+									},
+									"weapon_id": "starter-lightning"
+								},
+								"name": "Healer QA 1"
+							},
+							{
+								"build": {
+									"skill_loadout": [
+										"pulse",
+										"barrier"
+									],
+									"talents": {
+										"conduction": 0,
+										"defense_efficiency": 0,
+										"mobility": 0,
+										"pulse_mastery": 0,
+										"reserve": 0,
+										"skill_haste": 0,
+										"stamina_recovery": 0,
+										"vitality": 1,
+										"weapon_training": 0
+									},
+									"weapon_id": "starter-lightning"
+								},
+								"name": "Healer QA 2"
+							},
+							{
+								"build": {
+									"skill_loadout": [
+										"pulse",
+										"barrier"
+									],
+									"talents": {
+										"conduction": 0,
+										"defense_efficiency": 0,
+										"mobility": 0,
+										"pulse_mastery": 0,
+										"reserve": 0,
+										"skill_haste": 0,
+										"stamina_recovery": 0,
+										"vitality": 1,
+										"weapon_training": 0
+									},
+									"weapon_id": "starter-lightning"
+								},
+								"name": "Healer QA 3"
+							}
+						]
+					},
+					"thief": {
+						"applied_build": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"character_id": "thief",
+						"draft": {
+							"skill_loadout": [
+								"pulse",
+								"barrier"
+							],
+							"talents": {
+								"conduction": 0,
+								"defense_efficiency": 0,
+								"mobility": 0,
+								"pulse_mastery": 0,
+								"reserve": 0,
+								"skill_haste": 0,
+								"stamina_recovery": 0,
+								"vitality": 0,
+								"weapon_training": 0
+							},
+							"weapon_id": "starter-lightning"
+						},
+						"presets": [
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							},
+							{
+								"build": null,
+								"name": ""
+							}
+						]
+					}
+				},
+				"realm": 1,
+				"resources": {
+					"alloy": 0.0,
+					"crystal": 2.0,
+					"currency": 49.0,
+					"medkit": 2.0,
+					"rations": 3.0,
+					"scrap": 18.0
+				},
+				"run": 4,
+				"stamina": 120.0
+			},
+			"event": "actual_enemy_death_and_failure_camp"
+		},
+		{
+			"at_seconds": 56.1086113333407,
+			"data": {
+				"coverage": {
+					"android": false,
+					"healer_actual_death": true,
+					"healer_switch": true,
+					"healer_three_presets": true,
+					"pause_freeze": true,
+					"physical_gamepad": false,
+					"self_heal": true,
+					"skill_slot_edit": false,
+					"talent_draft_and_apply": true,
+					"thief_presets": false,
+					"thief_two_runs": true,
+					"title_continue_cooldown": true
+				},
+				"state": {
+					"active_character": "healer",
+					"camp": true,
+					"coin_remainder": 4,
+					"combat": {
+						"cooldowns": {
+							"anchor": 0.0,
+							"attack": 0.0,
+							"barrier": 0.0,
+							"dodge": 0.0,
+							"focus": 0.0,
+							"pulse": 0.0,
+							"recovery_family": 12.8300729999999,
+							"self_heal": 12.8300729999999
+						},
+						"effects": {
+							"barrier_capacity": 0.0,
+							"barrier_remaining": 0.0,
+							"focus_remaining": 0.0
+						},
+						"schema_version": 1
+					},
+					"gui": {
+						"active_character": "healer",
+						"apply_allowed": false,
+						"apply_reason": "",
+						"focus": "/root/CharacterPlaytest/@CanvasLayer@3/@Control@4/@PanelContainer@17/@MarginContainer@18/@ScrollContainer@21/@VBoxContainer@22/@Button@1536",
+						"section": "overview",
+						"selected_character": "healer"
+					},
+					"health": 44.45,
+					"level": 10,
+					"max_health": 127.0,
+					"max_stamina": 120.0,
+					"profiles": {
+						"healer": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 1,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "healer",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 1,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 1"
+								},
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 2"
+								},
+								{
+									"build": {
+										"skill_loadout": [
+											"pulse",
+											"barrier"
+										],
+										"talents": {
+											"conduction": 0,
+											"defense_efficiency": 0,
+											"mobility": 0,
+											"pulse_mastery": 0,
+											"reserve": 0,
+											"skill_haste": 0,
+											"stamina_recovery": 0,
+											"vitality": 1,
+											"weapon_training": 0
+										},
+										"weapon_id": "starter-lightning"
+									},
+									"name": "Healer QA 3"
+								}
+							]
+						},
+						"thief": {
+							"applied_build": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"character_id": "thief",
+							"draft": {
+								"skill_loadout": [
+									"pulse",
+									"barrier"
+								],
+								"talents": {
+									"conduction": 0,
+									"defense_efficiency": 0,
+									"mobility": 0,
+									"pulse_mastery": 0,
+									"reserve": 0,
+									"skill_haste": 0,
+									"stamina_recovery": 0,
+									"vitality": 0,
+									"weapon_training": 0
+								},
+								"weapon_id": "starter-lightning"
+							},
+							"presets": [
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								},
+								{
+									"build": null,
+									"name": ""
+								}
+							]
+						}
+					},
+					"realm": 1,
+					"resources": {
+						"alloy": 0.0,
+						"crystal": 2.0,
+						"currency": 49.0,
+						"medkit": 2.0,
+						"rations": 3.0,
+						"scrap": 18.0
+					},
+					"run": 4,
+					"stamina": 120.0
+				}
+			},
+			"event": "done"
+		}
+	],
+	"stage": "done"
+}

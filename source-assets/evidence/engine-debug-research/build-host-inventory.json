@@ -1,0 +1,64 @@
+{
+  "recorded_local_date": "2026-10-13",
+  "scope": "read-only inventory; no compiler installation or execution",
+  "drive": {
+    "Name": "D",
+    "Used": 805767647232,
+    "Free": 218150371328
+  },
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i9-14900HX",
+    "NumberOfCores": 24,
+    "NumberOfLogicalProcessors": 32
+  },
+  "memory": {
+    "TotalPhysicalMemory": 34141495296
+  },
+  "commands": [
+    {
+      "name": "cl",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "clang",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "gcc",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "g++",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "scons",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "gdb",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "lldb",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "windbg",
+      "found": false,
+      "path": null
+    },
+    {
+      "name": "cdb",
+      "found": false,
+      "path": null
+    }
+  ]
+}

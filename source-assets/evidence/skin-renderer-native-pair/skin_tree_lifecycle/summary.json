@@ -1,0 +1,19 @@
+{
+  "mode": "skin_tree_lifecycle",
+  "started_utc": "2026-10-13T02:47:46.068Z",
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 61.3191554,
+  "gpu_confirmed": true,
+  "native_error_lines": 0,
+  "script_error_lines": 0,
+  "particles_function_errors": 0,
+  "completed": true,
+  "observation_verified": true,
+  "error_free_diagnostic": true,
+  "scope": "isolated synthetic workload only; not bug closure, gameplay or performance acceptance",
+  "evidence": "D:\\bugu_projects\\another_world\\artifacts\\skin-renderer-probe\\runs\\skin_tree_lifecycle\\c67430b0f0974630862fcd51f31bf6be",
+  "frames_drawn": 14368,
+  "rebuilds": 11,
+  "seconds_observed": 60.0013810000152
+}

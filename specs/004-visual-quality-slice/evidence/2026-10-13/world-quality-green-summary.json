@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "expected_diagnostics": [],
+  "expected_diagnostic_count": 0,
+  "unexpected_native": 0,
+  "unexpected_script": 0,
+  "unexpected_diagnostics": 0,
+  "report": "D:\\bugu_projects\\another_world\\artifacts\\004-world-quality-green\\93a5c21ecb48412cb44ad9061507c17c\\report_1\\results.xml",
+  "diagnostic_policy_version": 2,
+  "diagnostic_policy_sha256": "95C58ABE932C34DB1049754C75104544606B63D8E59EE737E4D07911F0395022",
+  "source_sha256": {
+    "res://tests/test_session_persistence.gd": "2E80AB6059D47E657E499956584CD1E1CDCA84BB2FB9BDBFDCC9A7B2D2C8A5CF",
+    "res://presentation/game_session.gd": "F783556715327ACD5925BBE1E5593DAB7D6394F4CD6E614CA79F2496117247B2",
+    "res://tests/test_rebinding_transition.gd": "C8FF8D5C36E493186C5DEDDDD77D5344FA3FC666BD43695E23A9815DC2660A1B",
+    "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd": "3A14BEE1FF7587CCA99F17A463A3F31127FF4659C7412D0607A914473C296BAB"
+  },
+  "godot_executable": "D:\\bugu_software\\ai-game-toolchain\\godot\\Godot_v4.7.2-stable_win64_console.exe",
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "gdunit4_version": "6.2.2",
+  "project": "D:\\bugu_projects\\another_world\\game"
+}

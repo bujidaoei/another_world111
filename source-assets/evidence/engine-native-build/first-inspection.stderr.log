@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "D:\bugu_projects\another_world\artifacts\engine-native-debug\inspect_build.py", line 66, in <module>
+    output = invoke(f'addr2line-{index}', [str(binutils / 'addr2line.exe'), '--exe', str(symbols), '--functions', '--demangle', item['address']])
+  File "D:\bugu_projects\another_world\artifacts\engine-native-debug\inspect_build.py", line 26, in invoke
+    raise RuntimeError(f'Binutils {name} failed: {result.returncode}')
+RuntimeError: Binutils addr2line-3 failed: 4294967295

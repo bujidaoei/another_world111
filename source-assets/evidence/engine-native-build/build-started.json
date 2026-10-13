@@ -1,0 +1,51 @@
+{
+  "utc_started": "2026-10-13T04:17:07.164593+00:00",
+  "pid": 37204,
+  "command": [
+    "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\build-venv\\Scripts\\scons.exe",
+    "-C",
+    "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\src",
+    "platform=windows",
+    "target=editor",
+    "arch=x86_64",
+    "use_mingw=yes",
+    "use_llvm=no",
+    "mingw_prefix=D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64",
+    "windows_subsystem=console",
+    "dev_build=no",
+    "debug_symbols=yes",
+    "separate_debug_symbols=yes",
+    "optimize=none",
+    "lto=none",
+    "production=no",
+    "d3d12=no",
+    "accesskit=no",
+    "angle=no",
+    "winrt=no",
+    "vulkan=yes",
+    "use_static_cpp=yes",
+    "module_mono_enabled=no",
+    "-j6"
+  ],
+  "cwd": "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\src",
+  "source_manifest_sha256": "16688e184a62969d329e458e638b9007a45f8c04edf8b19920a0400aeb24cb14",
+  "commit": "ed1daf0bf001b61586d9930840f2f1394092c079",
+  "archive_sha256": "e607e9985e1c201bc9cdc1aec8a120f0c3f53b9603f1f828e2b748534a2471ef",
+  "prebuild_source_changed": [],
+  "child_only_PATH_prefix": "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin",
+  "global_environment_changed": false,
+  "sdk_differences": [
+    "d3d12=no",
+    "accesskit=no",
+    "angle=no",
+    "winrt=no"
+  ],
+  "diagnostic_compile_differences": [
+    "debug_symbols=yes",
+    "separate_debug_symbols=yes",
+    "optimize=none",
+    "lto=none",
+    "windows_subsystem=console"
+  ],
+  "GPU_Main_or_GDB_executed": false
+}

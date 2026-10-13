@@ -1,0 +1,7 @@
+{
+  "tool_root": "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf",
+  "evidence_root": "D:/bugu_projects/another_world/artifacts/engine-native-debug",
+  "scope": "diagnostic fixed-source toolchain/build; no production binary replacement or GPU execution",
+  "utc_started": "2026-10-13T04:09:31.4322250Z",
+  "maximum_build_jobs": 6
+}

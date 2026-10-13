@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="11" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_character_visuals" package="tests" timestamp="2026-10-13T02:25:23" hostname="localhost" tests="11" failures="0" errors="0" skipped="0" flaky="0" time="2.842">
+		<testcase name="test_visual_configuration_rejects_wrong_types_paths_and_leg_or_gun_filters" classname="test_character_visuals" time="0.003">
+		</testcase>
+		<testcase name="test_true_skin_uses_tree_only_private_loop_resources_and_measured_mount" classname="test_character_visuals" time="0.013">
+		</testcase>
+		<testcase name="test_walk_rate_matches_actual_speed_and_real_bones_alternate_without_player_writes" classname="test_character_visuals" time="0.010">
+		</testcase>
+		<testcase name="test_healer_one_shot_keeps_feet_and_right_arm_base_tracks_and_returns_to_locomotion" classname="test_character_visuals" time="0.017">
+		</testcase>
+		<testcase name="test_identity_and_weapon_replacement_preserve_vitals_and_failed_configuration_is_atomic" classname="test_character_visuals" time="0.021">
+		</testcase>
+		<testcase name="test_damage_consumes_real_shared_barrier_after_defense_and_dodge_never_recharges_resources" classname="test_character_visuals" time="0.014">
+		</testcase>
+		<testcase name="test_actual_collision_resolved_speed_stops_walk_when_wall_blocks_requested_movement" classname="test_character_visuals" time="0.972">
+		</testcase>
+		<testcase name="test_pause_freezes_heal_bone_pose_and_dodge_motion_then_resumes" classname="test_character_visuals" time="1.719">
+		</testcase>
+		<testcase name="test_real_asset_preflight_rejects_unskinned_mesh_or_missing_bone_track_and_failed_reconfiguration_rolls_back" classname="test_character_visuals" time="0.014">
+		</testcase>
+		<testcase name="test_damage_boundaries_pause_passive_reduction_and_death_emit_only_real_health_damage" classname="test_character_visuals" time="0.012">
+		</testcase>
+		<testcase name="test_dodge_uses_applied_shared_cast_vitals_and_rejects_invalid_effect_without_partial_motion" classname="test_character_visuals" time="0.012">
+		</testcase>
+	</testsuite>
+</testsuites>

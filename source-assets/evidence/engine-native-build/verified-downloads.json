@@ -1,0 +1,17 @@
+{
+  "source": {
+    "path": "D:\\bugu_projects\\another_world\\artifacts\\godot-ed1daf0bf001b61586d9930840f2f1394092c079.tar.gz",
+    "bytes": 71921164,
+    "sha256": "e607e9985e1c201bc9cdc1aec8a120f0c3f53b9603f1f828e2b748534a2471ef"
+  },
+  "winlibs": {
+    "path": "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\downloads\\winlibs-x86_64-posix-seh-gcc-16.2.0-mingw-w64ucrt-14.0.0-r1.zip",
+    "bytes": 274029684,
+    "sha256": "c1f52294597c0b73786b2a78eb5d176d89226d2f21875eab75e783a8b1cefcc4"
+  },
+  "scons": {
+    "path": "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\downloads\\scons-4.11.1-py3-none-any.whl",
+    "bytes": 4123659,
+    "sha256": "454cef364348053422696e3d2ecb4fa593c96a624f955842eaaea64f95c8d11d"
+  }
+}

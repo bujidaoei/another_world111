@@ -1,0 +1,32 @@
+{
+  "kind": "004_planning_activation_and_readonly_review",
+  "date": "2026-10-13",
+  "branch": "codex/004-visual-quality-slice",
+  "commands": [
+    "setup-plan.ps1 -Json",
+    "setup-tasks.ps1 -Json",
+    "check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks",
+    "python tools/verify_spec.py --feature specs/004-visual-quality-slice --output artifacts/spec004-document-validation.json"
+  ],
+  "feature": "specs/004-visual-quality-slice",
+  "requirements": 11,
+  "acceptance": 11,
+  "tasks": 17,
+  "protocols": 17,
+  "document_errors": 0,
+  "games_tests_executed_by_document_checker": 0,
+  "independent_review": {
+    "initial_critical": 0,
+    "initial_high": 2,
+    "initial_medium": 2,
+    "findings_closed": [
+      "A1 reference-completion gate",
+      "I1 real Main first sample before family",
+      "I2 source factory path",
+      "A2 UI matrix and actual-device boundary"
+    ],
+    "remaining_critical": 0,
+    "remaining_high": 0
+  },
+  "scope": "planning gate only; no visual asset/game/device/quality acceptance"
+}

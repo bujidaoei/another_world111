@@ -1,0 +1,30 @@
+{
+  "mode": "gdb",
+  "run_id": "f880a6bef01c4b8b82c715e6cb988238",
+  "utc_started": "2026-10-13T06:41:59.544474+00:00",
+  "argv": [
+    "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\gdb.exe",
+    "-nx",
+    "-batch",
+    "-x",
+    "D:\\bugu_projects\\another_world\\artifacts\\engine-native-runtime\\capture_owner.gdb",
+    "--args",
+    "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\src\\bin\\godot.windows.editor.x86_64.exe",
+    "--path",
+    "D:\\bugu_projects\\another_world\\artifacts\\engine-native-runtime\\project",
+    "--script",
+    "res://native_main_probe.gd"
+  ],
+  "cwd": "D:\\bugu_projects\\another_world\\artifacts\\engine-native-runtime\\runs\\gdb\\f880a6bef01c4b8b82c715e6cb988238",
+  "production_code_and_original_assets_changed": false,
+  "copy_source_count": 1757,
+  "pre_input_changed": [],
+  "adaptations": [
+    "isolated QA save directory",
+    "standalone probe report destination"
+  ],
+  "probe_sha256": "cb00da1a456fc527b2a0d298e8d4f9a5e2a3c2c11d886da5765388afc0d264d1",
+  "qa_sha256": "b9564fe60f00ce2169909c1b274b57aac564ab5068fd5081d36d1b430472a438",
+  "engine_sha256": "c306d8c207451e4137c619679266050227b800f6bbd919e0f0b7a3fc14845cf9",
+  "pid": 59588
+}

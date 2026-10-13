@@ -1,0 +1,281 @@
+{
+	"assets": [
+		{
+			"id": "survivor_robot",
+			"meshes": [
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "survivor_robot/survivor_robot_Body/survivor_robot_Body_Surface",
+					"skeleton_path": "",
+					"skin_binds": 0,
+					"surfaces": 1
+				},
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "survivor_robot/survivor_robot_Head/survivor_robot_Head_Surface",
+					"skeleton_path": "",
+					"skin_binds": 0,
+					"surfaces": 1
+				},
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "survivor_robot/survivor_robot_LeftHip/survivor_robot_LeftHip_Surface",
+					"skeleton_path": "",
+					"skin_binds": 0,
+					"surfaces": 1
+				},
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "survivor_robot/survivor_robot_LeftShoulder/survivor_robot_LeftShoulder_Surface",
+					"skeleton_path": "",
+					"skin_binds": 0,
+					"surfaces": 1
+				},
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "survivor_robot/survivor_robot_RightHip/survivor_robot_RightHip_Surface",
+					"skeleton_path": "",
+					"skin_binds": 0,
+					"surfaces": 1
+				},
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "survivor_robot/survivor_robot_RightShoulder/survivor_robot_RightShoulder_Surface",
+					"skeleton_path": "",
+					"skin_binds": 0,
+					"surfaces": 1
+				}
+			]
+		},
+		{
+			"id": "thief_robot",
+			"meshes": [
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "thief_robot/thief_robot_Rig/Skeleton3D/thief_robot_Surface",
+					"skeleton_path": "..",
+					"skin_binds": 17,
+					"surfaces": 1
+				}
+			]
+		},
+		{
+			"id": "healer_robot",
+			"meshes": [
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "healer_robot/healer_robot_Rig/Skeleton3D/healer_robot_Surface",
+					"skeleton_path": "..",
+					"skin_binds": 17,
+					"surfaces": 1
+				}
+			]
+		},
+		{
+			"id": "lightning_rifle_t1",
+			"meshes": [
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "lightning_rifle_t1/lightning_rifle_t1_Surface",
+					"skeleton_path": "",
+					"skin_binds": 0,
+					"surfaces": 1
+				}
+			]
+		},
+		{
+			"id": "lightning_rifle_t2",
+			"meshes": [
+				{
+					"camera_occluder": false,
+					"cast_shadow": 1,
+					"class": "MeshInstance3D",
+					"geometry_transparency": 0.0,
+					"lod_bias": 1.0,
+					"material_override": false,
+					"materials": [
+						{
+							"alpha": 1.0,
+							"billboard_mode": 0,
+							"class": "StandardMaterial3D",
+							"cull_mode": 2,
+							"next_pass": false,
+							"particle_trails": false,
+							"shading_mode": 1,
+							"transparency": 0,
+							"vertex_color_as_albedo": false
+						}
+					],
+					"node": "lightning_rifle_t2/lightning_rifle_t2_Surface",
+					"skeleton_path": "",
+					"skin_binds": 0,
+					"surfaces": 1
+				}
+			]
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"renderer_scope": "headless actual resource properties; no native CPU base_flags observation"
+}

@@ -22,6 +22,9 @@ var _sticks: Array[AWVirtualStick] = []
 var _modal_scroll: ScrollContainer
 var _vitals: VBoxContainer
 var _text_scale := 1.0
+var _skill_status: Label
+var _touch_action_buttons: Dictionary = {}
+var _modal_layers: Array[Dictionary] = []
 
 func _ready() -> void:
 	root = Control.new()
@@ -75,12 +78,16 @@ func _ready() -> void:
 	inventory_label = Label.new()
 	inventory_label.add_theme_font_size_override("font_size", 16)
 	vitals.add_child(inventory_label)
+	_skill_status = Label.new()
+	_skill_status.add_theme_font_size_override("font_size", 15)
+	_skill_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	vitals.add_child(_skill_status)
 	_controls = Label.new()
 	_controls.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
 	_controls.offset_left = -670
-	_controls.offset_top = -80
+	_controls.offset_top = -124
 	_controls.offset_right = -40
-	_controls.offset_bottom = -30
+	_controls.offset_bottom = -34
 	(_controls as Label).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	(_controls as Label).text = "左键 电链   右键 防御   SPACE 闪避\nQ 冲击   F 锚点   E 交互   H 药包   ESC 暂停"
 	_controls.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -148,13 +155,13 @@ func _layout_hud() -> void:
 	var safe := _safe_insets()
 	_vitals.offset_left = 34 + safe.x
 	_vitals.offset_right = 334 + safe.x
-	_vitals.offset_top = (-350 if _touch_controls.visible else -132) - safe.w
-	_vitals.offset_bottom = (-254 if _touch_controls.visible else -36) - safe.w
+	_vitals.offset_top = (-408 if _touch_controls.visible else -184) - safe.w
+	_vitals.offset_bottom = (-254 if _touch_controls.visible else -30) - safe.w
 	mission.offset_right = -36 - safe.z
 	mission.offset_left = -380 - safe.z
 	mission.offset_top = 36 + safe.y
 	mission.offset_bottom = 186 + safe.y
-	notice.offset_top = (-290 if _touch_controls.visible else -148) - safe.w
+	notice.offset_top = (-292 if _touch_controls.visible else -216) - safe.w
 	notice.offset_bottom = notice.offset_top + 64
 	for child: Node in _touch_controls.get_children():
 		if child is Control:
@@ -269,8 +276,68 @@ func show_settings(values: Dictionary) -> void:
 func hide_menu() -> void:
 	modal.visible = false
 
+func push_menu_layer() -> void:
+	var focused := root.get_viewport().gui_get_focus_owner()
+	var saved_focus: WeakRef = weakref(focused) if focused != null and _modal_content.is_ancestor_of(focused) else null
+	_modal_layers.append({"content": _modal_content, "visible": modal.visible, "content_visible": _modal_content.visible, "scroll": _modal_scroll.scroll_vertical, "focus": saved_focus})
+	_modal_scroll.remove_child(_modal_content)
+	_modal_content.hide()
+	# The hidden layer remains an owned child, keeping its widgets and callbacks.
+	add_child(_modal_content)
+	_modal_content = VBoxContainer.new()
+	_modal_content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_modal_content.add_theme_constant_override("separation", 12)
+	_modal_scroll.add_child(_modal_content)
+
+func pop_menu_layer(restore_focus: bool = true) -> bool:
+	if _modal_layers.is_empty(): return false
+	var layer: Dictionary = _modal_layers.pop_back()
+	_modal_scroll.remove_child(_modal_content)
+	_modal_content.queue_free()
+	_modal_content = layer.content
+	remove_child(_modal_content)
+	_modal_scroll.add_child(_modal_content)
+	_modal_content.visible = bool(layer.content_visible)
+	modal.visible = bool(layer.visible)
+	_scale_overrides(_modal_content)
+	_layout_modal.call_deferred()
+	if restore_focus: _restore_menu_layer_state.call_deferred(layer.focus, int(layer.scroll))
+	return true
+
+func _restore_menu_layer_state(focus: WeakRef, scroll: int) -> void:
+	var control := focus.get_ref() as Control if focus != null else null
+	if is_instance_valid(control) and control.is_visible_in_tree(): control.grab_focus()
+	_modal_scroll.scroll_vertical = scroll
+
+func append_menu_control(control: Control) -> void:
+	_modal_content.add_child(control)
+	_scale_overrides(control)
+
 func update_bindings(bindings: RefCounted) -> void:
-	(_controls as Label).text = "左键 电链   右键 防御   %s 闪避\n%s 冲击   %s 锚点   %s 交互   %s 药包   ESC 暂停" % [bindings.key_label("dodge"), bindings.key_label("pulse"), bindings.key_label("anchor"), bindings.key_label("interact"), bindings.key_label("heal")]
+	(_controls as Label).text = "左键 电链   右键 防御   %s 闪避\n%s 主技能   %s 次技能   %s 专属\n%s 锚点   %s 交互   %s 药包   ESC 暂停" % [bindings.key_label("dodge"), bindings.key_label("pulse"), bindings.key_label("skill_secondary"), bindings.key_label("character_ability"), bindings.key_label("anchor"), bindings.key_label("interact"), bindings.key_label("heal")]
+
+func update_skill_state(data: Dictionary, bindings: RefCounted) -> void:
+	var descriptions: Array[String] = []
+	for index in range(data.slots.size()):
+		var skill: Dictionary = data.slots[index]
+		var action := "pulse" if index == 0 else "skill_secondary"
+		var cooldown := "%.1fs" % float(skill.remaining) if float(skill.remaining) > 0.0 else "就绪"
+		descriptions.append("%s %s · %s" % [str(bindings.key_label(action)), str(skill.label), cooldown])
+		if _touch_action_buttons.has(action):
+			(_touch_action_buttons[action] as Button).text = str(skill.label) + ("\n%.1fs" % float(skill.remaining) if float(skill.remaining) > 0.0 else "")
+	if data.exclusive_available:
+		descriptions.append("%s 自疗 · %s" % [str(bindings.key_label("character_ability")), "%.1fs" % float(data.exclusive_remaining) if float(data.exclusive_remaining) > 0.0 else "就绪"])
+	if float(data.recovery_remaining) > 0.0:
+		descriptions.append("恢复共享 %.1fs" % float(data.recovery_remaining))
+	if float(data.barrier_capacity) > 0.0:
+		descriptions.append("屏障 %.0f" % float(data.barrier_capacity))
+	if float(data.focus_remaining) > 0.0:
+		descriptions.append("聚焦 %.1fs" % float(data.focus_remaining))
+	_skill_status.text = str(data.character_label) + " · " + " / ".join(descriptions)
+	if _touch_action_buttons.has("character_ability"):
+		var button: Button = _touch_action_buttons["character_ability"]
+		button.disabled = not bool(data.exclusive_available)
+		button.text = "自疗" + ("\n%.1fs" % float(data.exclusive_remaining) if float(data.exclusive_remaining) > 0.0 else "")
 
 func set_touch_visible(value: bool) -> void:
 	clear_touch()
@@ -315,13 +382,13 @@ func _build_touch() -> void:
 			input_adapter.set_touch_aim(value, pressed and value.length() > 0.2))
 	_touch_controls.add_child(aim)
 	_sticks.append(aim)
-	var actions := {"dodge": "闪避", "pulse": "冲击", "anchor": "锚点", "interact": "交互", "heal": "药包"}
+	var actions := {"dodge": "闪避", "pulse": "主技能", "skill_secondary": "次技能", "anchor": "锚点", "interact": "交互", "heal": "药包", "character_ability": "自疗"}
 	var index := 0
 	for action: String in actions:
 		var button := Button.new()
 		button.text = actions[action]
 		button.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
-		var point := Vector2(-430 + (index % 3) * 76, -200 + floori(float(index) / 3.0) * 68)
+		var point := Vector2(-430 + (index % 3) * 76, -268 + floori(float(index) / 3.0) * 68)
 		button.offset_left = point.x
 		button.offset_top = point.y
 		button.offset_right = point.x + 70
@@ -330,13 +397,14 @@ func _build_touch() -> void:
 			if input_adapter:
 				input_adapter.queue_touch(action))
 		_touch_controls.add_child(button)
+		_touch_action_buttons[action] = button
 		index += 1
 	var defense := Button.new()
 	defense.text = "防御"
 	defense.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
-	defense.offset_left = -278
+	defense.offset_left = -354
 	defense.offset_top = -132
-	defense.offset_right = -208
+	defense.offset_right = -284
 	defense.offset_bottom = -72
 	defense.button_down.connect(func() -> void:
 		if input_adapter:

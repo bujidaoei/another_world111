@@ -1,0 +1,21 @@
+{
+  "result": {
+    "character": "healer",
+    "focus": "继续旅程",
+    "health": 127,
+    "max_health": 127,
+    "paused": true,
+    "preset_names": [
+      "Healer QA 1",
+      "Healer QA 2",
+      "Healer QA 3"
+    ],
+    "recovery": 19.9958333333333,
+    "renderer": "mobile",
+    "self_heal": 19.9958333333333,
+    "stamina": 85.3166666666667,
+    "started": false,
+    "title": "title"
+  },
+  "source": "game"
+}

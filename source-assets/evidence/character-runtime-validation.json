@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-10-13T02:27:56.757Z",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "gdunit4": "6.2.2",
+  "scope": "headless real imported skeleton, AnimationTree, physical collisions, pause, shared damage/dodge; no live GPU or human/Android acceptance",
+  "tests": 11,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "report": "artifacts/character-visuals-gdunit/fee4404afab3402e933c6e126b2fd57a/report_1/results.xml",
+  "report_sha256": "e3b669c5c3bd83ae856070e2eb373f35f4c21baf9f2bf6c55bd5cc86b480eedd",
+  "source_sha256": {
+    "game/presentation/player_controller.gd": "ac815f4814a22093ecd5802dcf8a25a5f7953047752d8eb417cd18f8942ec7ee",
+    "game/presentation/character_animator.gd": "bf30315cbfbf31c29cc159e216f2310ddbdfc9db226ee956d46ccf7acf7b61f0",
+    "game/config/character_visuals_config.gd": "aebdde3f6adc96cdc1ad0676777e18cb0798f5e641b44808728f92f6c162cb74",
+    "game/config/character_visuals.json": "688bb8ef7ed6dff52079125da44db6bc4b2464870bd6dda80d355cc226b127d2",
+    "game/tests/test_character_visuals.gd": "667712eefe5edf041e40d339753201ce0fbc3ef25e9e98b805af0c790fdc1632"
+  }
+}

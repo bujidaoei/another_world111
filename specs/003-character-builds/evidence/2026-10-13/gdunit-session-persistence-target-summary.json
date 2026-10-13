@@ -1,0 +1,131 @@
+{
+  "ok": true,
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "expected_diagnostics": [
+    {
+      "rule": "test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds:save:io_error:case-line-225",
+      "case": "test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 1
+    },
+    {
+      "rule": "test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds:preferences:io_error:case-line-248",
+      "case": "test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds",
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stream": "stderr",
+      "line": 18
+    },
+    {
+      "rule": "test_already_running_session_preserves_external_future_domain_slot_on_next_save:save:future_schema:case-line-271",
+      "case": "test_already_running_session_preserves_external_future_domain_slot_on_next_save",
+      "json": {
+        "code": "future_schema",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 42
+    },
+    {
+      "rule": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:preferences:io_error:case-line-292",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stream": "stderr",
+      "line": 66
+    },
+    {
+      "rule": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:save:io_error:case-line-292",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 94
+    },
+    {
+      "rule": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:preferences:io_error:case-line-309",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stream": "stderr",
+      "line": 122
+    },
+    {
+      "rule": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:save:io_error:case-line-309",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 150
+    },
+    {
+      "rule": "test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards:save:io_error:case-line-371",
+      "case": "test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 178
+    },
+    {
+      "rule": "test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity:save:io_error:case-line-426",
+      "case": "test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity",
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stream": "stderr",
+      "line": 204
+    }
+  ],
+  "expected_diagnostic_count": 9,
+  "unexpected_native": 0,
+  "unexpected_script": 0,
+  "unexpected_diagnostics": 0,
+  "report": "D:\\bugu_projects\\another_world\\artifacts\\gdunit-session-persistence-target\\a5b4c5d0c1e14f1bab48f563b634a059\\report_1\\results.xml",
+  "diagnostic_policy_version": 1,
+  "diagnostic_policy_sha256": "49C69C307AD8D309F8E718698609D9F9573DB52112B08BF9388C0180DE071C70",
+  "source_sha256": {
+    "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd": "3A14BEE1FF7587CCA99F17A463A3F31127FF4659C7412D0607A914473C296BAB",
+    "res://presentation/game_session.gd": "C86D34D70352058D0A620FEA14163BA596F13F6F1B72C4BF6672BE94827912A3",
+    "res://tests/test_session_persistence.gd": "2E80AB6059D47E657E499956584CD1E1CDCA84BB2FB9BDBFDCC9A7B2D2C8A5CF"
+  },
+  "godot_executable": "D:\\bugu_software\\ai-game-toolchain\\godot\\Godot_v4.7.2-stable_win64_console.exe",
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "gdunit4_version": "6.2.2",
+  "project": "D:\\bugu_projects\\another_world\\game"
+}

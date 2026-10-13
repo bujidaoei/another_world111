@@ -17,7 +17,7 @@ func _init(rules: RefCounted) -> void:
 func count(resource: String) -> int:
 	return int(_resources.get(resource, 0))
 
-func can_apply_operation(operation_id: String, cost: Dictionary, grant_resources: Dictionary = {}, updates: Dictionary = {}, remove_ids: Array[String] = []) -> Dictionary:
+func can_apply_operation(operation_id: String, cost: Dictionary, grant_resources: Dictionary = {}, updates: Dictionary = {}, remove_ids: Array[String] = [], additions: Array[Dictionary] = []) -> Dictionary:
 	if not _rules.ready:
 		return Result.failure("rules_unavailable", "规则尚未载入。")
 	if operation_id.is_empty() or _applied_operations.has(operation_id):
@@ -46,10 +46,19 @@ func can_apply_operation(operation_id: String, cost: Dictionary, grant_resources
 		var validation := Equipment.validate(updates[id], _rules)
 		if not validation.ok:
 			return validation
+	var added_ids: Dictionary = {}
+	for item: Dictionary in additions:
+		var validation := Equipment.validate(item, _rules)
+		if not validation.ok:
+			return validation
+		var id: String = item.instance_id
+		if _equipment.has(id) or added_ids.has(id) or updates.has(id) or id in remove_ids:
+			return Result.failure("equipment_duplicate", "新增装备实例已存在或在事务中重复。")
+		added_ids[id] = true
 	return Result.success()
 
-func apply_operation(operation_id: String, cost: Dictionary, grant_resources: Dictionary = {}, updates: Dictionary = {}, remove_ids: Array[String] = []) -> Dictionary:
-	var validation := can_apply_operation(operation_id, cost, grant_resources, updates, remove_ids)
+func apply_operation(operation_id: String, cost: Dictionary, grant_resources: Dictionary = {}, updates: Dictionary = {}, remove_ids: Array[String] = [], additions: Array[Dictionary] = []) -> Dictionary:
+	var validation := can_apply_operation(operation_id, cost, grant_resources, updates, remove_ids, additions)
 	if not validation.ok:
 		return validation
 	for resource: String in _rules.data.resources:
@@ -58,8 +67,10 @@ func apply_operation(operation_id: String, cost: Dictionary, grant_resources: Di
 		_equipment.erase(id)
 	for id: String in updates:
 		_equipment[id] = updates[id].duplicate(true)
+	for item: Dictionary in additions:
+		_equipment[item.instance_id] = item.duplicate(true)
 	_applied_operations[operation_id] = true
-	return Result.success({"resources": _resources.duplicate(true), "equipment_updates": updates.duplicate(true)})
+	return Result.success({"resources": _resources.duplicate(true), "equipment_updates": updates.duplicate(true), "equipment_additions": additions.duplicate(true)})
 
 func grant(resources: Dictionary, operation_id: String) -> Dictionary:
 	return apply_operation(operation_id, {}, resources)

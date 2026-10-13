@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="6" failures="0" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_rebinding_transition" package="tests" timestamp="2026-10-13T06:40:43" hostname="localhost" tests="6" failures="0" errors="0" skipped="0" flaky="0" time="0.959">
+		<testcase name="test_failed_quit_layer_receives_navigation_and_enter_before_rebinding_capture" classname="test_rebinding_transition" time="0.199">
+		</testcase>
+		<testcase name="test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer" classname="test_rebinding_transition" time="0.123">
+		</testcase>
+		<testcase name="test_normal_main_build_preset_text_and_talent_submission_reach_native_controls" classname="test_rebinding_transition" time="0.173">
+		</testcase>
+		<testcase name="test_synthetic_pad_pause_cancels_capture_before_gameplay_or_next_menu" classname="test_rebinding_transition" time="0.133">
+		</testcase>
+		<testcase name="test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write" classname="test_rebinding_transition" time="0.160">
+		</testcase>
+		<testcase name="test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write" classname="test_rebinding_transition" time="0.152">
+		</testcase>
+	</testsuite>
+</testsuites>

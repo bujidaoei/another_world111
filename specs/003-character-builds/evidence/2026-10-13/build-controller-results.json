@@ -1,0 +1,79 @@
+{
+  "kind": "build_controller_control_and_rule_regression",
+  "ok": true,
+  "tests": 87,
+  "owned_control_cases": 15,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "engine_errors": 0,
+  "report": "artifacts\\build-controller-final-stable\\report_1\\results.xml",
+  "suites": [
+    {
+      "name": "test_build_menu",
+      "tests": "15",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_character_builds",
+      "tests": "14",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_build_presets",
+      "tests": "13",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_build_resonance",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_combat_state",
+      "tests": "13",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_progression",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_equipment",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_expedition",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "source_sha256": {
+    "game/presentation/build_controller.gd": "722d0a49eb8731796c2e1fd9ec41cad5a69d847bb5eac4ba253d46ef3bda8787",
+    "game/presentation/build_menu.gd": "7bf9374628e3e0924305ef4779478fa82bdda9fec482d87a37bbee60d9481b40",
+    "game/tests/test_build_menu.gd": "a754a96597ab52a798129657a661284b33ec4ab49bb988e12620d0de4eabfe38"
+  },
+  "actual_controls_and_core": true,
+  "pc_hardware_input": false,
+  "main_scene_acceptance": false,
+  "gpu_or_mcp_used": false,
+  "task_checkboxes_changed": false
+}

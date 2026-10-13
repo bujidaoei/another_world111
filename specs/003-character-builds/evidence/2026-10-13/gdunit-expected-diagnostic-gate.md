@@ -1,0 +1,15 @@
+# 固定故障诊断门槛
+
+2026-10-13，persistence_testing。根授权只改tools，不改已冻结游戏/Repo/Prefs/suite。官方assert_error会捕获正常push_error但仍打印ERROR；这些是实际tmp目录故障与未来域保护诊断，不可用全局忽略ERROR实现green。
+
+已交付tools/run_gdunit.ps1、gdunit_diagnostic_gate.ps1、gdunit_expected_diagnostics.json及test_gdunit_diagnostic_gate.ps1，规则与版本契约在tools/GDUNIT_DIAGNOSTICS.md。所有原始输出保留；先要求fresh非零全部通过JUnit，再检查每条stderr块的精确JSON/原始生产与官方断言/case栈/固定调用位点预算/三份源码SHA。版本和导入仍零ERROR，未知CPP/Script/Parse/泄漏、extra/重复JSON、未通过或缺case、缺栈、超量/漏量都失败；没有用户绕过开关和自动学习规则。
+
+根/core新增病例过程中最初预算从3发展为7/8，均等真实green后才准备冻结；取消退出还原settlement菜单和未提交preset控件增加两案例，最终实际7/7、父9诊断。child最初手动free跳过生产Audio退役，真实8ObjectDB泄漏已保留为失败；最终走生产_request_quit后每child预期IO1、Script/leak/RID0。该真实子路径由core suite单独检查，不借父allowlist过滤子警告。
+
+Policy v1于最终冻结源码/实际日志观察后产生，九个调用位点预算各1：进度IO1、偏好IO1、已启动future1、Title双故障两次共4、两取消UI保存故障各1。policy SHA256 `49C69C307AD8D309F8E718698609D9F9573DB52112B08BF9388C0180DE071C70`。Main/suite/official assert原始SHA与精确帧行在JSON中，不允许规则迁移到未知来源。
+
+pure判别24/24通过，`artifacts/gdunit-diagnostic-gate/ffcb18189d6e453fa4de1b0d7e10fdcb/summary.json`。输入是实际已断言并passed的合并日志，测试按完整原始块分流做结构判别；这不是独立Godot执行，也不增加游戏GdUnit案例数量。准备期修正PowerShell XML适配器将name属性冒充DOM节点Name的问题，用原生getter判断testsuites/testsuite；该工具错误没有计作游戏业务red。
+
+随后授权的单独目标wrapper真实通过：`artifacts/gdunit-session-persistence-target/a5b4c5d0c1e14f1bab48f563b634a059`，Godot4.7.2/GdUnit6.2.2、7/7、exit0、failure/error/skip/flaky0；实际tests.stderr.log恰9个ERROR块全部匹配expected_diagnostics，unexpected_native/script/diagnostics0、budget0。version.stderr/import.stderr为0字节，stdout无ERROR。freshJUnit、version/import/tests两个原始流、diagnostics与summary完整保留，最小证据副本在本目录。
+
+这只证明固定故障suite和门槛识别，不能称全文无ERROR、全量通过、当前003渲染/完整PC/设备/商业品质完成；根将执行全量wrapper与cold Native复验后另写结论。历史53/55/81、driver24数值比较器与本pure24相交或类别不同，不相加。

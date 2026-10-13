@@ -1,0 +1,33 @@
+{
+  "exit_code": 0,
+  "utc_started": "2026-10-13T04:17:07.164593+00:00",
+  "utc_finished": "2026-10-13T04:30:17.284010+00:00",
+  "elapsed_seconds": 790.1194214999996,
+  "command": [
+    "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\build-venv\\Scripts\\scons.exe",
+    "-C",
+    "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\src",
+    "platform=windows",
+    "target=editor",
+    "arch=x86_64",
+    "use_mingw=yes",
+    "use_llvm=no",
+    "mingw_prefix=D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64",
+    "windows_subsystem=console",
+    "dev_build=no",
+    "debug_symbols=yes",
+    "separate_debug_symbols=yes",
+    "optimize=none",
+    "lto=none",
+    "production=no",
+    "d3d12=no",
+    "accesskit=no",
+    "angle=no",
+    "winrt=no",
+    "vulkan=yes",
+    "use_static_cpp=yes",
+    "module_mono_enabled=no",
+    "-j6"
+  ],
+  "GPU_Main_or_GDB_executed": false
+}

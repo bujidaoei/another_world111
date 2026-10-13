@@ -1,0 +1,19 @@
+{
+  "mode": "skin_unbound_lifecycle",
+  "started_utc": "2026-10-13T02:49:40.680Z",
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_seconds": 61.1427969,
+  "gpu_confirmed": true,
+  "native_error_lines": 0,
+  "script_error_lines": 0,
+  "particles_function_errors": 0,
+  "completed": true,
+  "observation_verified": true,
+  "error_free_diagnostic": true,
+  "scope": "isolated synthetic workload only; not bug closure, gameplay or performance acceptance",
+  "evidence": "D:\\bugu_projects\\another_world\\artifacts\\skin-renderer-probe\\runs\\skin_unbound_lifecycle\\78d7e7882fff47c196675f2bf1107e9e",
+  "frames_drawn": 14369,
+  "rebuilds": 11,
+  "seconds_observed": 60.0041640000238
+}

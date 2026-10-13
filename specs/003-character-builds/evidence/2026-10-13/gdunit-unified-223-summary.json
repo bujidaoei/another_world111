@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "tests": 223,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "report": "D:\\bugu_projects\\another_world\\artifacts\\003-unified-frozen\\29be5f890cef495b85c8290899bbb441\\report_1\\results.xml",
+  "godot_executable": "D:\\bugu_software\\ai-game-toolchain\\godot\\Godot_v4.7.2-stable_win64_console.exe",
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "gdunit4_version": "6.2.2",
+  "project": "D:\\bugu_projects\\another_world\\game"
+}

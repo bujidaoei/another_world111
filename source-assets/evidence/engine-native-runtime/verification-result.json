@@ -1,0 +1,69 @@
+[
+  {
+    "stage": "gdb-version",
+    "exit_code": 0,
+    "elapsed_seconds": 0.3334489000008034,
+    "argv": [
+      "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\gdb.exe",
+      "--version"
+    ]
+  },
+  {
+    "stage": "symbols",
+    "exit_code": 0,
+    "elapsed_seconds": 9.473130800000945,
+    "argv": [
+      "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\gdb.exe",
+      "-nx",
+      "-batch",
+      "-ex",
+      "set pagination off",
+      "-ex",
+      "set print pretty on",
+      "-ex",
+      "info address RendererRD::ParticlesStorage::particles_get_instance_buffer_motion_vectors_offsets",
+      "-ex",
+      "info line servers/rendering/renderer_rd/storage_rd/particles_storage.cpp:759",
+      "-ex",
+      "info line servers/rendering/renderer_rd/forward_mobile/render_forward_mobile.cpp:2653",
+      "-ex",
+      "info line servers/rendering/renderer_rd/forward_mobile/render_forward_mobile.cpp:3173",
+      "-ex",
+      "break servers/rendering/renderer_rd/storage_rd/particles_storage.cpp:759 if particles == 0",
+      "-ex",
+      "info breakpoints",
+      "-ex",
+      "show debug-file-directory",
+      "-ex",
+      "info files",
+      "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\src\\bin\\godot.windows.editor.x86_64.exe"
+    ]
+  },
+  {
+    "stage": "import",
+    "exit_code": 0,
+    "elapsed_seconds": 16.55680470000152,
+    "argv": [
+      "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\src\\bin\\godot.windows.editor.x86_64.exe",
+      "--headless",
+      "--path",
+      "D:\\bugu_projects\\another_world\\artifacts\\engine-native-runtime\\project",
+      "--editor",
+      "--import"
+    ]
+  },
+  {
+    "stage": "check",
+    "exit_code": 0,
+    "elapsed_seconds": 0.7616400000006252,
+    "argv": [
+      "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\src\\bin\\godot.windows.editor.x86_64.exe",
+      "--headless",
+      "--path",
+      "D:\\bugu_projects\\another_world\\artifacts\\engine-native-runtime\\project",
+      "--script",
+      "res://native_main_probe.gd",
+      "--check-only"
+    ]
+  }
+]

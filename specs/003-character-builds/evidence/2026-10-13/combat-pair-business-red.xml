@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="12" failures="6" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_combat_state" package="tests" timestamp="2026-10-13T01:31:05" hostname="localhost" tests="12" failures="6" errors="0" skipped="0" flaky="0" time="0.092">
+		<testcase name="test_self_heal_real_vitals_cost_and_shared_family_survive_restore" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_healing_identity_full_health_dead_pause_and_resource_rejections_are_atomic" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_item_recovery_preflight_is_readonly_and_duplicate_cannot_consume_twice" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_barrier_absorbs_remaining_capacity_then_expires_without_health_creation" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_common_haste_changes_skill_cooldown_but_never_recovery_family" classname="test_combat_state" time="0.004">
+		</testcase>
+		<testcase name="test_focus_uses_real_realm_and_effect_cannot_stack_or_survive_expiration" classname="test_combat_state" time="0.006">
+		</testcase>
+		<testcase name="test_attack_dodge_anchor_share_finite_authority_and_clear_effects_preserves_cooldowns" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_tick_and_damage_invalid_values_fail_without_partial_state_changes" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_invalid_vitals_context_and_derived_build_cannot_commit_cooldowns" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_snapshot_is_exact_deep_copied_and_rejects_future_missing_and_nonfinite_values" classname="test_combat_state" time="0.005">
+		</testcase>
+		<testcase name="test_restore_rejects_unpaired_effect_cooldowns_and_recovery_family_atomically" classname="test_combat_state" time="0.005">
+			<failure message="FAILED: res://tests/test_combat_state.gd:200" type="FAILURE">
+<![CDATA[
+Expecting: 'false' but is 'true'
+	at 'test_restore_rejects_unpaired_effect_cooldowns_and_recovery_family_atomically' in res://tests/test_combat_state.gd:200
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_combat_state.gd:201" type="FAILURE">
+<![CDATA[
+Expecting:
+ '{
+	"cooldowns": {
+	"anchor": 0.0,
+	"attack": 0.0,
+	"barrier": 0.0,
+	"dodge": 0.0,
+	"focus": 0.0,
+	"pulse": 0.0,
+	"recovery_family": 0.0,
+	"self_heal": 0.0
+	},
+	"effects": {
+	"barrier_capacity": 0.0,
+	"barrier_remaining": 0.0,
+	"focus_remaining": 0.0
+	},
+	"schema_version": 1
+  }'
+ but was
+ '{
+	"cooldowns": {
+	"anchor": 0.0,
+	"attack": 0.0,
+	"barrier": 0.0,
+	"dodge": 0.0,
+	"focus": 0.0,
+	"pulse": 0.0,
+	"recovery_family": 0.0,
+	"self_heal": 0.0
+	},
+	"effects": {
+	"barrier_capacity": 24.0,
+	"barrier_remaining": 3.0,
+	"focus_remaining": 0.0
+	},
+	"schema_version": 1
+  }'
+	at 'test_restore_rejects_unpaired_effect_cooldowns_and_recovery_family_atomically' in res://tests/test_combat_state.gd:201
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_combat_state.gd:200" type="FAILURE">
+<![CDATA[
+Expecting: 'false' but is 'true'
+	at 'test_restore_rejects_unpaired_effect_cooldowns_and_recovery_family_atomically' in res://tests/test_combat_state.gd:200
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_combat_state.gd:201" type="FAILURE">
+<![CDATA[
+Expecting:
+ '{
+	"cooldowns": {
+	"anchor": 0.0,
+	"attack": 0.0,
+	"barrier": 0.0,
+	"dodge": 0.0,
+	"focus": 0.0,
+	"pulse": 0.0,
+	"recovery_family": 0.0,
+	"self_heal": 0.0
+	},
+	"effects": {
+	"barrier_capacity": 0.0,
+	"barrier_remaining": 0.0,
+	"focus_remaining": 0.0
+	},
+	"schema_version": 1
+  }'
+ but was
+ '{
+	"cooldowns": {
+	"anchor": 0.0,
+	"attack": 0.0,
+	"barrier": 0.0,
+	"dodge": 0.0,
+	"focus": 0.0,
+	"pulse": 0.0,
+	"recovery_family": 0.0,
+	"self_heal": 0.0
+	},
+	"effects": {
+	"barrier_capacity": 0.0,
+	"barrier_remaining": 0.0,
+	"focus_remaining": 4.0
+	},
+	"schema_version": 1
+  }'
+	at 'test_restore_rejects_unpaired_effect_cooldowns_and_recovery_family_atomically' in res://tests/test_combat_state.gd:201
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_combat_state.gd:200" type="FAILURE">
+<![CDATA[
+Expecting: 'false' but is 'true'
+	at 'test_restore_rejects_unpaired_effect_cooldowns_and_recovery_family_atomically' in res://tests/test_combat_state.gd:200
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_combat_state.gd:201" type="FAILURE">
+<![CDATA[
+Expecting:
+ '{
+	"cooldowns": {
+	"anchor": 0.0,
+	"attack": 0.0,
+	"barrier": 0.0,
+	"dodge": 0.0,
+	"focus": 0.0,
+	"pulse": 0.0,
+	"recovery_family": 0.0,
+	"self_heal": 0.0
+	},
+	"effects": {
+	"barrier_capacity": 0.0,
+	"barrier_remaining": 0.0,
+	"focus_remaining": 0.0
+	},
+	"schema_version": 1
+  }'
+ but was
+ '{
+	"cooldowns": {
+	"anchor": 0.0,
+	"attack": 0.0,
+	"barrier": 0.0,
+	"dodge": 0.0,
+	"focus": 0.0,
+	"pulse": 0.0,
+	"recovery_family": 0.0,
+	"self_heal": 20.0
+	},
+	"effects": {
+	"barrier_capacity": 0.0,
+	"barrier_remaining": 0.0,
+	"focus_remaining": 0.0
+	},
+	"schema_version": 1
+  }'
+	at 'test_restore_rejects_unpaired_effect_cooldowns_and_recovery_family_atomically' in res://tests/test_combat_state.gd:201
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_confirm_recovery_revalidates_after_preview_and_never_reserves_cooldown" classname="test_combat_state" time="0.005">
+		</testcase>
+	</testsuite>
+</testsuites>

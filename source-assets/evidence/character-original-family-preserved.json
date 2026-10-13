@@ -1,0 +1,97 @@
+{
+  "ok": true,
+  "models": [
+    {
+      "path": "game/assets/models/survivor_robot.glb",
+      "sha256": "7d8835209772e52d2ec008611b0fb17c4bb12b3ea3a27ace3080062c79d11af7"
+    },
+    {
+      "path": "game/assets/models/scavenger.glb",
+      "sha256": "a7a63ed298409564393f3a2792b8bd1c1dca6beb3148e572342be5285234a91d"
+    },
+    {
+      "path": "game/assets/models/guardian.glb",
+      "sha256": "564a7c51713a39634c13a3b249233bcf64fc710a521a88e760878964b0c3d011"
+    },
+    {
+      "path": "game/assets/models/spitter.glb",
+      "sha256": "2e3630cc78ff8be4ded3571cc36ce9f4ee54f97384fdd1c4b0defa60cc5ecb96"
+    },
+    {
+      "path": "game/assets/models/lightning_rifle_t1.glb",
+      "sha256": "1569ffb15b3399900f4653f3b43f4086c0fd16e817769c1c1cbb15cdabf19aaf"
+    },
+    {
+      "path": "game/assets/models/lightning_rifle_t2.glb",
+      "sha256": "5a74c300c757bca36db4b0f050e8532d901190f1e134b2f7c23129a3e889317e"
+    },
+    {
+      "path": "game/assets/models/conductive_anchor.glb",
+      "sha256": "7d0e235ed5befa7054c04839399351136934ba077a5e1e2bdfd30d74aba5e3e4"
+    },
+    {
+      "path": "game/assets/models/cargo_crate.glb",
+      "sha256": "17c5bbcbe57a8f0ad6ed8eb02ae413c7c16383557ab678578a1671b4aec5f05b"
+    },
+    {
+      "path": "game/assets/models/barricade.glb",
+      "sha256": "a9211ad597bc31ff878b478fc1a2886a5a78f0d7319aaad91cec052a4c9e1fb1"
+    },
+    {
+      "path": "game/assets/models/pump_station.glb",
+      "sha256": "48b97292e3b4a2418cfa4c5683765d6646afffba3445b36206b83e62f3680987"
+    },
+    {
+      "path": "game/assets/models/ruin_wall_full.glb",
+      "sha256": "15ceec73f1e2206bbfc54a9d8e831610963ab0a78994118b8026328b79ae0681"
+    },
+    {
+      "path": "game/assets/models/ruin_wall_broken.glb",
+      "sha256": "cb4c34d4cdcd92c2617d428c1226994073fc61fe34eb9b82efe8eb9fda71e7db"
+    },
+    {
+      "path": "game/assets/models/conduit_gateway.glb",
+      "sha256": "89acd9b1ed6d7076fa93754626656c9f34e43d24cd24f1e84d878e52e4c2bc9e"
+    },
+    {
+      "path": "game/assets/models/paving_tiles.glb",
+      "sha256": "4c13444aea1b9825028220cc7fc273d76ff8479c6d62d9e139d90335b59a1d02"
+    },
+    {
+      "path": "game/assets/models/district_facade.glb",
+      "sha256": "1f75c886ed049983c1bd40486d95b4a788f5e173d5fb3d4c5aa5076815932799"
+    },
+    {
+      "path": "game/assets/models/maintenance_shelter.glb",
+      "sha256": "a6592198ea49775c8b322a85486324372d067fd261a3fb3e8264024834d6678b"
+    },
+    {
+      "path": "game/assets/models/pipe_run.glb",
+      "sha256": "a525405b6d55e76ff6fc3ee1ad27b81dcc10e7b6d0cc72fcb5333f491a5031e9"
+    },
+    {
+      "path": "game/assets/models/industrial_lamp.glb",
+      "sha256": "9ae56f8fb756c8d5d9a9fa3f30ab47a941063e2f47bc5ec43c090d831e065d0d"
+    },
+    {
+      "path": "game/assets/models/planter_overgrowth.glb",
+      "sha256": "3510cd4c145e27abff1f402032fd1d34e36453737a15569ec3a8723bd3da821c"
+    },
+    {
+      "path": "game/assets/models/drain_grate.glb",
+      "sha256": "10034a752909eda8921888bc986d5756e863b4bc0174196c8246679eae9054ca"
+    },
+    {
+      "path": "game/assets/models/ventilation_unit.glb",
+      "sha256": "8d09359d3ca2fe0b4400270360b29f6e8cfa0ff1b95d908c23f7ec5266fdc46b"
+    },
+    {
+      "path": "game/assets/models/reservoir_tank.glb",
+      "sha256": "6bf023daf94ac892eaf972d5176523ed4568c60539f1b9fdd19128817d31a68f"
+    },
+    {
+      "path": "game/assets/models/scattered_debris.glb",
+      "sha256": "3c1f81b6caee5553a1ef1d567ceb3e71421d9dbd72b306acd83514711e96e526"
+    }
+  ]
+}

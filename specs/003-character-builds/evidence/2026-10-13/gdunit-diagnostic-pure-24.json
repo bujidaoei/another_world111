@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "kind": "pure diagnostic classifier regression, no Godot execution",
+  "cases": 24,
+  "observation_log_sha256": "897F28195998FF0375DF4E03297A81E2FAC63434D4457B80DC185DAFFA213FA2",
+  "observation_junit_sha256": "FCC229B2DEAEDBE3F7883B6C7FE539E949F93AF2622B1CD246C56A8E0FBAB1E0",
+  "policy_sha256": "49C69C307AD8D309F8E718698609D9F9573DB52112B08BF9388C0180DE071C70",
+  "source_sha256": {
+    "res://presentation/game_session.gd": "C86D34D70352058D0A620FEA14163BA596F13F6F1B72C4BF6672BE94827912A3",
+    "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd": "3A14BEE1FF7587CCA99F17A463A3F31127FF4659C7412D0607A914473C296BAB",
+    "res://tests/test_session_persistence.gd": "2E80AB6059D47E657E499956584CD1E1CDCA84BB2FB9BDBFDCC9A7B2D2C8A5CF"
+  },
+  "results": [
+    {
+      "accepted_expected": 9,
+      "unexpected_diagnostics": 0,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "actual-officially-asserted-observation",
+      "budget_failures": 0
+    },
+    {
+      "passed": true,
+      "name": "version-and-import-never-allow-test-diagnostics"
+    },
+    {
+      "accepted_expected": 9,
+      "unexpected_diagnostics": 0,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 1,
+      "name": "unknown-native-cpp759",
+      "budget_failures": 0
+    },
+    {
+      "accepted_expected": 9,
+      "unexpected_diagnostics": 0,
+      "passed": true,
+      "unexpected_script": 1,
+      "unexpected_native": 0,
+      "name": "script-parse-error",
+      "budget_failures": 0
+    },
+    {
+      "accepted_expected": 9,
+      "unexpected_diagnostics": 0,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 1,
+      "name": "native-objectdb-leak-warning",
+      "budget_failures": 0
+    },
+    {
+      "accepted_expected": 9,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "fake-json-without-stack",
+      "budget_failures": 0
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "correct-json-on-stdout-cannot-spoof-push-error",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "unknown-module-json",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "extra-json-key",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "duplicate-json-key",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "non-string-json-value",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "missing-main-source-frame",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "missing-official-assert-frame",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "wrong-official-assert-method",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "missing-corresponding-case-stack",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 9,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "extra-diagnostic-over-fixed-budget",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 0,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "missing-asserted-diagnostic-under-fixed-budget",
+      "budget_failures": 1
+    },
+    {
+      "accepted_expected": 8,
+      "unexpected_diagnostics": 1,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "stack-case-absent-from-passed-junit",
+      "budget_failures": 0
+    },
+    {
+      "accepted_expected": 0,
+      "unexpected_diagnostics": 9,
+      "passed": true,
+      "unexpected_script": 0,
+      "unexpected_native": 0,
+      "name": "frozen-source-sha-changed",
+      "budget_failures": 9
+    },
+    {
+      "junit_rejected_before_log_classification": true,
+      "name": "junit-failure-cannot-be-allowed-by-log",
+      "passed": true
+    },
+    {
+      "junit_rejected_before_log_classification": true,
+      "name": "junit-error-cannot-be-allowed-by-log",
+      "passed": true
+    },
+    {
+      "junit_rejected_before_log_classification": true,
+      "name": "junit-skipped-cannot-be-allowed-by-log",
+      "passed": true
+    },
+    {
+      "junit_rejected_before_log_classification": true,
+      "name": "junit-flaky-suite",
+      "passed": true
+    },
+    {
+      "junit_rejected_before_log_classification": true,
+      "name": "junit-zero-discovery",
+      "passed": true
+    }
+  ],
+  "evidence": "D:\\bugu_projects\\another_world\\artifacts\\gdunit-diagnostic-gate\\ffcb18189d6e453fa4de1b0d7e10fdcb"
+}

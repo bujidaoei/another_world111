@@ -1,6 +1,6 @@
 # 数据模型与不变量
 
-全部是拟实现格式；配置文件、class_name和API需按任务真正落地后验证，不在此创建空接口。
+本文记录当前已实施的数据格式与不变量；实现/局部测试/完整验收状态分别由tasks与progress中的实际证据追踪。后继系统不在此创建空接口。
 
 ## CharacterBuildsConfig（配置版本1）
 
@@ -30,6 +30,8 @@ talents字段完整、不重复，skill_loadout恰2且不同，只可含三通�
 
 结算预检通过后与库存战利品一起提交到roster.thief_coin_remainder；失败/活动档回营恢复丢弃pending，原已入库余数保留。commit前不改roster已入库字段。XP仍由既有真实事件即时增长，不被该奖励修正重新发放。
 
+稳定库存操作身份为`expedition-settlement:<run_id>`，资源与所有新装备共用一次InventoryLedger事务，再提交预检后的余数CAS。Ended容量/装备错误保持原域供重试；同远征跨代旧快照重放由稳定身份拒绝。放弃pending可回营而不补生命，不能伪标rewards_committed成功。
+
 ## CombatStateSnapshot（domain schema1）
 
 `{schema_version:1, cooldowns:{attack,dodge,pulse,anchor,barrier,focus,self_heal,recovery_family}, effects:{barrier_remaining,barrier_capacity,focus_remaining}}`；每值为有限非负秒/容量且不超过配置实际合法最大值。冷却按skill ID唯一，不按角色/槽位复制。屏障剩余时间0时容量必须0；focus时间0时无效果，推导buff不另存百分比。
@@ -57,3 +59,5 @@ payload.domain_version=2；类型须有限正整数，bool/小数/字符串/null
 domain1允许规范的既有11字段及domain_version，不得出现character_builds或combat_state；只缺全新系统才迁移，不把域2部分坏数据补默认。domain2恰14字段：domain_version、world、inventory、active_weapon_id、run_counter、operation_counter、bench_built、health、stamina、settings、input_bindings、interrupted_expedition、character_builds、combat_state；缺少/未知顶层字段拒绝，两个内部域要求schema1，input_bindings要求迁移后schema2。
 
 兼容顶层active_weapon_id须与活动profile.applied_build.weapon_id相同，否则拒绝两种权威冲突。当前装备穿戴标记由唯一活动引用规范化；不改原ID、数量、资源、首次获得或进阶经历。002客户端只接受domain≤1、不能自动读取新域后写回，这个前置保护需要独立真实测试。
+
+保存候选合法不代表有权替换已有数据；进程内mutex下扫描全部有效代次并逐一执行纯领域守卫，旧/未来/非法候选拒绝时不写tmp或槽。Main偏好dirty仅回读验证成功清除；失败保存的退出/标题转换保持内存会话，重试/取消/明确放弃退出分别作为真实用户意图，不能把恢复失败当作正常退出成功。多外部进程同时写入不在现有进程内互斥承诺内。

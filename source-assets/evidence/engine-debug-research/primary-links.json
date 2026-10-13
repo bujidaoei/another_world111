@@ -1,0 +1,18 @@
+{
+  "recorded_date": "2026-10-13",
+  "scope": "Primary-source metadata; no binary downloads or installation",
+  "links": [
+    {"url": "https://github.com/godotengine/godot/releases/tag/4.7.2-stable", "observed": "Playwright official release with 34 uploaded assets; no Windows symbol package in actual inventory"},
+    {"url": "https://docs.godotengine.org/en/4.7/engine_details/development/compiling/compiling_for_windows.html", "observed": "Web read official contents; Playwright HTTP429, did not treat challenge as documentation"},
+    {"url": "https://github.com/godotengine/godot-docs/blob/4.7/engine_details/development/compiling/compiling_for_windows.rst", "observed": "Playwright actual official mirror contents 20249 characters, 53 links"},
+    {"url": "https://github.com/brechtsanders/winlibs_mingw/releases/tag/16.2.0posix-14.0.0-ucrt-r1", "observed": "Playwright publisher release body; delayed asset component did not load, followed its observed expanded_assets URL"},
+    {"url": "https://github.com/brechtsanders/winlibs_mingw/releases/expanded_assets/16.2.0posix-14.0.0-ucrt-r1", "observed": "Playwright actual 14 asset links, zip size and published SHA256; no package download"},
+    {"url": "https://scons.org/pages/download.html", "observed": "Official standalone scons-local forms and Python virtualenv guidance"},
+    {"url": "https://pypi.org/project/SCons/4.11.1/#files", "observed": "Official project publication wheel filename/hash/size"},
+    {"url": "https://pypi.org/pypi/SCons/4.11.1/json", "observed": "Read-only HTTPS JSON metadata saved; wheel/source URL/hash/size; did not download package"},
+    {"url": "https://github.com/godotengine/godot/blob/ed1daf0bf001b61586d9930840f2f1394092c079/SConstruct", "observed": "Matching existing archive exact contents; debugging/compiler options inspected locally"},
+    {"url": "https://github.com/godotengine/godot/blob/ed1daf0bf001b61586d9930840f2f1394092c079/platform/windows/platform_windows_builders.py", "observed": "Matching existing archive shows .debugsymbols filename and GNU debuglink"},
+    {"url": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/Break-Commands.html", "observed": "Primary breakpoint logging/commands semantics; no debugger run"},
+    {"url": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Watchpoints.html", "observed": "Primary watchpoint limitations; no runtime C++ flags observed"}
+  ]
+}

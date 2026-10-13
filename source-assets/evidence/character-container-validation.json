@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "date": "2026-10-13",
+  "assets": [
+    {
+      "id": "thief_robot",
+      "container": "glTF 2.0 GLB",
+      "sha256": "d768cfb93981971d2926776d338fe59c9c1bc4494c3105afcf4f4d3552d8ed73",
+      "bytes": 358736,
+      "nodes": 20,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [
+        "Idle",
+        "Walk"
+      ],
+      "animation_channels": {
+        "Idle": 51,
+        "Walk": 51
+      },
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 2776,
+        "vertices": 1500,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    },
+    {
+      "id": "healer_robot",
+      "container": "glTF 2.0 GLB",
+      "sha256": "7bc6753a8e968c088c9f3be0c6900acdae25e2b29548fbc68eb574286ab00039",
+      "bytes": 413468,
+      "nodes": 20,
+      "meshes": 1,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "palette_map_size": [
+        48,
+        48
+      ],
+      "animations": [
+        "Idle",
+        "Walk",
+        "SelfHeal"
+      ],
+      "animation_channels": {
+        "Idle": 51,
+        "Walk": 51,
+        "SelfHeal": 51
+      },
+      "external_dependencies": 0,
+      "geometry_validation": {
+        "triangles": 3164,
+        "vertices": 1704,
+        "meshes": 1,
+        "materials": 1,
+        "nonmanifold_edges": 0,
+        "loose_vertices": 0,
+        "degenerate_triangles": 0,
+        "nonfinite_vertices": 0
+      },
+      "in_engine_acceptance": "pending"
+    }
+  ]
+}

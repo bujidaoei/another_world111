@@ -4,10 +4,14 @@ extends RefCounted
 signal changed(snapshot: Dictionary)
 
 const Result = preload("res://config/rule_result.gd")
-const ACTIONS: Array[String] = ["move_left", "move_right", "move_forward", "move_back", "attack", "defend", "dodge", "pulse", "anchor", "interact", "heal", "camera_lock", "camera_reset", "pause"]
+const LEGACY_ACTIONS: Array[String] = ["move_left", "move_right", "move_forward", "move_back", "attack", "defend", "dodge", "pulse", "anchor", "interact", "heal", "camera_lock", "camera_reset", "pause"]
+const NEW_ACTIONS: Array[String] = ["skill_secondary", "character_ability"]
+const ACTIONS: Array[String] = ["move_left", "move_right", "move_forward", "move_back", "attack", "defend", "dodge", "pulse", "anchor", "interact", "heal", "camera_lock", "camera_reset", "pause", "skill_secondary", "character_ability"]
+const MIGRATION_FALLBACK_KEYS: Array[int] = [KEY_I, KEY_J, KEY_K, KEY_L]
+const MIGRATION_DEFAULT_KEYS: Dictionary = {"skill_secondary": KEY_X, "character_ability": KEY_T}
 const OPTIONAL_KEYS: Array[String] = ["attack", "defend"]
 const RESERVED_KEYS: Array[int] = [KEY_ESCAPE, KEY_TAB, KEY_ENTER, KEY_KP_ENTER, KEY_UP, KEY_DOWN, KEY_LEFT, KEY_RIGHT, KEY_HOME, KEY_END, KEY_PAGEUP, KEY_PAGEDOWN]
-const SCHEMA_VERSION: int = 1
+const SCHEMA_VERSION: int = 2
 var ready: bool = false
 var _bindings: Dictionary = {}
 var _defaults: Dictionary = {}
@@ -25,7 +29,7 @@ func load_file(path: String = "res://config/input_bindings.json") -> Dictionary:
 	if error != OK or not parser.data is Dictionary:
 		return Result.failure("bindings_invalid_json", "键位配置格式无效。")
 	var parsed: Dictionary = parser.data
-	if parsed.size() != 3 or not parsed.has("schema_version") or not parsed.has("bindings") or not parsed.has("labels"):
+	if parsed.size() != 3 or not parsed.has("schema_version") or not parsed.has("bindings") or not parsed.has("labels") or not _integer(parsed.get("schema_version")) or int(parsed.schema_version) != SCHEMA_VERSION:
 		return Result.failure("bindings_config_invalid", "键位配置包含未知或缺少字段。")
 	var validation := _validate_snapshot({"schema_version": parsed.schema_version, "bindings": parsed.bindings})
 	if not validation.ok:
@@ -49,15 +53,51 @@ func validate(candidate: Dictionary) -> Dictionary:
 		return Result.failure("bindings_not_ready", "键位配置尚未载入。")
 	return _validate_snapshot(candidate)
 
+func normalize(candidate: Dictionary) -> Dictionary:
+	return validate(candidate)
+
+static func normalize_snapshot(candidate: Dictionary) -> Dictionary:
+	# Frozen schema1->2 policy needs no config IO or live InputMap.
+	var validator := new()
+	return validator._validate_snapshot(candidate)
+
 func _validate_snapshot(candidate: Dictionary) -> Dictionary:
-	if candidate.size() != 2 or not _integer(candidate.get("schema_version")) or int(candidate.schema_version) != SCHEMA_VERSION or not candidate.get("bindings") is Dictionary:
+	if candidate.size() != 2 or not _schema_integer(candidate.get("schema_version")) or not candidate.get("bindings") is Dictionary:
 		return Result.failure("bindings_schema_invalid", "键位存档版本或结构无效。")
-	var incoming: Dictionary = candidate.bindings
-	if incoming.size() != ACTIONS.size():
+	var version := int(candidate.schema_version)
+	if version > SCHEMA_VERSION:
+		return Result.failure("future_schema", "检测到更新版本键位，当前版本不会覆盖它。")
+	if version not in [1, SCHEMA_VERSION]:
+		return Result.failure("bindings_schema_invalid", "键位存档版本不受支持。")
+	var validation := _validate_keys(candidate.bindings, LEGACY_ACTIONS if version == 1 else ACTIONS, version)
+	if not validation.ok or version == SCHEMA_VERSION:
+		return validation
+	var expanded: Dictionary = validation.data.bindings.duplicate(true)
+	var occupied: Array = expanded.values()
+	for action: String in NEW_ACTIONS:
+		var preferred := int(MIGRATION_DEFAULT_KEYS[action])
+		var choices: Array[int] = [preferred]
+		choices.append_array(MIGRATION_FALLBACK_KEYS)
+		var chosen: int = 0
+		for key: int in choices:
+			if key not in occupied:
+				chosen = key
+				break
+		if chosen == 0:
+			return _reject("binding_migration_conflict", "旧自定义键位占用全部迁移候选，请先调整旧版键位；原键位已保留。", {"action": action})
+		expanded[action] = chosen
+		occupied.append(chosen)
+	var migrated := _validate_keys(expanded, ACTIONS, SCHEMA_VERSION)
+	if migrated.ok:
+		migrated["migrated"] = true
+	return migrated
+
+func _validate_keys(incoming: Dictionary, actions: Array[String], version: int) -> Dictionary:
+	if incoming.size() != actions.size():
 		return Result.failure("bindings_actions_invalid", "键位必须包含此版本全部动作。")
 	var normalized: Dictionary = {}
 	var owners: Dictionary = {}
-	for action: String in ACTIONS:
+	for action: String in actions:
 		if not incoming.has(action) or not _integer(incoming[action]):
 			return _reject("binding_key_invalid", "动作键码必须是有效整数。", {"action": action})
 		var key := int(incoming[action])
@@ -76,7 +116,7 @@ func _validate_snapshot(candidate: Dictionary) -> Dictionary:
 				return _reject("binding_conflict", "该按键已用于另一动作。", {"action": action, "conflict_action": owners[key], "key": key})
 			owners[key] = action
 		normalized[action] = key
-	return Result.success({"schema_version": SCHEMA_VERSION, "bindings": normalized})
+	return Result.success({"schema_version": version, "bindings": normalized})
 
 func preview_remap(action: String, physical_keycode: int) -> Dictionary:
 	if not ready:
@@ -138,6 +178,9 @@ func key_label(action: String) -> String:
 
 static func _integer(value: Variant) -> bool:
 	return (value is int or value is float) and is_finite(float(value)) and float(value) == floor(float(value)) and float(value) >= 0.0 and float(value) <= float(KEY_SPECIAL | 0xFFFF)
+
+static func _schema_integer(value: Variant) -> bool:
+	return (value is int or value is float) and is_finite(float(value)) and float(value) == floorf(float(value)) and float(value) >= 1.0 and float(value) <= 9007199254740991.0
 
 static func _valid_physical_key(key: int) -> bool:
 	if key <= 0 or key > (KEY_SPECIAL | 0xFFFF):

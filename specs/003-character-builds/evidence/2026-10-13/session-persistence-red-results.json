@@ -1,0 +1,22 @@
+{
+  "kind": "session_persistence_real_filesystem_business_red",
+  "tests": 4,
+  "errors": 0,
+  "assertion_failures": 22,
+  "skipped": 0,
+  "exit_code": 100,
+  "report": "artifacts/session-persistence-business-red/report_1/results.xml",
+  "log": "artifacts/session-persistence-business-red.log",
+  "test_source_sha256_at_red": "998d862d6860e4472a412b0869eaf2e75d74fe5b899877d0fe6bdae714e1c69f",
+  "main_source_sha256_at_red": "fcbee72e7a4087d2b31d569f3e51f3b8c082ff89d7bb4f4f797594d9c664a73c",
+  "actual_directory_blockers": true,
+  "official_gdunit_error_expectations": true,
+  "real_child_main": true,
+  "child_evidence": [
+    "D:\\bugu_projects\\another_world\\artifacts\\session-persistence-probes\\69100_1508989-preferences",
+    "D:\\bugu_projects\\another_world\\artifacts\\session-persistence-probes\\69100_1508989-progress"
+  ],
+  "false_first_probe_parse_report": "artifacts/session-persistence-first-red/report_1/results.xml",
+  "source_fixtures_only_no_fake_repository": true,
+  "global_import_or_gpu_or_mcp": false
+}

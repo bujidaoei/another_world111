@@ -1,0 +1,95 @@
+{
+  "url": "https://github.com/godotengine/godot/blob/ed1daf0bf001b61586d9930840f2f1394092c079/SConstruct",
+  "title": "godot/SConstruct at ed1daf0bf001b61586d9930840f2f1394092c079 · godotengine/godot · GitHub",
+  "rawLineArrays": 1,
+  "selected": [
+    {
+      "line": 168,
+      "text": "opts.Add(BoolVariable(\"dev_build\", \"Developer build with dev-only debugging code (DEV_ENABLED)\", False))"
+    },
+    {
+      "line": 171,
+      "text": "        \"optimize\","
+    },
+    {
+      "line": 172,
+      "text": "        \"Optimization level (by default inferred from 'target' and 'dev_build')\","
+    },
+    {
+      "line": 178,
+      "text": "opts.Add(BoolVariable(\"debug_symbols\", \"Build with debugging symbols\", False))"
+    },
+    {
+      "line": 179,
+      "text": "opts.Add(BoolVariable(\"separate_debug_symbols\", \"Extract debugging symbols to a separate file\", False))"
+    },
+    {
+      "line": 534,
+      "text": "env.dev_build = env[\"dev_build\"]"
+    },
+    {
+      "line": 537,
+      "text": "if env[\"optimize\"] == \"auto\":"
+    },
+    {
+      "line": 538,
+      "text": "    if env.dev_build:"
+    },
+    {
+      "line": 542,
+      "text": "    else:  # Release"
+    },
+    {
+      "line": 543,
+      "text": "        opt_level = \"speed\""
+    },
+    {
+      "line": 544,
+      "text": "    env[\"optimize\"] = opt_level"
+    },
+    {
+      "line": 552,
+      "text": "    # DEBUG_ENABLED enables debugging *features* and debug-only code, which is intended"
+    },
+    {
+      "line": 556,
+      "text": "if env.dev_build:"
+    },
+    {
+      "line": 674,
+      "text": "if env[\"production\"]:"
+    },
+    {
+      "line": 676,
+      "text": "    env[\"debug_symbols\"] = methods.get_cmdline_bool(\"debug_symbols\", False)"
+    },
+    {
+      "line": 680,
+      "text": "    env[\"lto\"] = ARGUMENTS.get(\"lto\", \"auto\")"
+    },
+    {
+      "line": 889,
+      "text": ""
+    },
+    {
+      "line": 890,
+      "text": "    if env[\"optimize\"] == \"speed\":"
+    },
+    {
+      "line": 891,
+      "text": "        env[\"OPTIMIZELEVEL\"] = \"-O3\""
+    },
+    {
+      "line": 892,
+      "text": "    # `-O2` is friendlier to debuggers than `-O3`, leading to better crash backtraces."
+    },
+    {
+      "line": 893,
+      "text": "    elif env[\"optimize\"] == \"speed_trace\":"
+    },
+    {
+      "line": 894,
+      "text": "        env[\"OPTIMIZELEVEL\"] = \"-O2\""
+    }
+  ]
+}

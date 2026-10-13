@@ -1,0 +1,21 @@
+{
+  "mode": "skin_unbound_lifecycle",
+  "pid": 15804,
+  "started_utc": "2026-10-13T02:49:40.680Z",
+  "engine": "D:/bugu_software/ai-game-toolchain/godot/Godot_v4.7.2-stable_win64_console.exe",
+  "arguments": [
+    "--path",
+    "D:\\bugu_projects\\another_world\\artifacts\\skin-renderer-probe",
+    "--rendering-method",
+    "mobile",
+    "--rendering-driver",
+    "vulkan",
+    "--script",
+    "skin_probe.gd",
+    "--",
+    "skin_unbound_lifecycle",
+    "60"
+  ],
+  "scope": "isolated native GPU diagnostic; no production gameplay acceptance",
+  "probe_sha256": "75b9e2775852bfc25d97a3572958cd378c124c975a92068a53f1c9057a397c84"
+}

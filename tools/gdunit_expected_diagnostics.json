@@ -1,0 +1,859 @@
+{
+  "policy_version": 2,
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "gdunit4_version": "6.2.2",
+  "source_sha256": {
+    "res://presentation/game_session.gd": "F783556715327ACD5925BBE1E5593DAB7D6394F4CD6E614CA79F2496117247B2",
+    "res://tests/test_session_persistence.gd": "2E80AB6059D47E657E499956584CD1E1CDCA84BB2FB9BDBFDCC9A7B2D2C8A5CF",
+    "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd": "3A14BEE1FF7587CCA99F17A463A3F31127FF4659C7412D0607A914473C296BAB",
+    "res://tests/test_rebinding_transition.gd": "C8FF8D5C36E493186C5DEDDDD77D5344FA3FC666BD43695E23A9815DC2660A1B"
+  },
+  "rules": [
+    {
+      "id": "test_session_persistence:test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds:save:io_error:case-line-225:call-line-225",
+      "suite_resource": "res://tests/test_session_persistence.gd",
+      "case": "test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_progress",
+          "path": "res://presentation/game_session.gd",
+          "line": 972
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 225
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 225
+        }
+      ]
+    },
+    {
+      "id": "test_session_persistence:test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds:preferences:io_error:case-line-248:call-line-248",
+      "suite_resource": "res://tests/test_session_persistence.gd",
+      "case": "test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_preferences",
+          "path": "res://presentation/game_session.gd",
+          "line": 1120
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 248
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 248
+        }
+      ]
+    },
+    {
+      "id": "test_session_persistence:test_already_running_session_preserves_external_future_domain_slot_on_next_save:save:future_schema:case-line-271:call-line-271",
+      "suite_resource": "res://tests/test_session_persistence.gd",
+      "case": "test_already_running_session_preserves_external_future_domain_slot_on_next_save",
+      "budget": 1,
+      "json": {
+        "code": "future_schema",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_progress",
+          "path": "res://presentation/game_session.gd",
+          "line": 972
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 271
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "test_already_running_session_preserves_external_future_domain_slot_on_next_save",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 271
+        }
+      ]
+    },
+    {
+      "id": "test_session_persistence:test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:preferences:io_error:case-line-292:call-line-339",
+      "suite_resource": "res://tests/test_session_persistence.gd",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_preferences",
+          "path": "res://presentation/game_session.gd",
+          "line": 1120
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1176
+        },
+        {
+          "method": "_return_to_title",
+          "path": "res://presentation/game_session.gd",
+          "line": 1184
+        },
+        {
+          "method": "_on_command",
+          "path": "res://presentation/game_session.gd",
+          "line": 567
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 339
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "_expect_title_failure_once",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 343
+        },
+        {
+          "method": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 292
+        }
+      ]
+    },
+    {
+      "id": "test_session_persistence:test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:save:io_error:case-line-292:call-line-339",
+      "suite_resource": "res://tests/test_session_persistence.gd",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_progress",
+          "path": "res://presentation/game_session.gd",
+          "line": 972
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1179
+        },
+        {
+          "method": "_return_to_title",
+          "path": "res://presentation/game_session.gd",
+          "line": 1184
+        },
+        {
+          "method": "_on_command",
+          "path": "res://presentation/game_session.gd",
+          "line": 567
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 339
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "_expect_title_failure_once",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 343
+        },
+        {
+          "method": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 292
+        }
+      ]
+    },
+    {
+      "id": "test_session_persistence:test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:preferences:io_error:case-line-309:call-line-339",
+      "suite_resource": "res://tests/test_session_persistence.gd",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_preferences",
+          "path": "res://presentation/game_session.gd",
+          "line": 1120
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1176
+        },
+        {
+          "method": "_return_to_title",
+          "path": "res://presentation/game_session.gd",
+          "line": 1184
+        },
+        {
+          "method": "_on_command",
+          "path": "res://presentation/game_session.gd",
+          "line": 567
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 339
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "_expect_title_failure_once",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 343
+        },
+        {
+          "method": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 309
+        }
+      ]
+    },
+    {
+      "id": "test_session_persistence:test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry:save:io_error:case-line-309:call-line-339",
+      "suite_resource": "res://tests/test_session_persistence.gd",
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_progress",
+          "path": "res://presentation/game_session.gd",
+          "line": 972
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1179
+        },
+        {
+          "method": "_return_to_title",
+          "path": "res://presentation/game_session.gd",
+          "line": 1184
+        },
+        {
+          "method": "_on_command",
+          "path": "res://presentation/game_session.gd",
+          "line": 567
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 339
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "_expect_title_failure_once",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 343
+        },
+        {
+          "method": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 309
+        }
+      ]
+    },
+    {
+      "id": "test_session_persistence:test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards:save:io_error:case-line-371:call-line-371",
+      "suite_resource": "res://tests/test_session_persistence.gd",
+      "case": "test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_progress",
+          "path": "res://presentation/game_session.gd",
+          "line": 972
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1179
+        },
+        {
+          "method": "_request_quit",
+          "path": "res://presentation/game_session.gd",
+          "line": 1167
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 371
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 371
+        }
+      ]
+    },
+    {
+      "id": "test_session_persistence:test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity:save:io_error:case-line-426:call-line-426",
+      "suite_resource": "res://tests/test_session_persistence.gd",
+      "case": "test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_progress",
+          "path": "res://presentation/game_session.gd",
+          "line": 972
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1179
+        },
+        {
+          "method": "_request_quit",
+          "path": "res://presentation/game_session.gd",
+          "line": 1167
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 426
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 426
+        }
+      ]
+    },
+    {
+      "id": "test_rebinding_transition:test_failed_quit_layer_receives_navigation_and_enter_before_rebinding_capture:save:io_error:case-line-125:call-line-119",
+      "suite_resource": "res://tests/test_rebinding_transition.gd",
+      "case": "test_failed_quit_layer_receives_navigation_and_enter_before_rebinding_capture",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_progress",
+          "path": "res://presentation/game_session.gd",
+          "line": 972
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1179
+        },
+        {
+          "method": "_request_quit",
+          "path": "res://presentation/game_session.gd",
+          "line": 1167
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 119
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "_capture_then_failed_quit",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 119
+        },
+        {
+          "method": "test_failed_quit_layer_receives_navigation_and_enter_before_rebinding_capture",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 125
+        }
+      ]
+    },
+    {
+      "id": "test_rebinding_transition:test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer:save:io_error:case-line-157:call-line-157",
+      "suite_resource": "res://tests/test_rebinding_transition.gd",
+      "case": "test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "save",
+        "operation": "save",
+        "version": "0.1.0"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_progress",
+          "path": "res://presentation/game_session.gd",
+          "line": 972
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1179
+        },
+        {
+          "method": "_request_quit",
+          "path": "res://presentation/game_session.gd",
+          "line": 1167
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 157
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "test_failed_quit_escape_restores_capture_content_without_replacing_failure_layer",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 157
+        }
+      ]
+    },
+    {
+      "id": "test_rebinding_transition:test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write:preferences:io_error:case-line-234:call-line-252",
+      "suite_resource": "res://tests/test_rebinding_transition.gd",
+      "case": "test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_preferences",
+          "path": "res://presentation/game_session.gd",
+          "line": 1120
+        },
+        {
+          "method": "_input",
+          "path": "res://presentation/game_session.gd",
+          "line": 1091
+        },
+        {
+          "method": "_key",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 99
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 252
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "_verify_preferences_failure",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 252
+        },
+        {
+          "method": "test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 234
+        }
+      ]
+    },
+    {
+      "id": "test_rebinding_transition:test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write:preferences:io_error:case-line-234:call-line-257",
+      "suite_resource": "res://tests/test_rebinding_transition.gd",
+      "case": "test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_preferences",
+          "path": "res://presentation/game_session.gd",
+          "line": 1120
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1176
+        },
+        {
+          "method": "_return_to_title",
+          "path": "res://presentation/game_session.gd",
+          "line": 1184
+        },
+        {
+          "method": "_on_command",
+          "path": "res://presentation/game_session.gd",
+          "line": 567
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 257
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "_verify_preferences_failure",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 257
+        },
+        {
+          "method": "test_failed_rebind_preferences_remain_dirty_block_title_and_retry_real_write",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 234
+        }
+      ]
+    },
+    {
+      "id": "test_rebinding_transition:test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write:preferences:io_error:case-line-237:call-line-247",
+      "suite_resource": "res://tests/test_rebinding_transition.gd",
+      "case": "test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_preferences",
+          "path": "res://presentation/game_session.gd",
+          "line": 1120
+        },
+        {
+          "method": "_on_command",
+          "path": "res://presentation/game_session.gd",
+          "line": 553
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 247
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "_verify_preferences_failure",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 247
+        },
+        {
+          "method": "test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 237
+        }
+      ]
+    },
+    {
+      "id": "test_rebinding_transition:test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write:preferences:io_error:case-line-237:call-line-257",
+      "suite_resource": "res://tests/test_rebinding_transition.gd",
+      "case": "test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write",
+      "budget": 1,
+      "json": {
+        "code": "io_error",
+        "module": "preferences",
+        "operation": "save"
+      },
+      "stack_prefix": [
+        {
+          "method": "_save_preferences",
+          "path": "res://presentation/game_session.gd",
+          "line": 1120
+        },
+        {
+          "method": "_save_before_transition",
+          "path": "res://presentation/game_session.gd",
+          "line": 1176
+        },
+        {
+          "method": "_return_to_title",
+          "path": "res://presentation/game_session.gd",
+          "line": 1184
+        },
+        {
+          "method": "_on_command",
+          "path": "res://presentation/game_session.gd",
+          "line": 567
+        },
+        {
+          "method": "<anonymous lambda>",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 257
+        },
+        {
+          "method": "_execute",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 17
+        },
+        {
+          "method": "is_push_error",
+          "path": "res://addons/gdUnit4/src/asserts/GdUnitGodotErrorAssertImpl.gd",
+          "line": 132
+        },
+        {
+          "method": "_verify_preferences_failure",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 257
+        },
+        {
+          "method": "test_failed_reset_preferences_remain_dirty_block_title_and_retry_real_write",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 237
+        }
+      ]
+    }
+  ],
+  "suites": {
+    "res://tests/test_session_persistence.gd": {
+      "classname": "test_session_persistence",
+      "evidence_origin": "artifacts/session-persistence-final-source-1c56493873e640c6a105cbd3477f88ab/report_1/results.xml: actual 7/7 passed JUnit, runner exit0; raw stderr artifacts/session-persistence-final-source-1c56493873e640c6a105cbd3477f88ab/tests.stderr.log",
+      "observed_log_sha256": "378EF484E54A5CF11FC0B8D5B520AC3C1A66F7A08C772648BB03B2DA73193695",
+      "allowed_tail_frames": [
+        {
+          "method": "after_test",
+          "path": "res://tests/test_session_persistence.gd",
+          "line": 151
+        }
+      ]
+    },
+    "res://tests/test_rebinding_transition.gd": {
+      "classname": "test_rebinding_transition",
+      "evidence_origin": "artifacts/003-rebinding-transition-green/report_1/results.xml: actual 6/6 passed JUnit, runner exit0; raw stderr artifacts/003-rebinding-transition-green.stderr.log",
+      "observed_log_sha256": "52299CFA57D0FFA584C6C37EB02906A6F85F59AEA981CDE951E3DD405B7FB3C8",
+      "allowed_tail_frames": [
+        {
+          "method": "after_test",
+          "path": "res://tests/test_rebinding_transition.gd",
+          "line": 36
+        }
+      ]
+    }
+  },
+  "allowed_framework_tail_frames": [
+    {
+      "method": "_execute_test_case",
+      "path": "res://addons/gdUnit4/src/core/_TestCase.gd",
+      "line": 79
+    },
+    {
+      "method": "execute",
+      "path": "res://addons/gdUnit4/src/core/_TestCase.gd",
+      "line": 40
+    },
+    {
+      "method": "_execute",
+      "path": "res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleTestStage.gd",
+      "line": 10
+    },
+    {
+      "method": "execute",
+      "path": "res://addons/gdUnit4/src/core/execution/stages/IGdUnitExecutionStage.gd",
+      "line": 19
+    },
+    {
+      "method": "_execute",
+      "path": "res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd",
+      "line": 17
+    },
+    {
+      "method": "_execute",
+      "path": "res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd",
+      "line": 26
+    },
+    {
+      "method": "_execute",
+      "path": "res://addons/gdUnit4/src/core/execution/stages/GdUnitTestSuiteExecutionStage.gd",
+      "line": 36
+    },
+    {
+      "method": "_execute",
+      "path": "res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseExecutionStage.gd",
+      "line": 35
+    },
+    {
+      "method": "_execute",
+      "path": "res://addons/gdUnit4/src/core/execution/stages/single/GdUnitTestCaseSingleExecutionStage.gd",
+      "line": 28
+    },
+    {
+      "method": "_execute",
+      "path": "res://addons/gdUnit4/src/core/execution/stages/GdUnitTestCaseAfterStage.gd",
+      "line": 26
+    }
+  ]
+}

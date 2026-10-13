@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://presentation/main.tscn" id="1_main"]
+
+[node name="CharacterPlaytest" instance=ExtResource("1_main")]
+save_directory = "user://tests/character_playtest/20261013_003_c"

@@ -23,9 +23,9 @@ func configure(directory: String = "user://saves") -> Dictionary:
 	return result
 
 
-func save(payload: Dictionary) -> Dictionary:
+func save(payload: Dictionary, existing_validator: Callable = Callable()) -> Dictionary:
 	_io_mutex.lock()
-	var result := _save(payload)
+	var result := _save(payload, existing_validator)
 	_io_mutex.unlock()
 	_emit_diagnostic("save", result)
 	return result
@@ -54,7 +54,7 @@ func _configure(directory: String) -> Dictionary:
 	return {"ok": true, "code": "configured", "message": "存档目录已配置。"}
 
 
-func _save(payload: Dictionary) -> Dictionary:
+func _save(payload: Dictionary, existing_validator: Callable) -> Dictionary:
 	if not _json_safe(payload, 0, {"count": 0}):
 		return _failure("invalid_payload", "存档包含不能持久化的数据类型、深度或数值。")
 	var payload_json := JSON.stringify(payload, "", true, true)
@@ -69,6 +69,17 @@ func _save(payload: Dictionary) -> Dictionary:
 	var latest: Dictionary = scan.latest
 	if latest.is_empty() and scan.has_existing:
 		return _failure("recovery_required", "所有存档槽均无法验证，请保留文件并选择恢复。")
+	# Guards are pure domain validators: no IO, repository reentry, signals or callbacks.
+	# Both validated generations are inspected while the same process mutex is held.
+	# A detached candidate prevents a validator from changing the scanned payload.
+	if existing_validator.is_valid():
+		for slot: Dictionary in scan.valid_slots:
+			var validation: Variant = existing_validator.call(slot.data.duplicate(true))
+			if not validation is Dictionary or not validation.get("ok") is bool or not validation.get("code") is String or not validation.get("message") is String:
+				return _failure("existing_validator_invalid", "现有存档守卫返回结构无效，未修改存档。")
+			if not validation.ok:
+				if validation.code.is_empty(): return _failure("existing_validator_invalid", "现有存档守卫未给出失败原因，未修改存档。")
+				return validation.duplicate(true)
 	var sequence: int = int(latest.get("sequence", 0)) + 1
 	if sequence > MAX_SAFE_INTEGER:
 		return _failure("sequence_exhausted", "存档序号达到安全上限，未修改存档。")
@@ -127,6 +138,7 @@ func _load() -> Dictionary:
 
 func _scan_slots() -> Dictionary:
 	var latest: Dictionary = {}
+	var valid_slots: Array[Dictionary] = []
 	var has_existing := false
 	var has_invalid := false
 	var future := false
@@ -137,9 +149,10 @@ func _scan_slots() -> Dictionary:
 			future = true
 		if slot.exists and not slot.ok:
 			has_invalid = true
-		if slot.ok and (latest.is_empty() or slot.sequence > latest.sequence):
-			latest = slot
-	return {"latest": latest, "has_existing": has_existing, "has_invalid": has_invalid, "future": future}
+		if slot.ok:
+			valid_slots.append(slot)
+			if latest.is_empty() or slot.sequence > latest.sequence: latest = slot
+	return {"latest": latest, "valid_slots": valid_slots, "has_existing": has_existing, "has_invalid": has_invalid, "future": future}
 
 
 func _read_slot(path: String, slot_index: int) -> Dictionary:

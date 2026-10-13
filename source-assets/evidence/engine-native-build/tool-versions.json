@@ -1,0 +1,99 @@
+{
+  "global_environment_changed": false,
+  "Godot_or_GDB_executed": false,
+  "tools": [
+    {
+      "tool": "python",
+      "command": [
+        "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\build-venv\\Scripts\\python.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "bytes": 241152,
+      "sha256": "02fc6755f958d2d4f12182b5543d72cca2be137f7aa73aa820cfeb2d7da926e3",
+      "stdout": "Python 3.13.12\r\n",
+      "stderr": ""
+    },
+    {
+      "tool": "scons",
+      "command": [
+        "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\build-venv\\Scripts\\scons.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "bytes": 108412,
+      "sha256": "bc3d02eff470380e947693a60f075834ac2321d60a2000bd364094e37cf66625",
+      "stdout": "SCons by Steven Knight et al.:\r\n\tSCons: v4.11.1.b97f32b9adab83a96af767ec1d7dc8d7a41c7c74, Wed, 26 Aug 2026 21:18:42 -0700, by bdbaddog on M1Dog2021\r\n\tSCons path: ['D:\\\\bugu_software\\\\ai-game-toolchain\\\\native-debug-ed1daf0bf\\\\build-venv\\\\Lib\\\\site-packages\\\\SCons']\r\nCopyright (c) 2001 - 2026 The SCons Foundation\r\n",
+      "stderr": ""
+    },
+    {
+      "tool": "gcc",
+      "command": [
+        "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\gcc.exe",
+        "-v"
+      ],
+      "exit_code": 0,
+      "bytes": 2408462,
+      "sha256": "52370b1776e129d6562753af441a5f2b2b3edc0a3181cb05a78550dab8d70e85",
+      "stdout": "",
+      "stderr": "Using built-in specs.\r\nCOLLECT_GCC=D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\gcc.exe\r\nCOLLECT_LTO_WRAPPER=D:/bugu_software/ai-game-toolchain/native-debug-ed1daf0bf/toolchain/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe\r\nOFFLOAD_TARGET_NAMES=nvptx-none\r\nTarget: x86_64-w64-mingw32\r\nConfigured with: ../configure --prefix=/c/Prog/winlibs_staging_ucrt/home64/inst_gcc-16.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --enable-libgdiagnostics --with-libiconv --with-system-zlib --with-build-sysroot=/c/Prog/winlibs_staging_ucrt/home64/gcc-16.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe\r\nThread model: posix\r\nSupported LTO compression algorithms: zlib zstd\r\ngcc version 16.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) \r\n"
+    },
+    {
+      "tool": "g++",
+      "command": [
+        "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\g++.exe",
+        "-v"
+      ],
+      "exit_code": 0,
+      "bytes": 2411534,
+      "sha256": "b8eaa0470fca205dcf1662c086bc8000eb87b16d29058bd0bf3098c598bf6f91",
+      "stdout": "",
+      "stderr": "Using built-in specs.\r\nCOLLECT_GCC=D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\g++.exe\r\nCOLLECT_LTO_WRAPPER=D:/bugu_software/ai-game-toolchain/native-debug-ed1daf0bf/toolchain/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/16.2.0/lto-wrapper.exe\r\nOFFLOAD_TARGET_NAMES=nvptx-none\r\nTarget: x86_64-w64-mingw32\r\nConfigured with: ../configure --prefix=/c/Prog/winlibs_staging_ucrt/home64/inst_gcc-16.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --enable-libgdiagnostics --with-libiconv --with-system-zlib --with-build-sysroot=/c/Prog/winlibs_staging_ucrt/home64/gcc-16.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe\r\nThread model: posix\r\nSupported LTO compression algorithms: zlib zstd\r\ngcc version 16.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r1) \r\n"
+    },
+    {
+      "tool": "ld",
+      "command": [
+        "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\ld.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "bytes": 1823758,
+      "sha256": "779a1721ab3764167e1fe9bebbd742d2eddbadd630bc14b37f3e84d76c6faae0",
+      "stdout": "GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r1) 2.47.20260726\r\nCopyright (C) 2026 Free Software Foundation, Inc.\r\nThis program is free software; you may redistribute it under the terms of\r\nthe GNU General Public License version 3 or (at your option) a later version.\r\nThis program has absolutely no warranty.\r\n",
+      "stderr": ""
+    },
+    {
+      "tool": "objcopy",
+      "command": [
+        "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\objcopy.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "bytes": 1306638,
+      "sha256": "954e04a85f63585de3c5b48ba6a1c04dcc5e3018a0d93b6bee2e0a64931e5206",
+      "stdout": "GNU objcopy (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r1) 2.47.20260726\r\nCopyright (C) 2026 Free Software Foundation, Inc.\r\nThis program is free software; you may redistribute it under the terms of\r\nthe GNU General Public License version 3 or (at your option) any later version.\r\nThis program has absolutely no warranty.\r\n",
+      "stderr": ""
+    },
+    {
+      "tool": "windres",
+      "command": [
+        "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\windres.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "bytes": 1284622,
+      "sha256": "dd86f745efa3bcb60bfe9e2aa852ccd2ca2ec10f749d41f2bd3c088f27001f5a",
+      "stdout": "GNU windres (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r1) 2.47.20260726\r\nCopyright (C) 2026 Free Software Foundation, Inc.\r\nThis program is free software; you may redistribute it under the terms of\r\nthe GNU General Public License version 3 or (at your option) any later version.\r\nThis program has absolutely no warranty.\r\n",
+      "stderr": ""
+    },
+    {
+      "tool": "gdb",
+      "path": "D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\toolchain\\mingw64\\bin\\gdb.exe",
+      "bytes": 14500878,
+      "sha256": "e2eb23612154d2da71fa10c53f737ef587a952ae10db586c52b710064a2a78b8",
+      "executed": false,
+      "publisher_version": "17.2",
+      "version_evidence": "Pinned publisher release and fixed archive manifest; GDB itself not run per root instruction"
+    }
+  ]
+}

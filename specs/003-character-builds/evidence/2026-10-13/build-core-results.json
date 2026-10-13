@@ -1,0 +1,76 @@
+{
+  "kind": "independent_build_rules_regression",
+  "tests": 71,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "engine_errors": 0,
+  "report": "artifacts\\build-core-real-combat-future-stable\\report_1\\results.xml",
+  "suites": [
+    {
+      "name": "test_character_builds",
+      "tests": "14",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_build_presets",
+      "tests": "13",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_build_resonance",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_combat_state",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_progression",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_equipment",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "test_expedition",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "source_sha256": {
+    "game/config/character_builds.json": "51e80937c27dbf4034e1ff0e69163a08f19284b33b25883bd731ef81bd2ef87b",
+    "game/config/character_builds_config.gd": "72d106e134d93f751e1943b8d0484aa7983a47990930104475eedce0ad1f50ee",
+    "game/features/characters/build_evaluator.gd": "05feb12af97526e64eae7579147131a32b810015ec084fcb8bce7cdfb8abe3c6",
+    "game/features/characters/character_roster.gd": "4626cf4f608b52598e60e4481e2aca8bdbb6b0499a8b93f7c5275a392a8111f3",
+    "game/tests/build_fixture.gd": "cf7081f5e0e7bde67208b4ba5d10f62e07a5f529eb6a65eaa888c57a363e6695",
+    "game/tests/test_character_builds.gd": "72f38968647e2711210904fd4cbe7f9746376be623c61c34844ffe34ebd7aa05",
+    "game/tests/test_build_presets.gd": "8074803596a37c470d548b53960214e6baab74f7b32bf80bb6a2355f72d74b59",
+    "game/tests/test_build_resonance.gd": "bd78b0c69a98ef07366a38c835179e8b8a77b97df5d7029e20c46b0d9f012491",
+    "game/features/combat/combat_state.gd": "31eec6c6cfbcbeba0ced0939f1d35e39f4e44a6ecf7dfd9cd1a0e385eaae097d"
+  },
+  "real_combat_fixture": true,
+  "gpu_or_mcp_used": false,
+  "full_game_ui_or_device_acceptance": false,
+  "task_checkboxes_changed": false,
+  "ok": true
+}

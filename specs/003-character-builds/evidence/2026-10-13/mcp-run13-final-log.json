@@ -1,0 +1,115 @@
+{
+  "source": "game",
+  "lines": [
+    {
+      "level": "info",
+      "run_id": "r10239729-13",
+      "source": "game",
+      "text": "[godot_ai game_helper] registered mcp capture (debugger active=true, logger=true)\n"
+    },
+    {
+      "details": {
+        "code": "Parameter \"particles\" is null.",
+        "error_type": 0,
+        "error_type_name": "error",
+        "frames": [],
+        "message": "Parameter \"particles\" is null.",
+        "rationale": "",
+        "resolved": {
+          "function": "particles_get_instance_buffer_motion_vectors_offsets",
+          "line": 759,
+          "path": "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp"
+        },
+        "source": {
+          "function": "particles_get_instance_buffer_motion_vectors_offsets",
+          "line": 759,
+          "path": "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp"
+        }
+      },
+      "level": "error",
+      "run_id": "r10239729-13",
+      "source": "game",
+      "text": "Parameter \"particles\" is null. (servers/rendering/renderer_rd/storage_rd/particles_storage.cpp:759 @ particles_get_instance_buffer_motion_vectors_offsets)"
+    },
+    {
+      "details": {
+        "code": "Parameter \"particles\" is null.",
+        "error_type": 0,
+        "error_type_name": "error",
+        "frames": [],
+        "message": "Parameter \"particles\" is null.",
+        "rationale": "",
+        "resolved": {
+          "function": "particles_get_instance_buffer_motion_vectors_offsets",
+          "line": 759,
+          "path": "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp"
+        },
+        "source": {
+          "function": "particles_get_instance_buffer_motion_vectors_offsets",
+          "line": 759,
+          "path": "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp"
+        }
+      },
+      "level": "error",
+      "run_id": "r10239729-13",
+      "source": "game",
+      "text": "Parameter \"particles\" is null. (servers/rendering/renderer_rd/storage_rd/particles_storage.cpp:759 @ particles_get_instance_buffer_motion_vectors_offsets)"
+    },
+    {
+      "details": {
+        "code": "Parameter \"particles\" is null.",
+        "error_type": 0,
+        "error_type_name": "error",
+        "frames": [],
+        "message": "Parameter \"particles\" is null.",
+        "rationale": "",
+        "resolved": {
+          "function": "particles_get_instance_buffer_motion_vectors_offsets",
+          "line": 759,
+          "path": "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp"
+        },
+        "source": {
+          "function": "particles_get_instance_buffer_motion_vectors_offsets",
+          "line": 759,
+          "path": "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp"
+        }
+      },
+      "level": "error",
+      "run_id": "r10239729-13",
+      "source": "game",
+      "text": "Parameter \"particles\" is null. (servers/rendering/renderer_rd/storage_rd/particles_storage.cpp:759 @ particles_get_instance_buffer_motion_vectors_offsets)"
+    }
+  ],
+  "total_count": 4,
+  "returned_count": 4,
+  "offset": 0,
+  "limit": 50,
+  "has_more": false,
+  "run_id": "r10239729-13",
+  "is_running": true,
+  "dropped_count": 0,
+  "stale_run_id": false,
+  "current_run_id": "r10239729-13",
+  "helper_live": false,
+  "session_active": true,
+  "game_status": {
+    "active": true,
+    "break": {
+      "can_debug": false,
+      "pre_live": false,
+      "reason": "Parser Error: Mixed use of tabs and spaces for indentation."
+    },
+    "editor_log_cursor": 3,
+    "elapsed_msec": 461889,
+    "helper_expected": true,
+    "helper_live": false,
+    "ready": true,
+    "ready_wait_msec": 20000,
+    "run_started_msec": 10239728,
+    "run_token": 13,
+    "session_active": true,
+    "status": "break"
+  },
+  "editor_errors_count": 1,
+  "editor_errors_hint": "1 editor-side error from this run (first: particles_get_instance_buffer_motion_vectors_offsets: Parameter \"particles\" is null.) missing from the game log — boot-time parse/load errors occur before the game helper's logger attaches. Read logs_read(source='editor', include_details=true)."
+}

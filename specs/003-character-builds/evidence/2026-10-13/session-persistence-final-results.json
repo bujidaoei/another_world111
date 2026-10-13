@@ -1,0 +1,129 @@
+{
+  "kind": "real_main_persistence_and_menu_layer_fault_integration_final",
+  "ok": true,
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "flaky": 0,
+  "orphans": 0,
+  "exit_code": 0,
+  "report": "artifacts/session-persistence-production-exit-final/report_1/results.xml",
+  "log": "artifacts/session-persistence-production-exit-final.log",
+  "expected_error_count": 9,
+  "expected_diagnostics": [
+    {
+      "case": "test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds",
+      "header": "ERROR: {\"code\":\"io_error\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}",
+      "has_production_save_stack": true,
+      "has_official_assert_stack": true,
+      "has_case_stack": true
+    },
+    {
+      "case": "test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds",
+      "header": "ERROR: {\"code\":\"io_error\",\"module\":\"preferences\",\"operation\":\"save\"}",
+      "has_production_save_stack": true,
+      "has_official_assert_stack": true,
+      "has_case_stack": true
+    },
+    {
+      "case": "test_already_running_session_preserves_external_future_domain_slot_on_next_save",
+      "header": "ERROR: {\"code\":\"future_schema\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}",
+      "has_production_save_stack": true,
+      "has_official_assert_stack": true,
+      "has_case_stack": true
+    },
+    {
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "header": "ERROR: {\"code\":\"io_error\",\"module\":\"preferences\",\"operation\":\"save\"}",
+      "has_production_save_stack": true,
+      "has_official_assert_stack": true,
+      "has_case_stack": true
+    },
+    {
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "header": "ERROR: {\"code\":\"io_error\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}",
+      "has_production_save_stack": true,
+      "has_official_assert_stack": true,
+      "has_case_stack": true
+    },
+    {
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "header": "ERROR: {\"code\":\"io_error\",\"module\":\"preferences\",\"operation\":\"save\"}",
+      "has_production_save_stack": true,
+      "has_official_assert_stack": true,
+      "has_case_stack": true
+    },
+    {
+      "case": "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+      "header": "ERROR: {\"code\":\"io_error\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}",
+      "has_production_save_stack": true,
+      "has_official_assert_stack": true,
+      "has_case_stack": true
+    },
+    {
+      "case": "test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards",
+      "header": "ERROR: {\"code\":\"io_error\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}",
+      "has_production_save_stack": true,
+      "has_official_assert_stack": true,
+      "has_case_stack": true
+    },
+    {
+      "case": "test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity",
+      "header": "ERROR: {\"code\":\"io_error\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}",
+      "has_production_save_stack": true,
+      "has_official_assert_stack": true,
+      "has_case_stack": true
+    }
+  ],
+  "unexpected_error_count": 0,
+  "case_names": [
+    "test_real_progress_write_failure_preserves_slots_and_returns_result_then_retry_succeeds",
+    "test_real_preferences_write_failure_keeps_dirty_and_original_slots_then_retry_succeeds",
+    "test_already_running_session_preserves_external_future_domain_slot_on_next_save",
+    "test_title_save_failure_keeps_session_and_dirty_until_cancel_then_real_retry",
+    "test_cancel_failed_quit_restores_pending_settlement_menu_without_committing_rewards",
+    "test_cancel_failed_quit_preserves_unsubmitted_preset_text_focus_scroll_and_control_identity",
+    "test_failed_quit_survives_real_write_fault_and_cancel_restores_menu_in_child_process"
+  ],
+  "audited_children": [
+    {
+      "directory": "D:\\bugu_projects\\another_world\\artifacts\\session-persistence-probes\\53672_1958922-preferences",
+      "expected_error_headers": [
+        "ERROR: {\"code\":\"io_error\",\"module\":\"preferences\",\"operation\":\"save\"}"
+      ],
+      "script_errors": 0,
+      "leak_diagnostics": 0,
+      "final_production_quitting_started": true,
+      "completed": true
+    },
+    {
+      "directory": "D:\\bugu_projects\\another_world\\artifacts\\session-persistence-probes\\53672_1958922-progress",
+      "expected_error_headers": [
+        "ERROR: {\"code\":\"io_error\",\"module\":\"save\",\"operation\":\"save\",\"version\":\"0.1.0\"}"
+      ],
+      "script_errors": 0,
+      "leak_diagnostics": 0,
+      "final_production_quitting_started": true,
+      "completed": true
+    }
+  ],
+  "successful_production_quit_only_in_children": true,
+  "source_sha256_at_freeze": {
+    "game/tests/test_session_persistence.gd": "2e80ab6059d47e657e499956584cd1e1cdca84bb2fb9bdbfdcc9a7b2d2c8a5cf",
+    "game/tests/test_session_persistence.gd.uid": "1d5e61a01abd26fa7934f22a503d04c1f40dc6b58a03e0eb5117378787cf9328",
+    "game/presentation/game_session.gd": "c86d34d70352058d0a620fea14163ba596f13f6f1b72c4bf6672be94827912a3",
+    "game/presentation/game_hud.gd": "d0f49979200efaeff5ff5839b7a8ba7a2dd2b85fa0862b4428edb468882ab987",
+    "game/persistence/save_repository.gd": "2b2779aa879d0e8c86007bba1dd0f1fa964440a283b19a613b2bfa34c2aff626",
+    "game/persistence/user_preferences.gd": "3f9a5ce5311ba2a635ddf138279289148cc3c47fc69aea508f3d5051c6d7b2d5"
+  },
+  "business_red": "artifacts/session-persistence-business-red/report_1/results.xml",
+  "settlement_red": "artifacts/session-persistence-settlement-red/report_1/results.xml",
+  "false_harness_audio_teardown_report": "artifacts/session-persistence-child-lifecycle-verbose/report_1/results.xml",
+  "actual_fileaccess_fault": true,
+  "official_gdunit_error_expectations": true,
+  "mocks_used": false,
+  "gpu_or_mcp_used": false,
+  "global_import_used": false,
+  "root_wrapper_run_by_this_agent": false
+}

@@ -27,10 +27,10 @@ func test_real_objective_and_evacuation_commit_once() -> void:
 	assert_int(inventory.count("currency")).is_equal(0)
 	assert_bool(run.resolve("evacuated", progress).ok).is_true()
 	assert_bool(run.reset().ok).is_true()
-	assert_bool(run.commit_rewards("settle-1", inventory).ok).is_true()
+	assert_bool(run.commit_rewards(inventory).ok).is_true()
 	assert_int(inventory.count("currency")).is_equal(18)
 	assert_int(inventory.count("scrap")).is_equal(9)
-	assert_bool(run.commit_rewards("settle-2", inventory).ok).is_false()
+	assert_bool(run.commit_rewards(inventory).ok).is_false()
 	assert_int(inventory.count("currency")).is_equal(18)
 
 func test_failure_discards_loot_and_retains_real_experience() -> void:
@@ -43,7 +43,7 @@ func test_failure_discards_loot_and_retains_real_experience() -> void:
 	run.gather("rain_scrap_01")
 	assert_bool(run.resolve("failed", progress).ok).is_true()
 	run.reset()
-	assert_bool(run.commit_rewards("settle-1", inventory).ok).is_false()
+	assert_bool(run.commit_rewards(inventory).ok).is_false()
 	assert_int(inventory.count("scrap")).is_equal(0)
 	assert_int(progress.experience).is_equal(6)
 
@@ -105,7 +105,7 @@ func test_reused_run_id_is_rejected_after_settlement() -> void:
 	run.begin("run-1", "rain_court")
 	run.resolve("evacuated", progress)
 	run.reset()
-	run.commit_rewards("settle-1", inventory)
+	run.commit_rewards(inventory)
 	assert_bool(run.begin("run-1", "rain_court").ok).is_false()
 
 func test_restore_rejects_terminal_state_without_outcome_or_real_victory() -> void:

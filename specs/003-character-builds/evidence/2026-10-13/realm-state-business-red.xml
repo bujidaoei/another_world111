@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites id="2026-10-13" name="report_1" tests="11" failures="6" skipped="0" flaky="0" time="0.000">
+	<testsuite id="0" name="test_build_migration" package="tests" timestamp="2026-10-13T02:20:40" hostname="localhost" tests="11" failures="6" errors="0" skipped="0" flaky="0" time="0.169">
+		<testcase name="test_real_frozen_domain1_container_migrates_without_grants_healing_or_live_mutation" classname="test_build_migration" time="0.008">
+		</testcase>
+		<testcase name="test_missing_legacy_version_is_supported_but_partial_new_domain_is_never_defaulted" classname="test_build_migration" time="0.011">
+		</testcase>
+		<testcase name="test_future_versions_invalid_types_and_unknown_fields_are_rejected_without_side_effects" classname="test_build_migration" time="0.016">
+		</testcase>
+		<testcase name="test_legacy_equipped_markers_normalize_without_touching_identity_history_or_resources" classname="test_build_migration" time="0.006">
+		</testcase>
+		<testcase name="test_current_cooldowns_and_all_six_presets_survive_migration_without_reset" classname="test_build_migration" time="0.008">
+		</testcase>
+		<testcase name="test_active_missing_conflicting_or_illegal_build_rejects_but_inactive_stale_refs_survive" classname="test_build_migration" time="0.019">
+		</testcase>
+		<testcase name="test_bad_domain_vitals_flags_counters_or_keys_never_get_clamped_or_defaults" classname="test_build_migration" time="0.017">
+		</testcase>
+		<testcase name="test_real_old_container_read_migrate_write_preserves_original_valid_slot_and_checksum" classname="test_build_migration" time="0.021">
+		</testcase>
+		<testcase name="test_old_equipment_missing_optional_equipped_marker_is_normalized_without_runtime_error" classname="test_build_migration" time="0.007">
+		</testcase>
+		<testcase name="test_realm1_cannot_restore_locked_focus_effect_or_focus_and_anchor_cooldowns" classname="test_build_migration" time="0.012">
+			<failure message="FAILED: res://tests/test_build_migration.gd:226" type="FAILURE">
+<![CDATA[
+Expecting: 'false' but is 'true'
+	at 'test_realm1_cannot_restore_locked_focus_effect_or_focus_and_anchor_cooldowns' in res://tests/test_build_migration.gd:226
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_build_migration.gd:227" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'skill_locked'
+ but was
+ 'skill_locked'
+	at 'test_realm1_cannot_restore_locked_focus_effect_or_focus_and_anchor_cooldowns' in res://tests/test_build_migration.gd:227
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_build_migration.gd:226" type="FAILURE">
+<![CDATA[
+Expecting: 'false' but is 'true'
+	at 'test_realm1_cannot_restore_locked_focus_effect_or_focus_and_anchor_cooldowns' in res://tests/test_build_migration.gd:226
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_build_migration.gd:227" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'skill_locked'
+ but was
+ 'skill_locked'
+	at 'test_realm1_cannot_restore_locked_focus_effect_or_focus_and_anchor_cooldowns' in res://tests/test_build_migration.gd:227
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_build_migration.gd:226" type="FAILURE">
+<![CDATA[
+Expecting: 'false' but is 'true'
+	at 'test_realm1_cannot_restore_locked_focus_effect_or_focus_and_anchor_cooldowns' in res://tests/test_build_migration.gd:226
+]]>
+			</failure>
+			<failure message="FAILED: res://tests/test_build_migration.gd:227" type="FAILURE">
+<![CDATA[
+Expecting:
+ 'realm_required'
+ but was
+ 'realm_requiredok'
+	at 'test_realm1_cannot_restore_locked_focus_effect_or_focus_and_anchor_cooldowns' in res://tests/test_build_migration.gd:227
+]]>
+			</failure>
+		</testcase>
+		<testcase name="test_realm2_keeps_shared_focus_and_anchor_state_after_unload_and_tier1_weapon_switch" classname="test_build_migration" time="0.009">
+		</testcase>
+	</testsuite>
+</testsuites>

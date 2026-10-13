@@ -1,0 +1,161 @@
+{
+  "captured_utc": "2026-10-13T01:17:59.2684892Z",
+  "cpu": [
+    {
+      "Name": "Intel(R) Core(TM) i9-14900HX",
+      "NumberOfCores": 24,
+      "NumberOfLogicalProcessors": 32,
+      "MaxClockSpeed": 2200
+    }
+  ],
+  "system": [
+    {
+      "Manufacturer": "LENOVO",
+      "Model": "83DF",
+      "TotalPhysicalMemory": 34141495296
+    }
+  ],
+  "gpu": [
+    {
+      "Name": "OrayIddDriver Device",
+      "DriverVersion": "17.50.19.949",
+      "DriverDate": "2025-06-11T08:00:00+08:00",
+      "VideoModeDescription": null
+    },
+    {
+      "Name": "GameViewer Virtual Display Adapter",
+      "DriverVersion": "15.6.5.199",
+      "DriverDate": "2026-02-28T08:00:00+08:00",
+      "VideoModeDescription": null
+    },
+    {
+      "Name": "AskLinkIddDriver Device",
+      "DriverVersion": "18.36.3.757",
+      "DriverDate": "2024-12-25T08:00:00+08:00",
+      "VideoModeDescription": null
+    },
+    {
+      "Name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "DriverVersion": "32.0.15.8115",
+      "DriverDate": "2025-08-21T08:00:00+08:00",
+      "VideoModeDescription": "2560 x 1600 x 4294967296 种颜色"
+    }
+  ],
+  "os": [
+    {
+      "Caption": "Microsoft Windows 11 专业工作站版",
+      "Version": "10.0.22621",
+      "BuildNumber": "22621"
+    }
+  ],
+  "concurrent_gpu_capable_processes": [
+    {
+      "ProcessName": "blender",
+      "Id": 50636
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 5776
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 8268
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 12264
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 21376
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 26356
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 40764
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 42612
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 43936
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 44860
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 47244
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 49452
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 51572
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 51868
+    },
+    {
+      "ProcessName": "comfy-mcp",
+      "Id": 52124
+    },
+    {
+      "ProcessName": "Godot_v4.7.2-stable_win64",
+      "Id": 51420
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 10328
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 11080
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 17800
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 19092
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 42792
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 43960
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 44420
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 44812
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 49996
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 53528
+    },
+    {
+      "ProcessName": "mcp-for-blender",
+      "Id": 57612
+    }
+  ]
+}

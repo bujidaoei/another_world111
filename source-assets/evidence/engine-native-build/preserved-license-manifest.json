@@ -1,0 +1,85 @@
+{
+  "complete": true,
+  "documents": [
+    {
+      "file": "Godot-MIT-LICENSE.txt",
+      "bytes": 1149,
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80",
+      "origin": "Unmodified fixed Godot ed1daf0bf archive LICENSE.txt"
+    },
+    {
+      "file": "Godot-THIRDPARTY-COPYRIGHT.txt",
+      "bytes": 100108,
+      "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d",
+      "origin": "Unmodified fixed Godot ed1daf0bf archive COPYRIGHT.txt; engine bundled third-party notices"
+    },
+    {
+      "file": "SCons-notice-0-license.xml.txt",
+      "bytes": 1303,
+      "sha256": "ab8498dc21572d51a7e3b34636a8c4e64428118bfaf0cf219b6189dd25c3dc33",
+      "origin": "Verified SCons4.11.1 wheel: SCons/Tool/docbook/docbook-xsl-1.76.1/docsrc/license.xml"
+    },
+    {
+      "file": "SCons-notice-1-LICENSE.txt.txt",
+      "bytes": 14204,
+      "sha256": "a687a13a81d77cc9b135e703ed5c654e8eac7bd14f6da784bb4c8c9d8f13c972",
+      "origin": "Verified SCons4.11.1 wheel: SCons/Tool/docbook/docbook-xsl-1.76.1/extensions/LICENSE.txt"
+    },
+    {
+      "file": "SCons-notice-2-LICENSE.txt",
+      "bytes": 27,
+      "sha256": "e247e595110189d0cf31fd30b0b2c01c9c394f86b9df68eceb878845979cad86",
+      "origin": "Verified SCons4.11.1 wheel: SCons/Tool/docbook/docbook-xsl-1.76.1/webhelp/LICENSE"
+    },
+    {
+      "file": "SCons-notice-3-LICENSE.txt",
+      "bytes": 1084,
+      "sha256": "2f6ac9a1fc98394d18b80dba9bedb9d5626006d44db3fecf7cf3e21cff7e8b1c",
+      "origin": "Verified SCons4.11.1 wheel: scons-4.11.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "file": "SCons-notice-4-COPYING.txt",
+      "bytes": 1960,
+      "sha256": "fb2072a648da193dd85c59c89123d882e727e54db96446f52d727815a36f1e7d",
+      "origin": "Verified SCons4.11.1 wheel: scons-4.11.1.dist-info/licenses/SCons/Tool/docbook/docbook-xsl-1.76.1/COPYING"
+    },
+    {
+      "file": "GDB-bundled-Python-LICENSE.txt",
+      "bytes": 13925,
+      "sha256": "599826df92bfdcd2702eac691072498bb096c55af04ee984cf90f70ed77b5a70",
+      "origin": "Verified WinLibs archive; mingw64/lib/python3.9/LICENSE.txt"
+    },
+    {
+      "file": "WinLibs-CPack-GenericLicense-Template.txt",
+      "bytes": 100,
+      "sha256": "d348896dcdfefe4ab35cb1898b9285d0b0e3b1a8990815abc4a8650dad58aa84",
+      "origin": "Verified WinLibs archive; generic CPack template, not a complete CMake license"
+    },
+    {
+      "file": "GCC-GDB-GPL3-COPYING.txt",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "origin": "https://github.com/gcc-mirror/gcc/blob/releases/gcc-16.2.0/COPYING3 (complete Playwright DOM rawLines; normalized LF)"
+    },
+    {
+      "file": "GCC-RUNTIME-EXCEPTION-3.1.txt",
+      "bytes": 3323,
+      "sha256": "28e85c5aa4af9b4f1dfe6b4817aa3eefb3eaaee7fd735045016f29ccf50276a1",
+      "origin": "https://github.com/gcc-mirror/gcc/blob/releases/gcc-16.2.0/COPYING.RUNTIME (complete Playwright DOM rawLines; normalized LF)"
+    },
+    {
+      "file": "MinGW-w64-14.0.0-COPYING.txt",
+      "bytes": 2326,
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f",
+      "origin": "https://github.com/mingw-w64/mingw-w64/blob/v14.0.0/COPYING (complete Playwright DOM rawLines; normalized LF)"
+    },
+    {
+      "file": "MinGW-w64-winpthreads-COPYING.txt",
+      "bytes": 2883,
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177",
+      "origin": "https://github.com/mingw-w64/mingw-w64/blob/v14.0.0/mingw-w64-libraries/winpthreads/COPYING (complete Playwright DOM rawLines; normalized LF)"
+    }
+  ],
+  "scope": "Private diagnostic build; full core MIT/GPL/runtime-exception notices, package included notices retained; unused extra tool components are not redistributed",
+  "gdb_GPL_reference": "https://sourceware.org/gdb/current/onlinedocs/gdb.html/Copying.html"
+}

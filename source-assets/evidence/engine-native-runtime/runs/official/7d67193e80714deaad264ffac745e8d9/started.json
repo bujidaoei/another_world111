@@ -1,0 +1,24 @@
+{
+  "mode": "official",
+  "run_id": "7d67193e80714deaad264ffac745e8d9",
+  "utc_started": "2026-10-13T06:40:17.140593+00:00",
+  "argv": [
+    "D:\\bugu_software\\ai-game-toolchain\\godot\\Godot_v4.7.2-stable_win64_console.exe",
+    "--path",
+    "D:\\bugu_projects\\another_world\\artifacts\\engine-native-runtime\\project",
+    "--script",
+    "res://native_main_probe.gd"
+  ],
+  "cwd": "D:\\bugu_projects\\another_world\\artifacts\\engine-native-runtime\\runs\\official\\7d67193e80714deaad264ffac745e8d9",
+  "production_code_and_original_assets_changed": false,
+  "copy_source_count": 1757,
+  "pre_input_changed": [],
+  "adaptations": [
+    "isolated QA save directory",
+    "standalone probe report destination"
+  ],
+  "probe_sha256": "7eddc526df246f2c1f039484fc90e3d510ab2233accb86fe9d5dc9d11526c77c",
+  "qa_sha256": "83b38c1618f2c9fffa94bf9664d5f3ffb198590afd0b4f1ac4777d330a49583f",
+  "engine_sha256": "c8f0a6bc45a19b33541501e57f6f7cd972ab18453743266339d495cbbe846643",
+  "pid": 55848
+}

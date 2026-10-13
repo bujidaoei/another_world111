@@ -1,0 +1,345 @@
+{
+  "scope": "Actual fixed-source diagnostic build+static inspection; no Main/GPU/GDB execution",
+  "commit": "ed1daf0bf001b61586d9930840f2f1394092c079",
+  "files": [
+    {
+      "path": "addr2line-batch.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "addr2line-batch.stdout.log",
+      "bytes": 966,
+      "sha256": "98f6ee9488b769dcd4696c1c34ed45ddc9cbb82e0b07120a1f9da2c889305ef9"
+    },
+    {
+      "path": "artifact-inspection.json",
+      "bytes": 2914,
+      "sha256": "8982eaecc926b007c9112ddece303210dbb94e714742d04c852b5fd8194f66e3"
+    },
+    {
+      "path": "binary-sections.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "binary-sections.stdout.log",
+      "bytes": 1927,
+      "sha256": "6d2be879886177cf0e20bba1e89dc3a6fcd398c0c1611a9f3f79c176fe713c31"
+    },
+    {
+      "path": "build_engine.py",
+      "bytes": 3342,
+      "sha256": "fd1c6e90f5887fd6ed7f12dc570a3f6bb2557e9d400cf00369e26a0e6ae07f38"
+    },
+    {
+      "path": "build-result.json",
+      "bytes": 966,
+      "sha256": "2e23b0e9eadc76a53d74099dfbb9a7290768a82a51b9c83ecfdfa520a88366b1"
+    },
+    {
+      "path": "build-started.json",
+      "bytes": 1661,
+      "sha256": "a357d70b8db260e71e31f0f492417eb0c5bd34e1d293472f0e44853df1dbe100"
+    },
+    {
+      "path": "build.stderr.log",
+      "bytes": 278,
+      "sha256": "ce215b85552975f6e47aa639ee3e636e10bccef3c3d8e6442112cf780211d191"
+    },
+    {
+      "path": "build.stdout.log",
+      "bytes": 186979,
+      "sha256": "f55349fc5706555178cfeed8ac9633d8d780bc40fdbda75f3046cfbce79fac9b"
+    },
+    {
+      "path": "collect_licenses.py",
+      "bytes": 5480,
+      "sha256": "1db64f86b882063af17af3c778d8325aecbe924b38610058a9b0f3bb1c31142e"
+    },
+    {
+      "path": "compiler-command-snapshot.json",
+      "bytes": 19372,
+      "sha256": "30850d4cbd203760ce83ff1229d47e7200985c72b58cd4db7abc435101b78ef4"
+    },
+    {
+      "path": "extraction-retry.exit.json",
+      "bytes": 75,
+      "sha256": "e60fb363542382cf1690e0dba8e5ba8ab1bb68554b4207b7810d0f14e486de71"
+    },
+    {
+      "path": "extraction-retry.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "extraction-retry.stdout.log",
+      "bytes": 577,
+      "sha256": "8588786fad40cc38b5af64a7b1c49fd22f840a4eaf944a6e748f299588a3f10b"
+    },
+    {
+      "path": "extraction-summary.json",
+      "bytes": 617,
+      "sha256": "2ea7dad19257e06714831f865bdefe759504c56a0af74bb63ab6f850caef065d"
+    },
+    {
+      "path": "extraction.exit.json",
+      "bytes": 75,
+      "sha256": "57f09e5707691d3e26a42592db65cc80edff44315ed5254630e69240d3236e5d"
+    },
+    {
+      "path": "extraction.stderr.log",
+      "bytes": 872,
+      "sha256": "42acb735700b5afd82d2e7945890ac3ee0eeaaee2183777f13fa0133e6215a04"
+    },
+    {
+      "path": "first-inspection.exit.json",
+      "bytes": 75,
+      "sha256": "6f82430b2bf5afe9e785998978120abec31ce867e99e03d06eda91a21acf8cbc"
+    },
+    {
+      "path": "first-inspection.stderr.log",
+      "bytes": 528,
+      "sha256": "e430f5425c34a6fc4b5390ecb4ea791fa52b63c17ab669def943adbe7a720906"
+    },
+    {
+      "path": "first-inspection.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "gdb-license-binary-strings.json",
+      "bytes": 227,
+      "sha256": "0fb8499415d458caa1069df0ca1d267697a1d908e15c968418e2d16f35b2969e"
+    },
+    {
+      "path": "gnu-debuglink.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "gnu-debuglink.stdout.log",
+      "bytes": 432,
+      "sha256": "754b57d5be75bddc46ad64f024cda3515a22752fcc3fbb3c669480d9d7838f0b"
+    },
+    {
+      "path": "inspect_build.py",
+      "bytes": 5589,
+      "sha256": "c990408cd148231b81641d5561d6219764d250a04746cb68d5987428fa2e0494"
+    },
+    {
+      "path": "inspect_toolchain.py",
+      "bytes": 2456,
+      "sha256": "76e95895b2ddc5e291ea5233921e37651e08e695f542943cb37778c5159afe5f"
+    },
+    {
+      "path": "inspection-consolidation.json",
+      "bytes": 493,
+      "sha256": "f9b3fa02e196b081a40ce411fcf08f49e5446066f15394d3ae8f92f75a16482d"
+    },
+    {
+      "path": "inspection.exit.json",
+      "bytes": 75,
+      "sha256": "21605a756afe9b56d9d72e9dbde807d00ab208a4879575ec842e1ded4c544c65"
+    },
+    {
+      "path": "inspection.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "inspection.stdout.log",
+      "bytes": 2625,
+      "sha256": "e0f583fefb0f71fbb59001a38f7178a8cad7c40fa8f1c61ffeded400625e5be2"
+    },
+    {
+      "path": "license-collection-dom.exit.json",
+      "bytes": 75,
+      "sha256": "c652ef3e21a6a9b96fbf6f06198027232e9fb92b9ef0a406adc193746f0793e4"
+    },
+    {
+      "path": "license-collection-dom.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "license-collection-dom.stdout.log",
+      "bytes": 66,
+      "sha256": "a7f8d5945c8ade2603e8661f01c5f1467dccae9a3009e4d06cd331e767f7cfa4"
+    },
+    {
+      "path": "license-collection-retry.stderr.log",
+      "bytes": 1551,
+      "sha256": "a14b66adc4313b1205ad1f790855c85325252630a0c8ce9dc94fbd5f99b034c0"
+    },
+    {
+      "path": "license-collection.stderr.log",
+      "bytes": 4256,
+      "sha256": "107a35a5f8dbfd1d0a0f74e12b269f4efaea8aa9f46d5dae1d08b62a1007e573"
+    },
+    {
+      "path": "license-dom-gcc-runtime.json",
+      "bytes": 4224,
+      "sha256": "74b165a5a81cb3e8c244832070e2131ff543f9e04b61b71d251b49c6d832f19c"
+    },
+    {
+      "path": "license-dom-gpl3.json",
+      "bytes": 40313,
+      "sha256": "17d48c3342f64f3a758729ec4dfde104f3ed1896e165e0d67d8018a8bb93668c"
+    },
+    {
+      "path": "license-dom-mingw.json",
+      "bytes": 2982,
+      "sha256": "3ded815913dc0e1efafc8a7f65b30e78b3be2e0c01a6956743e0ba1efdaa84ea"
+    },
+    {
+      "path": "license-dom-winpthreads.json",
+      "bytes": 3707,
+      "sha256": "12334762564d8fceb31dfe07ff0b456aea5f82206be86a6ebeee4745b7f97bb4"
+    },
+    {
+      "path": "pe-manifest-1.xml",
+      "bytes": 613,
+      "sha256": "a5afce46ab0f79f53ad3f1f16d3975f026ff01e3681b0241aa52548e7c820bd1"
+    },
+    {
+      "path": "pe-manifests.json",
+      "bytes": 701,
+      "sha256": "2f374ba7cdd323722c72021ac0d6aa7a872d45a228ff5039166f15478d0d5aff"
+    },
+    {
+      "path": "prepare_sources.py",
+      "bytes": 6956,
+      "sha256": "b151a9a8bd12ff36206d9468b923abd106b0e52683803f92bbe2650a0eead471"
+    },
+    {
+      "path": "preserved-license-manifest.json",
+      "bytes": 3978,
+      "sha256": "83eaaecdc7b74e92f2a566507a4ccdf6c8faec2389f00a197e07f9d414ee6691"
+    },
+    {
+      "path": "read_pe_manifest.py",
+      "bytes": 2396,
+      "sha256": "d8ef16ae39ce1a8e8affdf2c4aaad11f5648f165c6a5ce63386e4ece2e5b95ea"
+    },
+    {
+      "path": "scons-install.exit.json",
+      "bytes": 317,
+      "sha256": "0b17be6378a37187bfc5a9837ebbeefcf1f7784bde9052410122d315c9cd9502"
+    },
+    {
+      "path": "scons-install.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "scons-install.stdout.log",
+      "bytes": 185,
+      "sha256": "20d8f9dfda1208740bd4cc53dd9aa50cb56ed3d232a16e8f4d91baec7aff6a8e"
+    },
+    {
+      "path": "source-files.json",
+      "bytes": 2601248,
+      "sha256": "16688e184a62969d329e458e638b9007a45f8c04edf8b19920a0400aeb24cb14"
+    },
+    {
+      "path": "started.json",
+      "bytes": 353,
+      "sha256": "4b78be18ae696e35b039ce2481c61ac7a1791d0086c438166c174148d0784427"
+    },
+    {
+      "path": "symbol-sections.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "symbol-sections.stdout.log",
+      "bytes": 2878,
+      "sha256": "ebd1358c8518a0b5874e5aa6a99d8cbae7a216bcc35c16e3272b59ac8d694cc7"
+    },
+    {
+      "path": "tool-versions.json",
+      "bytes": 9372,
+      "sha256": "d61b3624909465f7a89152fa37b24602f98d6fc10a6a46081d403ab4942bd265"
+    },
+    {
+      "path": "verified-downloads.json",
+      "bytes": 771,
+      "sha256": "662b7cc68fe9d1c854b2c3cf58e45bf7d438fa97c9f7366a9cf342f4aa44b023"
+    },
+    {
+      "path": "licenses/GCC-GDB-GPL3-COPYING.txt",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "path": "licenses/GCC-RUNTIME-EXCEPTION-3.1.txt",
+      "bytes": 3323,
+      "sha256": "28e85c5aa4af9b4f1dfe6b4817aa3eefb3eaaee7fd735045016f29ccf50276a1"
+    },
+    {
+      "path": "licenses/GDB-bundled-Python-LICENSE.txt",
+      "bytes": 13925,
+      "sha256": "599826df92bfdcd2702eac691072498bb096c55af04ee984cf90f70ed77b5a70"
+    },
+    {
+      "path": "licenses/Godot-MIT-LICENSE.txt",
+      "bytes": 1149,
+      "sha256": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80"
+    },
+    {
+      "path": "licenses/Godot-THIRDPARTY-COPYRIGHT.txt",
+      "bytes": 100108,
+      "sha256": "cb1980c88089573bcacd7221d777c689bb8bbd778799f24c27fca0fe5f774d6d"
+    },
+    {
+      "path": "licenses/MinGW-w64-14.0.0-COPYING.txt",
+      "bytes": 2326,
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f"
+    },
+    {
+      "path": "licenses/MinGW-w64-winpthreads-COPYING.txt",
+      "bytes": 2883,
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177"
+    },
+    {
+      "path": "licenses/SCons-notice-0-license.xml.txt",
+      "bytes": 1303,
+      "sha256": "ab8498dc21572d51a7e3b34636a8c4e64428118bfaf0cf219b6189dd25c3dc33"
+    },
+    {
+      "path": "licenses/SCons-notice-1-LICENSE.txt.txt",
+      "bytes": 14204,
+      "sha256": "a687a13a81d77cc9b135e703ed5c654e8eac7bd14f6da784bb4c8c9d8f13c972"
+    },
+    {
+      "path": "licenses/SCons-notice-2-LICENSE.txt",
+      "bytes": 27,
+      "sha256": "e247e595110189d0cf31fd30b0b2c01c9c394f86b9df68eceb878845979cad86"
+    },
+    {
+      "path": "licenses/SCons-notice-3-LICENSE.txt",
+      "bytes": 1084,
+      "sha256": "2f6ac9a1fc98394d18b80dba9bedb9d5626006d44db3fecf7cf3e21cff7e8b1c"
+    },
+    {
+      "path": "licenses/SCons-notice-4-COPYING.txt",
+      "bytes": 1960,
+      "sha256": "fb2072a648da193dd85c59c89123d882e727e54db96446f52d727815a36f1e7d"
+    },
+    {
+      "path": "licenses/WinLibs-bundled-CMake-LICENSE.txt",
+      "bytes": 100,
+      "sha256": "d348896dcdfefe4ab35cb1898b9285d0b0e3b1a8990815abc4a8650dad58aa84"
+    },
+    {
+      "path": "licenses/WinLibs-CPack-GenericLicense-Template.txt",
+      "bytes": 100,
+      "sha256": "d348896dcdfefe4ab35cb1898b9285d0b0e3b1a8990815abc4a8650dad58aa84"
+    }
+  ],
+  "large_raw_outputs_retained_in_artifacts": [
+    "defined-symbols.stdout.log"
+  ],
+  "binary_and_toolchain_in_dedicated_D_directory_not_game": true
+}

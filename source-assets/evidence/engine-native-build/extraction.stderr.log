@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\bugu_projects\another_world\artifacts\engine-native-debug\prepare_sources.py", line 72, in <module>
+    with bundle.extractfile(member) as src, destination.open('xb') as dst:
+                                            ~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\Comfy-Desktop\ComfyUI-Installs\test\standalone-env\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\bugu_software\\ai-game-toolchain\\native-debug-ed1daf0bf\\source\\godot-ed1daf0bf001b61586d9930840f2f1394092c079\\modules\\mono\\editor\\Godot.NET.Sdk\\Godot.SourceGenerators.Tests\\TestData\\GeneratedSources\\ExportDiagnostics_GD0106_KO_ScriptPropertyDefVal.generated.cs'

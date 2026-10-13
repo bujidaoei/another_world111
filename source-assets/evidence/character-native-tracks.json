@@ -1,0 +1,441 @@
+{
+	"healer": {
+		"Idle": [
+			{
+				"keys": 8,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Pelvis",
+				"type": 1
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Spine",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Clavicle_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:UpperArm_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Forearm_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Hand_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Clavicle_R",
+				"type": 2
+			},
+			{
+				"keys": 43,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:UpperArm_R",
+				"type": 2
+			},
+			{
+				"keys": 52,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Forearm_R",
+				"type": 2
+			},
+			{
+				"keys": 42,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Hand_R",
+				"type": 2
+			},
+			{
+				"keys": 47,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Head",
+				"type": 2
+			},
+			{
+				"keys": 41,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Thigh_L",
+				"type": 2
+			},
+			{
+				"keys": 50,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Shin_L",
+				"type": 2
+			},
+			{
+				"keys": 38,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Foot_L",
+				"type": 2
+			},
+			{
+				"keys": 41,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Thigh_R",
+				"type": 2
+			},
+			{
+				"keys": 50,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Shin_R",
+				"type": 2
+			},
+			{
+				"keys": 38,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Foot_R",
+				"type": 2
+			}
+		],
+		"SelfHeal": [
+			{
+				"keys": 8,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Pelvis",
+				"type": 1
+			},
+			{
+				"keys": 24,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Spine",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Clavicle_L",
+				"type": 2
+			},
+			{
+				"keys": 31,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:UpperArm_L",
+				"type": 2
+			},
+			{
+				"keys": 31,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Forearm_L",
+				"type": 2
+			},
+			{
+				"keys": 31,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Hand_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Clavicle_R",
+				"type": 2
+			},
+			{
+				"keys": 29,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:UpperArm_R",
+				"type": 2
+			},
+			{
+				"keys": 31,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Forearm_R",
+				"type": 2
+			},
+			{
+				"keys": 31,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Hand_R",
+				"type": 2
+			},
+			{
+				"keys": 30,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Head",
+				"type": 2
+			},
+			{
+				"keys": 29,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Thigh_L",
+				"type": 2
+			},
+			{
+				"keys": 31,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Shin_L",
+				"type": 2
+			},
+			{
+				"keys": 29,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Foot_L",
+				"type": 2
+			},
+			{
+				"keys": 29,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Thigh_R",
+				"type": 2
+			},
+			{
+				"keys": 31,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Shin_R",
+				"type": 2
+			},
+			{
+				"keys": 29,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Foot_R",
+				"type": 2
+			}
+		],
+		"Walk": [
+			{
+				"keys": 10,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Pelvis",
+				"type": 1
+			},
+			{
+				"keys": 11,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Spine",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Clavicle_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:UpperArm_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Forearm_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Hand_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Clavicle_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:UpperArm_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Forearm_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Hand_R",
+				"type": 2
+			},
+			{
+				"keys": 11,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Head",
+				"type": 2
+			},
+			{
+				"keys": 12,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Thigh_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Shin_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Foot_L",
+				"type": 2
+			},
+			{
+				"keys": 12,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Thigh_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Shin_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "healer_robot/healer_robot_Rig/Skeleton3D:Foot_R",
+				"type": 2
+			}
+		]
+	},
+	"thief": {
+		"Idle": [
+			{
+				"keys": 8,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Pelvis",
+				"type": 1
+			},
+			{
+				"keys": 1,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Spine",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Clavicle_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:UpperArm_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Forearm_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Hand_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Clavicle_R",
+				"type": 2
+			},
+			{
+				"keys": 43,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:UpperArm_R",
+				"type": 2
+			},
+			{
+				"keys": 52,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Forearm_R",
+				"type": 2
+			},
+			{
+				"keys": 42,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Hand_R",
+				"type": 2
+			},
+			{
+				"keys": 47,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Head",
+				"type": 2
+			},
+			{
+				"keys": 41,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Thigh_L",
+				"type": 2
+			},
+			{
+				"keys": 50,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Shin_L",
+				"type": 2
+			},
+			{
+				"keys": 38,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Foot_L",
+				"type": 2
+			},
+			{
+				"keys": 41,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Thigh_R",
+				"type": 2
+			},
+			{
+				"keys": 50,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Shin_R",
+				"type": 2
+			},
+			{
+				"keys": 38,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Foot_R",
+				"type": 2
+			}
+		],
+		"Walk": [
+			{
+				"keys": 10,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Pelvis",
+				"type": 1
+			},
+			{
+				"keys": 11,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Spine",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Clavicle_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:UpperArm_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Forearm_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Hand_L",
+				"type": 2
+			},
+			{
+				"keys": 1,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Clavicle_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:UpperArm_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Forearm_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Hand_R",
+				"type": 2
+			},
+			{
+				"keys": 11,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Head",
+				"type": 2
+			},
+			{
+				"keys": 12,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Thigh_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Shin_L",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Foot_L",
+				"type": 2
+			},
+			{
+				"keys": 12,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Thigh_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Shin_R",
+				"type": 2
+			},
+			{
+				"keys": 13,
+				"path": "thief_robot/thief_robot_Rig/Skeleton3D:Foot_R",
+				"type": 2
+			}
+		]
+	}
+}

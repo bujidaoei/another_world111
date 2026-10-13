@@ -58,7 +58,7 @@
 | TASK-112 | REQ-103, REQ-108 | AC-103, AC-108 | TASK-102, TASK-107, TASK-110 | TEST-112 真实MCP场景/光/材质/雨粒子/命中效果及运行截图 | 进行中/未验收 | 尚无 |
 | TASK-113 | REQ-101, REQ-108 | AC-101, AC-108 | TASK-107 | TEST-113 合成源/文件、总线独立音量/并发/循环/削波/事件时序，实际播放 | 进行中/未验收 | 尚无 |
 | TASK-114 | REQ-101, REQ-102, REQ-103, REQ-104, REQ-105, REQ-106, REQ-107 | AC-101, AC-102, AC-103, AC-104, AC-105, AC-106, AC-107 | TASK-109, TASK-112, TASK-113 | TEST-114 合法新档真实完成，不用eval发经验/杀怪绕过流程；夹具局部对照分列 | 进行中/未验收 | 尚无 |
-| TASK-115 | NFR-101, NFR-102 | AC-109, AC-110 | TASK-114 | TEST-115 运行构建/资源合法、测试非零、FPS分位/加载/内存与对应设备 | 进行中/未验收（renderer门禁开放） | [旧release测量失败](evidence/2026-10-13/performance-tooling.md)、[Android开发管线](evidence/2026-10-13/android-development-build.md) |
+| TASK-115 | NFR-101, NFR-102 | AC-109, AC-110 | TASK-114 | TEST-115 运行构建/资源合法、测试非零、FPS分位/加载/内存与对应设备 | 进行中/未验收（冻结002 PC生产/Vulkan短期门禁通过；完整及长稳/设备证据未全） | [当前冻结生产/性能](evidence/2026-10-13/windows-current-performance.md)、[旧release测量失败](evidence/2026-10-13/performance-tooling.md)、[Android开发管线](evidence/2026-10-13/android-development-build.md) |
 | TASK-116 | NFR-101, NFR-102 | AC-109, AC-110 | TASK-115 | TEST-116 严重问题关闭、实际证据匹配、远端SHA一致 | 进行中/未验收 | 尚无 |
 | TASK-117 | REQ-102, NFR-102 | AC-102, AC-110 | TASK-114 | TEST-117 实际设备/参与者才验收；缺证据不暂停可独立完整制作 | 进行中/未验收（无手机运行证据） | [实际开发APK及未验边界](evidence/2026-10-13/android-development-build.md)、[小型审计JSON](evidence/2026-10-13/android-build-verification.json) |
 | TASK-118 | REQ-104, REQ-106, NFR-102 | AC-104, AC-106, AC-110 | TASK-116 | TEST-118 另立完整产品功能规格，实际实现/验证，不以当前原型结束完整目标 | 进行中/未验收 | 尚无 |
